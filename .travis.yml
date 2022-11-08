@@ -1,0 +1,7 @@
+language: csharp
+solution: TravisSample.sln
+install:
+  – nuget restore HTTT_QLTienAn.sln
+  # – nuget install NUnit.Runners -Version 2.6.4 -OutputDirectory testrunner
+script:
+  – xbuild /p:Configuration=Release HTTT_QLTienAn.sln
