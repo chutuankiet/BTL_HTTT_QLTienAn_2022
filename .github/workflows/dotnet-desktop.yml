@@ -1,0 +1,41 @@
+name: Build .Net Forms and publish release
+
+#Trigger
+on:
+  push:
+    tags:
+      - v*
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    env:
+      Solution_Name: HTTT_QLTienAn.sln
+      Dir_Name: HTTT_QLTienAn
+      Proj_Dir_Name: HTTT_QLTienAn
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v1
+      env:
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
+
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v1.0.2
+      env:
+        ACTIONS_ALLOW_UNSECURE_COMMANDS: 'true'
+
+    - name: Navigate to Workspace
+      run: cd $GITHUB_WORKSPACE
+
+    - name: Restore Packages
+      run: nuget restore $env:Solution_Name
+
+    - name: Build Solution
+      run: |
+        msbuild.exe $env:Solution_Name /nologo /nr:false /p:DeployOnBuild=true /p:DeployDefaultTarget=WebPublish /p:WebPublishMethod=FileSystem /p:DeleteExistingFiles=True /p:platform="Any CPU" /p:configuration="Release" /p:PublishUrl="../_build"
+    
+    
