@@ -66,4 +66,7 @@ Làm thêm chi tiết nghỉ : popup gồm : mã đăng ký, tên học viên,  
 
 - ra ngoài thêm ![image-20221108143616237](./image/image-20221108143616237.png) tickbox **cả ngày**
 
-  
+  ## III. Giao diện tiểu đoàn
+  ![image](https://user-images.githubusercontent.com/97930158/201264293-f473fe37-3b5a-48cf-b51e-2201b33c95fc.png)
+  - Thêm chức năng ở menubar: Thống kê số học viên cắt cơm và tiền cắt cơm
+  - Cần thêm tiêu chuẩn tiền ăn của từng loại học viên, sửa ngày áp dụng và cập nhật tiền ăn mới, thêm chi tiết loại nghỉ có số bữa cố định như tranh thủ, nghỉ phép,...
