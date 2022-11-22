@@ -6,27 +6,27 @@ namespace HTTT_QLTienAn.Model
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("DonVi")]
-    public partial class DonVi
+    [Table("LoaiHocVien")]
+    public partial class LoaiHocVien
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public DonVi()
+        public LoaiHocVien()
         {
-            Lops = new HashSet<Lop>();
+            HocViens = new HashSet<HocVien>();
         }
 
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int MaDonVi { get; set; }
+        public int MaLHV { get; set; }
 
         [StringLength(100)]
-        public string TenDonVi { get; set; }
+        public string TenLHV { get; set; }
 
-        public int? MaCBQL { get; set; }
-
-        public virtual CanBo CanBo { get; set; }
+        public int? MaTCA { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Lop> Lops { get; set; }
+        public virtual ICollection<HocVien> HocViens { get; set; }
+
+        public virtual TieuChuanAn TieuChuanAn { get; set; }
     }
 }

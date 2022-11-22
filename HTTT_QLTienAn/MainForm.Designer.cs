@@ -29,39 +29,33 @@ namespace HTTT_QLTienAn
         /// </summary>
         private void InitializeComponent()
         {
-            this.fluentDesignFormContainer1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
+            this.showUsercontrol = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
-            this.accordionControlElement1 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
             this.SuspendLayout();
             // 
-            // fluentDesignFormContainer1
+            // showUsercontrol
             // 
-            this.fluentDesignFormContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.fluentDesignFormContainer1.Location = new System.Drawing.Point(260, 39);
-            this.fluentDesignFormContainer1.Name = "fluentDesignFormContainer1";
-            this.fluentDesignFormContainer1.Size = new System.Drawing.Size(906, 760);
-            this.fluentDesignFormContainer1.TabIndex = 0;
+            this.showUsercontrol.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.showUsercontrol.Location = new System.Drawing.Point(195, 31);
+            this.showUsercontrol.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.showUsercontrol.Name = "showUsercontrol";
+            this.showUsercontrol.Size = new System.Drawing.Size(679, 546);
+            this.showUsercontrol.TabIndex = 0;
             // 
             // accordionControl1
             // 
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.accordionControlElement1});
-            this.accordionControl1.Location = new System.Drawing.Point(0, 39);
+            this.accordionControl1.Location = new System.Drawing.Point(0, 31);
+            this.accordionControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
-            this.accordionControl1.Size = new System.Drawing.Size(260, 760);
+            this.accordionControl1.Size = new System.Drawing.Size(195, 546);
             this.accordionControl1.TabIndex = 1;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
-            // 
-            // accordionControlElement1
-            // 
-            this.accordionControlElement1.Name = "accordionControlElement1";
-            this.accordionControlElement1.Text = "Element1";
             // 
             // fluentDesignFormControl1
             // 
@@ -69,8 +63,9 @@ namespace HTTT_QLTienAn
             this.fluentDesignFormControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.barButtonItem1});
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
+            this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
-            this.fluentDesignFormControl1.Size = new System.Drawing.Size(1166, 39);
+            this.fluentDesignFormControl1.Size = new System.Drawing.Size(874, 31);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
             this.fluentDesignFormControl1.TitleItemLinks.Add(this.barButtonItem1);
@@ -84,14 +79,15 @@ namespace HTTT_QLTienAn
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 18F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1166, 799);
-            this.ControlContainer = this.fluentDesignFormContainer1;
-            this.Controls.Add(this.fluentDesignFormContainer1);
+            this.ClientSize = new System.Drawing.Size(874, 577);
+            this.ControlContainer = this.showUsercontrol;
+            this.Controls.Add(this.showUsercontrol);
             this.Controls.Add(this.accordionControl1);
             this.Controls.Add(this.fluentDesignFormControl1);
             this.FluentDesignFormControl = this.fluentDesignFormControl1;
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "MainForm";
             this.NavigationControl = this.accordionControl1;
             this.Text = "MainForm";
@@ -102,9 +98,8 @@ namespace HTTT_QLTienAn
         }
 
         #endregion
-        private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer fluentDesignFormContainer1;
+        private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer showUsercontrol;
         private DevExpress.XtraBars.Navigation.AccordionControl accordionControl1;
-        private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement1;
         private DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl fluentDesignFormControl1;
         private DevExpress.XtraBars.BarButtonItem barButtonItem1;
     }

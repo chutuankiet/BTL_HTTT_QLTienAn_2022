@@ -37,8 +37,12 @@
     <Reference Include="DevExpress.Mvvm.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.Printing.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -61,11 +65,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="GUI\DaiDoi\NhapDanhSach.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\DaiDoi\NhapDanhSach.Designer.cs">
+      <DependentUpon>NhapDanhSach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Lop\Lop_NhapDS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Lop\Lop_NhapDS.Designer.cs">
+      <DependentUpon>Lop_NhapDS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ThemLoaiNghi.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="GUI\ThemLoaiNghi.Designer.cs">
+      <DependentUpon>ThemLoaiNghi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\ThongtinHV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ThongtinHV.Designer.cs">
+      <DependentUpon>ThongtinHV.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -74,19 +96,41 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\CanBo.cs" />
-    <Compile Include="Model\ChiTietNghi.cs" />
-    <Compile Include="Model\DangKyNghi.cs" />
-    <Compile Include="Model\DanhSachNghi.cs" />
+    <Compile Include="Model\ChiTietLoaiNghi.cs" />
+    <Compile Include="Model\ChiTietRaNgoai.cs" />
+    <Compile Include="Model\DanhSachRaNgoai.cs" />
     <Compile Include="Model\DonVi.cs" />
+    <Compile Include="Model\DotThanhToan.cs" />
     <Compile Include="Model\HocVien.cs" />
-    <Compile Include="Model\QLTienAn_Model.cs" />
-    <Compile Include="Model\ThanhToan.cs" />
+    <Compile Include="Model\LoaiHocVien.cs" />
+    <Compile Include="Model\Lop.cs" />
+    <Compile Include="Model\PhieuThanhToan.cs" />
+    <Compile Include="Model\QLTA_model.cs" />
+    <Compile Include="Model\TaiKhoan.cs" />
     <Compile Include="Model\TieuChuanAn.cs" />
-    <Compile Include="Model\TTDangNhap.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="QLTienAnDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLTienAnDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="QLTienAnDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLTienAnDataSet1.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="GUI\DaiDoi\NhapDanhSach.resx">
+      <DependentUpon>NhapDanhSach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Lop\Lop_NhapDS.resx">
+      <DependentUpon>Lop_NhapDS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ThemLoaiNghi.resx">
+      <DependentUpon>ThemLoaiNghi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ThongtinHV.resx">
+      <DependentUpon>ThongtinHV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -102,6 +146,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\HTTT_QLTienAn.Model.HocVien.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -111,12 +156,36 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="QLTienAnDataSet.xsc">
+      <DependentUpon>QLTienAnDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLTienAnDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLTienAnDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLTienAnDataSet.xss">
+      <DependentUpon>QLTienAnDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="QLTienAnDataSet1.xsc">
+      <DependentUpon>QLTienAnDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QLTienAnDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QLTienAnDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLTienAnDataSet1.xss">
+      <DependentUpon>QLTienAnDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="GUI\" />
+    <Folder Include="GUI\Admin\" />
+    <Folder Include="GUI\NhaBep\" />
+    <Folder Include="GUI\TieuDoan\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

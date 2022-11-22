@@ -6,30 +6,30 @@ namespace HTTT_QLTienAn.Model
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("ThanhToan")]
-    public partial class ThanhToan
+    [Table("DotThanhToan")]
+    public partial class DotThanhToan
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public ThanhToan()
+        public DotThanhToan()
         {
-            DangKyNghis = new HashSet<DangKyNghi>();
+            PhieuThanhToans = new HashSet<PhieuThanhToan>();
         }
 
         [Key]
-        public int MaThanhToan { get; set; }
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int MaDot { get; set; }
 
-        public int TongTien { get; set; }
+        [Required]
+        [StringLength(100)]
+        public string TenDot { get; set; }
 
         [Column(TypeName = "date")]
-        public DateTime? NgayTT { get; set; }
+        public DateTime? NgayBD { get; set; }
 
-        public int? TrangThaiTT { get; set; }
-
-        public int? MaHocVien { get; set; }
+        [Column(TypeName = "date")]
+        public DateTime? NgayKT { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DangKyNghi> DangKyNghis { get; set; }
-
-        public virtual HocVien HocVien { get; set; }
+        public virtual ICollection<PhieuThanhToan> PhieuThanhToans { get; set; }
     }
 }
