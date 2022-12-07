@@ -7,10 +7,6 @@ on:
     branches: [ "main" ]
 
 jobs:
-  strategy:
-      matrix:
-        configuration: [Debug, Release] 
-
   build:
     runs-on: windows-latest
 
@@ -41,8 +37,6 @@ jobs:
     - name: Build Solution
       run: |
         msbuild.exe $env:Solution_Name /nologo /nr:false /p:DeployOnBuild=true /p:DeployDefaultTarget=WebPublish /p:WebPublishMethod=FileSystem /p:DeleteExistingFiles=True /p:platform="Any CPU" /p:configuration="Release" /p:PublishUrl="../_build"
-     - name: See curent dir
-      run: dir    
 
     - name: 'Zip files'
       run: 7z a -tzip D:\a\$env:Dir_Name\$env:Dir_Name\$env:Proj_Dir_Name\bin\Release\release-artifact.zip D:\a\$env:Dir_Name\$env:Dir_Name\$env:Proj_Dir_Name\bin\Release
