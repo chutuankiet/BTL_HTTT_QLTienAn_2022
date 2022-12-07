@@ -12,11 +12,14 @@ namespace HTTT_QLTienAn.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public TieuChuanAn()
         {
-            HocViens = new HashSet<HocVien>();
+            LoaiHocViens = new HashSet<LoaiHocVien>();
         }
 
         [Key]
         public int MaTCA { get; set; }
+
+        [StringLength(50)]
+        public string TenTCA { get; set; }
 
         public int TienAnSang { get; set; }
 
@@ -24,12 +27,10 @@ namespace HTTT_QLTienAn.Model
 
         public int TienAnToi { get; set; }
 
-        public int TienAnCoBan { get; set; }
-
         [Column(TypeName = "date")]
         public DateTime NgayApDung { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<HocVien> HocViens { get; set; }
+        public virtual ICollection<LoaiHocVien> LoaiHocViens { get; set; }
     }
 }

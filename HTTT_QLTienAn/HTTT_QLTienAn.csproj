@@ -39,6 +39,9 @@
     <Reference Include="DevExpress.Utils.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -61,11 +64,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
-      <SubType>Form</SubType>
+    <Compile Include="Data\GetData.cs" />
+    <Compile Include="GUI\NhaBep_ThanhToan.cs">
+      <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="GUI\NhaBep_ThanhToan.Designer.cs">
+      <DependentUpon>NhaBep_ThanhToan.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -74,19 +78,27 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\CanBo.cs" />
-    <Compile Include="Model\ChiTietNghi.cs" />
-    <Compile Include="Model\DangKyNghi.cs" />
-    <Compile Include="Model\DanhSachNghi.cs" />
+    <Compile Include="Model\ChiTietLoaiNghi.cs" />
+    <Compile Include="Model\ChiTietRaNgoai.cs" />
+    <Compile Include="Model\DanhSachRaNgoai.cs" />
     <Compile Include="Model\DonVi.cs" />
+    <Compile Include="Model\DotThanhToan.cs" />
     <Compile Include="Model\HocVien.cs" />
-    <Compile Include="Model\QLTienAn_Model.cs" />
-    <Compile Include="Model\ThanhToan.cs" />
+    <Compile Include="Model\LoaiHocVien.cs" />
+    <Compile Include="Model\Lop.cs" />
+    <Compile Include="Model\lstCatCom.cs" />
+    <Compile Include="Model\Model1.cs" />
+    <Compile Include="Model\NhaBep_CatComChuaThanhToan.cs" />
+    <Compile Include="Model\NhaBep_LichSuCatComDaThanhToan.cs" />
+    <Compile Include="Model\NhaBep_lstCatCom.cs" />
+    <Compile Include="Model\NhaBep_TimDeTaoThanhToan.cs" />
+    <Compile Include="Model\PhieuThanhToan.cs" />
+    <Compile Include="Model\TaiKhoan.cs" />
     <Compile Include="Model\TieuChuanAn.cs" />
-    <Compile Include="Model\TTDangNhap.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\NhaBep_ThanhToan.resx">
+      <DependentUpon>NhaBep_ThanhToan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -115,8 +127,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="GUI\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -12,8 +12,7 @@ namespace HTTT_QLTienAn.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public HocVien()
         {
-            DangKyNghis = new HashSet<DangKyNghi>();
-            ThanhToans = new HashSet<ThanhToan>();
+            ChiTietRaNgoais = new HashSet<ChiTietRaNgoai>();
         }
 
         [Key]
@@ -34,21 +33,19 @@ namespace HTTT_QLTienAn.Model
         [StringLength(20)]
         public string ChucVu { get; set; }
 
-        public int? MaDonVi { get; set; }
+        public int? MaLop { get; set; }
 
-        public int? MaTCA { get; set; }
+        public int? MaLHV { get; set; }
 
-        [StringLength(50)]
-        public string Lop { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DangKyNghi> DangKyNghis { get; set; }
-
-        public virtual DonVi DonVi { get; set; }
-
-        public virtual TieuChuanAn TieuChuanAn { get; set; }
+        public int? MaTK { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ThanhToan> ThanhToans { get; set; }
+        public virtual ICollection<ChiTietRaNgoai> ChiTietRaNgoais { get; set; }
+
+        public virtual Lop Lop { get; set; }
+
+        public virtual LoaiHocVien LoaiHocVien { get; set; }
+
+        public virtual TaiKhoan TaiKhoan { get; set; }
     }
 }
