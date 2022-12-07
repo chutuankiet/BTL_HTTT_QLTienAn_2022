@@ -16,7 +16,6 @@ namespace HTTT_QLTienAn.Model
         }
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int MaTCA { get; set; }
 
         [StringLength(50)]

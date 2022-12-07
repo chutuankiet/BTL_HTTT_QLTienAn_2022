@@ -10,7 +10,6 @@ namespace HTTT_QLTienAn.Model
     public partial class PhieuThanhToan
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int MaThanhToan { get; set; }
 
         public int TongTien { get; set; }

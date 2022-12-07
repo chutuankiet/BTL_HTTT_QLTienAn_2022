@@ -16,7 +16,6 @@ namespace HTTT_QLTienAn.Model
         }
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int MaDangKy { get; set; }
 
         [Required]
@@ -30,10 +29,10 @@ namespace HTTT_QLTienAn.Model
         public int? MaDS { get; set; }
 
         [Column(TypeName = "date")]
-        public DateTime? NgayDi { get; set; }
+        public DateTime NgayDi { get; set; }
 
         [Column(TypeName = "date")]
-        public DateTime? NgayVe { get; set; }
+        public DateTime NgayVe { get; set; }
 
         public virtual ChiTietLoaiNghi ChiTietLoaiNghi { get; set; }
 

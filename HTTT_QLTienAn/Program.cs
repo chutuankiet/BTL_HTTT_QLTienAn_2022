@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using HTTT_QLTienAn.GUI;
 
 namespace HTTT_QLTienAn
 {
@@ -16,7 +17,8 @@ namespace HTTT_QLTienAn
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            //Application.Run(new MainForm());
+            Application.Run(new ThongtinHV(1,1,true));
         }
     }
 }

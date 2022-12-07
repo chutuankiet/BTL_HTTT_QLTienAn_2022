@@ -16,7 +16,6 @@ namespace HTTT_QLTienAn.Model
         }
 
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int MaDS { get; set; }
 
         [Column(TypeName = "date")]

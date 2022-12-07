@@ -20,42 +20,18 @@ namespace HTTT_QLTienAn.GUI.Lop
 
         DanhSachRaNgoai ds = new DanhSachRaNgoai();
 
-    
+
         public Lop_NhapDS()
         {
             InitializeComponent();
             ds.NgayDK = DateTime.Now;
             ds.PheDuyet = -1;
             ds.MaCBc = MainForm.MaID;
-            //ds.MaDS = db.DanhSachRaNgoais.Select(m => m.MaDS).Last();\
-            ds.MaDS = 0;
-            if(db.DanhSachRaNgoais.Count() > 0)
-            {
-                ds.MaDS = db.DanhSachRaNgoais.Select(m => m.MaDS).LastOrDefault();
-            }
-
-
-
-
-
-
-
+            //ds.MaDS = db.DanhSachRaNgoais.Select(m => m.MaDS).Last();
 
         }
 
-        private void radioGroup1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            RadioGroup edit = sender as RadioGroup;
-            if (edit.SelectedIndex == 2)
-            {
-                ThongtinHV newform = new ThongtinHV();
-                newform.Show();
-            }
-            else if (edit.SelectedIndex == 1)
-            {
-                
-            }
-        }
+
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
@@ -71,9 +47,58 @@ namespace HTTT_QLTienAn.GUI.Lop
             int MaDK = listDK[index].MaDangKy;
 
 
-            
+        }
+
+        private int MaHVCurrent = 0;
+
+        //private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        //{
+        //    MaHVCurrent= Convert.ToInt32(gridView1.GetRowCellValue(e.RowHandle, "MaHocVien")); ;
+        //    txtHoTen.EditValue = gridView1.GetRowCellValue(e.RowHandle, "HoTen").ToString();
+        //    txtLop.Text = gridView1.GetRowCellValue(e.RowHandle, "Lop").ToString();
 
 
+        //}
+
+        private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        {
+            MaHVCurrent = Convert.ToInt32(gridView1.GetRowCellValue(e.RowHandle, "MaHocVien")); ;
+            txtHoTen.EditValue = gridView1.GetRowCellValue(e.RowHandle, "HoTen").ToString();
+            txtLop.Text = gridView1.GetRowCellValue(e.RowHandle, "Lop").ToString();
+        }
+
+        private void Lop_NhapDS_Load(object sender, EventArgs e)
+        {
+            List<ChiTietLoaiNghi> LoaiNghis = db.ChiTietLoaiNghis.Select(m => m).ToList();
+
+            cbLoainghi.DataSource = LoaiNghis;
+            cbLoainghi.ValueMember = "MaLoaiNghi";
+            cbLoainghi.DisplayMember = "TenLoaiNghi";
+
+
+            var DSHocVien = (
+                from a in db.HocViens
+                join b in db.Lops on a.MaLop equals b.MaLop
+                select new Model.HocVien_DangKiNghi
+                {
+                    MaHocVien = a.MaHocVien,
+                    HoTen = a.HoTen,
+                    NgaySinh = a.NgaySinh,
+                    Lop = b.TenLop,
+                    NgayBDNghi = DateTime.Now,
+                    NgayKTNghi = DateTime.Now
+
+                }).ToList();
+            dsLop.DataSource = DSHocVien;
+
+
+        }
+
+        private void gridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
+        {
+            MaHVCurrent = Convert.ToInt32(gridView1.GetRowCellValue(e.RowHandle, "MaHocVien")); ;
+            txtHoTen.Text = gridView1.GetRowCellValue(e.RowHandle, "HoTen").ToString();
+            txtLop.Text = gridView1.GetRowCellValue(e.RowHandle, "Lop").ToString();
         }
     }
 }
