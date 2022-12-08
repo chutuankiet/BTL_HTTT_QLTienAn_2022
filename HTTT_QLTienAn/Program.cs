@@ -17,8 +17,9 @@ namespace HTTT_QLTienAn
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            //Application.Run(new MainForm());
-            Application.Run(new ThongtinHV(1,1,true));
+            Application.Run(new LoginForm());
+            //Application.Run(new ThongTinDK_HV(1, 1, true));
+            //Application.Run(new ThemLoaiNghi());
         }
     }
 }

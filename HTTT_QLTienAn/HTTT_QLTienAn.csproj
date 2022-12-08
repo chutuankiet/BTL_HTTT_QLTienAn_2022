@@ -33,12 +33,64 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Charts.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\CHU-TUAN-KIET\Desktop\HTTT_QLTienAn\bin\Debug\DevExpress.Charts.v19.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Charts.v20.1.Core">
+      <HintPath>C:\Users\CHU-TUAN-KIET\Desktop\HTTT_QLTienAn\bin\Debug\DevExpress.Charts.v20.1.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.CodeParser.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\CHU-TUAN-KIET\Desktop\HTTT_QLTienAn\bin\Debug\DevExpress.CodeParser.v19.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.CodeParser.v20.1">
+      <HintPath>C:\Users\CHU-TUAN-KIET\Desktop\HTTT_QLTienAn\bin\Debug\DevExpress.CodeParser.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Data.Desktop.v20.1">
+      <HintPath>C:\Users\CHU-TUAN-KIET\Desktop\HTTT_QLTienAn\bin\Debug\DevExpress.Data.Desktop.v20.1.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.Data.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.DataAccess.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\CHU-TUAN-KIET\Desktop\HTTT_QLTienAn\bin\Debug\DevExpress.DataAccess.v19.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v19.2.UI, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\CHU-TUAN-KIET\Desktop\HTTT_QLTienAn\bin\Debug\DevExpress.DataAccess.v19.2.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.DataAccess.v20.1">
+      <HintPath>C:\Users\CHU-TUAN-KIET\Desktop\HTTT_QLTienAn\bin\Debug\DevExpress.DataAccess.v20.1.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Diagram.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\CHU-TUAN-KIET\Desktop\HTTT_QLTienAn\bin\Debug\DevExpress.Diagram.v19.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Images.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\CHU-TUAN-KIET\Desktop\HTTT_QLTienAn\bin\Debug\DevExpress.Images.v19.2.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Images.v20.1">
+      <HintPath>C:\Users\CHU-TUAN-KIET\Desktop\HTTT_QLTienAn\bin\Debug\DevExpress.Images.v20.1.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.Mvvm.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Users\CHU-TUAN-KIET\Desktop\HTTT_QLTienAn\bin\Debug\DevExpress.Office.v19.2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.Office.v20.1.Core">
+      <HintPath>C:\Users\CHU-TUAN-KIET\Desktop\HTTT_QLTienAn\bin\Debug\DevExpress.Office.v20.1.Core.dll</HintPath>
+    </Reference>
     <Reference Include="DevExpress.Printing.v19.2.Core, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Xpo.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraBars.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.2.Extensions, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.2.UI, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.2.Web, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraCharts.v19.2.Wizard, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraDiagram.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraGrid.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraLayout.v19.2, Version=19.2.5.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
@@ -65,17 +117,71 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="GUI\DaiDoi\NhapDanhSach.cs">
+    <Compile Include="GUI\Admin\Admin_QLHocVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\DaiDoi\NhapDanhSach.Designer.cs">
-      <DependentUpon>NhapDanhSach.cs</DependentUpon>
+    <Compile Include="GUI\Admin\Admin_QLHocVien.Designer.cs">
+      <DependentUpon>Admin_QLHocVien.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\Lop\Lop_DaXacNhan.cs">
+    <Compile Include="GUI\Admin\Admin_QLCanBo.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="GUI\Lop\Lop_DaXacNhan.Designer.cs">
-      <DependentUpon>Lop_DaXacNhan.cs</DependentUpon>
+    <Compile Include="GUI\Admin\Admin_QLCanBo.Designer.cs">
+      <DependentUpon>Admin_QLCanBo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\Admin_QLDonVi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\Admin_QLDonVi.Designer.cs">
+      <DependentUpon>Admin_QLDonVi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\Admin_QLTaiKhoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\Admin_QLTaiKhoan.Designer.cs">
+      <DependentUpon>Admin_QLTaiKhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\Admin_QLTieuChuanAn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\Admin_QLTieuChuanAn.Designer.cs">
+      <DependentUpon>Admin_QLTieuChuanAn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DaiDoi\DaiDoi_ChoPheDuyet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\DaiDoi\DaiDoi_ChoPheDuyet.Designer.cs">
+      <DependentUpon>DaiDoi_ChoPheDuyet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DaiDoi\DaiDoi_DaHuyPheDuyet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\DaiDoi\DaiDoi_DaHuyPheDuyet.Designer.cs">
+      <DependentUpon>DaiDoi_DaHuyPheDuyet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DaiDoi\DaiDoi_DaPheDuyet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\DaiDoi\DaiDoi_DaPheDuyet.Designer.cs">
+      <DependentUpon>DaiDoi_DaPheDuyet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Lop\Lop_ChoPheDuyet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Lop\Lop_ChoPheDuyet.Designer.cs">
+      <DependentUpon>Lop_ChoPheDuyet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Lop\Lop_DaHuy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Lop\Lop_DaHuy.Designer.cs">
+      <DependentUpon>Lop_DaHuy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Lop\Lop_DaPheDuyet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Lop\Lop_DaPheDuyet.Designer.cs">
+      <DependentUpon>Lop_DaPheDuyet.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Lop\Lop_NhapDS.cs">
       <SubType>UserControl</SubType>
@@ -83,17 +189,65 @@
     <Compile Include="GUI\Lop\Lop_NhapDS.Designer.cs">
       <DependentUpon>Lop_NhapDS.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\NhaBep\NhaBep_QuanLyDS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\NhaBep\NhaBep_QuanLyDS.Designer.cs">
+      <DependentUpon>NhaBep_QuanLyDS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NhaBep\NhaBep_ThanhToan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\NhaBep\NhaBep_ThanhToan.Designer.cs">
+      <DependentUpon>NhaBep_ThanhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NhaBep\NhaBep_ThongKe.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\NhaBep\NhaBep_ThongKe.Designer.cs">
+      <DependentUpon>NhaBep_ThongKe.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\ThemLoaiNghi.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\ThemLoaiNghi.Designer.cs">
       <DependentUpon>ThemLoaiNghi.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\ThongTinDK_HV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\ThongTinDK_HV.Designer.cs">
+      <DependentUpon>ThongTinDK_HV.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\ThongtinHV.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\ThongtinHV.Designer.cs">
       <DependentUpon>ThongtinHV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\TieuDoan\TieuDoan_ChoPheDuyet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\TieuDoan\TieuDoan_ChoPheDuyet.Designer.cs">
+      <DependentUpon>TieuDoan_ChoPheDuyet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\TieuDoan\TieuDoan_DaHuy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\TieuDoan\TieuDoan_DaHuy.Designer.cs">
+      <DependentUpon>TieuDoan_DaHuy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\TieuDoan\TieuDoan_DaPheDuyet.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\TieuDoan\TieuDoan_DaPheDuyet.Designer.cs">
+      <DependentUpon>TieuDoan_DaPheDuyet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
@@ -127,20 +281,71 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLTienAnDataSet1.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="GUI\DaiDoi\NhapDanhSach.resx">
-      <DependentUpon>NhapDanhSach.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Admin\Admin_QLHocVien.resx">
+      <DependentUpon>Admin_QLHocVien.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="GUI\Lop\Lop_DaXacNhan.resx">
-      <DependentUpon>Lop_DaXacNhan.cs</DependentUpon>
+    <EmbeddedResource Include="GUI\Admin\Admin_QLCanBo.resx">
+      <DependentUpon>Admin_QLCanBo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\Admin_QLDonVi.resx">
+      <DependentUpon>Admin_QLDonVi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\Admin_QLTaiKhoan.resx">
+      <DependentUpon>Admin_QLTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\Admin_QLTieuChuanAn.resx">
+      <DependentUpon>Admin_QLTieuChuanAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DaiDoi\DaiDoi_ChoPheDuyet.resx">
+      <DependentUpon>DaiDoi_ChoPheDuyet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DaiDoi\DaiDoi_DaHuyPheDuyet.resx">
+      <DependentUpon>DaiDoi_DaHuyPheDuyet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DaiDoi\DaiDoi_DaPheDuyet.resx">
+      <DependentUpon>DaiDoi_DaPheDuyet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Lop\Lop_ChoPheDuyet.resx">
+      <DependentUpon>Lop_ChoPheDuyet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Lop\Lop_DaHuy.resx">
+      <DependentUpon>Lop_DaHuy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Lop\Lop_DaPheDuyet.resx">
+      <DependentUpon>Lop_DaPheDuyet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Lop\Lop_NhapDS.resx">
       <DependentUpon>Lop_NhapDS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NhaBep\NhaBep_QuanLyDS.resx">
+      <DependentUpon>NhaBep_QuanLyDS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NhaBep\NhaBep_ThanhToan.resx">
+      <DependentUpon>NhaBep_ThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NhaBep\NhaBep_ThongKe.resx">
+      <DependentUpon>NhaBep_ThongKe.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\ThemLoaiNghi.resx">
       <DependentUpon>ThemLoaiNghi.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\ThongTinDK_HV.resx">
+      <DependentUpon>ThongTinDK_HV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\ThongtinHV.resx">
       <DependentUpon>ThongtinHV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TieuDoan\TieuDoan_ChoPheDuyet.resx">
+      <DependentUpon>TieuDoan_ChoPheDuyet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TieuDoan\TieuDoan_DaHuy.resx">
+      <DependentUpon>TieuDoan_DaHuy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TieuDoan\TieuDoan_DaPheDuyet.resx">
+      <DependentUpon>TieuDoan_DaPheDuyet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -154,6 +359,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\HTTT_QLTienAn.Model.HocVien.datasource" />
@@ -192,10 +398,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
-    <Folder Include="GUI\Admin\" />
-    <Folder Include="GUI\NhaBep\" />
-    <Folder Include="GUI\TieuDoan\" />
+    <None Include="Resources\icons8_user_96px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -64,7 +64,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.paneldk = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.cbLoainghi = new System.Windows.Forms.ComboBox();
-            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
+            this.btnThemLoaiNghi = new DevExpress.XtraEditors.SimpleButton();
             this.txtToi = new DevExpress.XtraEditors.TextEdit();
             this.txtTrua = new DevExpress.XtraEditors.TextEdit();
             this.txtSang = new DevExpress.XtraEditors.TextEdit();
@@ -347,7 +347,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             // panel1
             // 
             this.panel1.Controls.Add(this.cbLoainghi);
-            this.panel1.Controls.Add(this.btnThem);
+            this.panel1.Controls.Add(this.btnThemLoaiNghi);
             this.panel1.Controls.Add(this.txtToi);
             this.panel1.Controls.Add(this.txtTrua);
             this.panel1.Controls.Add(this.txtSang);
@@ -385,16 +385,16 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.cbLoainghi.Size = new System.Drawing.Size(155, 24);
             this.cbLoainghi.TabIndex = 33;
             // 
-            // btnThem
+            // btnThemLoaiNghi
             // 
-            this.btnThem.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnThem.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
-            this.btnThem.Location = new System.Drawing.Point(410, 113);
-            this.btnThem.Margin = new System.Windows.Forms.Padding(4);
-            this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(130, 23);
-            this.btnThem.TabIndex = 32;
-            this.btnThem.Text = "Thêm loại nghỉ";
+            this.btnThemLoaiNghi.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnThemLoaiNghi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
+            this.btnThemLoaiNghi.Location = new System.Drawing.Point(410, 113);
+            this.btnThemLoaiNghi.Margin = new System.Windows.Forms.Padding(4);
+            this.btnThemLoaiNghi.Name = "btnThemLoaiNghi";
+            this.btnThemLoaiNghi.Size = new System.Drawing.Size(130, 23);
+            this.btnThemLoaiNghi.TabIndex = 32;
+            this.btnThemLoaiNghi.Text = "Thêm loại nghỉ";
             // 
             // txtToi
             // 
@@ -671,7 +671,7 @@ namespace HTTT_QLTienAn.GUI.Lop
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
-        private DevExpress.XtraEditors.SimpleButton btnThem;
+        private DevExpress.XtraEditors.SimpleButton btnThemLoaiNghi;
         private DevExpress.XtraEditors.TextEdit txtToi;
         private DevExpress.XtraEditors.TextEdit txtTrua;
         private DevExpress.XtraEditors.TextEdit txtSang;
