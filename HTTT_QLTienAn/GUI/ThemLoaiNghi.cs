@@ -40,9 +40,9 @@ namespace HTTT_QLTienAn.GUI
         {
             int index = cbLoaiNghi.SelectedIndex;
             txtTenLoaiNghi.Text = ListLoaiNghi[index].TenLoaiNghi.ToString();
-            txtSang.Text = ListLoaiNghi[index].SoBuoiSang.ToString();
-            txtTrua.Text = ListLoaiNghi[index].SoBuoiTrua.ToString();
-            txtToi.Text = ListLoaiNghi[index].SoBuoiToi.ToString();
+            lbSang.Text = ListLoaiNghi[index].SoBuoiSang.ToString();
+            lbTrua.Text = ListLoaiNghi[index].SoBuoiTrua.ToString();
+            lbToi.Text = ListLoaiNghi[index].SoBuoiToi.ToString();
 
 
 
@@ -64,9 +64,9 @@ namespace HTTT_QLTienAn.GUI
             ChiTietLoaiNghi newct = new ChiTietLoaiNghi
             {
                 TenLoaiNghi = txtTenLoaiNghi.Text,
-                SoBuoiSang = Convert.ToInt32(txtSang.Text),
-                SoBuoiTrua = Convert.ToInt32(txtTrua.Text),
-                SoBuoiToi = Convert.ToInt32(txtToi.Text),
+                SoBuoiSang = Convert.ToInt32(lbSang.Text),
+                SoBuoiTrua = Convert.ToInt32(lbTrua.Text),
+                SoBuoiToi = Convert.ToInt32(lbToi.Text),
 
             };
 

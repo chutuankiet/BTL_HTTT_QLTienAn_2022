@@ -52,6 +52,9 @@ namespace HTTT_QLTienAn.GUI
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.label7 = new System.Windows.Forms.Label();
             this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.lbSang = new System.Windows.Forms.Label();
+            this.lbTrua = new System.Windows.Forms.Label();
+            this.lbToi = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.txtTenLoaiNghi.Properties)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
@@ -173,6 +176,9 @@ namespace HTTT_QLTienAn.GUI
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.lbToi);
+            this.panel1.Controls.Add(this.lbTrua);
+            this.panel1.Controls.Add(this.lbSang);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.textEdit1);
             this.panel1.Controls.Add(this.label5);
@@ -306,6 +312,39 @@ namespace HTTT_QLTienAn.GUI
             this.textEdit1.Size = new System.Drawing.Size(271, 22);
             this.textEdit1.TabIndex = 59;
             // 
+            // lbSang
+            // 
+            this.lbSang.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbSang.AutoSize = true;
+            this.lbSang.Location = new System.Drawing.Point(305, 247);
+            this.lbSang.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbSang.Name = "lbSang";
+            this.lbSang.Size = new System.Drawing.Size(20, 21);
+            this.lbSang.TabIndex = 60;
+            this.lbSang.Text = "0";
+            // 
+            // lbTrua
+            // 
+            this.lbTrua.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbTrua.AutoSize = true;
+            this.lbTrua.Location = new System.Drawing.Point(506, 247);
+            this.lbTrua.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTrua.Name = "lbTrua";
+            this.lbTrua.Size = new System.Drawing.Size(16, 17);
+            this.lbTrua.TabIndex = 61;
+            this.lbTrua.Text = "0";
+            // 
+            // lbToi
+            // 
+            this.lbToi.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.lbToi.AutoSize = true;
+            this.lbToi.Location = new System.Drawing.Point(698, 247);
+            this.lbToi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbToi.Name = "lbToi";
+            this.lbToi.Size = new System.Drawing.Size(16, 17);
+            this.lbToi.TabIndex = 62;
+            this.lbToi.Text = "0";
+            // 
             // ThemLoaiNghi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -354,5 +393,8 @@ namespace HTTT_QLTienAn.GUI
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private System.Windows.Forms.Label label7;
         private DevExpress.XtraEditors.TextEdit textEdit1;
+        private System.Windows.Forms.Label lbToi;
+        private System.Windows.Forms.Label lbTrua;
+        private System.Windows.Forms.Label lbSang;
     }
 }
