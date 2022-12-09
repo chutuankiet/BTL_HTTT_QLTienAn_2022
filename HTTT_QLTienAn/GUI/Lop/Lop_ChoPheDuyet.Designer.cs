@@ -202,7 +202,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.Visible = true;
             this.gridColumn11.VisibleIndex = 4;
-            this.gridColumn11.Width = 76;
+            this.gridColumn11.Width = 49;
             // 
             // chkEdit
             // 
@@ -220,7 +220,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 3;
-            this.gridColumn10.Width = 80;
+            this.gridColumn10.Width = 52;
             // 
             // gridColumn9
             // 
@@ -230,7 +230,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 2;
-            this.gridColumn9.Width = 259;
+            this.gridColumn9.Width = 126;
             // 
             // gridColumn8
             // 
@@ -240,7 +240,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 1;
-            this.gridColumn8.Width = 112;
+            this.gridColumn8.Width = 64;
             // 
             // gridColumn7
             // 
@@ -250,7 +250,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 0;
-            this.gridColumn7.Width = 275;
+            this.gridColumn7.Width = 158;
             // 
             // gridView2
             // 
@@ -274,6 +274,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.gridColumn12.Name = "gridColumn12";
             this.gridColumn12.Visible = true;
             this.gridColumn12.VisibleIndex = 5;
+            this.gridColumn12.Width = 58;
             // 
             // gridControl2
             // 

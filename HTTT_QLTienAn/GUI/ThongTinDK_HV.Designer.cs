@@ -97,10 +97,11 @@ namespace HTTT_QLTienAn.GUI
             this.cbLoaiNghi.Name = "cbLoaiNghi";
             this.cbLoaiNghi.Size = new System.Drawing.Size(215, 24);
             this.cbLoaiNghi.TabIndex = 72;
+            this.cbLoaiNghi.SelectedIndexChanged += new System.EventHandler(this.cbLoaiNghi_SelectedIndexChanged);
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(357, 578);
+            this.btnExit.Location = new System.Drawing.Point(358, 663);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(94, 29);
             this.btnExit.TabIndex = 71;
@@ -109,7 +110,7 @@ namespace HTTT_QLTienAn.GUI
             // 
             // btnXoa
             // 
-            this.btnXoa.Location = new System.Drawing.Point(210, 578);
+            this.btnXoa.Location = new System.Drawing.Point(211, 663);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(94, 29);
             this.btnXoa.TabIndex = 70;
@@ -117,11 +118,12 @@ namespace HTTT_QLTienAn.GUI
             // 
             // btnSua
             // 
-            this.btnSua.Location = new System.Drawing.Point(66, 578);
+            this.btnSua.Location = new System.Drawing.Point(67, 663);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(94, 29);
             this.btnSua.TabIndex = 69;
             this.btnSua.Text = "Sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // lbTenDot
             // 
@@ -142,6 +144,9 @@ namespace HTTT_QLTienAn.GUI
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEnd.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEnd.Properties.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.dateEnd.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateEnd.Properties.Mask.EditMask = "dd/MM/yyyy";
             this.dateEnd.Size = new System.Drawing.Size(215, 22);
             this.dateEnd.TabIndex = 67;
             // 
@@ -154,11 +159,15 @@ namespace HTTT_QLTienAn.GUI
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateStart.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateStart.Properties.DisplayFormat.FormatString = "dd/MM/yyyy";
+            this.dateStart.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateStart.Properties.Mask.EditMask = "dd/MM/yyyy";
             this.dateStart.Size = new System.Drawing.Size(215, 22);
             this.dateStart.TabIndex = 66;
             // 
             // txtToi
             // 
+            this.txtToi.Enabled = false;
             this.txtToi.Location = new System.Drawing.Point(190, 507);
             this.txtToi.Name = "txtToi";
             this.txtToi.Size = new System.Drawing.Size(215, 22);
@@ -166,6 +175,7 @@ namespace HTTT_QLTienAn.GUI
             // 
             // txtTrua
             // 
+            this.txtTrua.Enabled = false;
             this.txtTrua.Location = new System.Drawing.Point(190, 479);
             this.txtTrua.Name = "txtTrua";
             this.txtTrua.Size = new System.Drawing.Size(215, 22);
@@ -173,6 +183,7 @@ namespace HTTT_QLTienAn.GUI
             // 
             // txtSang
             // 
+            this.txtSang.Enabled = false;
             this.txtSang.Location = new System.Drawing.Point(190, 452);
             this.txtSang.Name = "txtSang";
             this.txtSang.Size = new System.Drawing.Size(215, 22);
@@ -382,7 +393,7 @@ namespace HTTT_QLTienAn.GUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(508, 659);
+            this.ClientSize = new System.Drawing.Size(508, 722);
             this.Controls.Add(this.lbMaDS);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.cbLoaiNghi);

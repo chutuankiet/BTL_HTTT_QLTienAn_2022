@@ -165,6 +165,12 @@
     <Compile Include="GUI\DaiDoi\DaiDoi_DaPheDuyet.Designer.cs">
       <DependentUpon>DaiDoi_DaPheDuyet.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Lop\CatCom_HV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Lop\CatCom_HV.Designer.cs">
+      <DependentUpon>CatCom_HV.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Lop\Lop_ChoPheDuyet.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -219,12 +225,6 @@
     <Compile Include="GUI\ThongTinDK_HV.Designer.cs">
       <DependentUpon>ThongTinDK_HV.cs</DependentUpon>
     </Compile>
-    <Compile Include="GUI\ThongtinHV.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="GUI\ThongtinHV.Designer.cs">
-      <DependentUpon>ThongtinHV.cs</DependentUpon>
-    </Compile>
     <Compile Include="GUI\TieuDoan\TieuDoan_ChoPheDuyet.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -256,6 +256,7 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\CanBo.cs" />
+    <Compile Include="Model\ChiTietCatCom.cs" />
     <Compile Include="Model\ChiTietLoaiNghi.cs" />
     <Compile Include="Model\ChiTietRaNgoai.cs" />
     <Compile Include="Model\DanhSachRaNgoai.cs" />
@@ -266,7 +267,7 @@
     <Compile Include="Model\LoaiHocVien.cs" />
     <Compile Include="Model\Lop.cs" />
     <Compile Include="Model\PhieuThanhToan.cs" />
-    <Compile Include="Model\QLTAmodel.cs" />
+    <Compile Include="Model\QLTA_model.cs" />
     <Compile Include="Model\TaiKhoan.cs" />
     <Compile Include="Model\TieuChuanAn.cs" />
     <Compile Include="Program.cs" />
@@ -295,6 +296,9 @@
     <EmbeddedResource Include="GUI\DaiDoi\DaiDoi_DaPheDuyet.resx">
       <DependentUpon>DaiDoi_DaPheDuyet.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Lop\CatCom_HV.resx">
+      <DependentUpon>CatCom_HV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Lop\Lop_ChoPheDuyet.resx">
       <DependentUpon>Lop_ChoPheDuyet.cs</DependentUpon>
     </EmbeddedResource>
@@ -321,9 +325,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\ThongTinDK_HV.resx">
       <DependentUpon>ThongTinDK_HV.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="GUI\ThongtinHV.resx">
-      <DependentUpon>ThongtinHV.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\TieuDoan\TieuDoan_ChoPheDuyet.resx">
       <DependentUpon>TieuDoan_ChoPheDuyet.cs</DependentUpon>

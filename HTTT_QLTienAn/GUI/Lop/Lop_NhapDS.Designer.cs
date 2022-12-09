@@ -30,17 +30,7 @@ namespace HTTT_QLTienAn.GUI.Lop
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Lop_NhapDS));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.dsLop = new DevExpress.XtraGrid.GridControl();
@@ -51,6 +41,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.NgaySinh = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Lop = new DevExpress.XtraGrid.Columns.GridColumn();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.btnSendList = new DevExpress.XtraEditors.SimpleButton();
             this.paneldsdk = new System.Windows.Forms.Panel();
             this.gridControl2 = new DevExpress.XtraGrid.GridControl();
@@ -58,11 +49,14 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.btnCT = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnXoa = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.btnCT = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.paneldk = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txtLyDo = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.cbLoainghi = new System.Windows.Forms.ComboBox();
             this.btnThemLoaiNghi = new DevExpress.XtraEditors.SimpleButton();
             this.txtToi = new DevExpress.XtraEditors.TextEdit();
@@ -90,11 +84,12 @@ namespace HTTT_QLTienAn.GUI.Lop
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.paneldsdk.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCT)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnXoa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCT)).BeginInit();
             this.paneldk.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtToi.Properties)).BeginInit();
@@ -114,8 +109,8 @@ namespace HTTT_QLTienAn.GUI.Lop
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.73964F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 49.26036F));
             this.tableLayoutPanel1.Controls.Add(this.groupControl1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.groupControl2, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(4, 4);
@@ -134,7 +129,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.groupControl1.Location = new System.Drawing.Point(4, 4);
             this.groupControl1.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(668, 846);
+            this.groupControl1.Size = new System.Drawing.Size(677, 846);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Danh sách lớp";
             // 
@@ -148,7 +143,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.dsLop.MainView = this.gridView1;
             this.dsLop.Margin = new System.Windows.Forms.Padding(4);
             this.dsLop.Name = "dsLop";
-            this.dsLop.Size = new System.Drawing.Size(664, 827);
+            this.dsLop.Size = new System.Drawing.Size(673, 827);
             this.dsLop.TabIndex = 0;
             this.dsLop.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -212,37 +207,47 @@ namespace HTTT_QLTienAn.GUI.Lop
             // 
             // groupControl2
             // 
-            this.groupControl2.Controls.Add(this.btnSendList);
+            this.groupControl2.Controls.Add(this.panel2);
             this.groupControl2.Controls.Add(this.paneldsdk);
             this.groupControl2.Controls.Add(this.paneldk);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl2.Location = new System.Drawing.Point(680, 4);
+            this.groupControl2.Location = new System.Drawing.Point(689, 4);
             this.groupControl2.Margin = new System.Windows.Forms.Padding(4);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(668, 846);
+            this.groupControl2.Size = new System.Drawing.Size(659, 846);
             this.groupControl2.TabIndex = 1;
             this.groupControl2.Text = "Đăng ký cắt cơm";
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnSendList);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(2, 636);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(655, 100);
+            this.panel2.TabIndex = 6;
             // 
             // btnSendList
             // 
             this.btnSendList.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnSendList.Appearance.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
             this.btnSendList.Appearance.Options.UseBackColor = true;
-            this.btnSendList.Location = new System.Drawing.Point(141, 787);
+            this.btnSendList.Location = new System.Drawing.Point(141, 21);
             this.btnSendList.Margin = new System.Windows.Forms.Padding(4);
             this.btnSendList.Name = "btnSendList";
             this.btnSendList.Size = new System.Drawing.Size(381, 53);
             this.btnSendList.TabIndex = 5;
             this.btnSendList.Text = "Gửi danh sách";
+            this.btnSendList.Click += new System.EventHandler(this.btnSendList_Click);
             // 
             // paneldsdk
             // 
             this.paneldsdk.Controls.Add(this.gridControl2);
             this.paneldsdk.Dock = System.Windows.Forms.DockStyle.Top;
-            this.paneldsdk.Location = new System.Drawing.Point(2, 360);
+            this.paneldsdk.Location = new System.Drawing.Point(2, 362);
             this.paneldsdk.Margin = new System.Windows.Forms.Padding(4);
             this.paneldsdk.Name = "paneldsdk";
-            this.paneldsdk.Size = new System.Drawing.Size(664, 419);
+            this.paneldsdk.Size = new System.Drawing.Size(655, 274);
             this.paneldsdk.TabIndex = 1;
             // 
             // gridControl2
@@ -256,7 +261,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.gridControl2.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnXoa,
             this.btnCT});
-            this.gridControl2.Size = new System.Drawing.Size(664, 419);
+            this.gridControl2.Size = new System.Drawing.Size(655, 274);
             this.gridControl2.TabIndex = 0;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -267,6 +272,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.gridColumn1,
             this.gridColumn2,
             this.gridColumn3,
+            this.gridColumn5,
             this.gridColumn4});
             this.gridView2.DetailHeight = 431;
             this.gridView2.GridControl = this.gridControl2;
@@ -286,7 +292,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             // gridColumn2
             // 
             this.gridColumn2.Caption = "Lớp";
-            this.gridColumn2.FieldName = "TenLop";
+            this.gridColumn2.FieldName = "Lop";
             this.gridColumn2.MinWidth = 25;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
@@ -295,24 +301,23 @@ namespace HTTT_QLTienAn.GUI.Lop
             // 
             // gridColumn3
             // 
-            this.gridColumn3.Caption = "Xem chi tiết";
-            this.gridColumn3.ColumnEdit = this.btnCT;
+            this.gridColumn3.Caption = "Ngày đi";
+            this.gridColumn3.FieldName = "NgayBDNghi";
             this.gridColumn3.MinWidth = 25;
             this.gridColumn3.Name = "gridColumn3";
-            this.gridColumn3.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 106;
+            this.gridColumn3.Width = 94;
             // 
-            // btnCT
+            // gridColumn5
             // 
-            this.btnCT.AutoHeight = false;
-            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
-            this.btnCT.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.btnCT.Name = "btnCT";
-            this.btnCT.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            this.btnCT.Click += new System.EventHandler(this.btnCT_Click);
+            this.gridColumn5.Caption = "Loại nghỉ";
+            this.gridColumn5.FieldName = "TenLoaiNghi";
+            this.gridColumn5.MinWidth = 25;
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 3;
+            this.gridColumn5.Width = 94;
             // 
             // gridColumn4
             // 
@@ -320,19 +325,31 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.gridColumn4.ColumnEdit = this.btnXoa;
             this.gridColumn4.MinWidth = 25;
             this.gridColumn4.Name = "gridColumn4";
+            this.gridColumn4.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 3;
-            this.gridColumn4.Width = 66;
+            this.gridColumn4.VisibleIndex = 4;
+            this.gridColumn4.Width = 94;
             // 
             // btnXoa
             // 
             this.btnXoa.AutoHeight = false;
-            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
             this.btnXoa.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph)});
+            this.btnXoa.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ContextImageOptions.Image")));
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
+            // 
+            // btnCT
+            // 
+            this.btnCT.AutoHeight = false;
+            this.btnCT.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph)});
+            this.btnCT.ButtonsStyle = DevExpress.XtraEditors.Controls.BorderStyles.NoBorder;
+            this.btnCT.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnCT.ContextImageOptions.Image")));
+            this.btnCT.Name = "btnCT";
+            this.btnCT.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnCT.Click += new System.EventHandler(this.btnCT_Click);
             // 
             // paneldk
             // 
@@ -341,11 +358,13 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.paneldk.Location = new System.Drawing.Point(2, 17);
             this.paneldk.Margin = new System.Windows.Forms.Padding(4);
             this.paneldk.Name = "paneldk";
-            this.paneldk.Size = new System.Drawing.Size(664, 343);
+            this.paneldk.Size = new System.Drawing.Size(655, 345);
             this.paneldk.TabIndex = 0;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtLyDo);
+            this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.cbLoainghi);
             this.panel1.Controls.Add(this.btnThemLoaiNghi);
             this.panel1.Controls.Add(this.txtToi);
@@ -369,69 +388,100 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(664, 343);
+            this.panel1.Size = new System.Drawing.Size(655, 345);
             this.panel1.TabIndex = 19;
+            // 
+            // txtLyDo
+            // 
+            this.txtLyDo.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.txtLyDo.Location = new System.Drawing.Point(33, 265);
+            this.txtLyDo.Multiline = true;
+            this.txtLyDo.Name = "txtLyDo";
+            this.txtLyDo.Size = new System.Drawing.Size(166, 48);
+            this.txtLyDo.TabIndex = 35;
+            // 
+            // label1
+            // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(30, 237);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(56, 17);
+            this.label1.TabIndex = 34;
+            this.label1.Text = "Lý do : ";
             // 
             // cbLoainghi
             // 
-            this.cbLoainghi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
+            this.cbLoainghi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.cbLoainghi.FormattingEnabled = true;
             this.cbLoainghi.Items.AddRange(new object[] {
             "sáng",
             "trưa",
             "tối"});
-            this.cbLoainghi.Location = new System.Drawing.Point(219, 114);
+            this.cbLoainghi.Location = new System.Drawing.Point(383, 48);
             this.cbLoainghi.Name = "cbLoainghi";
-            this.cbLoainghi.Size = new System.Drawing.Size(155, 24);
+            this.cbLoainghi.Size = new System.Drawing.Size(166, 24);
             this.cbLoainghi.TabIndex = 33;
+            this.cbLoainghi.SelectedIndexChanged += new System.EventHandler(this.cbLoainghi_SelectedIndexChanged);
             // 
             // btnThemLoaiNghi
             // 
-            this.btnThemLoaiNghi.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.btnThemLoaiNghi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.ImageOptions.Image")));
-            this.btnThemLoaiNghi.Location = new System.Drawing.Point(410, 113);
+            this.btnThemLoaiNghi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnThemLoaiNghi.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnThemLoaiNghi.ImageOptions.Image")));
+            this.btnThemLoaiNghi.Location = new System.Drawing.Point(383, 79);
             this.btnThemLoaiNghi.Margin = new System.Windows.Forms.Padding(4);
             this.btnThemLoaiNghi.Name = "btnThemLoaiNghi";
-            this.btnThemLoaiNghi.Size = new System.Drawing.Size(130, 23);
+            this.btnThemLoaiNghi.Size = new System.Drawing.Size(166, 23);
             this.btnThemLoaiNghi.TabIndex = 32;
-            this.btnThemLoaiNghi.Text = "Thêm loại nghỉ";
+            this.btnThemLoaiNghi.Text = "Thêm loại nghỉ mới";
+            this.btnThemLoaiNghi.Click += new System.EventHandler(this.btnThemLoaiNghi_Click);
             // 
             // txtToi
             // 
-            this.txtToi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtToi.Location = new System.Drawing.Point(561, 211);
+            this.txtToi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtToi.Enabled = false;
+            this.txtToi.Location = new System.Drawing.Point(436, 223);
             this.txtToi.Margin = new System.Windows.Forms.Padding(4);
             this.txtToi.Name = "txtToi";
+            this.txtToi.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.txtToi.Properties.Appearance.Options.UseBackColor = true;
             this.txtToi.Properties.ReadOnly = true;
-            this.txtToi.Size = new System.Drawing.Size(60, 22);
+            this.txtToi.Size = new System.Drawing.Size(113, 22);
             this.txtToi.TabIndex = 30;
             // 
             // txtTrua
             // 
-            this.txtTrua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtTrua.Location = new System.Drawing.Point(314, 213);
+            this.txtTrua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtTrua.Enabled = false;
+            this.txtTrua.Location = new System.Drawing.Point(436, 193);
             this.txtTrua.Margin = new System.Windows.Forms.Padding(4);
             this.txtTrua.Name = "txtTrua";
+            this.txtTrua.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.txtTrua.Properties.Appearance.Options.UseBackColor = true;
             this.txtTrua.Properties.ReadOnly = true;
-            this.txtTrua.Size = new System.Drawing.Size(60, 22);
+            this.txtTrua.Size = new System.Drawing.Size(113, 22);
             this.txtTrua.TabIndex = 29;
             // 
             // txtSang
             // 
-            this.txtSang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtSang.Location = new System.Drawing.Point(87, 213);
+            this.txtSang.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSang.Enabled = false;
+            this.txtSang.Location = new System.Drawing.Point(436, 163);
             this.txtSang.Margin = new System.Windows.Forms.Padding(4);
             this.txtSang.Name = "txtSang";
+            this.txtSang.Properties.Appearance.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(240)))), ((int)(((byte)(240)))));
+            this.txtSang.Properties.Appearance.Options.UseBackColor = true;
             this.txtSang.Properties.ReadOnly = true;
-            this.txtSang.Size = new System.Drawing.Size(60, 22);
+            this.txtSang.Size = new System.Drawing.Size(113, 22);
             this.txtSang.TabIndex = 28;
             // 
             // label21
             // 
-            this.label21.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label21.AutoSize = true;
             this.label21.Font = new System.Drawing.Font("Tahoma", 7.8F);
-            this.label21.Location = new System.Drawing.Point(30, 117);
+            this.label21.Location = new System.Drawing.Point(380, 18);
             this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(151, 17);
@@ -440,11 +490,9 @@ namespace HTTT_QLTienAn.GUI.Lop
             // 
             // label20
             // 
-            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label20.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(522, 216);
+            this.label20.Location = new System.Drawing.Point(380, 224);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(31, 17);
@@ -453,11 +501,9 @@ namespace HTTT_QLTienAn.GUI.Lop
             // 
             // label19
             // 
-            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label19.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(30, 216);
+            this.label19.Location = new System.Drawing.Point(380, 166);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(48, 17);
@@ -466,11 +512,9 @@ namespace HTTT_QLTienAn.GUI.Lop
             // 
             // label18
             // 
-            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label18.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(264, 216);
+            this.label18.Location = new System.Drawing.Point(380, 196);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(42, 17);
@@ -479,10 +523,10 @@ namespace HTTT_QLTienAn.GUI.Lop
             // 
             // label17
             // 
-            this.label17.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Tahoma", 7.8F);
-            this.label17.Location = new System.Drawing.Point(30, 171);
+            this.label17.Location = new System.Drawing.Point(380, 131);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(113, 17);
@@ -491,48 +535,48 @@ namespace HTTT_QLTienAn.GUI.Lop
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSubmit.Location = new System.Drawing.Point(219, 268);
+            this.btnSubmit.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSubmit.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.btnSubmit.Appearance.Options.UseForeColor = true;
+            this.btnSubmit.Location = new System.Drawing.Point(383, 265);
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(4);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(237, 36);
+            this.btnSubmit.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.btnSubmit.Size = new System.Drawing.Size(173, 48);
             this.btnSubmit.TabIndex = 7;
-            this.btnSubmit.Text = "Thêm";
+            this.btnSubmit.Text = "Thêm vào danh sách";
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // dateEnd
             // 
-            this.dateEnd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.dateEnd.EditValue = null;
-            this.dateEnd.Location = new System.Drawing.Point(390, 69);
+            this.dateEnd.Location = new System.Drawing.Point(33, 200);
             this.dateEnd.Margin = new System.Windows.Forms.Padding(4);
             this.dateEnd.Name = "dateEnd";
             this.dateEnd.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEnd.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEnd.Size = new System.Drawing.Size(231, 22);
+            this.dateEnd.Size = new System.Drawing.Size(166, 22);
             this.dateEnd.TabIndex = 18;
             // 
             // dateStart
             // 
-            this.dateStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.dateStart.EditValue = null;
-            this.dateStart.Location = new System.Drawing.Point(390, 29);
+            this.dateStart.Location = new System.Drawing.Point(33, 149);
             this.dateStart.Margin = new System.Windows.Forms.Padding(4);
             this.dateStart.Name = "dateStart";
             this.dateStart.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateStart.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateStart.Size = new System.Drawing.Size(231, 22);
+            this.dateStart.Size = new System.Drawing.Size(166, 22);
             this.dateStart.TabIndex = 19;
             // 
             // txtLop
             // 
-            this.txtLop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtLop.Location = new System.Drawing.Point(87, 67);
+            this.txtLop.Enabled = false;
+            this.txtLop.Location = new System.Drawing.Point(33, 92);
             this.txtLop.Margin = new System.Windows.Forms.Padding(4);
             this.txtLop.Name = "txtLop";
             this.txtLop.Properties.ReadOnly = true;
@@ -541,8 +585,8 @@ namespace HTTT_QLTienAn.GUI.Lop
             // 
             // txtHoTen
             // 
-            this.txtHoTen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
-            this.txtHoTen.Location = new System.Drawing.Point(87, 31);
+            this.txtHoTen.Enabled = false;
+            this.txtHoTen.Location = new System.Drawing.Point(33, 45);
             this.txtHoTen.Margin = new System.Windows.Forms.Padding(4);
             this.txtHoTen.Name = "txtHoTen";
             this.txtHoTen.Properties.ReadOnly = true;
@@ -551,11 +595,8 @@ namespace HTTT_QLTienAn.GUI.Lop
             // 
             // label13
             // 
-            this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(30, 34);
+            this.label13.Location = new System.Drawing.Point(30, 15);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(49, 17);
@@ -564,11 +605,8 @@ namespace HTTT_QLTienAn.GUI.Lop
             // 
             // label14
             // 
-            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(261, 70);
+            this.label14.Location = new System.Drawing.Point(30, 175);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(96, 17);
@@ -577,11 +615,9 @@ namespace HTTT_QLTienAn.GUI.Lop
             // 
             // label15
             // 
-            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(30, 70);
+            this.label15.Location = new System.Drawing.Point(30, 71);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(31, 17);
@@ -590,11 +626,8 @@ namespace HTTT_QLTienAn.GUI.Lop
             // 
             // label16
             // 
-            this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(261, 34);
+            this.label16.Location = new System.Drawing.Point(30, 128);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(121, 17);
@@ -618,11 +651,12 @@ namespace HTTT_QLTienAn.GUI.Lop
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.paneldsdk.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnCT)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnXoa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnCT)).EndInit();
             this.paneldk.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -666,7 +700,6 @@ namespace HTTT_QLTienAn.GUI.Lop
         private DevExpress.XtraEditors.DateEdit dateEnd;
         private DevExpress.XtraEditors.DateEdit dateStart;
         private DevExpress.XtraEditors.TextEdit txtLop;
-        private DevExpress.XtraEditors.TextEdit txtHoTen;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
@@ -676,11 +709,16 @@ namespace HTTT_QLTienAn.GUI.Lop
         private DevExpress.XtraEditors.TextEdit txtTrua;
         private DevExpress.XtraEditors.TextEdit txtSang;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnCT;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnXoa;
         private System.Windows.Forms.ComboBox cbLoainghi;
         private System.Windows.Forms.BindingSource hocVienBindingSource;
+        private DevExpress.XtraEditors.TextEdit txtHoTen;
+        private System.Windows.Forms.TextBox txtLyDo;
+        private System.Windows.Forms.Label label1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private System.Windows.Forms.Panel panel2;
     }
 }

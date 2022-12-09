@@ -16,22 +16,22 @@ namespace HTTT_QLTienAn.GUI.Lop
     {
         QLTA_model db = new QLTA_model();
 
-        List<ChiTietRaNgoai> listDK = new List<ChiTietRaNgoai>();
+        List<HocVien_DangKiNghi> listDK = new List<HocVien_DangKiNghi>();
 
         DanhSachRaNgoai ds = new DanhSachRaNgoai();
+
+        List<ChiTietLoaiNghi> ListLoaiNghi = new List<ChiTietLoaiNghi>();
 
 
         public Lop_NhapDS()
         {
             InitializeComponent();
-            ds.NgayDK = DateTime.Now;
-            ds.PheDuyet = -1;
-            ds.MaCBc = MainForm.MaID;
-            //ds.MaDS = db.DanhSachRaNgoais.Select(m => m.MaDS).Last();
-
+            
+           
         }
 
-
+        int MaLopTruong = 0;
+        int MaLop = 0;
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
@@ -47,6 +47,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             int MaDK = listDK[index].MaDangKy;
 
 
+
         }
 
         private int MaHVCurrent = 0;
@@ -60,6 +61,17 @@ namespace HTTT_QLTienAn.GUI.Lop
 
         //}
 
+        public void reloadCombox(object sender, FormClosedEventArgs e)
+        {
+            cbLoainghi.DataSource = null;
+            ListLoaiNghi = db.ChiTietLoaiNghis.ToList();
+
+            cbLoainghi.DataSource = ListLoaiNghi;
+
+            cbLoainghi.ValueMember = "MaLoaiNghi";
+            cbLoainghi.DisplayMember = "TenLoaiNghi";
+        }
+
         private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
             MaHVCurrent = Convert.ToInt32(gridView1.GetRowCellValue(e.RowHandle, "MaHocVien")); ;
@@ -67,18 +79,32 @@ namespace HTTT_QLTienAn.GUI.Lop
             txtLop.Text = gridView1.GetRowCellValue(e.RowHandle, "Lop").ToString();
         }
 
+
+
         private void Lop_NhapDS_Load(object sender, EventArgs e)
         {
-            List<ChiTietLoaiNghi> LoaiNghis = db.ChiTietLoaiNghis.Select(m => m).ToList();
+            MaLopTruong = MainForm.MaID;
+            Model.Lop tempLop = db.Lops.Where(m => m.MaLopTruong == MaLopTruong).FirstOrDefault();
 
-            cbLoainghi.DataSource = LoaiNghis;
+            MaLop = tempLop.MaLop;
+
+
+            dateStart.DateTime = DateTime.Now;
+            dateEnd.DateTime = DateTime.Now;
+
+            ListLoaiNghi = db.ChiTietLoaiNghis.ToList();
+
+            cbLoainghi.DataSource = ListLoaiNghi;
+
             cbLoainghi.ValueMember = "MaLoaiNghi";
             cbLoainghi.DisplayMember = "TenLoaiNghi";
+
 
 
             var DSHocVien = (
                 from a in db.HocViens
                 join b in db.Lops on a.MaLop equals b.MaLop
+                where b.MaLop == MaLop
                 select new Model.HocVien_DangKiNghi
                 {
                     MaHocVien = a.MaHocVien,
@@ -89,16 +115,139 @@ namespace HTTT_QLTienAn.GUI.Lop
                     NgayKTNghi = DateTime.Now
 
                 }).ToList();
+
+
             dsLop.DataSource = DSHocVien;
 
 
         }
 
-        private void gridView1_RowCellClick(object sender, DevExpress.XtraGrid.Views.Grid.RowCellClickEventArgs e)
+
+        private void SetDefaultState()
         {
-            MaHVCurrent = Convert.ToInt32(gridView1.GetRowCellValue(e.RowHandle, "MaHocVien")); ;
-            txtHoTen.Text = gridView1.GetRowCellValue(e.RowHandle, "HoTen").ToString();
-            txtLop.Text = gridView1.GetRowCellValue(e.RowHandle, "Lop").ToString();
+            listDK.Clear();
+
+            txtHoTen.Text = "";
+            txtLop.Text = "";
+            txtLyDo.Text = "";
+            txtSang.Text = "";
+            txtTrua.Text = "";
+            txtToi.Text = "";
+
+
+            dateStart.DateTime = DateTime.Now;
+            dateEnd.DateTime = DateTime.Now;
+
+            gridControl2.DataSource = null;
+        }
+
+
+        private void btnThemLoaiNghi_Click(object sender, EventArgs e)
+        {
+            ThemLoaiNghi newform = new ThemLoaiNghi();
+            newform.FormClosed += new FormClosedEventHandler(reloadCombox);
+            newform.Show();
+        }
+
+
+
+        private void cbLoainghi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            int index = cbLoainghi.SelectedIndex;
+            txtSang.Text = ListLoaiNghi[index].SoBuoiSang.ToString();
+            txtTrua.Text = ListLoaiNghi[index].SoBuoiTrua.ToString();
+            txtToi.Text = ListLoaiNghi[index].SoBuoiToi.ToString();
+            txtLyDo.Text = ListLoaiNghi[index].TenLoaiNghi;
+        }
+
+        private bool checkDate()
+        {
+            return dateStart.DateTime <= dateEnd.DateTime;
+        }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+            if (!checkDate())
+            {
+
+                MessageBox.Show("Ngày bắt đầu phải nhỏ hơn hoặc bằng ngày trả phép !", "Error");
+                return;
+            }
+
+            if (MaHVCurrent == 0)
+            {
+                MessageBox.Show("Chưa chọn học viên !", "Error");
+                return;
+            }
+
+            if (txtSang.Text == null || txtTrua.Text == null && txtToi.Text == null)
+            {
+                MessageBox.Show("Chưa chọn loại nghỉ ! ", "Error");
+                return;
+            }
+
+            int maloainghi = Convert.ToInt32(cbLoainghi.SelectedValue);
+
+            for(int i = 0; i < listDK.Count; i++)
+            {
+                if(listDK[i].MaHocVien == MaHVCurrent)
+                {
+                    MessageBox.Show("Đã có trong danh sách ! ", "Error");
+                    return;
+                }
+            }
+
+
+            HocVien_DangKiNghi hv_dk = new HocVien_DangKiNghi
+            {
+                MaHocVien = MaHVCurrent,
+                HoTen = txtHoTen.Text,
+                Lop = txtLop.Text,
+                NgayBDNghi = dateStart.DateTime,
+                NgayKTNghi = dateEnd.DateTime,
+                MaLoaiNghi = maloainghi,
+                TenLoaiNghi = db.ChiTietLoaiNghis.Where(m => m.MaLoaiNghi == maloainghi).FirstOrDefault().TenLoaiNghi,
+                LyDo = txtLyDo.Text
+            };
+
+            listDK.Add(hv_dk);
+            gridControl2.DataSource = null;
+            gridControl2.DataSource = listDK;
+
+
+        }
+
+        private void btnSendList_Click(object sender, EventArgs e)
+        {
+
+            ds.NgayDK = DateTime.Now;
+            ds.PheDuyet = -1;
+            db.DanhSachRaNgoais.Add(ds);
+            db.SaveChanges();
+
+
+            foreach (var item in listDK)
+            {
+                db.ChiTietRaNgoais.Add(new ChiTietRaNgoai
+                {
+                    LyDo = item.LyDo,
+                    MaHocVien = item.MaHocVien,
+                    MaLoaiNghi = item.MaLoaiNghi,
+                    MaDS = ds.MaDS,
+                    NgayDi = item.NgayBDNghi,
+                    NgayVe = item.NgayKTNghi
+                });
+            }
+            db.SaveChanges();
+            MessageBox.Show("Gửi danh sách thành công");
+
+            SetDefaultState();
+
+
+
         }
     }
 }
+
+
+//thông tin chi tiết khi chưa lưu về database

@@ -82,6 +82,8 @@ namespace HTTT_QLTienAn.GUI
             db.ChiTietLoaiNghis.Add(newct);
             db.SaveChanges();
             MessageBox.Show("Thêm loại nghỉ thành công!!!");
+
+            
         }
     }
 }

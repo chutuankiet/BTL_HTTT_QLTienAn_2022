@@ -23,14 +23,19 @@ namespace HTTT_QLTienAn.GUI
         public bool editable = false;
         public int MaHocVien;
         public int MaDangKy;
-        public ThongTinDK_HV(int mahv, int madk, bool edit)
+
+        private ChiTietRaNgoai chitietrn;
+        public ThongTinDK_HV(int madk, bool edit)
         {
             InitializeComponent();
-            MaHocVien = mahv;
             MaDangKy = madk;
 
+            chitietrn = db.ChiTietRaNgoais.Where(m => m.MaDangKy == madk).FirstOrDefault();
+
+            MaHocVien = (int)chitietrn.MaHocVien;
+
             //editable = edit;
-            if (!editable) notEditable();
+            if (editable) notEditable();
 
         }
 
@@ -48,37 +53,45 @@ namespace HTTT_QLTienAn.GUI
 
         QLTA_model db = new QLTA_model();
 
+        List<ChiTietLoaiNghi> ListLoaiNghi;
+
 
 
         private void ThongTinDK_HV_Load(object sender, EventArgs e)
         {
 
             lbMaDK.Text = MaDangKy.ToString();
-            ChiTietRaNgoai itemChiTiet = db.ChiTietRaNgoais.Where(m => m.MaDangKy == MaDangKy).FirstOrDefault();
-            HocVien hv = db.HocViens.Where(m => m.MaHocVien == itemChiTiet.MaHocVien).FirstOrDefault();
+
+            HocVien hv = db.HocViens.Where(m => m.MaHocVien == chitietrn.MaHocVien).FirstOrDefault();
+
             Model.Lop itemLop = db.Lops.Where(m => m.MaLop == hv.MaLop).FirstOrDefault();
 
 
-            lbMaDS.Text = itemChiTiet.MaDS.ToString();
+            lbMaDS.Text = chitietrn.MaDS.ToString();
             lbTenHV.Text = hv.HoTen;
             lbMaHV.Text = hv.MaHocVien.ToString();
             lbTenLop.Text = itemLop.TenLop;
             lbTenDaiDoi.Text = db.DonVis.Where(m => m.MaDonVi == itemLop.MaDonVi).FirstOrDefault().TenDonVi;
             lbTenLoaiHV.Text = db.LoaiHocViens.Where(m => m.MaLHV == hv.MaLHV).FirstOrDefault().TenLHV;
 
-            dateStart.Text = itemChiTiet.NgayDi.ToString("dd/MM/yyyy");
-            dateEnd.Text = itemChiTiet.NgayVe.ToString("dd/MM/yyyy");
+            dateStart.Text = chitietrn.NgayDi.ToString("dd/MM/yyyy");
+            dateEnd.Text = chitietrn.NgayVe.ToString("dd/MM/yyyy");
 
-            ChiTietLoaiNghi itemLoaiNghi = db.ChiTietLoaiNghis.Where(m => m.MaLoaiNghi == itemChiTiet.MaLoaiNghi).FirstOrDefault();
+            ChiTietLoaiNghi itemLoaiNghi = db.ChiTietLoaiNghis.Where(m => m.MaLoaiNghi == chitietrn.MaLoaiNghi).FirstOrDefault();
 
-            var dsloainghi = (from ds in db.ChiTietLoaiNghis
-                              select new
-                              {
-                                  ds.TenLoaiNghi,
-                                  MaLoaiNghi = ds.MaLoaiNghi
-                              }
-                              ).ToList();
-            cbLoaiNghi.DataSource = dsloainghi;
+
+            //var dsloainghi = (from ds in db.ChiTietLoaiNghis
+            //                  select new
+            //                  {
+            //                      ds.TenLoaiNghi,
+            //                      MaLoaiNghi = ds.MaLoaiNghi
+            //                  }
+            //                  ).ToList();
+
+            ListLoaiNghi = db.ChiTietLoaiNghis.ToList();
+
+
+            cbLoaiNghi.DataSource = ListLoaiNghi;
 
             var loainghi_hv = (from ct in db.ChiTietRaNgoais
                                join ctln in db.ChiTietLoaiNghis on ct.MaLoaiNghi equals ctln.MaLoaiNghi
@@ -108,6 +121,31 @@ namespace HTTT_QLTienAn.GUI
             {
                 this.Close();
             }
+        }
+
+        private void btnSua_Click(object sender, EventArgs e)
+        {
+
+            chitietrn.NgayDi = dateStart.DateTime;
+            chitietrn.NgayVe = dateEnd.DateTime;
+
+
+            chitietrn.MaLoaiNghi = cbLoaiNghi.SelectedIndex;
+
+            db.SaveChanges();
+
+            MessageBox.Show("Sửa thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+
+        }
+
+        private void cbLoaiNghi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            int index = cbLoaiNghi.SelectedIndex;
+            txtSang.Text = ListLoaiNghi[index].SoBuoiSang.ToString();
+            txtTrua.Text = ListLoaiNghi[index].SoBuoiTrua.ToString();
+            txtToi.Text = ListLoaiNghi[index].SoBuoiToi.ToString();
         }
     }
 }

@@ -135,7 +135,7 @@ namespace HTTT_QLTienAn
             this.Controls.Add(this.labelControl1);
             this.Controls.Add(this.txtUsername);
             this.Name = "LoginForm";
-            this.Text = "Đăng nhập";
+            this.Text = "Đăng nhập QLTA MTA";
             ((System.ComponentModel.ISupportInitialize)(this.txtPassword.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtUsername.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.svgImageBox1)).EndInit();

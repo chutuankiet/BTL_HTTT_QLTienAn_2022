@@ -13,6 +13,7 @@ namespace HTTT_QLTienAn.Model
         }
 
         public virtual DbSet<CanBo> CanBoes { get; set; }
+        public virtual DbSet<ChiTietCatCom> ChiTietCatComs { get; set; }
         public virtual DbSet<ChiTietLoaiNghi> ChiTietLoaiNghis { get; set; }
         public virtual DbSet<ChiTietRaNgoai> ChiTietRaNgoais { get; set; }
         public virtual DbSet<DanhSachRaNgoai> DanhSachRaNgoais { get; set; }
