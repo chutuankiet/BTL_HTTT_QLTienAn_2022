@@ -120,6 +120,7 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
             this.dgvDaXacNhan_View.GridControl = this.dgvDaXacNhan;
             this.dgvDaXacNhan_View.Name = "dgvDaXacNhan_View";
             this.dgvDaXacNhan_View.OptionsView.ShowGroupPanel = false;
+            this.dgvDaXacNhan_View.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.dgvDaXacNhan_View_RowClick);
             // 
             // gridColumn4
             // 
@@ -137,7 +138,7 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
             this.dgvDaXacNhan.Location = new System.Drawing.Point(2, 17);
             this.dgvDaXacNhan.MainView = this.dgvDaXacNhan_View;
             this.dgvDaXacNhan.Name = "dgvDaXacNhan";
-            this.dgvDaXacNhan.Size = new System.Drawing.Size(505, 728);
+            this.dgvDaXacNhan.Size = new System.Drawing.Size(504, 728);
             this.dgvDaXacNhan.TabIndex = 0;
             this.dgvDaXacNhan.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.dgvDaXacNhan_View});
@@ -150,7 +151,7 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
             this.groupControl1.Controls.Add(this.dgvDaXacNhan);
             this.groupControl1.Location = new System.Drawing.Point(3, 3);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(509, 747);
+            this.groupControl1.Size = new System.Drawing.Size(508, 747);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Danh sách đã duyệt";
             // 
@@ -254,7 +255,7 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
             this.dgvChiTietDaXacNhan.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit1,
             this.chkEdit});
-            this.dgvChiTietDaXacNhan.Size = new System.Drawing.Size(449, 728);
+            this.dgvChiTietDaXacNhan.Size = new System.Drawing.Size(450, 728);
             this.dgvChiTietDaXacNhan.TabIndex = 8;
             this.dgvChiTietDaXacNhan.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -263,9 +264,9 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
             // 
             this.groupControl2.Controls.Add(this.dgvChiTietDaXacNhan);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl2.Location = new System.Drawing.Point(518, 3);
+            this.groupControl2.Location = new System.Drawing.Point(517, 3);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(453, 747);
+            this.groupControl2.Size = new System.Drawing.Size(454, 747);
             this.groupControl2.TabIndex = 0;
             this.groupControl2.Text = "Chi tiết danh sách";
             // 

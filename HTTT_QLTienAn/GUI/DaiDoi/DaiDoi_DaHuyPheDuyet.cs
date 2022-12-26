@@ -30,7 +30,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
                                 join cbd in db.CanBoes on ds.MaCBd equals cbd.MaCanBo
                                 join dv in db.DonVis on cbc.MaDonVi equals dv.MaDonVi
 
-                                where ds.PheDuyet == -1 // tiểu đoàn đã hủy
+                                where ds.PheDuyet == -1 | ds.PheDuyet == -2// tiểu đoàn đã hủy hoặc đại đội hủy
                                 select new
                                 {
                                     MaDS = ds.MaDS,
@@ -42,7 +42,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
                 if (ds_DaHuy.Count > 0)
                 {
                     ds_DaHuy.Reverse();
-                    gridView1.OptionsBehavior.Editable = false;
+                    dgvDaHuy_View.OptionsBehavior.Editable = false;
                     gridView2.OptionsBehavior.Editable = false;
                     dgvDaHuy.DataSource = ds_DaHuy;
                 }
@@ -61,7 +61,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
         {
             try
             {
-                int mads = (int)gridView1.GetFocusedRowCellValue("MaDS");
+                int mads = (int)dgvDaHuy_View.GetFocusedRowCellValue("MaDS");
                 MaDS_DaHuy = mads.ToString();
                 var dsCTDaHuy = (from ds in db.DanhSachRaNgoais
                                  join dkn in db.DangKyNghis on ds.MaDS equals dkn.MaDS

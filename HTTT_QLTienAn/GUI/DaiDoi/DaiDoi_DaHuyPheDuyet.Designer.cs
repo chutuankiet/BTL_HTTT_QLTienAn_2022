@@ -38,7 +38,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.dgvDaHuy_View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.dgvDaHuy = new DevExpress.XtraGrid.GridControl();
             this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
@@ -54,7 +54,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDaHuy_View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDaHuy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkEdit)).BeginInit();
@@ -97,16 +97,17 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.gridColumn1.VisibleIndex = 0;
             this.gridColumn1.Width = 109;
             // 
-            // gridView1
+            // dgvDaHuy_View
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.dgvDaHuy_View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
             this.gridColumn2,
             this.gridColumn3,
             this.gridColumn4});
-            this.gridView1.GridControl = this.dgvDaHuy;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.dgvDaHuy_View.GridControl = this.dgvDaHuy;
+            this.dgvDaHuy_View.Name = "dgvDaHuy_View";
+            this.dgvDaHuy_View.OptionsView.ShowGroupPanel = false;
+            this.dgvDaHuy_View.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.dgvDaHuy_View_FocusedRowChanged);
             // 
             // gridColumn3
             // 
@@ -122,12 +123,12 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             // 
             this.dgvDaHuy.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvDaHuy.Location = new System.Drawing.Point(2, 17);
-            this.dgvDaHuy.MainView = this.gridView1;
+            this.dgvDaHuy.MainView = this.dgvDaHuy_View;
             this.dgvDaHuy.Name = "dgvDaHuy";
             this.dgvDaHuy.Size = new System.Drawing.Size(428, 728);
             this.dgvDaHuy.TabIndex = 1;
             this.dgvDaHuy.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.dgvDaHuy_View});
             // 
             // repositoryItemButtonEdit1
             // 
@@ -280,7 +281,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "DaiDoi_DaHuyPheDuyet";
             this.Size = new System.Drawing.Size(981, 760);
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDaHuy_View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDaHuy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chkEdit)).EndInit();
@@ -300,7 +301,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
+        private DevExpress.XtraGrid.Views.Grid.GridView dgvDaHuy_View;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.GridControl dgvDaHuy;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;

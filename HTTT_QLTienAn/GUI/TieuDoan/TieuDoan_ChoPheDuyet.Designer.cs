@@ -91,6 +91,7 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
             this.btnHuy.Size = new System.Drawing.Size(187, 44);
             this.btnHuy.TabIndex = 2;
             this.btnHuy.Text = "Huỷ yêu cầu";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // panel1
             // 
@@ -113,6 +114,7 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
             this.btnXacnhan.Size = new System.Drawing.Size(187, 44);
             this.btnXacnhan.TabIndex = 1;
             this.btnXacnhan.Text = "Xác nhận";
+            this.btnXacnhan.Click += new System.EventHandler(this.btnXacnhan_Click);
             // 
             // groupControl2
             // 
@@ -263,12 +265,12 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
             // dgvDSCho
             // 
             this.dgvDSCho.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDSCho.Location = new System.Drawing.Point(2, 28);
+            this.dgvDSCho.Location = new System.Drawing.Point(2, 17);
             this.dgvDSCho.MainView = this.dgvDSCho_View;
             this.dgvDSCho.Name = "dgvDSCho";
             this.dgvDSCho.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemDateEdit1});
-            this.dgvDSCho.Size = new System.Drawing.Size(428, 550);
+            this.dgvDSCho.Size = new System.Drawing.Size(428, 561);
             this.dgvDSCho.TabIndex = 0;
             this.dgvDSCho.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.dgvDSCho_View});
@@ -283,6 +285,7 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
             this.dgvDSCho_View.GridControl = this.dgvDSCho;
             this.dgvDSCho_View.Name = "dgvDSCho_View";
             this.dgvDSCho_View.OptionsView.ShowGroupPanel = false;
+            this.dgvDSCho_View.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.dgvDSCho_View_RowClick_1);
             // 
             // TenDonVi
             // 

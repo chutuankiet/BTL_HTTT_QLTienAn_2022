@@ -52,7 +52,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
 
 
                 ds_ChoPheDuyet.Reverse();
-                dgvDScCho.DataSource = ds_ChoPheDuyet;
+                dgvDSCho.DataSource = ds_ChoPheDuyet;
 
                 mads = ds_ChoPheDuyet[0].MaDS;
                 MaDS_XacNhan = mads.ToString();
@@ -75,7 +75,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
                 ds_CTChoPheDuyet.Reverse();
                 //dgvDSCho_View.OptionsBehavior.Editable = false;
                 //gridView2.OptionsBehavior.Editable = false;
-                dgvChiTietDSc1.DataSource = ds_CTChoPheDuyet;
+                dgvChiTietDS1.DataSource = ds_CTChoPheDuyet;
             }
             catch
             { }
@@ -97,9 +97,9 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
                     db.SaveChanges();
                     MessageBox.Show("Danh sách đã được huỷ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
-                dgvDScCho.DataSource = null;
+                dgvDSCho.DataSource = null;
                 LoadDS1();
-                dgvChiTietDSc1.DataSource = null;
+                dgvChiTietDS1.DataSource = null;
 
             }
 
@@ -119,9 +119,9 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             {
                 MessageBox.Show("Danh sách không tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            dgvDScCho.DataSource = null;
+            dgvDSCho.DataSource = null;
             LoadDS1();
-            dgvChiTietDSc1.DataSource = null;
+            dgvChiTietDS1.DataSource = null;
 
         }
 
@@ -131,7 +131,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
         private void dgvDSCho_View_RowClick_1(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
 
-            int maDS = Convert.ToInt32(gridView1.GetRowCellValue(e.RowHandle, "MaDS")); ;
+            int maDS = Convert.ToInt32(dgvDSCho_View.GetRowCellValue(e.RowHandle, "MaDS")); ;
 
             var ds_CTChoPheDuyet = (from ds in db.DanhSachRaNgoais
                                     join dkn in db.DangKyNghis on ds.MaDS equals dkn.MaDS
@@ -152,7 +152,9 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             ds_CTChoPheDuyet.Reverse();
             //dgvDSCho_View.OptionsBehavior.Editable = false;
             //gridView2.OptionsBehavior.Editable = false;
-            dgvChiTietDSc1.DataSource = ds_CTChoPheDuyet;
+            dgvChiTietDS1.DataSource = ds_CTChoPheDuyet;
         }
+
+        
     }
 }
