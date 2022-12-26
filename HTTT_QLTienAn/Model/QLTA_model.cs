@@ -5,10 +5,10 @@ using System.Linq;
 
 namespace HTTT_QLTienAn.Model
 {
-    public partial class QLTA : DbContext
+    public partial class QLTA_model : DbContext
     {
-        public QLTA()
-            : base("name=QLTA")
+        public QLTA_model()
+            : base("name=QLTA_model")
         {
         }
 

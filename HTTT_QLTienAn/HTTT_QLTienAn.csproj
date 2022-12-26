@@ -267,11 +267,12 @@
     <Compile Include="Model\DonVi.cs" />
     <Compile Include="Model\DotThanhToan.cs" />
     <Compile Include="Model\HocVien.cs" />
+    <Compile Include="Model\HocVien_DangKiNghi.cs" />
     <Compile Include="Model\LoaiHocVien.cs" />
     <Compile Include="Model\LoaiNghi.cs" />
     <Compile Include="Model\Lop.cs" />
     <Compile Include="Model\PhieuThanhToan.cs" />
-    <Compile Include="Model\QLTA.cs" />
+    <Compile Include="Model\QLTA_model.cs" />
     <Compile Include="Model\sysdiagram.cs" />
     <Compile Include="Model\TaiKhoan.cs" />
     <Compile Include="Model\TieuChuanAn.cs" />

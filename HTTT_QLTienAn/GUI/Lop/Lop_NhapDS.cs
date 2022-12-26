@@ -20,7 +20,7 @@ namespace HTTT_QLTienAn.GUI.Lop
 
         DanhSachRaNgoai ds = new DanhSachRaNgoai();
 
-        List<ChiTietLoaiNghi> ListLoaiNghi = new List<ChiTietLoaiNghi>();
+        List<LoaiNghi> ListLoaiNghi = new List<LoaiNghi>();
 
 
         public Lop_NhapDS()
@@ -44,7 +44,7 @@ namespace HTTT_QLTienAn.GUI.Lop
         private void btnCT_Click(object sender, EventArgs e)
         {
             int index = gridView2.FocusedRowHandle;
-            int MaDK = listDK[index].MaDangKy;
+            int MaDK = listDK[index].MaDangKyTam;
 
 
 
@@ -64,7 +64,7 @@ namespace HTTT_QLTienAn.GUI.Lop
         public void reloadCombox(object sender, FormClosedEventArgs e)
         {
             cbLoainghi.DataSource = null;
-            ListLoaiNghi = db.ChiTietLoaiNghis.ToList();
+            ListLoaiNghi = db.LoaiNghis.ToList();
 
             cbLoainghi.DataSource = ListLoaiNghi;
 
@@ -86,13 +86,13 @@ namespace HTTT_QLTienAn.GUI.Lop
             MaLopTruong = MainForm.MaID;
             Model.Lop tempLop = db.Lops.Where(m => m.MaLopTruong == MaLopTruong).FirstOrDefault();
 
-            MaLop = tempLop.MaLop;
+            cMaLop = tempLop.MaLop;
 
 
             dateStart.DateTime = DateTime.Now;
             dateEnd.DateTime = DateTime.Now;
 
-            ListLoaiNghi = db.ChiTietLoaiNghis.ToList();
+            ListLoaiNghi = db.LoaiNghis.ToList();
 
             cbLoainghi.DataSource = ListLoaiNghi;
 
@@ -206,7 +206,7 @@ namespace HTTT_QLTienAn.GUI.Lop
                 NgayBDNghi = dateStart.DateTime,
                 NgayKTNghi = dateEnd.DateTime,
                 MaLoaiNghi = maloainghi,
-                TenLoaiNghi = db.ChiTietLoaiNghis.Where(m => m.MaLoaiNghi == maloainghi).FirstOrDefault().TenLoaiNghi,
+                TenLoaiNghi = db.LoaiNghis.Where(m => m.MaLoaiNghi == maloainghi).FirstOrDefault().TenLoaiNghi,
                 LyDo = txtLyDo.Text
             };
 
@@ -228,7 +228,7 @@ namespace HTTT_QLTienAn.GUI.Lop
 
             foreach (var item in listDK)
             {
-                db.ChiTietRaNgoais.Add(new ChiTietRaNgoai
+                db.DangKyNghis.Add(new DangKyNghi
                 {
                     LyDo = item.LyDo,
                     MaHocVien = item.MaHocVien,

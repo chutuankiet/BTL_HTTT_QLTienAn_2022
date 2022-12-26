@@ -30,10 +30,10 @@ namespace HTTT_QLTienAn.Model
         public int? MaDS { get; set; }
 
         [Column(TypeName = "date")]
-        public DateTime? NgayDi { get; set; }
+        public DateTime NgayDi { get; set; }
 
         [Column(TypeName = "date")]
-        public DateTime? NgayVe { get; set; }
+        public DateTime NgayVe { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietCatCom> ChiTietCatComs { get; set; }

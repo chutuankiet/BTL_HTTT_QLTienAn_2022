@@ -21,13 +21,13 @@ namespace HTTT_QLTienAn.GUI
 
         QLTA_model db = new QLTA_model();
 
-        List<ChiTietLoaiNghi> ListLoaiNghi;
+        List<LoaiNghi> ListLoaiNghi;
 
         private void ThemLoaiNghi_Load(object sender, EventArgs e)
         {
 
 
-            ListLoaiNghi = db.ChiTietLoaiNghis.ToList();
+            ListLoaiNghi = db.LoaiNghis.ToList();
 
             cbLoaiNghi.DataSource = ListLoaiNghi;
 
@@ -61,7 +61,7 @@ namespace HTTT_QLTienAn.GUI
 
         private void btnThemloainghi_Click(object sender, EventArgs e)
         {
-            ChiTietLoaiNghi newct = new ChiTietLoaiNghi
+            LoaiNghi newct = new LoaiNghi
             {
                 TenLoaiNghi = txtTenLoaiNghi.Text,
                 SoBuoiSang = Convert.ToInt32(lbSang.Text),
@@ -79,7 +79,7 @@ namespace HTTT_QLTienAn.GUI
                 }
             }
 
-            db.ChiTietLoaiNghis.Add(newct);
+            db.LoaiNghis.Add(newct);
             db.SaveChanges();
             MessageBox.Show("Thêm loại nghỉ thành công!!!");
 

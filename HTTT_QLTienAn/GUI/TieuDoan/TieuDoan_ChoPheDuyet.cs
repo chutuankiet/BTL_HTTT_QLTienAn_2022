@@ -17,7 +17,7 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
         {
             InitializeComponent();
         }
-        public QLTA db = new QLTA();
+        public QLTA_model db = new QLTA_model();
 
         public TieuDoan_ChoPheDuyet(int maCB)
         {

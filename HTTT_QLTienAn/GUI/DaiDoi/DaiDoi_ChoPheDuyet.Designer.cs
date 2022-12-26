@@ -42,7 +42,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.dgvDSCho = new DevExpress.XtraGrid.GridControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.dgvChiTietDS1 = new DevExpress.XtraGrid.GridControl();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.btnXoa = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -53,8 +53,8 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnHuy = new System.Windows.Forms.Button();
             this.btnXacNhan = new System.Windows.Forms.Button();
+            this.btnHuy = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.chkEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.danhSachNghiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDel)).BeginInit();
@@ -63,7 +63,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietDS1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnXoa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -175,25 +175,25 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             // 
             this.dgvChiTietDS1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dgvChiTietDS1.Location = new System.Drawing.Point(2, 17);
-            this.dgvChiTietDS1.MainView = this.gridView2;
+            this.dgvChiTietDS1.MainView = this.btnXoa;
             this.dgvChiTietDS1.Name = "dgvChiTietDS1";
-            this.dgvChiTietDS1.Size = new System.Drawing.Size(526, 568);
+            this.dgvChiTietDS1.Size = new System.Drawing.Size(526, 603);
             this.dgvChiTietDS1.TabIndex = 6;
             this.dgvChiTietDS1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView2});
+            this.btnXoa});
             // 
-            // gridView2
+            // btnXoa
             // 
-            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.btnXoa.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn7,
             this.gridColumn8,
             this.gridColumn9,
             this.gridColumn10,
             this.gridColumn11,
             this.gridColumn12});
-            this.gridView2.GridControl = this.dgvChiTietDS1;
-            this.gridView2.Name = "gridView2";
-            this.gridView2.OptionsView.ShowGroupPanel = false;
+            this.btnXoa.GridControl = this.dgvChiTietDS1;
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.OptionsView.ShowGroupPanel = false;
             // 
             // gridColumn7
             // 
@@ -260,10 +260,13 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             // 
             // groupControl2
             // 
+            this.groupControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl2.Controls.Add(this.dgvChiTietDS1);
             this.groupControl2.Location = new System.Drawing.Point(3, 3);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(530, 587);
+            this.groupControl2.Size = new System.Drawing.Size(530, 622);
             this.groupControl2.TabIndex = 0;
             this.groupControl2.Text = "Chi tiết danh sách";
             // 
@@ -304,29 +307,32 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.panel1.Size = new System.Drawing.Size(530, 747);
             this.panel1.TabIndex = 1;
             // 
-            // btnHuy
-            // 
-            this.btnHuy.BackColor = System.Drawing.Color.Red;
-            this.btnHuy.ForeColor = System.Drawing.Color.White;
-            this.btnHuy.Location = new System.Drawing.Point(54, 646);
-            this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(152, 47);
-            this.btnHuy.TabIndex = 1;
-            this.btnHuy.Text = "Huỷ yêu cầu";
-            this.btnHuy.UseVisualStyleBackColor = false;
-            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
-            // 
             // btnXacNhan
             // 
             this.btnXacNhan.BackColor = System.Drawing.Color.ForestGreen;
             this.btnXacNhan.ForeColor = System.Drawing.Color.White;
-            this.btnXacNhan.Location = new System.Drawing.Point(322, 646);
+            this.btnXacNhan.Location = new System.Drawing.Point(312, 667);
             this.btnXacNhan.Name = "btnXacNhan";
             this.btnXacNhan.Size = new System.Drawing.Size(140, 47);
             this.btnXacNhan.TabIndex = 2;
             this.btnXacNhan.Text = "Xác nhận";
             this.btnXacNhan.UseVisualStyleBackColor = false;
             this.btnXacNhan.Click += new System.EventHandler(this.btnXacnhan_Click);
+            // 
+            // btnHuy
+            // 
+            this.btnHuy.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHuy.BackColor = System.Drawing.Color.Red;
+            this.btnHuy.ForeColor = System.Drawing.Color.White;
+            this.btnHuy.Location = new System.Drawing.Point(36, 667);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(152, 47);
+            this.btnHuy.TabIndex = 1;
+            this.btnHuy.Text = "Huỷ yêu cầu";
+            this.btnHuy.UseVisualStyleBackColor = false;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // DaiDoi_ChoPheDuyet
             // 
@@ -343,7 +349,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietDS1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnXoa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
@@ -369,7 +375,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraGrid.Views.Grid.GridView btnXoa;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
         private DevExpress.XtraGrid.GridControl dgvChiTietDS1;
         private DevExpress.XtraEditors.GroupControl groupControl2;

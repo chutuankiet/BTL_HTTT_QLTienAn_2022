@@ -17,7 +17,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
         {
             InitializeComponent();
         }
-        public QLTA db = new QLTA();
+        public QLTA_model db = new QLTA_model();
         public DaiDoi_ChoPheDuyet(int maCB)
         {
             InitializeComponent();
