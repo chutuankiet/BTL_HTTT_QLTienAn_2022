@@ -38,11 +38,11 @@ namespace HTTT_QLTienAn.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ChiTietCatCom> ChiTietCatComs { get; set; }
 
-        public virtual ChiTietLoaiNghi ChiTietLoaiNghi { get; set; }
-
         public virtual DanhSachRaNgoai DanhSachRaNgoai { get; set; }
 
         public virtual HocVien HocVien { get; set; }
+
+        public virtual LoaiNghi LoaiNghi { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PhieuThanhToan> PhieuThanhToans { get; set; }

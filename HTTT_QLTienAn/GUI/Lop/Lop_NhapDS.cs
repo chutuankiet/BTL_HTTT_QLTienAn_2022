@@ -20,7 +20,11 @@ namespace HTTT_QLTienAn.GUI.Lop
 
         DanhSachRaNgoai ds = new DanhSachRaNgoai();
 
-        List<ChiTietLoaiNghi> ListLoaiNghi = new List<ChiTietLoaiNghi>();
+        List<LoaiNghi> ListLoaiNghi = new List<LoaiNghi>();
+
+
+        // danh sách đăng ký nghỉ được lưu tạm tại listDK
+        // danh sách chi tiết cắt cơm lưu tạm tại lsCTCatCom
 
 
         public Lop_NhapDS()
@@ -35,22 +39,40 @@ namespace HTTT_QLTienAn.GUI.Lop
 
         private void btnXoa_Click(object sender, EventArgs e)
         {
-            int index = gridView2.FocusedRowHandle;
-            listDK.RemoveAt(index);
-            gridControl2.DataSource = null;
-            gridControl2.DataSource = listDK;
+
+            if (MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                int index = gridView2.FocusedRowHandle;
+
+                //foreach(var item in lsCTCatCom)
+                //{
+                //    if(item.MaDangKyTam == )
+                //    {
+                //        lsCTCatCom.Remove(item);
+                //    }
+                //}
+
+                lsCTCatCom.RemoveAll(m => m.MaDangKyTam == listDK[index].MaDangKyTam);
+
+                //MessageBox.Show("count = "+lsCTCatCom.Count.ToString());
+
+                listDK.RemoveAt(index);
+                gridControl2.DataSource = null;
+                gridControl2.DataSource = listDK;
+            }
         }
 
         private void btnCT_Click(object sender, EventArgs e)
         {
-            int index = gridView2.FocusedRowHandle;
-            int MaDK = listDK[index].MaDangKy;
+            //int index = gridView2.FocusedRowHandle;
+            //int MaDK = listDK[index].MaDangKy;
 
 
 
         }
 
         private int MaHVCurrent = 0;
+        private int MaDKTamCurrent = 0;
 
         //private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         //{
@@ -64,7 +86,7 @@ namespace HTTT_QLTienAn.GUI.Lop
         public void reloadCombox(object sender, FormClosedEventArgs e)
         {
             cbLoainghi.DataSource = null;
-            ListLoaiNghi = db.ChiTietLoaiNghis.ToList();
+            ListLoaiNghi = db.LoaiNghis.ToList();
 
             cbLoainghi.DataSource = ListLoaiNghi;
 
@@ -74,9 +96,11 @@ namespace HTTT_QLTienAn.GUI.Lop
 
         private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
-            MaHVCurrent = Convert.ToInt32(gridView1.GetRowCellValue(e.RowHandle, "MaHocVien")); ;
-            txtHoTen.EditValue = gridView1.GetRowCellValue(e.RowHandle, "HoTen").ToString();
-            txtLop.Text = gridView1.GetRowCellValue(e.RowHandle, "Lop").ToString();
+            
+                MaHVCurrent = Convert.ToInt32(gridView1.GetRowCellValue(e.RowHandle, "MaHocVien")); ;
+                txtHoTen.EditValue = gridView1.GetRowCellValue(e.RowHandle, "HoTen").ToString();
+                txtLop.Text = gridView1.GetRowCellValue(e.RowHandle, "Lop").ToString();
+            
         }
 
 
@@ -92,7 +116,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             dateStart.DateTime = DateTime.Now;
             dateEnd.DateTime = DateTime.Now;
 
-            ListLoaiNghi = db.ChiTietLoaiNghis.ToList();
+            ListLoaiNghi = db.LoaiNghis.ToList();
 
             cbLoainghi.DataSource = ListLoaiNghi;
 
@@ -149,7 +173,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             newform.Show();
         }
 
-
+        int sobuoinghi;
 
         private void cbLoainghi_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -158,19 +182,82 @@ namespace HTTT_QLTienAn.GUI.Lop
             txtTrua.Text = ListLoaiNghi[index].SoBuoiTrua.ToString();
             txtToi.Text = ListLoaiNghi[index].SoBuoiToi.ToString();
             txtLyDo.Text = ListLoaiNghi[index].TenLoaiNghi;
+
+            int maloainghi = ListLoaiNghi[index].MaLoaiNghi;
+            sobuoinghi = db.ChiTietLoaiNghis.Where(m => m.MaLoaiNghi == maloainghi).Count();
+
+
+            dateEnd.DateTime = dateStart.DateTime.AddDays(sobuoinghi - 1);
+
         }
 
-        private bool checkDate()
+ 
+        List<CT_CatCom_HocVien> lsCTCatCom = new List<CT_CatCom_HocVien>();
+
+
+        bool IsNotDupDate(HocVien_DangKiNghi hv)
         {
-            return dateStart.DateTime <= dateEnd.DateTime;
+            for (int i = 0; i < listDK.Count; i++)
+            {
+
+                if (listDK[i].MaHocVien == hv.MaHocVien)
+                {
+
+                    DateTime temp = hv.NgayBDNghi;
+
+                    for(int j = 0;j < sobuoinghi; j++)
+                    {
+                        int isInCT = lsCTCatCom.Where(m => DateTime.Compare(m.NgayCatCom,temp) == 0 && m.MaDangKyTam == listDK[i].MaDangKyTam).Count();
+
+                        if (isInCT  > 0)
+                        {
+                            MessageBox.Show($"Đã tồn đăng ký trong danh sách", "Thông báo !");
+                            return false;
+                        }
+                        temp = temp.AddDays(1);
+                    }
+                  
+                }
+            }
+
+            // check trung ngay trong csdl
+            DateTime ngayTemp = hv.NgayBDNghi;
+            while (DateTime.Compare(ngayTemp.AddDays(1), hv.NgayKTNghi) < 0)
+            {
+                var isDupInDB = db.ChiTietCatComs.Where(x => x.NgayCatCom == ngayTemp && x.ChiTietRaNgoai.MaHocVien == hv.MaHocVien).FirstOrDefault();
+
+                if (isDupInDB != null)
+                {
+                    MessageBox.Show($"Đã tồn tại đăng ký tại ngày {hv.NgayBDNghi.ToString("dd-MM-yyyy")}", "Thông báo !");
+
+                    return false;
+                }
+
+                ngayTemp = ngayTemp.AddDays(1);
+
+            }
+
+            return true;
         }
+
+        bool checkDateTT()
+        {
+            DateTime start = dateStart.DateTime;
+            DateTime end = dateEnd.DateTime;
+            if (DateTime.Compare(start, end) > 0)
+            {
+                MessageBox.Show("Ngày trả phép phải sau hoặc bằng ngày đăng ký nghỉ !", "Lỗi");
+                dateEnd.EditValue = dateStart.DateTime;
+                return false;
+            }
+            return true;
+        }
+
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (!checkDate())
+            if (!checkDateTT())
             {
-
-                MessageBox.Show("Ngày bắt đầu phải nhỏ hơn hoặc bằng ngày trả phép !", "Error");
                 return;
             }
 
@@ -188,16 +275,36 @@ namespace HTTT_QLTienAn.GUI.Lop
 
             int maloainghi = Convert.ToInt32(cbLoainghi.SelectedValue);
 
-            for(int i = 0; i < listDK.Count; i++)
+            //for(int i = 0; i < listDK.Count; i++)
+            //{
+            //    if(listDK[i].MaHocVien == MaHVCurrent)
+            //    {
+            //        MessageBox.Show("Đã có trong danh sách ! ", "Error");
+            //        return;
+            //    }
+            //}
+
+            // thêm chi tiết cắt cơm 
+
+            List<ChiTietLoaiNghi> Ls_ctLN = db.ChiTietLoaiNghis.Where(m => m.MaLoaiNghi == maloainghi).ToList();
+
+            MaDKTamCurrent++;
+
+            DateTime StartDateTemp = dateStart.DateTime;
+            foreach(var item in Ls_ctLN)
             {
-                if(listDK[i].MaHocVien == MaHVCurrent)
+                lsCTCatCom.Add(new CT_CatCom_HocVien
                 {
-                    MessageBox.Show("Đã có trong danh sách ! ", "Error");
-                    return;
-                }
+                    NgayCatCom = StartDateTemp,
+                    BuoiSang = item.BuoiSang,
+                    BuoiTrua = item.BuoiTrua,
+                    BuoiToi = item.BuoiToi,
+                    MaDangKyTam = MaDKTamCurrent
+                });
+                StartDateTemp.AddDays(1);
             }
 
-
+            //-------------------------------------------------
             HocVien_DangKiNghi hv_dk = new HocVien_DangKiNghi
             {
                 MaHocVien = MaHVCurrent,
@@ -206,44 +313,87 @@ namespace HTTT_QLTienAn.GUI.Lop
                 NgayBDNghi = dateStart.DateTime,
                 NgayKTNghi = dateEnd.DateTime,
                 MaLoaiNghi = maloainghi,
-                TenLoaiNghi = db.ChiTietLoaiNghis.Where(m => m.MaLoaiNghi == maloainghi).FirstOrDefault().TenLoaiNghi,
-                LyDo = txtLyDo.Text
+                TenLoaiNghi = db.LoaiNghis.Where(m => m.MaLoaiNghi == maloainghi).FirstOrDefault().TenLoaiNghi,
+                LyDo = txtLyDo.Text,
+                MaDangKyTam = MaDKTamCurrent
             };
 
-            listDK.Add(hv_dk);
-            gridControl2.DataSource = null;
-            gridControl2.DataSource = listDK;
 
+            if (IsNotDupDate(hv_dk))
+            {
+                listDK.Add(hv_dk);
+                gridControl2.DataSource = null;
+                gridControl2.DataSource = listDK;
+            }
+
+            //MessageBox.Show("count = " + lsCTCatCom.Count.ToString());
 
         }
 
         private void btnSendList_Click(object sender, EventArgs e)
         {
-
-            ds.NgayDK = DateTime.Now;
-            ds.PheDuyet = -1;
-            db.DanhSachRaNgoais.Add(ds);
-            db.SaveChanges();
-
-
-            foreach (var item in listDK)
+            if (MessageBox.Show("Bạn có chắc chắn hoàn thành và gửi không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-                db.ChiTietRaNgoais.Add(new ChiTietRaNgoai
+
+
+                ds.NgayDK = DateTime.Now;
+                ds.PheDuyet = -2; // -2 : chua canbo nao phe duyet | -1 : huy | 0 : daidoi | 1 : tieudoan
+
+                db.DanhSachRaNgoais.Add(ds);
+
+
+                db.SaveChanges();
+
+
+                foreach (var item in listDK)
                 {
-                    LyDo = item.LyDo,
-                    MaHocVien = item.MaHocVien,
-                    MaLoaiNghi = item.MaLoaiNghi,
-                    MaDS = ds.MaDS,
-                    NgayDi = item.NgayBDNghi,
-                    NgayVe = item.NgayKTNghi
-                });
+                    ChiTietRaNgoai ctrn = new ChiTietRaNgoai
+                    {
+                        LyDo = item.LyDo,
+                        MaHocVien = item.MaHocVien,
+                        MaLoaiNghi = item.MaLoaiNghi,
+                        MaDS = ds.MaDS,
+                        NgayDi = item.NgayBDNghi,
+                        NgayVe = item.NgayKTNghi
+                    };
+
+                    db.ChiTietRaNgoais.Add(ctrn);
+                    db.SaveChanges();
+
+                    List<CT_CatCom_HocVien> ls_Add_cc = lsCTCatCom.Where(m => m.MaDangKyTam == item.MaDangKyTam).ToList();
+
+                    foreach (var icc in ls_Add_cc)
+                    {
+                        ChiTietCatCom ctcc = new ChiTietCatCom
+                        {
+                            BuoiSang = icc.BuoiSang,
+                            BuoiTrua = icc.BuoiTrua,
+                            BuoiToi = icc.BuoiToi,
+                            MaDangKy = db.ChiTietRaNgoais.Where(m => m.MaHocVien == item.MaHocVien && m.MaDS == ds.MaDS).FirstOrDefault().MaDangKy,
+                            NgayCatCom = icc.NgayCatCom
+                        };
+                        db.ChiTietCatComs.Add(ctcc);
+                        db.SaveChanges();
+                    }
+                }
+
+                db.SaveChanges();
+
+                if(lsCTCatCom.Count > 0 && listDK.Count > 0)
+                {
+                    MessageBox.Show("Gửi danh sách thành công");
+                }
+
+                SetDefaultState();
+
             }
-            db.SaveChanges();
-            MessageBox.Show("Gửi danh sách thành công");
 
-            SetDefaultState();
+        }
 
 
+        private void dateStart_EditValueChanged(object sender, EventArgs e)
+        {
+            dateEnd.DateTime = dateStart.DateTime.AddDays(sobuoinghi - 1);
 
         }
     }

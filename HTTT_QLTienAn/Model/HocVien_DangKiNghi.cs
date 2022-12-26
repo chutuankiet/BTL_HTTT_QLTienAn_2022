@@ -9,7 +9,7 @@ namespace HTTT_QLTienAn.Model
     class HocVien_DangKiNghi
     {
         public int MaHocVien { get; set; }
-        public int MaDangKy { get; set; }
+        public int MaDangKyTam { get; set; }
         public string HoTen { get; set; }
         public DateTime NgaySinh { get; set; }
         public string Lop { get; set; }

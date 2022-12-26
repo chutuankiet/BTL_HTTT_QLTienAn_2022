@@ -21,6 +21,7 @@ namespace HTTT_QLTienAn.Model
         public virtual DbSet<DotThanhToan> DotThanhToans { get; set; }
         public virtual DbSet<HocVien> HocViens { get; set; }
         public virtual DbSet<LoaiHocVien> LoaiHocViens { get; set; }
+        public virtual DbSet<LoaiNghi> LoaiNghis { get; set; }
         public virtual DbSet<Lop> Lops { get; set; }
         public virtual DbSet<PhieuThanhToan> PhieuThanhToans { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }

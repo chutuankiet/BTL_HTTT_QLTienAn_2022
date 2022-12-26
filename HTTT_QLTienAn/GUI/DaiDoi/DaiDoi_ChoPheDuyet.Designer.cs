@@ -160,7 +160,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnDel});
-            this.gridControl1.Size = new System.Drawing.Size(428, 596);
+            this.gridControl1.Size = new System.Drawing.Size(428, 640);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -173,7 +173,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.groupControl1.Controls.Add(this.gridControl1);
             this.groupControl1.Location = new System.Drawing.Point(3, 3);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(432, 615);
+            this.groupControl1.Size = new System.Drawing.Size(432, 659);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Danh sách chờ duyệt";
             // 
@@ -316,7 +316,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 132F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 88F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(974, 753);
             this.tableLayoutPanel1.TabIndex = 4;
             // 

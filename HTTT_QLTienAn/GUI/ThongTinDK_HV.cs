@@ -53,7 +53,7 @@ namespace HTTT_QLTienAn.GUI
 
         QLTA_model db = new QLTA_model();
 
-        List<ChiTietLoaiNghi> ListLoaiNghi;
+        List<LoaiNghi> ListLoaiNghi;
 
 
 
@@ -77,10 +77,10 @@ namespace HTTT_QLTienAn.GUI
             dateStart.Text = chitietrn.NgayDi.ToString("dd/MM/yyyy");
             dateEnd.Text = chitietrn.NgayVe.ToString("dd/MM/yyyy");
 
-            ChiTietLoaiNghi itemLoaiNghi = db.ChiTietLoaiNghis.Where(m => m.MaLoaiNghi == chitietrn.MaLoaiNghi).FirstOrDefault();
+            LoaiNghi itemLoaiNghi = db.LoaiNghis.Where(m => m.MaLoaiNghi == chitietrn.MaLoaiNghi).FirstOrDefault();
 
 
-            //var dsloainghi = (from ds in db.ChiTietLoaiNghis
+            //var dsloainghi = (from ds in db.LoaiNghis
             //                  select new
             //                  {
             //                      ds.TenLoaiNghi,
@@ -88,13 +88,13 @@ namespace HTTT_QLTienAn.GUI
             //                  }
             //                  ).ToList();
 
-            ListLoaiNghi = db.ChiTietLoaiNghis.ToList();
+            ListLoaiNghi = db.LoaiNghis.ToList();
 
 
             cbLoaiNghi.DataSource = ListLoaiNghi;
 
             var loainghi_hv = (from ct in db.ChiTietRaNgoais
-                               join ctln in db.ChiTietLoaiNghis on ct.MaLoaiNghi equals ctln.MaLoaiNghi
+                               join ctln in db.LoaiNghis on ct.MaLoaiNghi equals ctln.MaLoaiNghi
                                join hocv in db.HocViens on ct.MaHocVien equals hocv.MaHocVien
                                where hocv.MaHocVien == MaHocVien && ct.MaDangKy == MaDangKy
                                select ctln
