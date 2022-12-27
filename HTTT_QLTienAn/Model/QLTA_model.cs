@@ -5,10 +5,10 @@ using System.Linq;
 
 namespace HTTT_QLTienAn.Model
 {
-    public partial class QLTA : DbContext
+    public partial class QLTA_model : DbContext
     {
-        public QLTA()
-            : base("name=QLTA")
+        public QLTA_model()
+            : base("name=QLTA_model")
         {
         }
 
@@ -24,7 +24,6 @@ namespace HTTT_QLTienAn.Model
         public virtual DbSet<LoaiNghi> LoaiNghis { get; set; }
         public virtual DbSet<Lop> Lops { get; set; }
         public virtual DbSet<PhieuThanhToan> PhieuThanhToans { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
         public virtual DbSet<TieuChuanAn> TieuChuanAns { get; set; }
 

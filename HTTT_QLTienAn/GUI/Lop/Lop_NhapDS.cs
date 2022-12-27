@@ -224,7 +224,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             DateTime ngayTemp = hv.NgayBDNghi;
             while (DateTime.Compare(ngayTemp.AddDays(1), hv.NgayKTNghi) < 0)
             {
-                var isDupInDB = db.ChiTietCatComs.Where(x => x.NgayCatCom == ngayTemp && x.ChiTietRaNgoai.MaHocVien == hv.MaHocVien).FirstOrDefault();
+                var isDupInDB = db.ChiTietCatComs.Where(x => x.NgayCatCom == ngayTemp && x.DangKyNghi.MaHocVien == hv.MaHocVien).FirstOrDefault();
 
                 if (isDupInDB != null)
                 {
@@ -347,7 +347,7 @@ namespace HTTT_QLTienAn.GUI.Lop
 
                 foreach (var item in listDK)
                 {
-                    ChiTietRaNgoai ctrn = new ChiTietRaNgoai
+                    DangKyNghi ctrn = new DangKyNghi
                     {
                         LyDo = item.LyDo,
                         MaHocVien = item.MaHocVien,
@@ -359,7 +359,7 @@ namespace HTTT_QLTienAn.GUI.Lop
 
                     
 
-                    db.ChiTietRaNgoais.Add(ctrn);
+                    db.DangKyNghis.Add(ctrn);
                     db.SaveChanges();
 
                     int maTCA = (int)db.HocViens.Where(m => m.MaHocVien == item.MaHocVien).FirstOrDefault().LoaiHocVien.MaTCA;
@@ -390,7 +390,7 @@ namespace HTTT_QLTienAn.GUI.Lop
                             BuoiSang = icc.BuoiSang,
                             BuoiTrua = icc.BuoiTrua,
                             BuoiToi = icc.BuoiToi,
-                            MaDangKy = db.ChiTietRaNgoais.Where(m => m.MaHocVien == item.MaHocVien && m.MaDS == ds.MaDS).FirstOrDefault().MaDangKy,
+                            MaDangKy = db.DangKyNghis.Where(m => m.MaHocVien == item.MaHocVien && m.MaDS == ds.MaDS).FirstOrDefault().MaDangKy,
                             NgayCatCom = icc.NgayCatCom
                         };
                         db.ChiTietCatComs.Add(ctcc);

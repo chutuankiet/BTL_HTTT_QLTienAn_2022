@@ -24,13 +24,13 @@ namespace HTTT_QLTienAn.GUI
         public int MaHocVien;
         public int MaDangKy;
 
-        private ChiTietRaNgoai chitietrn;
+        private DangKyNghi chitietrn;
         public ThongTinDK_HV(int madk, bool edit)
         {
             InitializeComponent();
             MaDangKy = madk;
 
-            chitietrn = db.ChiTietRaNgoais.Where(m => m.MaDangKy == madk).FirstOrDefault();
+            chitietrn = db.DangKyNghis.Where(m => m.MaDangKy == madk).FirstOrDefault();
 
             MaHocVien = (int)chitietrn.MaHocVien;
 
@@ -93,7 +93,7 @@ namespace HTTT_QLTienAn.GUI
 
             cbLoaiNghi.DataSource = ListLoaiNghi;
 
-            var loainghi_hv = (from ct in db.ChiTietRaNgoais
+            var loainghi_hv = (from ct in db.DangKyNghis
                                join ctln in db.LoaiNghis on ct.MaLoaiNghi equals ctln.MaLoaiNghi
                                join hocv in db.HocViens on ct.MaHocVien equals hocv.MaHocVien
                                where hocv.MaHocVien == MaHocVien && ct.MaDangKy == MaDangKy
