@@ -61,21 +61,8 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
             try
             {
 
-                var dsCTDaXacNhan = (from ds in db.DanhSachRaNgoais
-                                     join dkn in db.DangKyNghis on ds.MaDS equals dkn.MaDS
-                                     join ctn in db.ChiTietCatComs on dkn.MaDangKy equals ctn.MaDangKy
-                                     join hv1 in db.HocViens on dkn.MaHocVien equals hv1.MaHocVien
-                                     join l in db.Lops on hv1.MaLop equals l.MaLop
-                                     where ds.MaDS == mads
-                                     select new
-                                     {
-                                         HoTen = hv1.HoTen,
-                                         Lop =l.TenLop,
-                                         NgayNghi = ctn.NgayCatCom,
-                                         SoBuoiSang = ctn.BuoiSang,
-                                         SoBuoiTrua = ctn.BuoiTrua,
-                                         SoBuoiToi = ctn.BuoiToi
-                                     }).ToList();
+                List<DS_ChoPheDuyet> dsCTDaXacNhan = db.DS_ChoPheDuyet.Where(m => m.MaDS == mads).ToList();
+
                 dgvChiTietDaXacNhan.DataSource = dsCTDaXacNhan;
 
             }
@@ -95,6 +82,11 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
         private void dgvDaXacNhan_View_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
             LoadDSChiTietDaXacNhan(Convert.ToInt32(dgvDaXacNhan_View.GetRowCellValue(e.RowHandle, "MaDS")));
+        }
+
+        private void TieuDoan_DaPheDuyet_Load(object sender, EventArgs e)
+        {
+            LoadDSDaPheDuyet();
         }
     }
 }

@@ -92,6 +92,9 @@ namespace HTTT_QLTienAn.GUI.Lop
 
             cbLoainghi.ValueMember = "MaLoaiNghi";
             cbLoainghi.DisplayMember = "TenLoaiNghi";
+
+            cbLoainghi.SelectedIndex = 0;
+
         }
 
         private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
@@ -122,6 +125,7 @@ namespace HTTT_QLTienAn.GUI.Lop
 
             cbLoainghi.ValueMember = "MaLoaiNghi";
             cbLoainghi.DisplayMember = "TenLoaiNghi";
+
 
 
 
@@ -177,7 +181,7 @@ namespace HTTT_QLTienAn.GUI.Lop
 
         private void cbLoainghi_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int index = cbLoainghi.SelectedIndex;
+            int index = cbLoainghi.SelectedIndex == -1? 0: cbLoainghi.SelectedIndex;
             txtSang.Text = ListLoaiNghi[index].SoBuoiSang.ToString();
             txtTrua.Text = ListLoaiNghi[index].SoBuoiTrua.ToString();
             txtToi.Text = ListLoaiNghi[index].SoBuoiToi.ToString();
@@ -427,6 +431,8 @@ namespace HTTT_QLTienAn.GUI.Lop
             dateEnd.DateTime = dateStart.DateTime.AddDays(sobuoinghi - 1);
 
         }
+
+        \
     }
 }
 

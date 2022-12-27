@@ -25,18 +25,16 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
         {
             try
             {
-                var ds_DaHuy = (from ds in db.DanhSachRaNgoais
-                                join cbc in db.CanBoes on ds.MaCBc equals cbc.MaCanBo
+                var ds_DaHuy = (from ds in db.ds_huy 
                                 join cbd in db.CanBoes on ds.MaCBd equals cbd.MaCanBo
-                                join dv in db.DonVis on cbc.MaDonVi equals dv.MaDonVi
 
                                 where ds.PheDuyet == -1 // tiểu đoàn đã hủy
                                 select new
                                 {
                                     MaDS = ds.MaDS,
-                                    TenDonVi = dv.TenDonVi,
+                                    TenDonVi = ds.TenDonVi,
                                     NgayDK = ds.NgayDK,
-                                    HoTenc = cbc.HoTen,
+                                    HoTenc = ds.HoTenc,
                                     HoTend = cbd.HoTen
                                 }).ToList();
                 if (ds_DaHuy.Count > 0)
@@ -63,20 +61,8 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
             {
                 int mads = (int)dgvDaHuy_View.GetFocusedRowCellValue("MaDS");
                 MaDS_DaHuy = mads.ToString();
-                var dsCTDaHuy = (from ds in db.DanhSachRaNgoais
-                                 join dkn in db.DangKyNghis on ds.MaDS equals dkn.MaDS
-                                 join ctn in db.ChiTietCatComs on dkn.MaDangKy equals ctn.MaDangKy
-                                 join hv1 in db.HocViens on dkn.MaHocVien equals hv1.MaHocVien
-                                 where ds.MaDS == mads
-                                 select new
-                                 {
-                                     HoTen = hv1.HoTen,
-                                     Lop = hv1.Lop,
-                                     NgayNghi = ctn.NgayCatCom,
-                                     SoBuoiSang = ctn.BuoiSang,
-                                     SoBuoiTrua = ctn.BuoiTrua,
-                                     SoBuoiToi = ctn.BuoiToi
-                                 }).ToList();
+                List<DS_ChoPheDuyet> dsCTDaHuy = db.DS_ChoPheDuyet.Where(m => m.MaDS == mads).ToList();
+
                 dgvChiTietDaHuy.DataSource = dsCTDaHuy;
 
             }
@@ -94,6 +80,11 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
         {
             LoadDSChiTietDaHuy();
 
+        }
+
+        private void TieuDoan_DaHuy_Load(object sender, EventArgs e)
+        {
+            LoadDSDaHuy();
         }
     }
 }
