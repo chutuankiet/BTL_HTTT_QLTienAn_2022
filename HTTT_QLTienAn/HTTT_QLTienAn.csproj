@@ -263,6 +263,8 @@
     <Compile Include="Model\ChiTietCatCom.cs" />
     <Compile Include="Model\ChiTietLoaiNghi.cs" />
     <Compile Include="Model\DangKyNghi.cs" />
+    <Compile Include="Model\ChiTietRaNgoai.cs" />
+    <Compile Include="Model\CT_CatCom_HocVien.cs" />
     <Compile Include="Model\DanhSachRaNgoai.cs" />
     <Compile Include="Model\DonVi.cs" />
     <Compile Include="Model\DotThanhToan.cs" />

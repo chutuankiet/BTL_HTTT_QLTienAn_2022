@@ -38,7 +38,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSubmit = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -150,7 +150,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             // 
             // groupControl1
             // 
-            this.groupControl1.Controls.Add(this.simpleButton1);
+            this.groupControl1.Controls.Add(this.btnSubmit);
             this.groupControl1.Controls.Add(this.gridControl1);
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(3, 146);
@@ -159,15 +159,16 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.groupControl1.TabIndex = 1;
             this.groupControl1.Text = "Chỉnh sửa Chi tiết cắt cơm";
             // 
-            // simpleButton1
+            // btnSubmit
             // 
-            this.simpleButton1.Appearance.BackColor = System.Drawing.Color.Green;
-            this.simpleButton1.Appearance.Options.UseBackColor = true;
-            this.simpleButton1.Location = new System.Drawing.Point(221, 385);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(207, 51);
-            this.simpleButton1.TabIndex = 1;
-            this.simpleButton1.Text = "Xác nhận";
+            this.btnSubmit.Appearance.BackColor = System.Drawing.Color.Green;
+            this.btnSubmit.Appearance.Options.UseBackColor = true;
+            this.btnSubmit.Location = new System.Drawing.Point(221, 385);
+            this.btnSubmit.Name = "btnSubmit";
+            this.btnSubmit.Size = new System.Drawing.Size(207, 51);
+            this.btnSubmit.TabIndex = 1;
+            this.btnSubmit.Text = "Xác nhận";
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // gridControl1
             // 
@@ -285,6 +286,6 @@ namespace HTTT_QLTienAn.GUI.Lop
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit check;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
+        private DevExpress.XtraEditors.SimpleButton btnSubmit;
     }
 }
