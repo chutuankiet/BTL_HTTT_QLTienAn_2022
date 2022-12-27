@@ -20,7 +20,7 @@ namespace HTTT_QLTienAn.Model
 
         public bool BuoiToi { get; set; }
 
-        public int MaLoaiNghi { get; set; }
+        public int? MaLoaiNghi { get; set; }
 
         public virtual LoaiNghi LoaiNghi { get; set; }
     }

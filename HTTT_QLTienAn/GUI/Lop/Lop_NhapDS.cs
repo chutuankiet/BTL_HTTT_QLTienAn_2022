@@ -357,7 +357,28 @@ namespace HTTT_QLTienAn.GUI.Lop
                         NgayVe = item.NgayKTNghi
                     };
 
+                    
+
                     db.ChiTietRaNgoais.Add(ctrn);
+                    db.SaveChanges();
+
+                    int maTCA = (int)db.HocViens.Where(m => m.MaHocVien == item.MaHocVien).FirstOrDefault().LoaiHocVien.MaTCA;
+
+                    TieuChuanAn tca_hv = db.TieuChuanAns.Where(m => m.MaTCA == maTCA).FirstOrDefault();
+
+                    LoaiNghi ln_hv = db.LoaiNghis.Where(m => m.MaLoaiNghi == item.MaLoaiNghi).FirstOrDefault();
+
+
+                    PhieuThanhToan newThanhToan = new PhieuThanhToan
+                    {
+                        TrangThaiTT = -2,
+                        MaDangKy = ctrn.MaDangKy,
+                        TongTien = (int)ln_hv.SoBuoiSang * tca_hv.TienAnSang +
+                                    (int)ln_hv.SoBuoiTrua* tca_hv.TienAnTrua + 
+                                    (int)ln_hv.SoBuoiToi * tca_hv.TienAnToi 
+                    };
+
+                    db.PhieuThanhToans.Add(newThanhToan);
                     db.SaveChanges();
 
                     List<CT_CatCom_HocVien> ls_Add_cc = lsCTCatCom.Where(m => m.MaDangKyTam == item.MaDangKyTam).ToList();

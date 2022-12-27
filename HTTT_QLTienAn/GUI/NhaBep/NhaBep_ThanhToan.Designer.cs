@@ -73,60 +73,60 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             // colTrangThaiTT
             // 
             this.colTrangThaiTT.FieldName = "TrangThaiTT";
-            this.colTrangThaiTT.MinWidth = 25;
+            this.colTrangThaiTT.MinWidth = 29;
             this.colTrangThaiTT.Name = "colTrangThaiTT";
-            this.colTrangThaiTT.Width = 94;
+            this.colTrangThaiTT.Width = 107;
             // 
             // colNgayTT
             // 
             this.colNgayTT.Caption = "Ngày thanh toán";
             this.colNgayTT.FieldName = "NgayTT";
-            this.colNgayTT.MinWidth = 25;
+            this.colNgayTT.MinWidth = 29;
             this.colNgayTT.Name = "colNgayTT";
             this.colNgayTT.Visible = true;
             this.colNgayTT.VisibleIndex = 2;
-            this.colNgayTT.Width = 94;
+            this.colNgayTT.Width = 107;
             // 
             // colTenDonVi
             // 
             this.colTenDonVi.FieldName = "TenDonVi";
-            this.colTenDonVi.MinWidth = 25;
+            this.colTenDonVi.MinWidth = 29;
             this.colTenDonVi.Name = "colTenDonVi";
-            this.colTenDonVi.Width = 94;
+            this.colTenDonVi.Width = 107;
             // 
             // colMaDonVi
             // 
             this.colMaDonVi.FieldName = "MaDonVi";
-            this.colMaDonVi.MinWidth = 25;
+            this.colMaDonVi.MinWidth = 29;
             this.colMaDonVi.Name = "colMaDonVi";
-            this.colMaDonVi.Width = 94;
+            this.colMaDonVi.Width = 107;
             // 
             // colLop
             // 
             this.colLop.FieldName = "Lop";
-            this.colLop.MinWidth = 25;
+            this.colLop.MinWidth = 29;
             this.colLop.Name = "colLop";
-            this.colLop.Width = 94;
+            this.colLop.Width = 107;
             // 
             // colHoTen
             // 
             this.colHoTen.Caption = "Họ tên";
             this.colHoTen.FieldName = "HoTen";
-            this.colHoTen.MinWidth = 25;
+            this.colHoTen.MinWidth = 29;
             this.colHoTen.Name = "colHoTen";
             this.colHoTen.Visible = true;
             this.colHoTen.VisibleIndex = 1;
-            this.colHoTen.Width = 94;
+            this.colHoTen.Width = 107;
             // 
             // colMaHocVien
             // 
             this.colMaHocVien.Caption = "Mã HV";
             this.colMaHocVien.FieldName = "MaHocVien";
-            this.colMaHocVien.MinWidth = 25;
+            this.colMaHocVien.MinWidth = 29;
             this.colMaHocVien.Name = "colMaHocVien";
             this.colMaHocVien.Visible = true;
             this.colMaHocVien.VisibleIndex = 0;
-            this.colMaHocVien.Width = 94;
+            this.colMaHocVien.Width = 107;
             // 
             // gridView1
             // 
@@ -149,11 +149,11 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             // 
             this.colTongTien.Caption = "Tổng tiền";
             this.colTongTien.FieldName = "TongTien";
-            this.colTongTien.MinWidth = 25;
+            this.colTongTien.MinWidth = 29;
             this.colTongTien.Name = "colTongTien";
             this.colTongTien.Visible = true;
             this.colTongTien.VisibleIndex = 3;
-            this.colTongTien.Width = 94;
+            this.colTongTien.Width = 107;
             // 
             // gridControl1
             // 
@@ -163,7 +163,7 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             this.gridControl1.Location = new System.Drawing.Point(2, 64);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(428, 681);
+            this.gridControl1.Size = new System.Drawing.Size(489, 681);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -171,20 +171,21 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             // cbbLop
             // 
             this.cbbLop.FormattingEnabled = true;
-            this.cbbLop.Location = new System.Drawing.Point(239, 32);
+            this.cbbLop.Location = new System.Drawing.Point(273, 32);
             this.cbbLop.Name = "cbbLop";
-            this.cbbLop.Size = new System.Drawing.Size(121, 24);
+            this.cbbLop.Size = new System.Drawing.Size(138, 24);
             this.cbbLop.TabIndex = 1;
             this.cbbLop.Text = "BDATTT";
             // 
             // cbbDonVi
             // 
             this.cbbDonVi.FormattingEnabled = true;
-            this.cbbDonVi.Location = new System.Drawing.Point(80, 32);
+            this.cbbDonVi.Location = new System.Drawing.Point(91, 32);
             this.cbbDonVi.Name = "cbbDonVi";
-            this.cbbDonVi.Size = new System.Drawing.Size(121, 24);
+            this.cbbDonVi.Size = new System.Drawing.Size(138, 24);
             this.cbbDonVi.TabIndex = 1;
             this.cbbDonVi.Text = "c153";
+            this.cbbDonVi.SelectedIndexChanged += new System.EventHandler(this.cbbDonVi_SelectedIndexChanged);
             // 
             // groupControl1
             // 
@@ -196,7 +197,7 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             this.groupControl1.Controls.Add(this.gridControl1);
             this.groupControl1.Location = new System.Drawing.Point(3, 3);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(432, 747);
+            this.groupControl1.Size = new System.Drawing.Size(494, 747);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Lịch sử cắt cơm theo lớp";
             // 
@@ -216,7 +217,7 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             this.gridControl2.Location = new System.Drawing.Point(2, 28);
             this.gridControl2.MainView = this.gridView2;
             this.gridControl2.Name = "gridControl2";
-            this.gridControl2.Size = new System.Drawing.Size(526, 522);
+            this.gridControl2.Size = new System.Drawing.Size(602, 522);
             this.gridControl2.TabIndex = 0;
             this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -225,9 +226,9 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(56, 713);
+            this.label4.Location = new System.Drawing.Point(64, 713);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(66, 17);
+            this.label4.Size = new System.Drawing.Size(68, 17);
             this.label4.TabIndex = 4;
             this.label4.Text = "Tổng tiền";
             // 
@@ -235,67 +236,67 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             // 
             this.textEdit4.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.textEdit4.EditValue = "";
-            this.textEdit4.Location = new System.Drawing.Point(153, 710);
+            this.textEdit4.Location = new System.Drawing.Point(175, 710);
             this.textEdit4.Name = "textEdit4";
             this.textEdit4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textEdit4.Size = new System.Drawing.Size(202, 22);
+            this.textEdit4.Size = new System.Drawing.Size(231, 22);
             this.textEdit4.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(56, 665);
+            this.label3.Location = new System.Drawing.Point(64, 665);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(73, 17);
+            this.label3.Size = new System.Drawing.Size(75, 17);
             this.label3.TabIndex = 4;
             this.label3.Text = "Số buổi tối";
             // 
             // textEdit3
             // 
             this.textEdit3.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.textEdit3.Location = new System.Drawing.Point(153, 662);
+            this.textEdit3.Location = new System.Drawing.Point(175, 662);
             this.textEdit3.Name = "textEdit3";
             this.textEdit3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textEdit3.Size = new System.Drawing.Size(202, 22);
+            this.textEdit3.Size = new System.Drawing.Size(231, 22);
             this.textEdit3.TabIndex = 2;
             // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(56, 617);
+            this.label2.Location = new System.Drawing.Point(64, 617);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(84, 17);
+            this.label2.Size = new System.Drawing.Size(85, 17);
             this.label2.TabIndex = 4;
             this.label2.Text = "Số buổi trưa";
             // 
             // textEdit2
             // 
             this.textEdit2.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.textEdit2.Location = new System.Drawing.Point(153, 614);
+            this.textEdit2.Location = new System.Drawing.Point(175, 614);
             this.textEdit2.Name = "textEdit2";
             this.textEdit2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textEdit2.Size = new System.Drawing.Size(202, 22);
+            this.textEdit2.Size = new System.Drawing.Size(231, 22);
             this.textEdit2.TabIndex = 2;
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(56, 569);
+            this.label1.Location = new System.Drawing.Point(64, 569);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(87, 17);
+            this.label1.Size = new System.Drawing.Size(91, 17);
             this.label1.TabIndex = 4;
             this.label1.Text = "Số buổi sáng";
             // 
             // textEdit1
             // 
             this.textEdit1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.textEdit1.Location = new System.Drawing.Point(153, 566);
+            this.textEdit1.Location = new System.Drawing.Point(175, 566);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textEdit1.Size = new System.Drawing.Size(202, 22);
+            this.textEdit1.Size = new System.Drawing.Size(231, 22);
             this.textEdit1.TabIndex = 2;
             // 
             // simpleButton1
@@ -303,9 +304,9 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             this.simpleButton1.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.simpleButton1.Appearance.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
             this.simpleButton1.Appearance.Options.UseBackColor = true;
-            this.simpleButton1.Location = new System.Drawing.Point(389, 591);
+            this.simpleButton1.Location = new System.Drawing.Point(445, 591);
             this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(122, 115);
+            this.simpleButton1.Size = new System.Drawing.Size(139, 115);
             this.simpleButton1.TabIndex = 1;
             this.simpleButton1.Text = "Thanh toán";
             // 
@@ -324,9 +325,9 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             this.groupControl2.Controls.Add(this.textEdit1);
             this.groupControl2.Controls.Add(this.simpleButton1);
             this.groupControl2.Controls.Add(this.gridControl2);
-            this.groupControl2.Location = new System.Drawing.Point(441, 3);
+            this.groupControl2.Location = new System.Drawing.Point(503, 3);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(530, 747);
+            this.groupControl2.Size = new System.Drawing.Size(607, 747);
             this.groupControl2.TabIndex = 0;
             this.groupControl2.Text = "Danh sách cắt cơm theo lớp";
             // 
@@ -344,16 +345,17 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(974, 753);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1113, 753);
             this.tableLayoutPanel1.TabIndex = 5;
             // 
             // NhaBep_ThanhToan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "NhaBep_ThanhToan";
-            this.Size = new System.Drawing.Size(981, 760);
+            this.Size = new System.Drawing.Size(1121, 760);
+            this.Load += new System.EventHandler(this.NhaBep_ThanhToan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
