@@ -47,5 +47,10 @@ namespace HTTT_QLTienAn.GUI.Lop
 
 
         }
+
+        private void btnSubmit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

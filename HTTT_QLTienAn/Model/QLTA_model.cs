@@ -16,16 +16,21 @@ namespace HTTT_QLTienAn.Model
         public virtual DbSet<CanBo> CanBoes { get; set; }
         public virtual DbSet<ChiTietCatCom> ChiTietCatComs { get; set; }
         public virtual DbSet<ChiTietLoaiNghi> ChiTietLoaiNghis { get; set; }
-        public virtual DbSet<ChiTietRaNgoai> ChiTietRaNgoais { get; set; }
+        public virtual DbSet<DangKyNghi> DangKyNghis { get; set; }
         public virtual DbSet<DanhSachRaNgoai> DanhSachRaNgoais { get; set; }
         public virtual DbSet<DonVi> DonVis { get; set; }
         public virtual DbSet<DotThanhToan> DotThanhToans { get; set; }
         public virtual DbSet<HocVien> HocViens { get; set; }
         public virtual DbSet<LoaiHocVien> LoaiHocViens { get; set; }
+        public virtual DbSet<LoaiNghi> LoaiNghis { get; set; }
         public virtual DbSet<Lop> Lops { get; set; }
         public virtual DbSet<PhieuThanhToan> PhieuThanhToans { get; set; }
+        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
         public virtual DbSet<TieuChuanAn> TieuChuanAns { get; set; }
+        public virtual DbSet<NhaBep_ChuaThanhToan> NhaBep_ChuaThanhToan { get; set; }
+        public virtual DbSet<NhaBep_ListDaThanhToan> NhaBep_ListDaThanhToan { get; set; }
+        public virtual DbSet<NhaBep_ListThanhToan> NhaBep_ListThanhToan { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

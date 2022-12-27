@@ -119,6 +119,7 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
             this.dgvDaHuy_View.GridControl = this.dgvDaHuy;
             this.dgvDaHuy_View.Name = "dgvDaHuy_View";
             this.dgvDaHuy_View.OptionsView.ShowGroupPanel = false;
+            this.dgvDaHuy_View.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.dgvDaHuy_View_FocusedRowChanged);
             // 
             // gridColumn4
             // 

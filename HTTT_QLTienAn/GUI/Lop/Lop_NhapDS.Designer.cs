@@ -31,6 +31,11 @@ namespace HTTT_QLTienAn.GUI.Lop
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Lop_NhapDS));
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.dsLop = new DevExpress.XtraGrid.GridControl();
@@ -40,6 +45,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.HoTen = new DevExpress.XtraGrid.Columns.GridColumn();
             this.NgaySinh = new DevExpress.XtraGrid.Columns.GridColumn();
             this.Lop = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnSendList = new DevExpress.XtraEditors.SimpleButton();
@@ -82,6 +88,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             ((System.ComponentModel.ISupportInitialize)(this.dsLop)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.hocVienBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -143,6 +150,8 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.dsLop.MainView = this.gridView1;
             this.dsLop.Margin = new System.Windows.Forms.Padding(4);
             this.dsLop.Name = "dsLop";
+            this.dsLop.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemButtonEdit1});
             this.dsLop.Size = new System.Drawing.Size(673, 827);
             this.dsLop.TabIndex = 0;
             this.dsLop.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
@@ -162,6 +171,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.gridView1.DetailHeight = 431;
             this.gridView1.GridControl = this.dsLop;
             this.gridView1.Name = "gridView1";
+            this.gridView1.OptionsBehavior.Editable = false;
             this.gridView1.OptionsView.ShowGroupPanel = false;
             this.gridView1.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView1_RowClick);
             // 
@@ -205,6 +215,17 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.Lop.VisibleIndex = 3;
             this.Lop.Width = 243;
             // 
+            // repositoryItemButtonEdit1
+            // 
+            this.repositoryItemButtonEdit1.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.repositoryItemButtonEdit1.AutoHeight = false;
+            this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton()});
+            this.repositoryItemButtonEdit1.ContextImageOptions.AllowGlyphSkinning = DevExpress.Utils.DefaultBoolean.True;
+            this.repositoryItemButtonEdit1.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("repositoryItemButtonEdit1.ContextImageOptions.Image")));
+            this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
+            this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            // 
             // groupControl2
             // 
             this.groupControl2.Controls.Add(this.panel2);
@@ -224,7 +245,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(2, 636);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(655, 100);
+            this.panel2.Size = new System.Drawing.Size(655, 115);
             this.panel2.TabIndex = 6;
             // 
             // btnSendList
@@ -232,7 +253,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.btnSendList.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
             this.btnSendList.Appearance.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
             this.btnSendList.Appearance.Options.UseBackColor = true;
-            this.btnSendList.Location = new System.Drawing.Point(141, 21);
+            this.btnSendList.Location = new System.Drawing.Point(141, 36);
             this.btnSendList.Margin = new System.Windows.Forms.Padding(4);
             this.btnSendList.Name = "btnSendList";
             this.btnSendList.Size = new System.Drawing.Size(381, 53);
@@ -287,7 +308,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 203;
+            this.gridColumn1.Width = 169;
             // 
             // gridColumn2
             // 
@@ -297,7 +318,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 194;
+            this.gridColumn2.Width = 99;
             // 
             // gridColumn3
             // 
@@ -307,7 +328,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 94;
+            this.gridColumn3.Width = 130;
             // 
             // gridColumn5
             // 
@@ -317,7 +338,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 3;
-            this.gridColumn5.Width = 94;
+            this.gridColumn5.Width = 165;
             // 
             // gridColumn4
             // 
@@ -328,14 +349,14 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.gridColumn4.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 4;
-            this.gridColumn4.Width = 94;
+            this.gridColumn4.Width = 71;
             // 
             // btnXoa
             // 
             this.btnXoa.AutoHeight = false;
+            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
             this.btnXoa.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph)});
-            this.btnXoa.ContextImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ContextImageOptions.Image")));
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
@@ -397,7 +418,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.txtLyDo.Location = new System.Drawing.Point(33, 265);
             this.txtLyDo.Multiline = true;
             this.txtLyDo.Name = "txtLyDo";
-            this.txtLyDo.Size = new System.Drawing.Size(166, 48);
+            this.txtLyDo.Size = new System.Drawing.Size(166, 56);
             this.txtLyDo.TabIndex = 35;
             // 
             // label1
@@ -550,6 +571,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             // dateEnd
             // 
             this.dateEnd.EditValue = null;
+            this.dateEnd.Enabled = false;
             this.dateEnd.Location = new System.Drawing.Point(33, 200);
             this.dateEnd.Margin = new System.Windows.Forms.Padding(4);
             this.dateEnd.Name = "dateEnd";
@@ -572,6 +594,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateStart.Size = new System.Drawing.Size(166, 22);
             this.dateStart.TabIndex = 19;
+            this.dateStart.EditValueChanged += new System.EventHandler(this.dateStart_EditValueChanged);
             // 
             // txtLop
             // 
@@ -606,7 +629,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(30, 175);
+            this.label14.Location = new System.Drawing.Point(30, 179);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(96, 17);
@@ -649,6 +672,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             ((System.ComponentModel.ISupportInitialize)(this.dsLop)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.hocVienBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
@@ -720,5 +744,6 @@ namespace HTTT_QLTienAn.GUI.Lop
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private System.Windows.Forms.Panel panel2;
+        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
     }
 }
