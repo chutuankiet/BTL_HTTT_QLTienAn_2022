@@ -110,7 +110,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             MaLopTruong = MainForm.MaID;
             Model.Lop tempLop = db.Lops.Where(m => m.MaLopTruong == MaLopTruong).FirstOrDefault();
 
-            cMaLop = tempLop.MaLop;
+            MaLop = tempLop.MaLop;
 
 
             dateStart.DateTime = DateTime.Now;
@@ -256,10 +256,7 @@ namespace HTTT_QLTienAn.GUI.Lop
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (!checkDateTT())
-            {
-                return;
-            }
+
 
             if (MaHVCurrent == 0)
             {
@@ -267,6 +264,13 @@ namespace HTTT_QLTienAn.GUI.Lop
                 return;
             }
 
+
+            if (!checkDateTT())
+            {
+                return;
+            }
+
+            
             if (txtSang.Text == null || txtTrua.Text == null && txtToi.Text == null)
             {
                 MessageBox.Show("Chưa chọn loại nghỉ ! ", "Error");
@@ -332,12 +336,18 @@ namespace HTTT_QLTienAn.GUI.Lop
 
         private void btnSendList_Click(object sender, EventArgs e)
         {
+            if (MaHVCurrent == 0 || listDK.Count == 0 || lsCTCatCom.Count == 0)
+            {
+                MessageBox.Show("Chưa chọn học viên ! Danh sách trống !!", "Error");
+                return;
+            }
+
             if (MessageBox.Show("Bạn có chắc chắn hoàn thành và gửi không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-
+                
 
                 ds.NgayDK = DateTime.Now;
-                ds.PheDuyet = -2; // -2 : chua canbo nao phe duyet | -1 : huy | 0 : daidoi | 1 : tieudoan
+                ds.PheDuyet = -3; // -3 : chua duyet | -2 : huy dai doi |-1 : huy tieu doan | 0 : daidoi | 1 : tieudoan
 
                 db.DanhSachRaNgoais.Add(ds);
 
