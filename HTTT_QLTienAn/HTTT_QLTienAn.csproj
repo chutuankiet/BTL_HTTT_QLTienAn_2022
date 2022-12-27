@@ -107,6 +107,7 @@
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Xml.Linq" />
@@ -198,6 +199,12 @@
     <Compile Include="GUI\Lop\Lop_NhapDS.Designer.cs">
       <DependentUpon>Lop_NhapDS.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\NhaBep\NhaBep_LSCatCom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\NhaBep\NhaBep_LSCatCom.Designer.cs">
+      <DependentUpon>NhaBep_LSCatCom.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\NhaBep\NhaBep_QuanLyDS.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -261,7 +268,8 @@
     <Compile Include="Model\CanBo.cs" />
     <Compile Include="Model\ChiTietCatCom.cs" />
     <Compile Include="Model\ChiTietLoaiNghi.cs" />
-    <Compile Include="Model\ChiTietRaNgoai.cs" />
+    <Compile Include="Model\DangKyNghi.cs" />
+    <Compile Include="Model\DangKyNghi.cs" />
     <Compile Include="Model\CT_CatCom_HocVien.cs" />
     <Compile Include="Model\DanhSachRaNgoai.cs" />
     <Compile Include="Model\DonVi.cs" />
@@ -315,6 +323,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Lop\Lop_NhapDS.resx">
       <DependentUpon>Lop_NhapDS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NhaBep\NhaBep_LSCatCom.resx">
+      <DependentUpon>NhaBep_LSCatCom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\NhaBep\NhaBep_QuanLyDS.resx">
       <DependentUpon>NhaBep_QuanLyDS.cs</DependentUpon>
@@ -372,10 +383,13 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\icons8_user_96px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

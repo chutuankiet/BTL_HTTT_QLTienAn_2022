@@ -27,7 +27,7 @@ namespace HTTT_QLTienAn.Model
 
         public virtual CanBo CanBo { get; set; }
 
-        public virtual ChiTietRaNgoai ChiTietRaNgoai { get; set; }
+        public virtual DangKyNghi DangKyNghi { get; set; }
 
         public virtual DotThanhToan DotThanhToan { get; set; }
     }

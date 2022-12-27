@@ -12,7 +12,7 @@ namespace HTTT_QLTienAn.Model
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public HocVien()
         {
-            ChiTietRaNgoais = new HashSet<ChiTietRaNgoai>();
+            DangKyNghis = new HashSet<DangKyNghi>();
         }
 
         [Key]
@@ -40,7 +40,7 @@ namespace HTTT_QLTienAn.Model
         public int? MaTK { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ChiTietRaNgoai> ChiTietRaNgoais { get; set; }
+        public virtual ICollection<DangKyNghi> DangKyNghis { get; set; }
 
         public virtual Lop Lop { get; set; }
 

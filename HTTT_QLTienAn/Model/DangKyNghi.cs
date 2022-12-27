@@ -6,11 +6,11 @@ namespace HTTT_QLTienAn.Model
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("ChiTietRaNgoai")]
-    public partial class ChiTietRaNgoai
+    [Table("DangKyNghi")]
+    public partial class DangKyNghi
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public ChiTietRaNgoai()
+        public DangKyNghi()
         {
             ChiTietCatComs = new HashSet<ChiTietCatCom>();
             PhieuThanhToans = new HashSet<PhieuThanhToan>();

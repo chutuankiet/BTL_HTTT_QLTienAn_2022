@@ -13,7 +13,7 @@ namespace HTTT_QLTienAn.Model
         public LoaiNghi()
         {
             ChiTietLoaiNghis = new HashSet<ChiTietLoaiNghi>();
-            ChiTietRaNgoais = new HashSet<ChiTietRaNgoai>();
+            DangKyNghis = new HashSet<DangKyNghi>();
         }
 
         [Key]
@@ -33,6 +33,6 @@ namespace HTTT_QLTienAn.Model
         public virtual ICollection<ChiTietLoaiNghi> ChiTietLoaiNghis { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ChiTietRaNgoai> ChiTietRaNgoais { get; set; }
+        public virtual ICollection<DangKyNghi> DangKyNghis { get; set; }
     }
 }

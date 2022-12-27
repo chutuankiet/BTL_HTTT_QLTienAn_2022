@@ -30,56 +30,52 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DaiDoi_ChoPheDuyet));
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            this.chkEdit = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.danhSachNghiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnDel = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn4 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.dgvDSCho_View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn13 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.dgvDSCho = new DevExpress.XtraGrid.GridControl();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.chkEdit = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.dgvChiTietDS1 = new DevExpress.XtraGrid.GridControl();
+            this.btnXoa = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridControl2 = new DevExpress.XtraGrid.GridControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
+            this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
-            this.btnXacnhan = new DevExpress.XtraEditors.SimpleButton();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnXacNhan = new System.Windows.Forms.Button();
+            this.btnHuy = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.chkEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.danhSachNghiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDel)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSCho_View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSCho)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkEdit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietDS1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnXoa)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // chkEdit
+            // 
+            this.chkEdit.AutoHeight = false;
+            this.chkEdit.Name = "chkEdit";
+            this.chkEdit.ValueChecked = 1;
+            this.chkEdit.ValueUnchecked = 0;
             // 
             // gridColumn3
             // 
@@ -93,33 +89,20 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             // btnDel
             // 
             this.btnDel.AutoHeight = false;
-            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
             this.btnDel.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph)});
             this.btnDel.Name = "btnDel";
             this.btnDel.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
-            // gridColumn6
-            // 
-            this.gridColumn6.Caption = "Xóa";
-            this.gridColumn6.ColumnEdit = this.btnDel;
-            this.gridColumn6.FieldName = "fldXoa";
-            this.gridColumn6.MinWidth = 25;
-            this.gridColumn6.Name = "gridColumn6";
-            this.gridColumn6.ShowButtonMode = DevExpress.XtraGrid.Views.Base.ShowButtonModeEnum.ShowAlways;
-            this.gridColumn6.Visible = true;
-            this.gridColumn6.VisibleIndex = 3;
-            this.gridColumn6.Width = 88;
-            // 
             // gridColumn5
             // 
-            this.gridColumn5.Caption = "Cán bộ đại đội";
-            this.gridColumn5.FieldName = "CanBoDaiDoi";
+            this.gridColumn5.Caption = "Lớp trưởng";
+            this.gridColumn5.FieldName = "HoTen";
             this.gridColumn5.MinWidth = 25;
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 2;
-            this.gridColumn5.Width = 471;
+            this.gridColumn5.VisibleIndex = 3;
+            this.gridColumn5.Width = 137;
             // 
             // gridColumn4
             // 
@@ -128,7 +111,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.gridColumn4.MinWidth = 25;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 1;
+            this.gridColumn4.VisibleIndex = 2;
             this.gridColumn4.Width = 277;
             // 
             // gridColumn1
@@ -141,108 +124,76 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.gridColumn1.VisibleIndex = 0;
             this.gridColumn1.Width = 118;
             // 
-            // gridView1
+            // dgvDSCho_View
             // 
-            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.dgvDSCho_View.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.gridColumn1,
+            this.gridColumn13,
             this.gridColumn4,
-            this.gridColumn5,
-            this.gridColumn6});
-            this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsView.ShowGroupPanel = false;
+            this.gridColumn5});
+            this.dgvDSCho_View.GridControl = this.dgvDSCho;
+            this.dgvDSCho_View.Name = "dgvDSCho_View";
+            this.dgvDSCho_View.OptionsView.ShowGroupPanel = false;
+            this.dgvDSCho_View.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.dgvDSCho_View_RowClick_1);
             // 
-            // gridControl1
+            // gridColumn13
             // 
-            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl1.Location = new System.Drawing.Point(2, 17);
-            this.gridControl1.MainView = this.gridView1;
-            this.gridControl1.Name = "gridControl1";
-            this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.gridColumn13.Caption = "Lớp";
+            this.gridColumn13.FieldName = "TenLop";
+            this.gridColumn13.MinWidth = 25;
+            this.gridColumn13.Name = "gridColumn13";
+            this.gridColumn13.Visible = true;
+            this.gridColumn13.VisibleIndex = 1;
+            this.gridColumn13.Width = 100;
+            // 
+            // dgvDSCho
+            // 
+            this.dgvDSCho.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDSCho.Location = new System.Drawing.Point(2, 17);
+            this.dgvDSCho.MainView = this.dgvDSCho_View;
+            this.dgvDSCho.Name = "dgvDSCho";
+            this.dgvDSCho.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnDel});
-            this.gridControl1.Size = new System.Drawing.Size(428, 640);
-            this.gridControl1.TabIndex = 0;
-            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView1});
+            this.dgvDSCho.Size = new System.Drawing.Size(428, 728);
+            this.dgvDSCho.TabIndex = 0;
+            this.dgvDSCho.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.dgvDSCho_View});
             // 
             // groupControl1
             // 
             this.groupControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupControl1.Controls.Add(this.gridControl1);
+            this.groupControl1.Controls.Add(this.dgvDSCho);
             this.groupControl1.Location = new System.Drawing.Point(3, 3);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(432, 659);
+            this.groupControl1.Size = new System.Drawing.Size(432, 747);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Danh sách chờ duyệt";
             // 
-            // gridColumn2
+            // dgvChiTietDS1
             // 
-            this.gridColumn2.Caption = "gridColumn2";
-            this.gridColumn2.MinWidth = 25;
-            this.gridColumn2.Name = "gridColumn2";
-            this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 3;
-            this.gridColumn2.Width = 94;
+            this.dgvChiTietDS1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvChiTietDS1.Location = new System.Drawing.Point(2, 17);
+            this.dgvChiTietDS1.MainView = this.btnXoa;
+            this.dgvChiTietDS1.Name = "dgvChiTietDS1";
+            this.dgvChiTietDS1.Size = new System.Drawing.Size(526, 603);
+            this.dgvChiTietDS1.TabIndex = 6;
+            this.dgvChiTietDS1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.btnXoa});
             // 
-            // repositoryItemButtonEdit1
+            // btnXoa
             // 
-            this.repositoryItemButtonEdit1.AutoHeight = false;
-            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
-            this.repositoryItemButtonEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
-            this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
-            this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
-            // 
-            // gridColumn11
-            // 
-            this.gridColumn11.Caption = "Trưa";
-            this.gridColumn11.ColumnEdit = this.chkEdit;
-            this.gridColumn11.FieldName = "Trua";
-            this.gridColumn11.MinWidth = 25;
-            this.gridColumn11.Name = "gridColumn11";
-            this.gridColumn11.Visible = true;
-            this.gridColumn11.VisibleIndex = 4;
-            this.gridColumn11.Width = 76;
-            // 
-            // chkEdit
-            // 
-            this.chkEdit.AutoHeight = false;
-            this.chkEdit.Name = "chkEdit";
-            this.chkEdit.ValueChecked = 1;
-            this.chkEdit.ValueUnchecked = 0;
-            // 
-            // gridColumn10
-            // 
-            this.gridColumn10.Caption = "Sáng";
-            this.gridColumn10.ColumnEdit = this.chkEdit;
-            this.gridColumn10.FieldName = "Sang";
-            this.gridColumn10.MinWidth = 25;
-            this.gridColumn10.Name = "gridColumn10";
-            this.gridColumn10.Visible = true;
-            this.gridColumn10.VisibleIndex = 3;
-            this.gridColumn10.Width = 80;
-            // 
-            // gridColumn9
-            // 
-            this.gridColumn9.Caption = "Ngày nghỉ";
-            this.gridColumn9.FieldName = "NgayNghi";
-            this.gridColumn9.MinWidth = 25;
-            this.gridColumn9.Name = "gridColumn9";
-            this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 2;
-            this.gridColumn9.Width = 259;
-            // 
-            // gridColumn8
-            // 
-            this.gridColumn8.Caption = "Lớp";
-            this.gridColumn8.FieldName = "Lop";
-            this.gridColumn8.MinWidth = 25;
-            this.gridColumn8.Name = "gridColumn8";
-            this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 1;
-            this.gridColumn8.Width = 112;
+            this.btnXoa.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn7,
+            this.gridColumn8,
+            this.gridColumn9,
+            this.gridColumn10,
+            this.gridColumn11,
+            this.gridColumn12});
+            this.btnXoa.GridControl = this.dgvChiTietDS1;
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.OptionsView.ShowGroupPanel = false;
             // 
             // gridColumn7
             // 
@@ -254,18 +205,47 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.gridColumn7.VisibleIndex = 0;
             this.gridColumn7.Width = 275;
             // 
-            // gridView2
+            // gridColumn8
             // 
-            this.gridView2.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn7,
-            this.gridColumn8,
-            this.gridColumn9,
-            this.gridColumn10,
-            this.gridColumn11,
-            this.gridColumn12});
-            this.gridView2.GridControl = this.gridControl2;
-            this.gridView2.Name = "gridView2";
-            this.gridView2.OptionsView.ShowGroupPanel = false;
+            this.gridColumn8.Caption = "Lớp";
+            this.gridColumn8.FieldName = "Lop";
+            this.gridColumn8.MinWidth = 25;
+            this.gridColumn8.Name = "gridColumn8";
+            this.gridColumn8.Visible = true;
+            this.gridColumn8.VisibleIndex = 1;
+            this.gridColumn8.Width = 112;
+            // 
+            // gridColumn9
+            // 
+            this.gridColumn9.Caption = "Ngày nghỉ";
+            this.gridColumn9.FieldName = "NgayNghi";
+            this.gridColumn9.MinWidth = 25;
+            this.gridColumn9.Name = "gridColumn9";
+            this.gridColumn9.Visible = true;
+            this.gridColumn9.VisibleIndex = 2;
+            this.gridColumn9.Width = 259;
+            // 
+            // gridColumn10
+            // 
+            this.gridColumn10.Caption = "Sáng";
+            this.gridColumn10.ColumnEdit = this.chkEdit;
+            this.gridColumn10.FieldName = "Sang";
+            this.gridColumn10.MinWidth = 25;
+            this.gridColumn10.Name = "gridColumn10";
+            this.gridColumn10.Visible = true;
+            this.gridColumn10.VisibleIndex = 3;
+            this.gridColumn10.Width = 51;
+            // 
+            // gridColumn11
+            // 
+            this.gridColumn11.Caption = "Trưa";
+            this.gridColumn11.ColumnEdit = this.chkEdit;
+            this.gridColumn11.FieldName = "Trua";
+            this.gridColumn11.MinWidth = 25;
+            this.gridColumn11.Name = "gridColumn11";
+            this.gridColumn11.Visible = true;
+            this.gridColumn11.VisibleIndex = 4;
+            this.gridColumn11.Width = 48;
             // 
             // gridColumn12
             // 
@@ -276,29 +256,28 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.gridColumn12.Name = "gridColumn12";
             this.gridColumn12.Visible = true;
             this.gridColumn12.VisibleIndex = 5;
-            // 
-            // gridControl2
-            // 
-            this.gridControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridControl2.Location = new System.Drawing.Point(2, 17);
-            this.gridControl2.MainView = this.gridView2;
-            this.gridControl2.Name = "gridControl2";
-            this.gridControl2.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
-            this.repositoryItemButtonEdit1,
-            this.chkEdit});
-            this.gridControl2.Size = new System.Drawing.Size(526, 596);
-            this.gridControl2.TabIndex = 6;
-            this.gridControl2.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
-            this.gridView2});
+            this.gridColumn12.Width = 55;
             // 
             // groupControl2
             // 
-            this.groupControl2.Controls.Add(this.gridControl2);
-            this.groupControl2.Location = new System.Drawing.Point(441, 3);
+            this.groupControl2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupControl2.Controls.Add(this.dgvChiTietDS1);
+            this.groupControl2.Location = new System.Drawing.Point(3, 3);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(530, 615);
+            this.groupControl2.Size = new System.Drawing.Size(530, 622);
             this.groupControl2.TabIndex = 0;
             this.groupControl2.Text = "Chi tiết danh sách";
+            // 
+            // gridColumn2
+            // 
+            this.gridColumn2.Caption = "gridColumn2";
+            this.gridColumn2.MinWidth = 25;
+            this.gridColumn2.Name = "gridColumn2";
+            this.gridColumn2.Visible = true;
+            this.gridColumn2.VisibleIndex = 3;
+            this.gridColumn2.Width = 94;
             // 
             // tableLayoutPanel1
             // 
@@ -308,41 +287,52 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.tableLayoutPanel1.ColumnCount = 2;
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 45F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 55F));
-            this.tableLayoutPanel1.Controls.Add(this.groupControl2, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.groupControl1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.btnHuy, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.btnXacnhan, 0, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panel1, 1, 0);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(3, 4);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 2;
+            this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 88F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(974, 753);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnXacNhan);
+            this.panel1.Controls.Add(this.btnHuy);
+            this.panel1.Controls.Add(this.groupControl2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(441, 3);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(530, 747);
+            this.panel1.TabIndex = 1;
+            // 
+            // btnXacNhan
+            // 
+            this.btnXacNhan.BackColor = System.Drawing.Color.ForestGreen;
+            this.btnXacNhan.ForeColor = System.Drawing.Color.White;
+            this.btnXacNhan.Location = new System.Drawing.Point(312, 667);
+            this.btnXacNhan.Name = "btnXacNhan";
+            this.btnXacNhan.Size = new System.Drawing.Size(140, 47);
+            this.btnXacNhan.TabIndex = 2;
+            this.btnXacNhan.Text = "Xác nhận";
+            this.btnXacNhan.UseVisualStyleBackColor = false;
+            this.btnXacNhan.Click += new System.EventHandler(this.btnXacnhan_Click);
+            // 
             // btnHuy
             // 
-            this.btnHuy.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnHuy.Appearance.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Danger;
-            this.btnHuy.Appearance.ForeColor = System.Drawing.Color.Red;
-            this.btnHuy.Appearance.Options.UseBackColor = true;
-            this.btnHuy.Appearance.Options.UseForeColor = true;
-            this.btnHuy.Location = new System.Drawing.Point(612, 706);
+            this.btnHuy.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHuy.BackColor = System.Drawing.Color.Red;
+            this.btnHuy.ForeColor = System.Drawing.Color.White;
+            this.btnHuy.Location = new System.Drawing.Point(36, 667);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(187, 44);
-            this.btnHuy.TabIndex = 4;
+            this.btnHuy.Size = new System.Drawing.Size(152, 47);
+            this.btnHuy.TabIndex = 1;
             this.btnHuy.Text = "Huỷ yêu cầu";
-            // 
-            // btnXacnhan
-            // 
-            this.btnXacnhan.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.btnXacnhan.Appearance.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
-            this.btnXacnhan.Appearance.Options.UseBackColor = true;
-            this.btnXacnhan.Location = new System.Drawing.Point(125, 706);
-            this.btnXacnhan.Name = "btnXacnhan";
-            this.btnXacnhan.Size = new System.Drawing.Size(187, 44);
-            this.btnXacnhan.TabIndex = 3;
-            this.btnXacnhan.Text = "Xác nhận";
+            this.btnHuy.UseVisualStyleBackColor = false;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // DaiDoi_ChoPheDuyet
             // 
@@ -351,19 +341,19 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "DaiDoi_ChoPheDuyet";
             this.Size = new System.Drawing.Size(981, 760);
+            ((System.ComponentModel.ISupportInitialize)(this.chkEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.danhSachNghiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDel)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSCho_View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSCho)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkEdit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvChiTietDS1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnXoa)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -373,27 +363,27 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private System.Windows.Forms.BindingSource danhSachNghiBindingSource;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnDel;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraGrid.GridControl gridControl1;
+        private DevExpress.XtraGrid.Views.Grid.GridView dgvDSCho_View;
+        private DevExpress.XtraGrid.GridControl dgvDSCho;
         private DevExpress.XtraEditors.GroupControl groupControl1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
-        private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
-        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit chkEdit;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
-        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraGrid.Views.Grid.GridView btnXoa;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
-        private DevExpress.XtraGrid.GridControl gridControl2;
+        private DevExpress.XtraGrid.GridControl dgvChiTietDS1;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private DevExpress.XtraEditors.SimpleButton btnHuy;
-        private DevExpress.XtraEditors.SimpleButton btnXacnhan;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn13;
+        private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit chkEdit;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnXacNhan;
+        private System.Windows.Forms.Button btnHuy;
     }
 }

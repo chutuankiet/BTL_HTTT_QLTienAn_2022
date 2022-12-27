@@ -23,6 +23,6 @@ namespace HTTT_QLTienAn.Model
 
         public int? MaDangKy { get; set; }
 
-        public virtual ChiTietRaNgoai ChiTietRaNgoai { get; set; }
+        public virtual DangKyNghi DangKyNghi { get; set; }
     }
 }

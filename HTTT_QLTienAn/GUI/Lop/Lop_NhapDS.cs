@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -207,8 +208,8 @@ namespace HTTT_QLTienAn.GUI.Lop
 
                     for(int j = 0;j < sobuoinghi; j++)
                     {
-                        int isInCT = lsCTCatCom.Where(m => DateTime.Compare(m.NgayCatCom,temp) == 0 && m.MaDangKyTam == listDK[i].MaDangKyTam).Count();
-
+                        int isInCT = lsCTCatCom.Where(m => m.NgayCatCom.ToString("dd/MM/yyyy") == temp.ToString("dd/MM/yyyy") ).Count();
+                        //&& m.MaDangKyTam == listDK[i].MaDangKyTam
                         if (isInCT  > 0)
                         {
                             MessageBox.Show($"Đã tồn đăng ký trong danh sách", "Thông báo !");
@@ -216,7 +217,6 @@ namespace HTTT_QLTienAn.GUI.Lop
                         }
                         temp = temp.AddDays(1);
                     }
-                  
                 }
             }
 
@@ -224,7 +224,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             DateTime ngayTemp = hv.NgayBDNghi;
             while (DateTime.Compare(ngayTemp.AddDays(1), hv.NgayKTNghi) < 0)
             {
-                var isDupInDB = db.ChiTietCatComs.Where(x => x.NgayCatCom == ngayTemp && x.ChiTietRaNgoai.MaHocVien == hv.MaHocVien).FirstOrDefault();
+                var isDupInDB = db.ChiTietCatComs.Where(x => x.NgayCatCom == ngayTemp && x.DangKyNghi.MaHocVien == hv.MaHocVien).FirstOrDefault();
 
                 if (isDupInDB != null)
                 {
@@ -256,10 +256,7 @@ namespace HTTT_QLTienAn.GUI.Lop
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-            if (!checkDateTT())
-            {
-                return;
-            }
+
 
             if (MaHVCurrent == 0)
             {
@@ -267,6 +264,13 @@ namespace HTTT_QLTienAn.GUI.Lop
                 return;
             }
 
+
+            if (!checkDateTT())
+            {
+                return;
+            }
+
+            
             if (txtSang.Text == null || txtTrua.Text == null && txtToi.Text == null)
             {
                 MessageBox.Show("Chưa chọn loại nghỉ ! ", "Error");
@@ -332,12 +336,18 @@ namespace HTTT_QLTienAn.GUI.Lop
 
         private void btnSendList_Click(object sender, EventArgs e)
         {
+            if (MaHVCurrent == 0 || listDK.Count == 0 || lsCTCatCom.Count == 0)
+            {
+                MessageBox.Show("Chưa chọn học viên ! Danh sách trống !!", "Error");
+                return;
+            }
+
             if (MessageBox.Show("Bạn có chắc chắn hoàn thành và gửi không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
-
+                
 
                 ds.NgayDK = DateTime.Now;
-                ds.PheDuyet = -2; // -2 : chua canbo nao phe duyet | -1 : huy | 0 : daidoi | 1 : tieudoan
+                ds.PheDuyet = -3; // -3 : chua duyet | -2 : huy dai doi |-1 : huy tieu doan | 0 : daidoi | 1 : tieudoan
 
                 db.DanhSachRaNgoais.Add(ds);
 
@@ -347,7 +357,7 @@ namespace HTTT_QLTienAn.GUI.Lop
 
                 foreach (var item in listDK)
                 {
-                    ChiTietRaNgoai ctrn = new ChiTietRaNgoai
+                    DangKyNghi ctrn = new DangKyNghi
                     {
                         LyDo = item.LyDo,
                         MaHocVien = item.MaHocVien,
@@ -359,7 +369,7 @@ namespace HTTT_QLTienAn.GUI.Lop
 
                     
 
-                    db.ChiTietRaNgoais.Add(ctrn);
+                    db.DangKyNghis.Add(ctrn);
                     db.SaveChanges();
 
                     int maTCA = (int)db.HocViens.Where(m => m.MaHocVien == item.MaHocVien).FirstOrDefault().LoaiHocVien.MaTCA;
@@ -390,7 +400,7 @@ namespace HTTT_QLTienAn.GUI.Lop
                             BuoiSang = icc.BuoiSang,
                             BuoiTrua = icc.BuoiTrua,
                             BuoiToi = icc.BuoiToi,
-                            MaDangKy = db.ChiTietRaNgoais.Where(m => m.MaHocVien == item.MaHocVien && m.MaDS == ds.MaDS).FirstOrDefault().MaDangKy,
+                            MaDangKy = db.DangKyNghis.Where(m => m.MaHocVien == item.MaHocVien && m.MaDS == ds.MaDS).FirstOrDefault().MaDangKy,
                             NgayCatCom = icc.NgayCatCom
                         };
                         db.ChiTietCatComs.Add(ctcc);
