@@ -110,7 +110,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             MaLopTruong = MainForm.MaID;
             Model.Lop tempLop = db.Lops.Where(m => m.MaLopTruong == MaLopTruong).FirstOrDefault();
 
-            MaLop = tempLop.MaLop;
+            cMaLop = tempLop.MaLop;
 
 
             dateStart.DateTime = DateTime.Now;

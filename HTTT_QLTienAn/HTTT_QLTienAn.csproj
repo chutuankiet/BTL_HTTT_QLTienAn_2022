@@ -199,6 +199,12 @@
     <Compile Include="GUI\Lop\Lop_NhapDS.Designer.cs">
       <DependentUpon>Lop_NhapDS.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\NhaBep\NhaBep_LSCatCom.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\NhaBep\NhaBep_LSCatCom.Designer.cs">
+      <DependentUpon>NhaBep_LSCatCom.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\NhaBep\NhaBep_QuanLyDS.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -317,6 +323,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Lop\Lop_NhapDS.resx">
       <DependentUpon>Lop_NhapDS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NhaBep\NhaBep_LSCatCom.resx">
+      <DependentUpon>NhaBep_LSCatCom.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\NhaBep\NhaBep_QuanLyDS.resx">
       <DependentUpon>NhaBep_QuanLyDS.cs</DependentUpon>
