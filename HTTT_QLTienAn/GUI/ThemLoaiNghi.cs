@@ -68,11 +68,11 @@ namespace HTTT_QLTienAn.GUI
             lbTrua.Text = ListLoaiNghi[index].SoBuoiTrua.ToString();
             lbToi.Text = ListLoaiNghi[index].SoBuoiToi.ToString();
 
-            MaLoaiNghiCurrent = index + 1;
+            MaLoaiNghiCurrent = ListLoaiNghi[index].MaLoaiNghi;
 
             LoadCTLoaiNghi(MaLoaiNghiCurrent);
 
-
+            btnXoa.Text = $"Xóa '{txtTenLoaiNghi.Text}' ?";
         }
 
         private void ThemLoaiNghi_FormClosing(object sender, FormClosingEventArgs e)
@@ -237,9 +237,7 @@ namespace HTTT_QLTienAn.GUI
             }
 
 
-
             List<ChiTietLoaiNghi> preCT = db.ChiTietLoaiNghis.Where(m => m.MaLoaiNghi == MaLoaiNghiCurrent).ToList();
-
 
 
             db.ChiTietLoaiNghis.RemoveRange(preCT);
@@ -248,8 +246,6 @@ namespace HTTT_QLTienAn.GUI
 
             for (int i = 0; i < songay; i++)
             {
-
-
                 ChiTietLoaiNghi newct = new ChiTietLoaiNghi
                 {
                     BuoiSang = true,
@@ -284,6 +280,26 @@ namespace HTTT_QLTienAn.GUI
         private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
         {
             reloadSoBuoi();
+        }
+
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
+            LoaiNghi xoaln = db.LoaiNghis.Where(m => m.MaLoaiNghi == MaLoaiNghiCurrent).First();
+            if (MessageBox.Show($"Bạn có chắc chắn xóa ? {xoaln.TenLoaiNghi}", "Xác nhận xóa", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+
+                List<ChiTietLoaiNghi> preCT = db.ChiTietLoaiNghis.Where(m => m.MaLoaiNghi == MaLoaiNghiCurrent).ToList();
+                db.ChiTietLoaiNghis.RemoveRange(preCT);
+
+                db.LoaiNghis.Remove(xoaln);
+                db.SaveChanges();
+
+                LoadCBLoaiNghi();
+
+                gridControl1.DataSource = null;
+                MessageBox.Show($"Đã xóa thành công  !");
+
+            }
         }
 
         void reloadSoBuoi()
