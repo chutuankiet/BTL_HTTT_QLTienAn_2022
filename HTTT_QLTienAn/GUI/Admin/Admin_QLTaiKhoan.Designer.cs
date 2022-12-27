@@ -438,7 +438,7 @@ namespace HTTT_QLTienAn.GUI.Admin
             // gridColumn4
             // 
             this.gridColumn4.Caption = "Quyền truy cập";
-            this.gridColumn4.FieldName = "QuyenTruyCap";
+            this.gridColumn4.FieldName = "Quyen";
             this.gridColumn4.MinWidth = 29;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
