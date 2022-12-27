@@ -268,9 +268,8 @@
     <Compile Include="Model\CanBo.cs" />
     <Compile Include="Model\ChiTietCatCom.cs" />
     <Compile Include="Model\ChiTietLoaiNghi.cs" />
-    <Compile Include="Model\DangKyNghi.cs" />
-    <Compile Include="Model\DangKyNghi.cs" />
     <Compile Include="Model\CT_CatCom_HocVien.cs" />
+    <Compile Include="Model\DangKyNghi.cs" />
     <Compile Include="Model\DanhSachRaNgoai.cs" />
     <Compile Include="Model\DonVi.cs" />
     <Compile Include="Model\DotThanhToan.cs" />
@@ -279,8 +278,12 @@
     <Compile Include="Model\LoaiHocVien.cs" />
     <Compile Include="Model\LoaiNghi.cs" />
     <Compile Include="Model\Lop.cs" />
+    <Compile Include="Model\NhaBep_ChuaThanhToan.cs" />
+    <Compile Include="Model\NhaBep_ListDaThanhToan.cs" />
+    <Compile Include="Model\NhaBep_ListThanhToan.cs" />
     <Compile Include="Model\PhieuThanhToan.cs" />
     <Compile Include="Model\QLTA_model.cs" />
+    <Compile Include="Model\sysdiagram.cs" />
     <Compile Include="Model\TaiKhoan.cs" />
     <Compile Include="Model\TieuChuanAn.cs" />
     <Compile Include="Program.cs" />
