@@ -20,11 +20,12 @@ namespace HTTT_QLTienAn.GUI.Admin
         }
         public QLTA_model db = new QLTA_model();
         public TaiKhoan tk = new TaiKhoan();
+        List<TaiKhoan> Lst_tk;
 
         private void Admin_QLTaiKhoan_Load(object sender, EventArgs e)
         {
-            var tk = db.TaiKhoans.ToList();
-            dgvTKDN.DataSource = tk;
+            Lst_tk = db.TaiKhoans.ToList();
+            dgvTKDN.DataSource = Lst_tk;
             LoadChiTietTK();
         }
 
@@ -32,14 +33,16 @@ namespace HTTT_QLTienAn.GUI.Admin
         {
             try
             {
-                int matk = (int)dgvTKDN_View.GetFocusedRowCellValue("MaTaiKhoan");
-                tk = db.TaiKhoans.Where(p => p.MaTK == matk).FirstOrDefault();
+
+                tk = Lst_tk[0];
                 txtTenDN_CT.EditValue = tk.TenDangNhap;
                 txtQuyenTruyCap_CT.EditValue = tk.Quyen;
                 txtMatKhau_CT.EditValue = tk.MatKhau;
+
                 txtXoaMK.EditValue = tk.MatKhau;
                 txtXoaQTC.EditValue = tk.Quyen;
                 txtXoaTenDN.EditValue = tk.TenDangNhap;
+
                 txtSuaMaTK.EditValue = tk.MaTK;
             }
             catch { }

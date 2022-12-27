@@ -746,7 +746,7 @@ namespace HTTT_QLTienAn.GUI.Admin
             // gridColumn4
             // 
             this.gridColumn4.Caption = "Cấp bậc";
-            this.gridColumn4.FieldName = "Lop";
+            this.gridColumn4.FieldName = "CapBac";
             this.gridColumn4.MinWidth = 29;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
@@ -756,7 +756,7 @@ namespace HTTT_QLTienAn.GUI.Admin
             // gridColumn5
             // 
             this.gridColumn5.Caption = "Chức vụ";
-            this.gridColumn5.FieldName = "CapBac";
+            this.gridColumn5.FieldName = "ChucVu";
             this.gridColumn5.MinWidth = 29;
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
@@ -766,7 +766,7 @@ namespace HTTT_QLTienAn.GUI.Admin
             // gridColumn6
             // 
             this.gridColumn6.Caption = "Mã lớp";
-            this.gridColumn6.FieldName = "ChucVu";
+            this.gridColumn6.FieldName = "MaLop";
             this.gridColumn6.MinWidth = 29;
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
@@ -776,7 +776,7 @@ namespace HTTT_QLTienAn.GUI.Admin
             // gridColumn7
             // 
             this.gridColumn7.Caption = "Mã loại học viên";
-            this.gridColumn7.FieldName = "MaDonVi";
+            this.gridColumn7.FieldName = "MaLHV";
             this.gridColumn7.MinWidth = 29;
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
@@ -786,7 +786,7 @@ namespace HTTT_QLTienAn.GUI.Admin
             // gridColumn8
             // 
             this.gridColumn8.Caption = "Mã tài khoản";
-            this.gridColumn8.FieldName = "MaTCA";
+            this.gridColumn8.FieldName = "MaTK";
             this.gridColumn8.MinWidth = 29;
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Visible = true;
