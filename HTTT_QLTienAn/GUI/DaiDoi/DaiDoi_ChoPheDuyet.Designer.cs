@@ -56,6 +56,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnXacNhan = new System.Windows.Forms.Button();
+            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.chkEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.danhSachNghiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDel)).BeginInit();
@@ -190,6 +191,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn11,
             this.gridColumn7,
             this.gridColumn8,
             this.gridColumn9,
@@ -257,7 +259,6 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-
             // 
             // groupControl2
             // 
@@ -342,6 +343,14 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.btnXacNhan.UseVisualStyleBackColor = false;
             this.btnXacNhan.Click += new System.EventHandler(this.btnXacnhan_Click);
             // 
+            // gridColumn11
+            // 
+            this.gridColumn11.Caption = "Mã đăng ký";
+            this.gridColumn11.FieldName = "MaDK";
+            this.gridColumn11.MinWidth = 25;
+            this.gridColumn11.Name = "gridColumn11";
+            this.gridColumn11.Width = 94;
+            // 
             // DaiDoi_ChoPheDuyet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -397,5 +406,6 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit btnXoa;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
     }
 }
