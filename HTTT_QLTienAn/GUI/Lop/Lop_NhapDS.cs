@@ -416,30 +416,8 @@ namespace HTTT_QLTienAn.GUI.Lop
 
                     }
 
-                    int maTCA = (int)db.HocViens.Where(m => m.MaHocVien == item.MaHocVien).FirstOrDefault().LoaiHocVien.MaTCA;
-
-                    TieuChuanAn tca_hv = db.TieuChuanAns.Where(m => m.MaTCA == maTCA).FirstOrDefault();
-
-                    LoaiNghi ln_hv = db.LoaiNghis.Where(m => m.MaLoaiNghi == item.MaLoaiNghi).FirstOrDefault();
 
 
-                    using (var context = new QLTA_model())
-                    {
-                        PhieuThanhToan newThanhToan = new PhieuThanhToan
-                        {
-                            TrangThaiTT = -2,
-                            MaDangKy = MaDangKyCurrent, //---------------------------------------
-                            TongTien = (int)ln_hv.SoBuoiSang * tca_hv.TienAnSang +
-                                    (int)ln_hv.SoBuoiTrua * tca_hv.TienAnTrua +
-                                    (int)ln_hv.SoBuoiToi * tca_hv.TienAnToi
-                        };
-
-                        context.PhieuThanhToans.Add(newThanhToan);
-
-
-                        context.SaveChanges();
-
-                    }
 
                     List<CT_CatCom_HocVien> ls_Add_cc = lsCTCatCom.Where(m => m.MaDangKyTam == item.MaDangKyTam).ToList();
 

@@ -29,6 +29,9 @@ namespace HTTT_QLTienAn.GUI.Lop
 
 
         int MaDS_XacNhan;
+
+
+
         public void LoadDS1()
         {
             try
@@ -37,11 +40,9 @@ namespace HTTT_QLTienAn.GUI.Lop
 
                 gridControl1.DataSource = ds_ChoPheDuyet;
 
-                MaDS_XacNhan = ds_ChoPheDuyet[0].MaDS;
 
                 ds_CTChoPheDuyet = db.DS_CTLopChoPheDuyet.Where(m => m.MaLop == targetLop.MaLop).ToList();
 
-                gridControl2.DataSource = ds_CTChoPheDuyet;
             }
             catch
             { }
@@ -62,10 +63,51 @@ namespace HTTT_QLTienAn.GUI.Lop
         {
             int maDS = Convert.ToInt32(gridView1.GetRowCellValue(e.RowHandle, "MaDS"));
 
+            if (gridView1.FocusedColumn == gridView1.Columns["fldXoa"])
+            {
+                if (MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+                {
+                    List<DangKyNghi> dsdk = db.DangKyNghis.Where(s => s.MaDS == maDS).ToList();
+
+                    for (int i = 0; i < dsdk.Count; i++)
+                    {
+                        int madknghi = dsdk[i].MaDangKy;
+                        List<ChiTietCatCom> ctn = db.ChiTietCatComs.Where(s => s.MaDangKy == madknghi).ToList();
+                        List<PhieuThanhToan> dsTT = db.PhieuThanhToans.Where(s => s.MaDangKy == madknghi).ToList();
+
+                        db.ChiTietCatComs.RemoveRange(ctn);
+                        db.PhieuThanhToans.RemoveRange(dsTT);
+                    }
+
+
+                    db.DangKyNghis.RemoveRange(dsdk);
+
+
+                    DanhSachRaNgoai DStemp = db.DanhSachRaNgoais.Where(s => s.MaDS == maDS).FirstOrDefault();
+                    db.DanhSachRaNgoais.Remove(DStemp);
+                    db.SaveChanges();
+                    ReloadAll();
+                    MessageBox.Show("Xóa thành công");
+                }
+                return;
+            }
+
+
             MaDS_XacNhan = maDS;
-            List<DS_CTLopChoPheDuyet> temp = ds_CTChoPheDuyet.Where(m => m.MaDS == MaDS_XacNhan).ToList();
+            List<DS_CTLopChoPheDuyet> temp = ds_CTChoPheDuyet.Where(m => m.MaDS == maDS).ToList();
 
             gridControl2.DataSource = temp; 
+        }
+
+        public void ReloadAll()
+        {
+            Lop_ChoPheDuyet_Load(this, new EventArgs());
+        }
+
+
+        private void btnDel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
