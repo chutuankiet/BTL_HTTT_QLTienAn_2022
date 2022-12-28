@@ -93,7 +93,7 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             this.colNgayTT.Name = "colNgayTT";
             this.colNgayTT.Visible = true;
             this.colNgayTT.VisibleIndex = 2;
-            this.colNgayTT.Width = 107;
+            this.colNgayTT.Width = 113;
             // 
             // colTenDonVi
             // 
@@ -117,7 +117,7 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             this.colLop.Name = "colLop";
             this.colLop.Visible = true;
             this.colLop.VisibleIndex = 3;
-            this.colLop.Width = 107;
+            this.colLop.Width = 113;
             // 
             // colHoTen
             // 
@@ -127,7 +127,7 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             this.colHoTen.Name = "colHoTen";
             this.colHoTen.Visible = true;
             this.colHoTen.VisibleIndex = 1;
-            this.colHoTen.Width = 107;
+            this.colHoTen.Width = 113;
             // 
             // colMaHocVien
             // 
@@ -137,7 +137,7 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             this.colMaHocVien.Name = "colMaHocVien";
             this.colMaHocVien.Visible = true;
             this.colMaHocVien.VisibleIndex = 0;
-            this.colMaHocVien.Width = 107;
+            this.colMaHocVien.Width = 56;
             // 
             // gridView1
             // 
@@ -164,7 +164,7 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             this.colTongTien.Name = "colTongTien";
             this.colTongTien.Visible = true;
             this.colTongTien.VisibleIndex = 4;
-            this.colTongTien.Width = 107;
+            this.colTongTien.Width = 117;
             // 
             // gridControl1
             // 
@@ -245,7 +245,7 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 157;
+            this.gridColumn1.Width = 92;
             // 
             // gridColumn2
             // 
@@ -255,7 +255,7 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 56;
+            this.gridColumn2.Width = 139;
             // 
             // gridColumn3
             // 
@@ -265,7 +265,7 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 59;
+            this.gridColumn3.Width = 65;
             // 
             // gridColumn4
             // 
@@ -275,7 +275,7 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
-            this.gridColumn4.Width = 68;
+            this.gridColumn4.Width = 53;
             // 
             // gridColumn5
             // 
@@ -285,7 +285,7 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 4;
-            this.gridColumn5.Width = 59;
+            this.gridColumn5.Width = 52;
             // 
             // gridColumn6
             // 
@@ -295,7 +295,7 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 5;
-            this.gridColumn6.Width = 182;
+            this.gridColumn6.Width = 133;
             // 
             // gridControl2
             // 
@@ -389,10 +389,10 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             // 
             // btnThanhToan
             // 
-            this.btnThanhToan.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.btnThanhToan.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnThanhToan.Appearance.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Success;
             this.btnThanhToan.Appearance.Options.UseBackColor = true;
-            this.btnThanhToan.Location = new System.Drawing.Point(423, 591);
+            this.btnThanhToan.Location = new System.Drawing.Point(403, 588);
             this.btnThanhToan.Name = "btnThanhToan";
             this.btnThanhToan.Size = new System.Drawing.Size(139, 115);
             this.btnThanhToan.TabIndex = 1;

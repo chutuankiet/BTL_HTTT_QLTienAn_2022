@@ -30,6 +30,12 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DaiDoi_ChoPheDuyet));
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.chkEdit = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.danhSachNghiBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -106,7 +112,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 3;
-            this.gridColumn5.Width = 157;
+            this.gridColumn5.Width = 148;
             // 
             // gridColumn4
             // 
@@ -116,7 +122,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 2;
-            this.gridColumn4.Width = 317;
+            this.gridColumn4.Width = 108;
             // 
             // gridColumn1
             // 
@@ -126,7 +132,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 135;
+            this.gridColumn1.Width = 46;
             // 
             // dgvDSCho_View
             // 
@@ -149,7 +155,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.gridColumn13.Name = "gridColumn13";
             this.gridColumn13.Visible = true;
             this.gridColumn13.VisibleIndex = 1;
-            this.gridColumn13.Width = 114;
+            this.gridColumn13.Width = 169;
             // 
             // dgvDSCho
             // 
@@ -218,7 +224,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 0;
-            this.gridColumn7.Width = 199;
+            this.gridColumn7.Width = 139;
             // 
             // gridColumn8
             // 
@@ -228,7 +234,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 1;
-            this.gridColumn8.Width = 81;
+            this.gridColumn8.Width = 146;
             // 
             // gridColumn9
             // 
@@ -238,7 +244,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 2;
-            this.gridColumn9.Width = 188;
+            this.gridColumn9.Width = 102;
             // 
             // gridColumn6
             // 
@@ -248,7 +254,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 3;
-            this.gridColumn6.Width = 59;
+            this.gridColumn6.Width = 138;
             // 
             // gridColumn10
             // 
@@ -258,13 +264,14 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 4;
-            this.gridColumn10.Width = 57;
+            this.gridColumn10.Width = 59;
             // 
             // btnXoa
             // 
             this.btnXoa.AutoHeight = false;
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
             this.btnXoa.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);

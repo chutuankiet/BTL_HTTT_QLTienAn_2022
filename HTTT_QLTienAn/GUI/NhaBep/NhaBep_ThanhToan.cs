@@ -81,7 +81,7 @@ namespace HTTT_QLTienAn.GUI.NhaBep
 
             using(var ctx  = new Model.QLTA_model())
             {
-                lstThanhToan = ctx.NhaBep_ListThanhToan.SqlQuery("Select * from NhaBep_ListThanhToan").ToList<NhaBep_ListThanhToan>();
+                lstThanhToan = ctx.NhaBep_ListThanhToan.SqlQuery("Select * from NhaBep_ListThanhToan ").ToList<NhaBep_ListThanhToan>();
             }
 
 
