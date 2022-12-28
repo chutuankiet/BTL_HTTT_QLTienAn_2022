@@ -33,6 +33,7 @@ namespace HTTT_QLTienAn.Model
         public virtual DbSet<DS_DaThanhToan> DS_DaThanhToan { get; set; }
         public virtual DbSet<ds_huy> ds_huy { get; set; }
         public virtual DbSet<DS_LopChoPheDuyet> DS_LopChoPheDuyet { get; set; }
+        public virtual DbSet<getQSc> getQScs { get; set; }
         public virtual DbSet<NhaBep_ListCatCom> NhaBep_ListCatCom { get; set; }
         public virtual DbSet<NhaBep_ListThanhToan> NhaBep_ListThanhToan { get; set; }
 

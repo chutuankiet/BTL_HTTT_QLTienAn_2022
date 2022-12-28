@@ -140,7 +140,7 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
             // 
             // colNgayNghi
             // 
-            this.colNgayNghi.FieldName = "NgayNghi";
+            this.colNgayNghi.FieldName = "NgayCatCom";
             this.colNgayNghi.MinWidth = 29;
             this.colNgayNghi.Name = "colNgayNghi";
             this.colNgayNghi.Width = 107;
@@ -149,7 +149,7 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
             // 
             this.colSoBuoiSang.Caption = "Nghỉ sáng";
             this.colSoBuoiSang.ColumnEdit = this.chkEdit;
-            this.colSoBuoiSang.FieldName = "SoBuoiSang";
+            this.colSoBuoiSang.FieldName = "BuoiSang";
             this.colSoBuoiSang.MinWidth = 29;
             this.colSoBuoiSang.Name = "colSoBuoiSang";
             this.colSoBuoiSang.Visible = true;
@@ -160,14 +160,12 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
             // 
             this.chkEdit.AutoHeight = false;
             this.chkEdit.Name = "chkEdit";
-            this.chkEdit.ValueChecked = 1;
-            this.chkEdit.ValueUnchecked = 0;
             // 
             // colSoBuoiTrua
             // 
             this.colSoBuoiTrua.Caption = "Nghỉ trưa";
             this.colSoBuoiTrua.ColumnEdit = this.chkEdit;
-            this.colSoBuoiTrua.FieldName = "SoBuoiTrua";
+            this.colSoBuoiTrua.FieldName = "BuoiTrua";
             this.colSoBuoiTrua.MinWidth = 29;
             this.colSoBuoiTrua.Name = "colSoBuoiTrua";
             this.colSoBuoiTrua.Visible = true;
@@ -178,7 +176,7 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
             // 
             this.colSoBuoiToi.Caption = "Nghỉ tối";
             this.colSoBuoiToi.ColumnEdit = this.chkEdit;
-            this.colSoBuoiToi.FieldName = "SoBuoiToi";
+            this.colSoBuoiToi.FieldName = "BuoiToi";
             this.colSoBuoiToi.MinWidth = 29;
             this.colSoBuoiToi.Name = "colSoBuoiToi";
             this.colSoBuoiToi.Visible = true;
@@ -232,6 +230,7 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
             this.cbbDonVi.Name = "cbbDonVi";
             this.cbbDonVi.Size = new System.Drawing.Size(254, 24);
             this.cbbDonVi.TabIndex = 1;
+            this.cbbDonVi.SelectedIndexChanged += new System.EventHandler(this.cbbDonVi_SelectedIndexChanged);
             // 
             // textEdit9
             // 
@@ -368,6 +367,7 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtpNgayC.Size = new System.Drawing.Size(255, 22);
             this.dtpNgayC.TabIndex = 0;
+            this.dtpNgayC.EditValueChanged += new System.EventHandler(this.dtpNgayC_EditValueChanged);
             // 
             // groupControl3
             // 
@@ -435,6 +435,7 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtpNgayD.Size = new System.Drawing.Size(255, 22);
             this.dtpNgayD.TabIndex = 0;
+            this.dtpNgayD.EditValueChanged += new System.EventHandler(this.dtpNgayD_EditValueChanged);
             // 
             // textEdit10
             // 
@@ -611,6 +612,7 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "TieuDoan_QuanLyDS";
             this.Size = new System.Drawing.Size(1121, 760);
+            this.Load += new System.EventHandler(this.NhaBep_QuanLyDanhSach_Load);
             ((System.ComponentModel.ISupportInitialize)(this.chkEdit)).EndInit();
             this.tableLayoutPanel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();

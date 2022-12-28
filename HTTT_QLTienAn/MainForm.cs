@@ -36,6 +36,7 @@ namespace HTTT_QLTienAn
         TieuDoan_ChoPheDuyet uc8;
         TieuDoan_DaHuy uc9;
         TieuDoan_DaPheDuyet uc10;
+        TieuDoan_QuanLyDS uc101;
 
         NhaBep_QuanLyDS uc11;
         NhaBep_ThanhToan uc12;
@@ -163,27 +164,30 @@ namespace HTTT_QLTienAn
                     AccordionControlElement it8 = new AccordionControlElement(ElementStyle.Item) { Text = "Danh sách đang chờ duyệt" };
                     AccordionControlElement it9 = new AccordionControlElement(ElementStyle.Item) { Text = "Danh sách đã hủy" };
                     AccordionControlElement it10 = new AccordionControlElement(ElementStyle.Item) { Text = "Danh sách đã duyệt" };
+                    AccordionControlElement it101 = new AccordionControlElement(ElementStyle.Item) { Text = "Quản lý danh sách đã thanh toán" };
 
-                    accordionControl1.Elements.AddRange(new AccordionControlElement[] { it8, it9, it10 });
+                    accordionControl1.Elements.AddRange(new AccordionControlElement[] { it8, it9, it10, it101 });
                     accordionControl1.AllowItemSelection = true;
                     accordionControl1.ExpandAll();
 
                     it8.Click += It8_Click;
                     it9.Click += It9_Click;
                     it10.Click += It10_Click;
+                    it101.Click += It101_Click;
 
 
                     uc8 = new TieuDoan_ChoPheDuyet();//para macanbo
                     uc9 = new TieuDoan_DaHuy();
                     uc10 = new TieuDoan_DaPheDuyet();
-
+                    uc101 = new TieuDoan_QuanLyDS();
 
                     uc8.Dock = DockStyle.Fill;
                     uc9.Dock = DockStyle.Fill;
                     uc10.Dock = DockStyle.Fill;
+                    uc101.Dock = DockStyle.Fill;
 
 
-                    showUsercontrol.Controls.AddRange(new Control[] { uc8, uc9, uc10 });
+                    showUsercontrol.Controls.AddRange(new Control[] { uc8, uc9, uc10,uc101 });
 
                     break;
 
@@ -338,7 +342,12 @@ namespace HTTT_QLTienAn
             uc10.BringToFront();
             uc10.reload();
         }
-
+        private void It101_Click(object sender, EventArgs e)
+        {
+            
+            uc101.BringToFront();
+           
+        }
         private void It9_Click(object sender, EventArgs e)
         {
             uc9.reload();
