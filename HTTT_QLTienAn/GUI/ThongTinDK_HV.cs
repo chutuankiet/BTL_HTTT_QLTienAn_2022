@@ -74,8 +74,8 @@ namespace HTTT_QLTienAn.GUI
             lbTenDaiDoi.Text = db.DonVis.Where(m => m.MaDonVi == itemLop.MaDonVi).FirstOrDefault().TenDonVi;
             lbTenLoaiHV.Text = db.LoaiHocViens.Where(m => m.MaLHV == hv.MaLHV).FirstOrDefault().TenLHV;
 
-            dateStart.Text = chitietrn.NgayDi.ToString("dd/MM/yyyy");
-            dateEnd.Text = chitietrn.NgayVe.ToString("dd/MM/yyyy");
+            dateStart.DateTime = chitietrn.NgayDi;
+            dateEnd.DateTime = chitietrn.NgayVe;
 
             LoaiNghi itemLoaiNghi = db.LoaiNghis.Where(m => m.MaLoaiNghi == chitietrn.MaLoaiNghi).FirstOrDefault();
 

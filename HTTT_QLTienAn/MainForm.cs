@@ -12,6 +12,8 @@ using HTTT_QLTienAn.GUI.Lop;
 using HTTT_QLTienAn.GUI.DaiDoi;
 using HTTT_QLTienAn.GUI.TieuDoan;
 using HTTT_QLTienAn.GUI.NhaBep;
+using HTTT_QLTienAn.GUI;
+using HTTT_QLTienAn.Model;
 
 using DevExpress.XtraBars.Navigation;
 
@@ -46,11 +48,13 @@ namespace HTTT_QLTienAn
         Admin_QLTaiKhoan uc17;
         Admin_QLTieuChuanAn uc18;
 
-        
+
+        CanBo_SuaDSNhap ucSuaNhap;
 
 
         public static int MaID;
 
+        QLTA_model db = new QLTA_model();
 
         public MainForm(int maid, string accPer)
 
@@ -60,6 +64,8 @@ namespace HTTT_QLTienAn
             logout = false;
             MaID = maid;
         }
+
+        int Ma = MaID; 
 
 
         public MainForm(string accPer)
@@ -113,24 +119,34 @@ namespace HTTT_QLTienAn
                     AccordionControlElement it5 = new AccordionControlElement(ElementStyle.Item) { Text = "Danh sách chờ phê duyệt" };
                     AccordionControlElement it6 = new AccordionControlElement(ElementStyle.Item) { Text = "Danh sách đã hủy" };
                     AccordionControlElement it7 = new AccordionControlElement(ElementStyle.Item) { Text = "Danh sách đã phê duyệt" };
-                    accordionControl1.Elements.AddRange(new AccordionControlElement[] { it5, it6, it7 });
+                    AccordionControlElement itSuaNhap = new AccordionControlElement(ElementStyle.Item) { Text = "Sửa nhập danh sách" };
+                    accordionControl1.Elements.AddRange(new AccordionControlElement[] { it5, it6, it7, itSuaNhap });
                     accordionControl1.AllowItemSelection = true;
                     accordionControl1.ExpandAll();
 
                     it5.Click += It5_Click;
                     it6.Click += It6_Click;
-                    it7.Click += It7_Click;
+                    itSuaNhap.Click += itSuaNhap_Click;
 
                     uc5 = new DaiDoi_ChoPheDuyet();
                     uc6 = new DaiDoi_DaHuyPheDuyet();
                     uc7 = new DaiDoi_DaPheDuyet();
-                    
+
+                    //testing..............
+
+                    CanBo cbc = db.CanBoes.Where(m => m.MaCanBo == Ma).FirstOrDefault();
+
+                    List<HocVien> dshv = db.HocViens.ToList();
+                    List<DangKyNghi> dsdk = db.DangKyNghis.ToList();
+
+                    ucSuaNhap = new CanBo_SuaDSNhap(dshv,dsdk);
+
+
                     uc5.Dock = DockStyle.Fill;
                     uc6.Dock = DockStyle.Fill;
                     uc7.Dock = DockStyle.Fill;
-                    showUsercontrol.Controls.AddRange(new Control[] { uc5, uc6, uc7 });
-
-
+                    ucSuaNhap.Dock = DockStyle.Fill;
+                    showUsercontrol.Controls.AddRange(new Control[] { uc5, uc6, uc7, ucSuaNhap });
 
                     break;
 
@@ -228,8 +244,10 @@ namespace HTTT_QLTienAn
 
         }
 
-
-
+        private void itSuaNhap_Click(object sender, EventArgs e)
+        {
+            ucSuaNhap.BringToFront();
+        }
 
         private void FormMain_FormClosing(object sender, FormClosingEventArgs e)
         {

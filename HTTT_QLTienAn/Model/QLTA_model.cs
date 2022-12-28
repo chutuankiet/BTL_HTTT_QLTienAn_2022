@@ -30,6 +30,7 @@ namespace HTTT_QLTienAn.Model
         public virtual DbSet<c_ChoPheDuyet> c_ChoPheDuyet { get; set; }
         public virtual DbSet<DS_ChoPheDuyet> DS_ChoPheDuyet { get; set; }
         public virtual DbSet<ds_huy> ds_huy { get; set; }
+        public virtual DbSet<NhaBep_ListThanhToan> NhaBep_ListThanhToan { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

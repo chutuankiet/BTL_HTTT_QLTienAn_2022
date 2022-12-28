@@ -151,6 +151,12 @@
     <Compile Include="GUI\Admin\Admin_QLTieuChuanAn.Designer.cs">
       <DependentUpon>Admin_QLTieuChuanAn.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\CanBo_SuaDSNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\CanBo_SuaDSNhap.Designer.cs">
+      <DependentUpon>CanBo_SuaDSNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\DaiDoi\DaiDoi_ChoPheDuyet.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -210,6 +216,12 @@
     </Compile>
     <Compile Include="GUI\NhaBep\NhaBep_QuanLyDS.Designer.cs">
       <DependentUpon>NhaBep_QuanLyDS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\NhaBep\NhaBep_TaoDotTT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\NhaBep\NhaBep_TaoDotTT.Designer.cs">
+      <DependentUpon>NhaBep_TaoDotTT.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\NhaBep\NhaBep_ThanhToan.cs">
       <SubType>UserControl</SubType>
@@ -281,6 +293,7 @@
     <Compile Include="Model\LoaiHocVien.cs" />
     <Compile Include="Model\LoaiNghi.cs" />
     <Compile Include="Model\Lop.cs" />
+    <Compile Include="Model\NhaBep_ListThanhToan.cs" />
     <Compile Include="Model\PhieuThanhToan.cs" />
     <Compile Include="Model\QLTA_model.cs" />
     <Compile Include="Model\sysdiagram.cs" />
@@ -302,6 +315,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin\Admin_QLTieuChuanAn.resx">
       <DependentUpon>Admin_QLTieuChuanAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CanBo_SuaDSNhap.resx">
+      <DependentUpon>CanBo_SuaDSNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\DaiDoi\DaiDoi_ChoPheDuyet.resx">
       <DependentUpon>DaiDoi_ChoPheDuyet.cs</DependentUpon>
@@ -332,6 +348,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\NhaBep\NhaBep_QuanLyDS.resx">
       <DependentUpon>NhaBep_QuanLyDS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NhaBep\NhaBep_TaoDotTT.resx">
+      <DependentUpon>NhaBep_TaoDotTT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\NhaBep\NhaBep_ThanhToan.resx">
       <DependentUpon>NhaBep_ThanhToan.cs</DependentUpon>

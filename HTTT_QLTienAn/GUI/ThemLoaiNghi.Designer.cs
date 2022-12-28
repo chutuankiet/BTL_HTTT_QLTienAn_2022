@@ -70,10 +70,10 @@ namespace HTTT_QLTienAn.GUI
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(118, 85);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(135, 85);
+            this.label2.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(111, 17);
+            this.label2.Size = new System.Drawing.Size(116, 17);
             this.label2.TabIndex = 51;
             this.label2.Text = "Loại nghỉ có sẵn:";
             // 
@@ -81,10 +81,10 @@ namespace HTTT_QLTienAn.GUI
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(118, 230);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(135, 230);
+            this.label1.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(92, 17);
+            this.label1.Size = new System.Drawing.Size(95, 17);
             this.label1.TabIndex = 50;
             this.label1.Text = "Số buổi sáng:";
             // 
@@ -92,8 +92,8 @@ namespace HTTT_QLTienAn.GUI
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(322, 230);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(368, 230);
+            this.label4.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(89, 17);
             this.label4.TabIndex = 53;
@@ -102,20 +102,20 @@ namespace HTTT_QLTienAn.GUI
             // txtTenLoaiNghi
             // 
             this.txtTenLoaiNghi.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtTenLoaiNghi.Location = new System.Drawing.Point(269, 124);
-            this.txtTenLoaiNghi.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTenLoaiNghi.Location = new System.Drawing.Point(307, 124);
+            this.txtTenLoaiNghi.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtTenLoaiNghi.Name = "txtTenLoaiNghi";
-            this.txtTenLoaiNghi.Size = new System.Drawing.Size(271, 22);
+            this.txtTenLoaiNghi.Size = new System.Drawing.Size(310, 22);
             this.txtTenLoaiNghi.TabIndex = 48;
             // 
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(515, 230);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(589, 230);
+            this.label6.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(78, 17);
+            this.label6.Size = new System.Drawing.Size(79, 17);
             this.label6.TabIndex = 55;
             this.label6.Text = "Số buổi tối:";
             // 
@@ -123,10 +123,10 @@ namespace HTTT_QLTienAn.GUI
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(118, 129);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(135, 129);
+            this.label3.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 17);
+            this.label3.Size = new System.Drawing.Size(98, 17);
             this.label3.TabIndex = 47;
             this.label3.Text = "Tên loại nghỉ: ";
             // 
@@ -134,9 +134,9 @@ namespace HTTT_QLTienAn.GUI
             // 
             this.cbLoaiNghi.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbLoaiNghi.FormattingEnabled = true;
-            this.cbLoaiNghi.Location = new System.Drawing.Point(269, 82);
+            this.cbLoaiNghi.Location = new System.Drawing.Point(307, 82);
             this.cbLoaiNghi.Name = "cbLoaiNghi";
-            this.cbLoaiNghi.Size = new System.Drawing.Size(271, 24);
+            this.cbLoaiNghi.Size = new System.Drawing.Size(309, 24);
             this.cbLoaiNghi.TabIndex = 56;
             this.cbLoaiNghi.SelectedIndexChanged += new System.EventHandler(this.cbLoaiNghi_SelectedIndexChanged);
             // 
@@ -144,10 +144,10 @@ namespace HTTT_QLTienAn.GUI
             // 
             this.btnSuaCatCom.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnSuaCatCom.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnSuaCatCom.ImageOptions.Image")));
-            this.btnSuaCatCom.Location = new System.Drawing.Point(569, 162);
-            this.btnSuaCatCom.Margin = new System.Windows.Forms.Padding(4);
+            this.btnSuaCatCom.Location = new System.Drawing.Point(650, 162);
+            this.btnSuaCatCom.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnSuaCatCom.Name = "btnSuaCatCom";
-            this.btnSuaCatCom.Size = new System.Drawing.Size(165, 41);
+            this.btnSuaCatCom.Size = new System.Drawing.Size(189, 41);
             this.btnSuaCatCom.TabIndex = 44;
             this.btnSuaCatCom.Text = "Sửa buổi cắt cơm";
             this.btnSuaCatCom.Click += new System.EventHandler(this.btnSuaCatCom_Click);
@@ -157,8 +157,8 @@ namespace HTTT_QLTienAn.GUI
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(352, 32);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(402, 32);
+            this.label5.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(159, 24);
             this.label5.TabIndex = 45;
@@ -185,17 +185,17 @@ namespace HTTT_QLTienAn.GUI
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(867, 288);
+            this.panel1.Size = new System.Drawing.Size(991, 288);
             this.panel1.TabIndex = 58;
             // 
             // btnTickAll
             // 
             this.btnTickAll.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnTickAll.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnTickAll.ImageOptions.Image")));
-            this.btnTickAll.Location = new System.Drawing.Point(694, 254);
-            this.btnTickAll.Margin = new System.Windows.Forms.Padding(4);
+            this.btnTickAll.Location = new System.Drawing.Point(793, 254);
+            this.btnTickAll.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnTickAll.Name = "btnTickAll";
-            this.btnTickAll.Size = new System.Drawing.Size(143, 30);
+            this.btnTickAll.Size = new System.Drawing.Size(163, 30);
             this.btnTickAll.TabIndex = 63;
             this.btnTickAll.Text = "Tick Tất cả";
             this.btnTickAll.Click += new System.EventHandler(this.btnTickAll_Click);
@@ -204,8 +204,8 @@ namespace HTTT_QLTienAn.GUI
             // 
             this.lbToi.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbToi.AutoSize = true;
-            this.lbToi.Location = new System.Drawing.Point(611, 230);
-            this.lbToi.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbToi.Location = new System.Drawing.Point(698, 230);
+            this.lbToi.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbToi.Name = "lbToi";
             this.lbToi.Size = new System.Drawing.Size(16, 17);
             this.lbToi.TabIndex = 62;
@@ -215,8 +215,8 @@ namespace HTTT_QLTienAn.GUI
             // 
             this.lbTrua.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbTrua.AutoSize = true;
-            this.lbTrua.Location = new System.Drawing.Point(419, 230);
-            this.lbTrua.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbTrua.Location = new System.Drawing.Point(479, 230);
+            this.lbTrua.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbTrua.Name = "lbTrua";
             this.lbTrua.Size = new System.Drawing.Size(16, 17);
             this.lbTrua.TabIndex = 61;
@@ -226,8 +226,8 @@ namespace HTTT_QLTienAn.GUI
             // 
             this.lbSang.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lbSang.AutoSize = true;
-            this.lbSang.Location = new System.Drawing.Point(218, 230);
-            this.lbSang.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lbSang.Location = new System.Drawing.Point(249, 230);
+            this.lbSang.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lbSang.Name = "lbSang";
             this.lbSang.Size = new System.Drawing.Size(16, 17);
             this.lbSang.TabIndex = 60;
@@ -237,10 +237,10 @@ namespace HTTT_QLTienAn.GUI
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(118, 175);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(135, 175);
+            this.label7.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(118, 17);
+            this.label7.Size = new System.Drawing.Size(117, 17);
             this.label7.TabIndex = 58;
             this.label7.Text = "Số ngày cắt cơm:";
             // 
@@ -248,29 +248,30 @@ namespace HTTT_QLTienAn.GUI
             // 
             this.txtSoNgay.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtSoNgay.EditValue = "";
-            this.txtSoNgay.Location = new System.Drawing.Point(269, 170);
-            this.txtSoNgay.Margin = new System.Windows.Forms.Padding(4);
+            this.txtSoNgay.Location = new System.Drawing.Point(307, 170);
+            this.txtSoNgay.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtSoNgay.Name = "txtSoNgay";
-            this.txtSoNgay.Size = new System.Drawing.Size(271, 22);
+            this.txtSoNgay.Size = new System.Drawing.Size(310, 22);
             this.txtSoNgay.TabIndex = 59;
             // 
             // btnXoa
             // 
             this.btnXoa.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnXoa.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.ImageOptions.Image")));
-            this.btnXoa.Location = new System.Drawing.Point(45, 19);
-            this.btnXoa.Margin = new System.Windows.Forms.Padding(4);
+            this.btnXoa.Location = new System.Drawing.Point(650, 42);
+            this.btnXoa.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(191, 37);
+            this.btnXoa.Size = new System.Drawing.Size(189, 64);
             this.btnXoa.TabIndex = 57;
             this.btnXoa.Text = "Xóa loại nghỉ";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // groupControl1
             // 
             this.groupControl1.Controls.Add(this.gridControl1);
             this.groupControl1.Location = new System.Drawing.Point(0, 294);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(867, 322);
+            this.groupControl1.Size = new System.Drawing.Size(991, 322);
             this.groupControl1.TabIndex = 59;
             this.groupControl1.Text = "Chỉnh sửa Chi tiết cắt cơm";
             // 
@@ -282,7 +283,7 @@ namespace HTTT_QLTienAn.GUI
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.check});
-            this.gridControl1.Size = new System.Drawing.Size(863, 303);
+            this.gridControl1.Size = new System.Drawing.Size(987, 303);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -303,22 +304,22 @@ namespace HTTT_QLTienAn.GUI
             // 
             this.gridColumn1.Caption = "Ngày cắt cơm";
             this.gridColumn1.FieldName = "Ngay";
-            this.gridColumn1.MinWidth = 25;
+            this.gridColumn1.MinWidth = 29;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 94;
+            this.gridColumn1.Width = 107;
             // 
             // gridColumn2
             // 
             this.gridColumn2.Caption = "Buổi sáng";
             this.gridColumn2.ColumnEdit = this.check;
             this.gridColumn2.FieldName = "BuoiSang";
-            this.gridColumn2.MinWidth = 25;
+            this.gridColumn2.MinWidth = 29;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 94;
+            this.gridColumn2.Width = 107;
             // 
             // check
             // 
@@ -330,39 +331,39 @@ namespace HTTT_QLTienAn.GUI
             this.gridColumn3.Caption = "Buổi trưa";
             this.gridColumn3.ColumnEdit = this.check;
             this.gridColumn3.FieldName = "BuoiTrua";
-            this.gridColumn3.MinWidth = 25;
+            this.gridColumn3.MinWidth = 29;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 94;
+            this.gridColumn3.Width = 107;
             // 
             // gridColumn4
             // 
             this.gridColumn4.Caption = "Buổi tối";
             this.gridColumn4.ColumnEdit = this.check;
             this.gridColumn4.FieldName = "BuoiToi";
-            this.gridColumn4.MinWidth = 25;
+            this.gridColumn4.MinWidth = 29;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
-            this.gridColumn4.Width = 94;
+            this.gridColumn4.Width = 107;
             // 
             // btnSubmit
             // 
             this.btnSubmit.Appearance.BackColor = System.Drawing.Color.Green;
             this.btnSubmit.Appearance.Options.UseBackColor = true;
-            this.btnSubmit.Location = new System.Drawing.Point(328, 640);
+            this.btnSubmit.Location = new System.Drawing.Point(375, 640);
             this.btnSubmit.Name = "btnSubmit";
-            this.btnSubmit.Size = new System.Drawing.Size(207, 51);
+            this.btnSubmit.Size = new System.Drawing.Size(237, 51);
             this.btnSubmit.TabIndex = 1;
             this.btnSubmit.Text = "Xác nhận";
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // ThemLoaiNghi
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(867, 712);
+            this.ClientSize = new System.Drawing.Size(991, 712);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.panel1);
