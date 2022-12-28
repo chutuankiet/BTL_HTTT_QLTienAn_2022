@@ -366,7 +366,7 @@ namespace HTTT_QLTienAn.GUI.Lop
 
                 foreach (var item in listDK)
                 {
-                    DangKyNghi ctrn = new DangKyNghi
+                    DangKyNghi dkn = new DangKyNghi
                     {
                         LyDo = item.LyDo,
                         MaHocVien = item.MaHocVien,
@@ -378,7 +378,7 @@ namespace HTTT_QLTienAn.GUI.Lop
 
 
 
-                    db.DangKyNghis.Add(ctrn);
+                    db.DangKyNghis.Add(dkn);
                     db.SaveChanges();
 
                     int maTCA = (int)db.HocViens.Where(m => m.MaHocVien == item.MaHocVien).FirstOrDefault().LoaiHocVien.MaTCA;
@@ -391,7 +391,7 @@ namespace HTTT_QLTienAn.GUI.Lop
                     PhieuThanhToan newThanhToan = new PhieuThanhToan
                     {
                         TrangThaiTT = -2,
-                        MaDangKy = ctrn.MaDangKy,
+                        MaDangKy = dkn.MaDangKy,
                         TongTien = (int)ln_hv.SoBuoiSang * tca_hv.TienAnSang +
                                     (int)ln_hv.SoBuoiTrua * tca_hv.TienAnTrua +
                                     (int)ln_hv.SoBuoiToi * tca_hv.TienAnToi
@@ -409,7 +409,7 @@ namespace HTTT_QLTienAn.GUI.Lop
                             BuoiSang = icc.BuoiSang,
                             BuoiTrua = icc.BuoiTrua,
                             BuoiToi = icc.BuoiToi,
-                            MaDangKy = db.DangKyNghis.Where(m => m.MaHocVien == item.MaHocVien && m.MaDS == ds.MaDS).FirstOrDefault().MaDangKy,
+                            MaDangKy = dkn.MaDangKy,
                             NgayCatCom = icc.NgayCatCom
                         };
                         db.ChiTietCatComs.Add(ctcc);

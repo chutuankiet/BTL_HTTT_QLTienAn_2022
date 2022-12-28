@@ -36,6 +36,7 @@ namespace HTTT_QLTienAn.GUI
             this.colHoTen = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn6 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.ngaynghi = new DevExpress.XtraGrid.Columns.GridColumn();
             this.sang = new DevExpress.XtraGrid.Columns.GridColumn();
             this.trua = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -79,7 +80,6 @@ namespace HTTT_QLTienAn.GUI
             this.label3 = new System.Windows.Forms.Label();
             this.dateStart = new DevExpress.XtraEditors.DateEdit();
             this.label1 = new System.Windows.Forms.Label();
-            this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dateEnd.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEnd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -108,7 +108,7 @@ namespace HTTT_QLTienAn.GUI
             // dateEnd
             // 
             this.dateEnd.EditValue = null;
-            this.dateEnd.Location = new System.Drawing.Point(417, 59);
+            this.dateEnd.Location = new System.Drawing.Point(422, 59);
             this.dateEnd.Name = "dateEnd";
             this.dateEnd.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -175,6 +175,16 @@ namespace HTTT_QLTienAn.GUI
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 3;
             this.gridColumn6.Width = 94;
+            // 
+            // gridColumn7
+            // 
+            this.gridColumn7.Caption = "Loại nghỉ";
+            this.gridColumn7.FieldName = "TenLoaiNghi";
+            this.gridColumn7.MinWidth = 25;
+            this.gridColumn7.Name = "gridColumn7";
+            this.gridColumn7.Visible = true;
+            this.gridColumn7.VisibleIndex = 4;
+            this.gridColumn7.Width = 94;
             // 
             // ngaynghi
             // 
@@ -546,7 +556,7 @@ namespace HTTT_QLTienAn.GUI
             this.lbTenDV.AutoSize = true;
             this.lbTenDV.BackColor = System.Drawing.Color.Transparent;
             this.lbTenDV.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTenDV.Location = new System.Drawing.Point(98, 17);
+            this.lbTenDV.Location = new System.Drawing.Point(117, 30);
             this.lbTenDV.Name = "lbTenDV";
             this.lbTenDV.Size = new System.Drawing.Size(55, 24);
             this.lbTenDV.TabIndex = 11;
@@ -557,7 +567,7 @@ namespace HTTT_QLTienAn.GUI
             this.label15.AutoSize = true;
             this.label15.BackColor = System.Drawing.Color.Transparent;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(5, 17);
+            this.label15.Location = new System.Drawing.Point(24, 30);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(87, 24);
             this.label15.TabIndex = 10;
@@ -636,16 +646,6 @@ namespace HTTT_QLTienAn.GUI
             this.label1.Size = new System.Drawing.Size(38, 17);
             this.label1.TabIndex = 0;
             this.label1.Text = "Đợt :";
-            // 
-            // gridColumn7
-            // 
-            this.gridColumn7.Caption = "Loại nghỉ";
-            this.gridColumn7.FieldName = "TenLoaiNghi";
-            this.gridColumn7.MinWidth = 25;
-            this.gridColumn7.Name = "gridColumn7";
-            this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 4;
-            this.gridColumn7.Width = 94;
             // 
             // Chung_LSThanhToan
             // 
