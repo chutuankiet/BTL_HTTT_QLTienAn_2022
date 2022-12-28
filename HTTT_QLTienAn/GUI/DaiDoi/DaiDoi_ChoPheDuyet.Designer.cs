@@ -329,7 +329,8 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             // 
             // btnHuy
             // 
-            this.btnHuy.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.btnHuy.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.btnHuy.BackColor = System.Drawing.Color.Red;
             this.btnHuy.ForeColor = System.Drawing.Color.White;
             this.btnHuy.Location = new System.Drawing.Point(73, 34);
@@ -342,6 +343,8 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             // 
             // btnXacNhan
             // 
+            this.btnXacNhan.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.btnXacNhan.BackColor = System.Drawing.Color.ForestGreen;
             this.btnXacNhan.ForeColor = System.Drawing.Color.White;
             this.btnXacNhan.Location = new System.Drawing.Point(358, 34);

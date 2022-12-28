@@ -19,88 +19,60 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
         }
         public QLTA_model db = new QLTA_model();
 
-        public string MaDS_DaHuy;
+
+        public void reload()
+        {
+            LoadDSDaHuy();
+        }
 
         public void LoadDSDaHuy()
         {
-            try
+
+            var ds_DaHuy = (from ds in db.ds_huy
+                            join cbd in db.CanBoes on ds.MaCBd equals cbd.MaCanBo
+                            where ds.PheDuyet == -1 // tiểu đoàn đã hủy 
+                            select new
+                            {
+                                MaDS = ds.MaDS,
+                                NgayDK = ds.NgayDK,
+                                HoTenc = "",
+                                HoTend = cbd.HoTen
+                            }).ToList();
+
+            var ds_dahuy2 = (from ds in db.ds_huy
+                             where ds.PheDuyet == -2 //  đại đội hủy
+                             select new
+                             {
+                                 MaDS = ds.MaDS,
+                                 NgayDK = ds.NgayDK,
+                                 HoTenc = ds.HoTenc,
+                                 HoTend = ""
+                             }).ToList();
+
+
+            ds_DaHuy.AddRange(ds_dahuy2);
+
+
+            if (ds_DaHuy.Count > 0)
             {
-                var ds_DaHuy = (from ds in db.ds_huy
-                               
-                                join cbd in db.CanBoes on ds.MaCBd equals cbd.MaCanBo
-                                where ds.PheDuyet == -1 // tiểu đoàn đã hủy 
-                                select new
-                                {
-                                    MaDS = ds.MaDS,                                  
-                                    NgayDK = ds.NgayDK,
-                                    HoTenc = "",
-                                    HoTend = cbd.HoTen
-                                }).ToList();
-                var ds_dahuy2 = (from ds in db.ds_huy
-                                 
-                                 
-
-                                 where ds.PheDuyet == -2 //  đại đội hủy
-                                 select new
-                                 {
-                                     MaDS = ds.MaDS,
-                                     NgayDK = ds.NgayDK,
-                                     HoTenc = ds.HoTenc,
-                                     HoTend = ""
-                                 }).ToList();
-                foreach( var item in ds_dahuy2)
-                {
-                    ds_DaHuy.Add(item);
-                }
-                if (ds_DaHuy.Count > 0)
-                {
-                    ds_DaHuy.Reverse();
-                    dgvDaHuy_View.OptionsBehavior.Editable = false;
-                    gridView2.OptionsBehavior.Editable = false;
-                    dgvDaHuy.DataSource = ds_DaHuy;
-                }
-                else
-                {
-                    MessageBox.Show("Chưa có danh sách đã hủy nào !");
-                    return;
-                }
+                dgvDaHuy.DataSource = ds_DaHuy;
             }
-            catch
-            { }
-            //LoadDSChiTietDaHuy();
-        }
-
-        public void LoadDSChiTietDaHuy()
-        {
-            try
-            {
-                int mads = (int)dgvDaHuy_View.GetFocusedRowCellValue("MaDS");
-                MaDS_DaHuy = mads.ToString();
-                
-                List<DS_ChoPheDuyet> dsCTDaHuy = db.DS_ChoPheDuyet.Where(m => m.MaDS == mads).ToList();
-
-                dgvChiTietDaHuy.DataSource = dsCTDaHuy;
-
-            }
-            catch
-            { }
-        }
-
-        private void dgvDaHuy_Load(object sender, EventArgs e)
-        {
-            LoadDSDaHuy();
 
         }
 
-        private void dgvDaHuy_View_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
-        {
-            LoadDSChiTietDaHuy();
-
-        }
 
         private void DaiDoi_DaHuyPheDuyet_Load(object sender, EventArgs e)
         {
             LoadDSDaHuy();
+        }
+
+        private void dgvDaHuy_View_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        {
+            int maDS = Convert.ToInt32(dgvDaHuy_View.GetRowCellValue(e.RowHandle, "MaDS"));
+
+            List<DS_ChoPheDuyet> dsCTDaHuy = db.DS_ChoPheDuyet.Where(m => m.MaDS == maDS).ToList();
+
+            dgvChiTietDaHuy.DataSource = dsCTDaHuy;
         }
     }
 }

@@ -47,11 +47,11 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.dgvChiTietDaHuy = new DevExpress.XtraGrid.GridControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
-            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDaHuy_View)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDaHuy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
@@ -104,8 +104,9 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.gridColumn4});
             this.dgvDaHuy_View.GridControl = this.dgvDaHuy;
             this.dgvDaHuy_View.Name = "dgvDaHuy_View";
+            this.dgvDaHuy_View.OptionsBehavior.Editable = false;
             this.dgvDaHuy_View.OptionsView.ShowGroupPanel = false;
-            this.dgvDaHuy_View.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.dgvDaHuy_View_FocusedRowChanged);
+            this.dgvDaHuy_View.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.dgvDaHuy_View_RowClick);
             // 
             // gridColumn3
             // 
@@ -183,7 +184,18 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.gridColumn5});
             this.gridView2.GridControl = this.dgvChiTietDaHuy;
             this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsBehavior.Editable = false;
             this.gridView2.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "Loại nghỉ";
+            this.gridColumn5.FieldName = "TenLoaiNghi";
+            this.gridColumn5.MinWidth = 25;
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 3;
+            this.gridColumn5.Width = 94;
             // 
             // dgvChiTietDaHuy
             // 
@@ -237,16 +249,6 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.groupControl1.Size = new System.Drawing.Size(494, 747);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Danh sách không được duyệt";
-            // 
-            // gridColumn5
-            // 
-            this.gridColumn5.Caption = "Loại nghỉ";
-            this.gridColumn5.FieldName = "TenLoaiNghi";
-            this.gridColumn5.MinWidth = 25;
-            this.gridColumn5.Name = "gridColumn5";
-            this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 3;
-            this.gridColumn5.Width = 94;
             // 
             // DaiDoi_DaHuyPheDuyet
             // 

@@ -25,24 +25,29 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
         }
 
         static int maCBc;
-        public string MaDS_XacNhan;
+        public int MaDS_XacNhan;
+
         private int mads;
+
         private int mahv;
+
+        string TenDonVi;
+
         List<DS_ChoPheDuyet> ds_CTChoPheDuyet = new List<DS_ChoPheDuyet>();
 
+        List<c_ChoPheDuyet> ds_ChoPheDuyet;
 
         public void LoadDS1()
         {
             try
             {
-                List<c_ChoPheDuyet> ds_ChoPheDuyet = db.c_ChoPheDuyet.Where(m=>m.PheDuyet == -3).ToList();
+                ds_ChoPheDuyet = db.c_ChoPheDuyet.Where(m=>m.PheDuyet == -3 && m.TenDonVi == TenDonVi).ToList();
 
- 
                 dgvDSCho.DataSource = ds_ChoPheDuyet;
 
-                mads = ds_ChoPheDuyet[0].MaDS;
-                MaDS_XacNhan = mads.ToString();
-                ds_CTChoPheDuyet = db.DS_ChoPheDuyet.Where(m=>m.MaDS == mads).ToList();
+                MaDS_XacNhan = ds_ChoPheDuyet[0].MaDS;
+
+                ds_CTChoPheDuyet = db.DS_ChoPheDuyet.Where(m=>m.MaDS == MaDS_XacNhan).ToList();
                 
                
                 dgvChiTietDS1.DataSource = ds_CTChoPheDuyet;
@@ -89,7 +94,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             if (DialogResult.Yes == MessageBox.Show("Bạn có chắc chắn muốn hủy?", "Xác nhận hủy", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
             {
 
-                var dsn = db.DanhSachRaNgoais.SingleOrDefault(p => p.MaDS.ToString() == MaDS_XacNhan);
+                var dsn = db.DanhSachRaNgoais.SingleOrDefault(p => p.MaDS == MaDS_XacNhan);
                 if (dsn != null)
                 {
                     dsn.PheDuyet = -2;
@@ -107,7 +112,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
 
         private void btnXacnhan_Click(object sender, EventArgs e)
         {
-            var dsn = db.DanhSachRaNgoais.SingleOrDefault(p => p.MaDS.ToString() == MaDS_XacNhan);
+            var dsn = db.DanhSachRaNgoais.SingleOrDefault(p => p.MaDS == MaDS_XacNhan);
             if (dsn != null)
             {
                 dsn.PheDuyet = 0;
@@ -121,7 +126,8 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             }
             dgvDSCho.DataSource = null;
             LoadDS1();
-          //  dgvChiTietDS1.DataSource = null;
+            dgvChiTietDS1.DataSource = null;
+
 
         }
 
@@ -131,9 +137,13 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
         private void dgvDSCho_View_RowClick_1(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
 
-            int maDS = Convert.ToInt32(dgvDSCho_View.GetRowCellValue(e.RowHandle, "MaDS")); 
+            int maDS = Convert.ToInt32(dgvDSCho_View.GetRowCellValue(e.RowHandle, "MaDS"));
 
-            List<DS_ChoPheDuyet> ds_CTChoPheDuyet = db.DS_ChoPheDuyet.Where(m => m.MaDS == mads).ToList();
+            MaDS_XacNhan = maDS;
+
+
+
+            ds_CTChoPheDuyet = db.DS_ChoPheDuyet.Where(m => m.MaDS == MaDS_XacNhan).ToList();
 
             
             //dgvDSCho_View.OptionsBehavior.Editable = false;
@@ -143,6 +153,12 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
 
         private void DaiDoi_ChoPheDuyet_Load(object sender, EventArgs e)
         {
+
+            int madv = (int)db.CanBoes.Where(m => m.MaCanBo == MainForm.MaID).FirstOrDefault().MaDonVi;
+
+            TenDonVi = db.DonVis.Where(m => m.MaDonVi == madv).FirstOrDefault().TenDonVi;
+
+
             LoadDS1();
         }
     }

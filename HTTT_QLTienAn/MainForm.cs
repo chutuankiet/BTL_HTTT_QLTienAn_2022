@@ -127,6 +127,7 @@ namespace HTTT_QLTienAn
 
                     it5.Click += It5_Click;
                     it6.Click += It6_Click;
+                    it7.Click += It7_Click;
                     itLichSuTT.Click += ItLSTT_Click;
                     //itSuaNhap.Click += itSuaNhap_Click;
 
@@ -181,7 +182,7 @@ namespace HTTT_QLTienAn
                     uc10.Dock = DockStyle.Fill;
 
 
-                    showUsercontrol.Controls.AddRange(new Control[] { uc8, uc9,uc10 });
+                    showUsercontrol.Controls.AddRange(new Control[] { uc8, uc9, uc10 });
 
                     break;
 
@@ -346,12 +347,14 @@ namespace HTTT_QLTienAn
         private void It7_Click(object sender, EventArgs e)
         {
             uc7.BringToFront();
+            uc7.reload();
 
         }
 
         private void It6_Click(object sender, EventArgs e)
         {
             uc6.BringToFront();
+            uc6.reload();
 
         }
 
