@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -211,8 +212,8 @@ namespace HTTT_QLTienAn.GUI.Lop
 
                     for(int j = 0;j < sobuoinghi; j++)
                     {
-                        int isInCT = lsCTCatCom.Where(m => DateTime.Compare(m.NgayCatCom,temp) == 0 && m.MaDangKyTam == listDK[i].MaDangKyTam).Count();
-
+                        int isInCT = lsCTCatCom.Where(m => m.NgayCatCom.ToString("dd/MM/yyyy") == temp.ToString("dd/MM/yyyy") ).Count();
+                        //&& m.MaDangKyTam == listDK[i].MaDangKyTam
                         if (isInCT  > 0)
                         {
                             MessageBox.Show($"Đã tồn đăng ký trong danh sách", "Thông báo !");
@@ -220,7 +221,6 @@ namespace HTTT_QLTienAn.GUI.Lop
                         }
                         temp = temp.AddDays(1);
                     }
-                  
                 }
             }
 
