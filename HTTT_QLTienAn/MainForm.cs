@@ -50,7 +50,7 @@ namespace HTTT_QLTienAn
 
 
         CanBo_SuaDSNhap ucSuaNhap;
-
+        Chung_LSThanhToan ucLSThanhToan;
 
         public static int MaID;
 
@@ -78,6 +78,7 @@ namespace HTTT_QLTienAn
 
         public void LoadByAccessPermission(string accPer)
         {
+            
             switch (accPer)
             {
 
@@ -119,34 +120,38 @@ namespace HTTT_QLTienAn
                     AccordionControlElement it5 = new AccordionControlElement(ElementStyle.Item) { Text = "Danh sách chờ phê duyệt" };
                     AccordionControlElement it6 = new AccordionControlElement(ElementStyle.Item) { Text = "Danh sách đã hủy" };
                     AccordionControlElement it7 = new AccordionControlElement(ElementStyle.Item) { Text = "Danh sách đã phê duyệt" };
-                    AccordionControlElement itSuaNhap = new AccordionControlElement(ElementStyle.Item) { Text = "Sửa nhập danh sách" };
-                    accordionControl1.Elements.AddRange(new AccordionControlElement[] { it5, it6, it7, itSuaNhap });
+                    AccordionControlElement itLichSuTT = new AccordionControlElement(ElementStyle.Item) { Text = "Lịch sử thanh toán" };
+                    accordionControl1.Elements.AddRange(new AccordionControlElement[] { it5, it6, it7, itLichSuTT });
                     accordionControl1.AllowItemSelection = true;
                     accordionControl1.ExpandAll();
 
                     it5.Click += It5_Click;
                     it6.Click += It6_Click;
-                    itSuaNhap.Click += itSuaNhap_Click;
+                    itLichSuTT.Click += ItLSTT_Click;
+                    //itSuaNhap.Click += itSuaNhap_Click;
 
                     uc5 = new DaiDoi_ChoPheDuyet();
                     uc6 = new DaiDoi_DaHuyPheDuyet();
                     uc7 = new DaiDoi_DaPheDuyet();
+                    ucLSThanhToan = new Chung_LSThanhToan(true);
 
                     //testing..............
 
-                    CanBo cbc = db.CanBoes.Where(m => m.MaCanBo == Ma).FirstOrDefault();
+                    //CanBo cbc = db.CanBoes.Where(m => m.MaCanBo == Ma).FirstOrDefault();
 
-                    List<HocVien> dshv = db.HocViens.ToList();
-                    List<DangKyNghi> dsdk = db.DangKyNghis.ToList();
+                    //List<HocVien> dshv = db.HocViens.ToList();
+                    //List<DangKyNghi> dsdk = db.DangKyNghis.ToList();
 
-                    ucSuaNhap = new CanBo_SuaDSNhap(dshv,dsdk);
+                    //ucSuaNhap = new CanBo_SuaDSNhap(dshv,dsdk);
 
 
                     uc5.Dock = DockStyle.Fill;
                     uc6.Dock = DockStyle.Fill;
                     uc7.Dock = DockStyle.Fill;
-                    ucSuaNhap.Dock = DockStyle.Fill;
-                    showUsercontrol.Controls.AddRange(new Control[] { uc5, uc6, uc7, ucSuaNhap });
+                    ucLSThanhToan.Dock = DockStyle.Fill;
+                    //ucSuaNhap.Dock = DockStyle.Fill;
+
+                    showUsercontrol.Controls.AddRange(new Control[] { uc5, uc6, uc7, ucLSThanhToan });
 
                     break;
 
@@ -242,6 +247,12 @@ namespace HTTT_QLTienAn
             }
 
 
+         
+        }
+
+        private void ItLSTT_Click(object sender, EventArgs e)
+        {
+            ucLSThanhToan.BringToFront();
         }
 
         private void itSuaNhap_Click(object sender, EventArgs e)

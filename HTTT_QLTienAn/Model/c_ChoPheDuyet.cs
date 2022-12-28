@@ -25,5 +25,8 @@ namespace HTTT_QLTienAn.Model
         [Column(Order = 1)]
         [StringLength(100)]
         public string HoTen { get; set; }
+
+        [StringLength(100)]
+        public string TenDonVi { get; set; }
     }
 }

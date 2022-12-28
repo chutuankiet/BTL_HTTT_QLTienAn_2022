@@ -67,5 +67,10 @@ namespace HTTT_QLTienAn.Model
         [Column(Order = 7)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int MaThanhToan { get; set; }
+
+        [Key]
+        [Column(Order = 8)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int MaDangKy { get; set; }
     }
 }

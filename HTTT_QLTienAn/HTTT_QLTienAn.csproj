@@ -157,6 +157,12 @@
     <Compile Include="GUI\CanBo_SuaDSNhap.Designer.cs">
       <DependentUpon>CanBo_SuaDSNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Chung_LSThanhToan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Chung_LSThanhToan.Designer.cs">
+      <DependentUpon>Chung_LSThanhToan.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\DaiDoi\DaiDoi_ChoPheDuyet.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -296,7 +302,6 @@
     <Compile Include="Model\NhaBep_ListThanhToan.cs" />
     <Compile Include="Model\PhieuThanhToan.cs" />
     <Compile Include="Model\QLTA_model.cs" />
-    <Compile Include="Model\sysdiagram.cs" />
     <Compile Include="Model\TaiKhoan.cs" />
     <Compile Include="Model\TieuChuanAn.cs" />
     <Compile Include="Program.cs" />
@@ -318,6 +323,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\CanBo_SuaDSNhap.resx">
       <DependentUpon>CanBo_SuaDSNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Chung_LSThanhToan.resx">
+      <DependentUpon>Chung_LSThanhToan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\DaiDoi\DaiDoi_ChoPheDuyet.resx">
       <DependentUpon>DaiDoi_ChoPheDuyet.cs</DependentUpon>
