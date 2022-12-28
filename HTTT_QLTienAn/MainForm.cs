@@ -327,11 +327,13 @@ namespace HTTT_QLTienAn
         #region tieudoan
         private void It10_Click(object sender, EventArgs e)
         {
+            uc10.reload();
             uc10.BringToFront();
         }
 
         private void It9_Click(object sender, EventArgs e)
         {
+            uc9.reload();
             uc9.BringToFront();
         }
 
