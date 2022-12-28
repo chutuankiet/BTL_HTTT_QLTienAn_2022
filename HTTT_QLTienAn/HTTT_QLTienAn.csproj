@@ -271,6 +271,12 @@
     <Compile Include="GUI\TieuDoan\TieuDoan_DaPheDuyet.Designer.cs">
       <DependentUpon>TieuDoan_DaPheDuyet.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\TieuDoan\TieuDoan_QuanLyDS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\TieuDoan\TieuDoan_QuanLyDS.Designer.cs">
+      <DependentUpon>TieuDoan_QuanLyDS.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -385,6 +391,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\TieuDoan\TieuDoan_DaPheDuyet.resx">
       <DependentUpon>TieuDoan_DaPheDuyet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TieuDoan\TieuDoan_QuanLyDS.resx">
+      <DependentUpon>TieuDoan_QuanLyDS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
