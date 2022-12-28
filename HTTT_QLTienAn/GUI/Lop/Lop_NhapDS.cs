@@ -45,14 +45,6 @@ namespace HTTT_QLTienAn.GUI.Lop
             {
                 int index = gridView2.FocusedRowHandle;
 
-                //foreach(var item in lsCTCatCom)
-                //{
-                //    if(item.MaDangKyTam == )
-                //    {
-                //        lsCTCatCom.Remove(item);
-                //    }
-                //}
-
                 lsCTCatCom.RemoveAll(m => m.MaDangKyTam == listDK[index].MaDangKyTam);
 
                 //MessageBox.Show("count = "+lsCTCatCom.Count.ToString());
@@ -195,53 +187,63 @@ namespace HTTT_QLTienAn.GUI.Lop
 
         List<CT_CatCom_HocVien> lsCTCatCom = new List<CT_CatCom_HocVien>();
 
+       
 
-        bool IsNotDupDate(HocVien_DangKiNghi hv)
+        bool IsOverLapping(List<HocVien_DangKiNghi> checkList, HocVien_DangKiNghi hv)
         {
-            for (int i = 0; i < listDK.Count; i++)
+            foreach (var item in checkList)
             {
+                DateTime date1 = item.NgayBDNghi;
+                DateTime date2 = hv.NgayKTNghi;
 
-                if (listDK[i].MaHocVien == hv.MaHocVien)
+                string d1 = date1.ToString("dd-MM-yyyy");
+                string d2 = date2.ToString("dd-MM-yyyy");
+
+
+                if(d1 == d2)
                 {
-
-                    DateTime temp = hv.NgayBDNghi;
-
-                    for (int j = 0; j < sobuoinghi; j++)
-                    {
-
-                        foreach (var item_cc in lsCTCatCom)
-                        {
-
-                            if (item_cc.NgayCatCom.ToString("dd/MM/yyyy") == temp.ToString("dd/MM/yyyy") && item_cc.MaDangKyTam != listDK[i].MaDangKyTam)
-                            {
-                                MessageBox.Show($"Đã tồn đăng ký trong danh sách", "Thông báo !");
-                                return false;
-
-                            }
-                        }
-                        temp = temp.AddDays(1);
-
-                        //int isInCT = lsCTCatCom.Where(m => m.NgayCatCom.ToString("dd/MM/yyyy") == temp.ToString("dd/MM/yyyy") ).Count();
-                        //&& 
-                    }
-                }
-            }
-
-            // check trung ngay trong csdl
-            DateTime ngayTemp = hv.NgayBDNghi;
-            while (DateTime.Compare(ngayTemp.AddDays(1), hv.NgayKTNghi) < 0)
-            {
-                var isDupInDB = db.ChiTietCatComs.Where(x => x.NgayCatCom == ngayTemp && x.DangKyNghi.MaHocVien == hv.MaHocVien).FirstOrDefault();
-
-                if (isDupInDB != null)
-                {
-                    MessageBox.Show($"Đã tồn tại đăng ký tại ngày {hv.NgayBDNghi.ToString("dd-MM-yyyy")}", "Thông báo !");
+                    MessageBox.Show($"Đã tồn đăng ký '{item.TenLoaiNghi}' trong danh sách vào ngày {item.NgayBDNghi.Date}", "Thông báo !");
                     return false;
                 }
 
-                ngayTemp = ngayTemp.AddDays(1);
-
+                if ((item.NgayBDNghi <= hv.NgayKTNghi && item.NgayKTNghi >= hv.NgayBDNghi) 
+                   
+                    || (hv.NgayBDNghi <= item.NgayKTNghi && hv.NgayKTNghi >= item.NgayBDNghi)
+                    )
+                {
+                    MessageBox.Show($"Đã tồn đăng ký '{item.TenLoaiNghi}' trong danh sách vào ngày {item.NgayBDNghi.Date}", "Thông báo !");
+                    return false;
+                }
             }
+            return true;
+
+        }
+
+        bool IsNotDupDate(HocVien_DangKiNghi hv)
+        {
+            //check trùng ngày đã đki (RAM)
+            List<HocVien_DangKiNghi> checkExist = listDK.Where(s => s.MaHocVien == hv.MaHocVien).ToList();
+
+            //IsOverLapping(checkExist, hv);
+
+
+            // check trung ngày đã dki trong csdl (DISK)
+
+            List<HocVien_DangKiNghi> checkInDB = db.DangKyNghis.Where(x => x.MaHocVien == hv.MaHocVien).Select(x =>
+               new HocVien_DangKiNghi
+               {
+                   MaDangKyTam = x.MaDangKy,
+                   MaHocVien = (int)x.MaHocVien,
+                   NgayBDNghi = x.NgayDi,
+                   NgayKTNghi = x.NgayVe,
+                   TenLoaiNghi = x.LoaiNghi.TenLoaiNghi
+               }).ToList<HocVien_DangKiNghi>();
+
+            //IsOverLapping(checkInDB, hv);
+
+            if (!IsOverLapping(checkExist, hv) || !IsOverLapping(checkInDB, hv)) return false;
+
+    
 
             return true;
         }

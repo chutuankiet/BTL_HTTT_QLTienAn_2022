@@ -211,6 +211,12 @@
     <Compile Include="GUI\NhaBep\NhaBep_QuanLyDS.Designer.cs">
       <DependentUpon>NhaBep_QuanLyDS.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\NhaBep\NhaBep_TaoDotTT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\NhaBep\NhaBep_TaoDotTT.Designer.cs">
+      <DependentUpon>NhaBep_TaoDotTT.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\NhaBep\NhaBep_ThanhToan.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -278,12 +284,9 @@
     <Compile Include="Model\LoaiHocVien.cs" />
     <Compile Include="Model\LoaiNghi.cs" />
     <Compile Include="Model\Lop.cs" />
-    <Compile Include="Model\NhaBep_ChuaThanhToan.cs" />
-    <Compile Include="Model\NhaBep_ListDaThanhToan.cs" />
     <Compile Include="Model\NhaBep_ListThanhToan.cs" />
     <Compile Include="Model\PhieuThanhToan.cs" />
     <Compile Include="Model\QLTA_model.cs" />
-    <Compile Include="Model\sysdiagram.cs" />
     <Compile Include="Model\TaiKhoan.cs" />
     <Compile Include="Model\TieuChuanAn.cs" />
     <Compile Include="Program.cs" />
@@ -332,6 +335,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\NhaBep\NhaBep_QuanLyDS.resx">
       <DependentUpon>NhaBep_QuanLyDS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NhaBep\NhaBep_TaoDotTT.resx">
+      <DependentUpon>NhaBep_TaoDotTT.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\NhaBep\NhaBep_ThanhToan.resx">
       <DependentUpon>NhaBep_ThanhToan.cs</DependentUpon>

@@ -24,11 +24,8 @@ namespace HTTT_QLTienAn.Model
         public virtual DbSet<LoaiNghi> LoaiNghis { get; set; }
         public virtual DbSet<Lop> Lops { get; set; }
         public virtual DbSet<PhieuThanhToan> PhieuThanhToans { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
         public virtual DbSet<TieuChuanAn> TieuChuanAns { get; set; }
-        public virtual DbSet<NhaBep_ChuaThanhToan> NhaBep_ChuaThanhToan { get; set; }
-        public virtual DbSet<NhaBep_ListDaThanhToan> NhaBep_ListDaThanhToan { get; set; }
         public virtual DbSet<NhaBep_ListThanhToan> NhaBep_ListThanhToan { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
