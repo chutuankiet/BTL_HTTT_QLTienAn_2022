@@ -80,7 +80,7 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             // gridColumn1
             // 
             this.gridColumn1.Caption = "Người thanh toán";
-            this.gridColumn1.FieldName = "TenCBBep";
+            this.gridColumn1.FieldName = "HoTenCB";
             this.gridColumn1.MinWidth = 25;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
@@ -90,7 +90,7 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             // gridColumn2
             // 
             this.gridColumn2.Caption = "Tên học viên";
-            this.gridColumn2.FieldName = "TenHocVien";
+            this.gridColumn2.FieldName = "HoTenHV";
             this.gridColumn2.MinWidth = 25;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
@@ -110,7 +110,7 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             // gridColumn4
             // 
             this.gridColumn4.Caption = "Ngày thanh toán";
-            this.gridColumn4.FieldName = "NgayThanhToan";
+            this.gridColumn4.FieldName = "NgayTT";
             this.gridColumn4.MinWidth = 25;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
@@ -164,6 +164,7 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             this.btnLoc.Size = new System.Drawing.Size(94, 24);
             this.btnLoc.TabIndex = 5;
             this.btnLoc.Text = "Lọc";
+            this.btnLoc.Click += new System.EventHandler(this.btnLoc_Click);
             // 
             // label4
             // 
@@ -179,7 +180,7 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(25, 49);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(34, 17);
+            this.label3.Size = new System.Drawing.Size(33, 17);
             this.label3.TabIndex = 3;
             this.label3.Text = "Từ :";
             // 
@@ -222,6 +223,7 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "NhaBep_LSCatCom";
             this.Size = new System.Drawing.Size(981, 760);
+            this.Load += new System.EventHandler(this.NhaBep_LSThanhToan_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);

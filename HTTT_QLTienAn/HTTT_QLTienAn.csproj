@@ -292,10 +292,9 @@
     <Compile Include="Model\DanhSachRaNgoai.cs" />
     <Compile Include="Model\DonVi.cs" />
     <Compile Include="Model\DotThanhToan.cs" />
-    <Compile Include="Model\DSLop_ChoPheDuyet.cs" />
     <Compile Include="Model\DS_ChoPheDuyet.cs" />
     <Compile Include="Model\DS_CTLopChoPheDuyet.cs" />
-    <Compile Include="Model\DS_DaPheDuyet_cd.cs" />
+    <Compile Include="Model\DS_DaThanhToan.cs" />
     <Compile Include="Model\ds_huy.cs" />
     <Compile Include="Model\DS_LopChoPheDuyet.cs" />
     <Compile Include="Model\HocVien.cs" />
@@ -303,6 +302,7 @@
     <Compile Include="Model\LoaiHocVien.cs" />
     <Compile Include="Model\LoaiNghi.cs" />
     <Compile Include="Model\Lop.cs" />
+    <Compile Include="Model\NhaBep_ListCatCom.cs" />
     <Compile Include="Model\NhaBep_ListThanhToan.cs" />
     <Compile Include="Model\PhieuThanhToan.cs" />
     <Compile Include="Model\QLTA_model.cs" />

@@ -35,7 +35,5 @@ namespace HTTT_QLTienAn.Model
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DangKyNghi> DangKyNghis { get; set; }
-
-        public virtual HocVien HocVien { get; set; }
     }
 }

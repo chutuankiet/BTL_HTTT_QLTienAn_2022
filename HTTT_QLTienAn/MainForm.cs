@@ -40,6 +40,7 @@ namespace HTTT_QLTienAn
         NhaBep_QuanLyDS uc11;
         NhaBep_ThanhToan uc12;
         NhaBep_ThongKe uc13;
+        NhaBep_LSCatCom uc131;
         
 
         Admin_QLCanBo uc14;
@@ -192,23 +193,25 @@ namespace HTTT_QLTienAn
                     AccordionControlElement it11 = new AccordionControlElement(ElementStyle.Item) { Text = "Quản lý danh sách" };
                     AccordionControlElement it12 = new AccordionControlElement(ElementStyle.Item) { Text = "Thanh toán" };
                     AccordionControlElement it13 = new AccordionControlElement(ElementStyle.Item) { Text = "Thống kê" };
-                    accordionControl1.Elements.AddRange(new AccordionControlElement[] { it11, it12, it13 });
+                    AccordionControlElement it131 = new AccordionControlElement(ElementStyle.Item) { Text = "Lịch sử thanh toán" };
+                    accordionControl1.Elements.AddRange(new AccordionControlElement[] { it11, it12, it13, it131 });
                     accordionControl1.AllowItemSelection = true;
                     accordionControl1.ExpandAll();
 
                     it11.Click += It11_Click;
                     it12.Click += It12_Click;
                     it13.Click += It13_Click;
-
+                    it131.Click += It131_Click;
                     uc11 = new NhaBep_QuanLyDS();
                     uc12 = new NhaBep_ThanhToan();
                     uc13 = new NhaBep_ThongKe();
-
+                    uc131 = new NhaBep_LSCatCom();
                     uc11.Dock = DockStyle.Fill;
                     uc12.Dock = DockStyle.Fill;
                     uc13.Dock = DockStyle.Fill;
+                    uc131.Dock = DockStyle.Fill;
 
-                    showUsercontrol.Controls.AddRange(new Control[] { uc11, uc12, uc13 });
+                    showUsercontrol.Controls.AddRange(new Control[] { uc11, uc12, uc13,uc131 });
                     break;
 
                 case "admin":
@@ -321,6 +324,10 @@ namespace HTTT_QLTienAn
         private void It11_Click(object sender, EventArgs e)
         {
             uc11.BringToFront();
+        }
+        private void It131_Click(object sender, EventArgs e)
+        {
+            uc131.BringToFront();
         }
         #endregion
 

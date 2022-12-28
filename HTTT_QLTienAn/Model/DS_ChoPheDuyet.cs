@@ -21,22 +21,17 @@ namespace HTTT_QLTienAn.Model
         [StringLength(100)]
         public string TenLop { get; set; }
 
-        [Key]
-        [Column(Order = 2, TypeName = "date")]
-        public DateTime NgayCatCom { get; set; }
+        [Column(TypeName = "date")]
+        public DateTime? NgayDi { get; set; }
 
         [Key]
-        [Column(Order = 3)]
+        [Column(Order = 2)]
         [StringLength(100)]
         public string TenLoaiNghi { get; set; }
 
         [Key]
-        [Column(Order = 4)]
+        [Column(Order = 3)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int MaDS { get; set; }
-
-        public int? MaLop { get; set; }
-
-        public int? MaDonVi { get; set; }
     }
 }

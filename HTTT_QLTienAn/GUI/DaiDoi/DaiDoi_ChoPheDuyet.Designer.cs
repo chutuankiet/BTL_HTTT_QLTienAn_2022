@@ -233,7 +233,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             // gridColumn9
             // 
             this.gridColumn9.Caption = "Ngày nghỉ";
-            this.gridColumn9.FieldName = "NgayCatCom";
+            this.gridColumn9.FieldName = "NgayDi";
             this.gridColumn9.MinWidth = 29;
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.Visible = true;

@@ -13,7 +13,6 @@ namespace HTTT_QLTienAn.Model
         public HocVien()
         {
             DangKyNghis = new HashSet<DangKyNghi>();
-            DanhSachRaNgoais = new HashSet<DanhSachRaNgoai>();
         }
 
         [Key]
@@ -42,9 +41,6 @@ namespace HTTT_QLTienAn.Model
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DangKyNghi> DangKyNghis { get; set; }
-
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<DanhSachRaNgoai> DanhSachRaNgoais { get; set; }
 
         public virtual Lop Lop { get; set; }
 

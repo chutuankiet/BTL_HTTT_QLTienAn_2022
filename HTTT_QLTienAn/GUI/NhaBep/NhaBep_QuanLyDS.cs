@@ -63,15 +63,15 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             List<DonVi> lstDonVi = db.DonVis.ToList();
             int maC = lstDonVi.Find(s => s.TenDonVi == tenDonVi).MaDonVi;
 
-            List<NhaBep_ListCatCom> lstCatCom = db.NhaBep_ListCatCom.Where(s => DbFunctions.TruncateTime(s.NgayNghi) == thisDate.Date && s.MaDonVi == maC).ToList();
+            List<NhaBep_ListCatCom> lstCatCom = db.NhaBep_ListCatCom.Where(s => DbFunctions.TruncateTime(s.NgayCatCom) == thisDate.Date && s.MaDonVi == maC).ToList();
 
             gridView1.Columns[3].Visible = false;
             gridControl1.DataSource = lstCatCom;
             gridControl1.Refresh();
 
-            int sobuoisang = lstCatCom.Count(s => s.SoBuoiSang == 1);
-            int sobuoitrua = lstCatCom.Count(s => s.SoBuoiTrua == 1);
-            int sobuoitoi = lstCatCom.Count(s => s.SoBuoiToi == 1);
+            int sobuoisang = lstCatCom.Count(s => s.BuoiSang == true);
+            int sobuoitrua = lstCatCom.Count(s => s.BuoiTrua == true);
+            int sobuoitoi = lstCatCom.Count(s => s.BuoiToi == true);
             int quansoC = LoadQuanSoC();
             textEdit1.Text = (quansoC - sobuoisang).ToString();
             textEdit2.Text = (quansoC - sobuoitrua).ToString();
@@ -85,15 +85,15 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             var thisDate = dtpNgayD.DateTime.Date;
             ClearGridControl();
 
-            List<NhaBep_ListCatCom> lstCatComD = db.NhaBep_ListCatCom.Where(s => DbFunctions.TruncateTime(s.NgayNghi) == thisDate.Date).ToList();
+            List<NhaBep_ListCatCom> lstCatComD = db.NhaBep_ListCatCom.Where(s => DbFunctions.TruncateTime(s.NgayCatCom) == thisDate.Date).ToList();
 
             gridView1.Columns[3].Visible = true;
             gridControl1.DataSource = lstCatComD;
             gridControl1.Refresh();
 
-            int sobuoisang = lstCatComD.Count(s => s.SoBuoiSang == 1);
-            int sobuoitrua = lstCatComD.Count(s => s.SoBuoiTrua == 1);
-            int sobuoitoi = lstCatComD.Count(s => s.SoBuoiToi == 1);
+            int sobuoisang = lstCatComD.Count(s => s.BuoiSang == true);
+            int sobuoitrua = lstCatComD.Count(s => s.BuoiTrua == true);
+            int sobuoitoi = lstCatComD.Count(s => s.BuoiToi == true);
             int quansoD = LoadQuanSoD();
             textEdit4.Text = (quansoD - sobuoisang).ToString();
             textEdit5.Text = (quansoD - sobuoitrua).ToString();
@@ -104,7 +104,13 @@ namespace HTTT_QLTienAn.GUI.NhaBep
         {
             List<DonVi> lstDonVi = db.DonVis.ToList();
             int maC = lstDonVi.Find(s => s.TenDonVi == cbbDonVi.SelectedItem.ToString()).MaDonVi;
-            int quansoC = db.HocViens.Where(s => s.MaDonVi == maC).ToList().Count;
+            int quansoC = (from hv in db.HocViens
+                           join l in db.Lops on hv.MaLop equals l.MaLop
+                           where l.MaDonVi == maC
+                           select new
+                           {
+                               hv.MaHocVien
+                           }).ToList().Count;
             textEdit7.Text = quansoC.ToString();
             textEdit8.Text = quansoC.ToString();
             textEdit9.Text = quansoC.ToString();
@@ -127,11 +133,11 @@ namespace HTTT_QLTienAn.GUI.NhaBep
         private void StartupLoadQuanSoD()
         {
             var thisDate = dtpNgayD.DateTime.Date;
-            List<NhaBep_ListCatCom> lstCatComD = db.NhaBep_ListCatCom.Where(s => DbFunctions.TruncateTime(s.NgayNghi) == thisDate.Date).ToList();
+            List<NhaBep_ListCatCom> lstCatComD = db.NhaBep_ListCatCom.Where(s => DbFunctions.TruncateTime(s.NgayCatCom) == thisDate.Date).ToList();
 
-            int sobuoisang = lstCatComD.Count(s => s.SoBuoiSang == 1);
-            int sobuoitrua = lstCatComD.Count(s => s.SoBuoiTrua == 1);
-            int sobuoitoi = lstCatComD.Count(s => s.SoBuoiToi == 1);
+            int sobuoisang = lstCatComD.Count(s => s.BuoiSang == true);
+            int sobuoitrua = lstCatComD.Count(s => s.BuoiTrua == true);
+            int sobuoitoi = lstCatComD.Count(s => s.BuoiToi == true);
             int quansoD = LoadQuanSoD();
             textEdit4.Text = (quansoD - sobuoisang).ToString();
             textEdit5.Text = (quansoD - sobuoitrua).ToString();

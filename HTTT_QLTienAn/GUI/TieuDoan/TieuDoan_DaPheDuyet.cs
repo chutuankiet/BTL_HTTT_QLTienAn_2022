@@ -82,10 +82,7 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
         {
             LoadDSChiTietDaXacNhan(Convert.ToInt32(dgvDaXacNhan_View.GetRowCellValue(e.RowHandle, "MaDS")));
         }
-        public void reload()
-        {
-            LoadDSDaPheDuyet();
-        }
+      
 
         private void TieuDoan_DaPheDuyet_Load(object sender, EventArgs e)
         {

@@ -107,14 +107,6 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             // 
             this.cbbDonVi.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbbDonVi.FormattingEnabled = true;
-            this.cbbDonVi.Items.AddRange(new object[] {
-            "c151",
-            "c152",
-            "c153",
-            "c154",
-            "c155",
-            "cLKBK",
-            "cLKNN"});
             this.cbbDonVi.Location = new System.Drawing.Point(36, 70);
             this.cbbDonVi.Name = "cbbDonVi";
             this.cbbDonVi.Size = new System.Drawing.Size(254, 24);
@@ -619,6 +611,7 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "NhaBep_QuanLyDS";
             this.Size = new System.Drawing.Size(1121, 760);
+            this.Load += new System.EventHandler(this.NhaBep_QuanLyDanhSach_Load);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
             this.groupControl3.PerformLayout();
