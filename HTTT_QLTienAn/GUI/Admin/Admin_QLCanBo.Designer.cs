@@ -70,11 +70,9 @@ namespace HTTT_QLTienAn.GUI.Admin
             this.btnThemCB = new DevExpress.XtraEditors.SimpleButton();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.dateSuaNgaySinhCB = new DevExpress.XtraEditors.DateEdit();
-            this.txtSuaMaCB = new DevExpress.XtraEditors.TextEdit();
             this.label19 = new System.Windows.Forms.Label();
             this.txtSuaMaTKCB = new DevExpress.XtraEditors.TextEdit();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtSuaMaDVCB = new DevExpress.XtraEditors.TextEdit();
             this.label7 = new System.Windows.Forms.Label();
             this.txtSuaChucVuCB = new DevExpress.XtraEditors.TextEdit();
             this.label8 = new System.Windows.Forms.Label();
@@ -84,6 +82,8 @@ namespace HTTT_QLTienAn.GUI.Admin
             this.txtSuaTenCB = new DevExpress.XtraEditors.TextEdit();
             this.label18 = new System.Windows.Forms.Label();
             this.btnSuaCB = new DevExpress.XtraEditors.SimpleButton();
+            this.cbDonVi = new System.Windows.Forms.ComboBox();
+            this.cbCanBo = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTTCB)).BeginInit();
@@ -111,9 +111,7 @@ namespace HTTT_QLTienAn.GUI.Admin
             this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateSuaNgaySinhCB.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateSuaNgaySinhCB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSuaMaCB.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSuaMaTKCB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSuaMaDVCB.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSuaChucVuCB.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSuaCapBacCB.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSuaTenCB.Properties)).BeginInit();
@@ -264,9 +262,9 @@ namespace HTTT_QLTienAn.GUI.Admin
             this.label12.AutoSize = true;
             this.label12.Location = new System.Drawing.Point(16, 300);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(69, 17);
+            this.label12.Size = new System.Drawing.Size(48, 17);
             this.label12.TabIndex = 13;
-            this.label12.Text = "Mã đơn vị";
+            this.label12.Text = "Đơn vị";
             // 
             // txtMTKCB_CT
             // 
@@ -552,12 +550,12 @@ namespace HTTT_QLTienAn.GUI.Admin
             // 
             // xtraTabPage2
             // 
+            this.xtraTabPage2.Controls.Add(this.cbCanBo);
+            this.xtraTabPage2.Controls.Add(this.cbDonVi);
             this.xtraTabPage2.Controls.Add(this.dateSuaNgaySinhCB);
-            this.xtraTabPage2.Controls.Add(this.txtSuaMaCB);
             this.xtraTabPage2.Controls.Add(this.label19);
             this.xtraTabPage2.Controls.Add(this.txtSuaMaTKCB);
             this.xtraTabPage2.Controls.Add(this.label6);
-            this.xtraTabPage2.Controls.Add(this.txtSuaMaDVCB);
             this.xtraTabPage2.Controls.Add(this.label7);
             this.xtraTabPage2.Controls.Add(this.txtSuaChucVuCB);
             this.xtraTabPage2.Controls.Add(this.label8);
@@ -575,7 +573,7 @@ namespace HTTT_QLTienAn.GUI.Admin
             // 
             this.dateSuaNgaySinhCB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dateSuaNgaySinhCB.EditValue = null;
-            this.dateSuaNgaySinhCB.Location = new System.Drawing.Point(35, 86);
+            this.dateSuaNgaySinhCB.Location = new System.Drawing.Point(30, 134);
             this.dateSuaNgaySinhCB.Name = "dateSuaNgaySinhCB";
             this.dateSuaNgaySinhCB.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -584,22 +582,11 @@ namespace HTTT_QLTienAn.GUI.Admin
             this.dateSuaNgaySinhCB.Size = new System.Drawing.Size(333, 22);
             this.dateSuaNgaySinhCB.TabIndex = 36;
             // 
-            // txtSuaMaCB
-            // 
-            this.txtSuaMaCB.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtSuaMaCB.EditValue = "";
-            this.txtSuaMaCB.Enabled = false;
-            this.txtSuaMaCB.Location = new System.Drawing.Point(35, 374);
-            this.txtSuaMaCB.Name = "txtSuaMaCB";
-            this.txtSuaMaCB.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtSuaMaCB.Size = new System.Drawing.Size(333, 22);
-            this.txtSuaMaCB.TabIndex = 34;
-            // 
             // label19
             // 
             this.label19.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(33, 345);
+            this.label19.Location = new System.Drawing.Point(30, 3);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(74, 17);
             this.label19.TabIndex = 35;
@@ -609,7 +596,7 @@ namespace HTTT_QLTienAn.GUI.Admin
             // 
             this.txtSuaMaTKCB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtSuaMaTKCB.EditValue = "";
-            this.txtSuaMaTKCB.Location = new System.Drawing.Point(35, 254);
+            this.txtSuaMaTKCB.Location = new System.Drawing.Point(30, 302);
             this.txtSuaMaTKCB.Name = "txtSuaMaTKCB";
             this.txtSuaMaTKCB.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtSuaMaTKCB.Size = new System.Drawing.Size(333, 22);
@@ -619,27 +606,17 @@ namespace HTTT_QLTienAn.GUI.Admin
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(32, 234);
+            this.label6.Location = new System.Drawing.Point(30, 282);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(89, 17);
             this.label6.TabIndex = 33;
             this.label6.Text = "Mã tài khoản";
             // 
-            // txtSuaMaDVCB
-            // 
-            this.txtSuaMaDVCB.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtSuaMaDVCB.EditValue = "";
-            this.txtSuaMaDVCB.Location = new System.Drawing.Point(35, 319);
-            this.txtSuaMaDVCB.Name = "txtSuaMaDVCB";
-            this.txtSuaMaDVCB.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtSuaMaDVCB.Size = new System.Drawing.Size(333, 22);
-            this.txtSuaMaDVCB.TabIndex = 30;
-            // 
             // label7
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(33, 290);
+            this.label7.Location = new System.Drawing.Point(30, 338);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(69, 17);
             this.label7.TabIndex = 31;
@@ -649,7 +626,7 @@ namespace HTTT_QLTienAn.GUI.Admin
             // 
             this.txtSuaChucVuCB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtSuaChucVuCB.EditValue = "";
-            this.txtSuaChucVuCB.Location = new System.Drawing.Point(35, 199);
+            this.txtSuaChucVuCB.Location = new System.Drawing.Point(30, 247);
             this.txtSuaChucVuCB.Name = "txtSuaChucVuCB";
             this.txtSuaChucVuCB.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtSuaChucVuCB.Size = new System.Drawing.Size(333, 22);
@@ -659,7 +636,7 @@ namespace HTTT_QLTienAn.GUI.Admin
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(32, 176);
+            this.label8.Location = new System.Drawing.Point(30, 224);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(59, 17);
             this.label8.TabIndex = 29;
@@ -669,7 +646,7 @@ namespace HTTT_QLTienAn.GUI.Admin
             // 
             this.txtSuaCapBacCB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtSuaCapBacCB.EditValue = "";
-            this.txtSuaCapBacCB.Location = new System.Drawing.Point(35, 141);
+            this.txtSuaCapBacCB.Location = new System.Drawing.Point(30, 189);
             this.txtSuaCapBacCB.Name = "txtSuaCapBacCB";
             this.txtSuaCapBacCB.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtSuaCapBacCB.Size = new System.Drawing.Size(333, 22);
@@ -679,7 +656,7 @@ namespace HTTT_QLTienAn.GUI.Admin
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(32, 121);
+            this.label13.Location = new System.Drawing.Point(30, 169);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(60, 17);
             this.label13.TabIndex = 27;
@@ -689,7 +666,7 @@ namespace HTTT_QLTienAn.GUI.Admin
             // 
             this.label17.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(32, 66);
+            this.label17.Location = new System.Drawing.Point(30, 114);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(71, 17);
             this.label17.TabIndex = 25;
@@ -699,7 +676,7 @@ namespace HTTT_QLTienAn.GUI.Admin
             // 
             this.txtSuaTenCB.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtSuaTenCB.EditValue = "";
-            this.txtSuaTenCB.Location = new System.Drawing.Point(35, 34);
+            this.txtSuaTenCB.Location = new System.Drawing.Point(30, 82);
             this.txtSuaTenCB.Name = "txtSuaTenCB";
             this.txtSuaTenCB.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.txtSuaTenCB.Size = new System.Drawing.Size(333, 22);
@@ -709,7 +686,7 @@ namespace HTTT_QLTienAn.GUI.Admin
             // 
             this.label18.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(32, 14);
+            this.label18.Location = new System.Drawing.Point(30, 62);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(50, 17);
             this.label18.TabIndex = 23;
@@ -725,6 +702,22 @@ namespace HTTT_QLTienAn.GUI.Admin
             this.btnSuaCB.TabIndex = 21;
             this.btnSuaCB.Text = "Sửa";
             this.btnSuaCB.Click += new System.EventHandler(this.btnSuaCB_Click);
+            // 
+            // cbDonVi
+            // 
+            this.cbDonVi.FormattingEnabled = true;
+            this.cbDonVi.Location = new System.Drawing.Point(30, 362);
+            this.cbDonVi.Name = "cbDonVi";
+            this.cbDonVi.Size = new System.Drawing.Size(332, 24);
+            this.cbDonVi.TabIndex = 37;
+            // 
+            // cbCanBo
+            // 
+            this.cbCanBo.FormattingEnabled = true;
+            this.cbCanBo.Location = new System.Drawing.Point(30, 23);
+            this.cbCanBo.Name = "cbCanBo";
+            this.cbCanBo.Size = new System.Drawing.Size(332, 24);
+            this.cbCanBo.TabIndex = 38;
             // 
             // Admin_QLCanBo
             // 
@@ -766,9 +759,7 @@ namespace HTTT_QLTienAn.GUI.Admin
             this.xtraTabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateSuaNgaySinhCB.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateSuaNgaySinhCB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSuaMaCB.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSuaMaTKCB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSuaMaDVCB.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSuaChucVuCB.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSuaCapBacCB.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSuaTenCB.Properties)).EndInit();
@@ -819,11 +810,9 @@ namespace HTTT_QLTienAn.GUI.Admin
         private DevExpress.XtraEditors.SimpleButton btnThemCB;
         private DevExpress.XtraTab.XtraTabPage xtraTabPage2;
         private DevExpress.XtraEditors.DateEdit dateSuaNgaySinhCB;
-        private DevExpress.XtraEditors.TextEdit txtSuaMaCB;
         private System.Windows.Forms.Label label19;
         private DevExpress.XtraEditors.TextEdit txtSuaMaTKCB;
         private System.Windows.Forms.Label label6;
-        private DevExpress.XtraEditors.TextEdit txtSuaMaDVCB;
         private System.Windows.Forms.Label label7;
         private DevExpress.XtraEditors.TextEdit txtSuaChucVuCB;
         private System.Windows.Forms.Label label8;
@@ -833,5 +822,7 @@ namespace HTTT_QLTienAn.GUI.Admin
         private DevExpress.XtraEditors.TextEdit txtSuaTenCB;
         private System.Windows.Forms.Label label18;
         private DevExpress.XtraEditors.SimpleButton btnSuaCB;
+        private System.Windows.Forms.ComboBox cbCanBo;
+        private System.Windows.Forms.ComboBox cbDonVi;
     }
 }

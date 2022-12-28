@@ -22,11 +22,16 @@ namespace HTTT_QLTienAn.GUI.Admin
         public QLTA_model db = new QLTA_model();
         public CanBo cb = new CanBo();
 
+        List<CanBo> lsCanBo;
         private void Admin_QLCanBo_Load(object sender, EventArgs e)
         {
             var ttcb = db.CanBoes.ToList();
             dgvTTCB.DataSource = ttcb;
             LoadChiTietCB();
+            lsCanBo = db.CanBoes.ToList();
+            cbCanBo.DataSource = lsCanBo;
+            cbCanBo.ValueMember = "MaCanBo";
+            cbCanBo.DisplayMember = "TenCanBo";
         }
 
         private void LoadChiTietCB()
@@ -44,7 +49,7 @@ namespace HTTT_QLTienAn.GUI.Admin
             txtNSCB_CT.EditValue = ((DateTime)cb.NgaySinh).ToString("dd/MM/yy");
             txtTenCB_CT.EditValue = cb.HoTen;
 
-            txtSuaMaCB.EditValue = cb.MaCanBo;
+            cbCanBo.SelectedValue = cb.HoTen;
         }
 
         private void dgvTTCB_View_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
