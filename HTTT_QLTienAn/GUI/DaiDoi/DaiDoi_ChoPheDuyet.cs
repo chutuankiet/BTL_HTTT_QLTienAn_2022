@@ -48,7 +48,6 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
                 MaDS_XacNhan = ds_ChoPheDuyet[0].MaDS;
 
                 ds_CTChoPheDuyet = db.DS_ChoPheDuyet.Where(m=>m.MaDS == MaDS_XacNhan).ToList();
-                
                
                 dgvChiTietDS1.DataSource = ds_CTChoPheDuyet;
             }
@@ -124,6 +123,8 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             {
                 MessageBox.Show("Danh sách không tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+
+
             dgvDSCho.DataSource = null;
             LoadDS1();
             dgvChiTietDS1.DataSource = null;
