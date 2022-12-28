@@ -151,6 +151,12 @@
     <Compile Include="GUI\Admin\Admin_QLTieuChuanAn.Designer.cs">
       <DependentUpon>Admin_QLTieuChuanAn.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\CanBo_SuaDSNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\CanBo_SuaDSNhap.Designer.cs">
+      <DependentUpon>CanBo_SuaDSNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\DaiDoi\DaiDoi_ChoPheDuyet.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -305,6 +311,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin\Admin_QLTieuChuanAn.resx">
       <DependentUpon>Admin_QLTieuChuanAn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CanBo_SuaDSNhap.resx">
+      <DependentUpon>CanBo_SuaDSNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\DaiDoi\DaiDoi_ChoPheDuyet.resx">
       <DependentUpon>DaiDoi_ChoPheDuyet.cs</DependentUpon>

@@ -98,31 +98,31 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             // 
             this.gridColumn5.Caption = "Lớp trưởng";
             this.gridColumn5.FieldName = "HoTen";
-            this.gridColumn5.MinWidth = 25;
+            this.gridColumn5.MinWidth = 29;
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
             this.gridColumn5.VisibleIndex = 3;
-            this.gridColumn5.Width = 137;
+            this.gridColumn5.Width = 157;
             // 
             // gridColumn4
             // 
             this.gridColumn4.Caption = "Ngày đăng ký";
             this.gridColumn4.FieldName = "NgayDangKy";
-            this.gridColumn4.MinWidth = 25;
+            this.gridColumn4.MinWidth = 29;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 2;
-            this.gridColumn4.Width = 277;
+            this.gridColumn4.Width = 317;
             // 
             // gridColumn1
             // 
             this.gridColumn1.Caption = "Mã DS";
             this.gridColumn1.FieldName = "MaDS";
-            this.gridColumn1.MinWidth = 25;
+            this.gridColumn1.MinWidth = 29;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 118;
+            this.gridColumn1.Width = 135;
             // 
             // dgvDSCho_View
             // 
@@ -140,11 +140,11 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             // 
             this.gridColumn13.Caption = "Lớp";
             this.gridColumn13.FieldName = "TenLop";
-            this.gridColumn13.MinWidth = 25;
+            this.gridColumn13.MinWidth = 29;
             this.gridColumn13.Name = "gridColumn13";
             this.gridColumn13.Visible = true;
             this.gridColumn13.VisibleIndex = 1;
-            this.gridColumn13.Width = 100;
+            this.gridColumn13.Width = 114;
             // 
             // dgvDSCho
             // 
@@ -154,7 +154,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.dgvDSCho.Name = "dgvDSCho";
             this.dgvDSCho.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.btnDel});
-            this.dgvDSCho.Size = new System.Drawing.Size(428, 728);
+            this.dgvDSCho.Size = new System.Drawing.Size(490, 728);
             this.dgvDSCho.TabIndex = 0;
             this.dgvDSCho.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.dgvDSCho_View});
@@ -167,7 +167,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.groupControl1.Controls.Add(this.dgvDSCho);
             this.groupControl1.Location = new System.Drawing.Point(3, 3);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(432, 747);
+            this.groupControl1.Size = new System.Drawing.Size(494, 747);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Danh sách chờ duyệt";
             // 
@@ -177,7 +177,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.dgvChiTietDS1.Location = new System.Drawing.Point(2, 17);
             this.dgvChiTietDS1.MainView = this.btnXoa;
             this.dgvChiTietDS1.Name = "dgvChiTietDS1";
-            this.dgvChiTietDS1.Size = new System.Drawing.Size(526, 603);
+            this.dgvChiTietDS1.Size = new System.Drawing.Size(603, 517);
             this.dgvChiTietDS1.TabIndex = 6;
             this.dgvChiTietDS1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.btnXoa});
@@ -199,64 +199,64 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             // 
             this.gridColumn7.Caption = "Họ tên";
             this.gridColumn7.FieldName = "HoTen";
-            this.gridColumn7.MinWidth = 25;
+            this.gridColumn7.MinWidth = 29;
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 0;
-            this.gridColumn7.Width = 275;
+            this.gridColumn7.Width = 314;
             // 
             // gridColumn8
             // 
             this.gridColumn8.Caption = "Lớp";
             this.gridColumn8.FieldName = "Lop";
-            this.gridColumn8.MinWidth = 25;
+            this.gridColumn8.MinWidth = 29;
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 1;
-            this.gridColumn8.Width = 112;
+            this.gridColumn8.Width = 128;
             // 
             // gridColumn9
             // 
             this.gridColumn9.Caption = "Ngày nghỉ";
             this.gridColumn9.FieldName = "NgayNghi";
-            this.gridColumn9.MinWidth = 25;
+            this.gridColumn9.MinWidth = 29;
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 2;
-            this.gridColumn9.Width = 259;
+            this.gridColumn9.Width = 296;
             // 
             // gridColumn10
             // 
             this.gridColumn10.Caption = "Sáng";
             this.gridColumn10.ColumnEdit = this.chkEdit;
             this.gridColumn10.FieldName = "Sang";
-            this.gridColumn10.MinWidth = 25;
+            this.gridColumn10.MinWidth = 29;
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.Visible = true;
             this.gridColumn10.VisibleIndex = 3;
-            this.gridColumn10.Width = 51;
+            this.gridColumn10.Width = 58;
             // 
             // gridColumn11
             // 
             this.gridColumn11.Caption = "Trưa";
             this.gridColumn11.ColumnEdit = this.chkEdit;
             this.gridColumn11.FieldName = "Trua";
-            this.gridColumn11.MinWidth = 25;
+            this.gridColumn11.MinWidth = 29;
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.Visible = true;
             this.gridColumn11.VisibleIndex = 4;
-            this.gridColumn11.Width = 48;
+            this.gridColumn11.Width = 55;
             // 
             // gridColumn12
             // 
             this.gridColumn12.Caption = "Tối";
             this.gridColumn12.ColumnEdit = this.chkEdit;
             this.gridColumn12.FieldName = "Toi";
-            this.gridColumn12.MinWidth = 25;
+            this.gridColumn12.MinWidth = 29;
             this.gridColumn12.Name = "gridColumn12";
             this.gridColumn12.Visible = true;
             this.gridColumn12.VisibleIndex = 5;
-            this.gridColumn12.Width = 55;
+            this.gridColumn12.Width = 63;
             // 
             // groupControl2
             // 
@@ -266,7 +266,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.groupControl2.Controls.Add(this.dgvChiTietDS1);
             this.groupControl2.Location = new System.Drawing.Point(3, 3);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(530, 622);
+            this.groupControl2.Size = new System.Drawing.Size(607, 536);
             this.groupControl2.TabIndex = 0;
             this.groupControl2.Text = "Chi tiết danh sách";
             // 
@@ -293,7 +293,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(974, 753);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1113, 753);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
             // panel1
@@ -302,18 +302,18 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.panel1.Controls.Add(this.btnHuy);
             this.panel1.Controls.Add(this.groupControl2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(441, 3);
+            this.panel1.Location = new System.Drawing.Point(503, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(530, 747);
+            this.panel1.Size = new System.Drawing.Size(607, 747);
             this.panel1.TabIndex = 1;
             // 
             // btnXacNhan
             // 
             this.btnXacNhan.BackColor = System.Drawing.Color.ForestGreen;
             this.btnXacNhan.ForeColor = System.Drawing.Color.White;
-            this.btnXacNhan.Location = new System.Drawing.Point(312, 667);
+            this.btnXacNhan.Location = new System.Drawing.Point(330, 667);
             this.btnXacNhan.Name = "btnXacNhan";
-            this.btnXacNhan.Size = new System.Drawing.Size(140, 47);
+            this.btnXacNhan.Size = new System.Drawing.Size(160, 47);
             this.btnXacNhan.TabIndex = 2;
             this.btnXacNhan.Text = "Xác nhận";
             this.btnXacNhan.UseVisualStyleBackColor = false;
@@ -326,9 +326,9 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnHuy.BackColor = System.Drawing.Color.Red;
             this.btnHuy.ForeColor = System.Drawing.Color.White;
-            this.btnHuy.Location = new System.Drawing.Point(36, 667);
+            this.btnHuy.Location = new System.Drawing.Point(139, 667);
             this.btnHuy.Name = "btnHuy";
-            this.btnHuy.Size = new System.Drawing.Size(152, 47);
+            this.btnHuy.Size = new System.Drawing.Size(175, 47);
             this.btnHuy.TabIndex = 1;
             this.btnHuy.Text = "Huỷ yêu cầu";
             this.btnHuy.UseVisualStyleBackColor = false;
@@ -336,11 +336,11 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             // 
             // DaiDoi_ChoPheDuyet
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "DaiDoi_ChoPheDuyet";
-            this.Size = new System.Drawing.Size(981, 760);
+            this.Size = new System.Drawing.Size(1121, 760);
             ((System.ComponentModel.ISupportInitialize)(this.chkEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.danhSachNghiBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDel)).EndInit();

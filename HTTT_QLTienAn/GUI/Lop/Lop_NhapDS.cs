@@ -287,14 +287,7 @@ namespace HTTT_QLTienAn.GUI.Lop
 
             int maloainghi = Convert.ToInt32(cbLoainghi.SelectedValue);
 
-            //for(int i = 0; i < listDK.Count; i++)
-            //{
-            //    if(listDK[i].MaHocVien == MaHVCurrent)
-            //    {
-            //        MessageBox.Show("Đã có trong danh sách ! ", "Error");
-            //        return;
-            //    }
-            //}
+       
 
             // thêm chi tiết cắt cơm 
 
@@ -359,6 +352,7 @@ namespace HTTT_QLTienAn.GUI.Lop
 
                 ds.NgayDK = DateTime.Now;
                 ds.PheDuyet = -3; // -3 : chua duyet | -2 : huy dai doi |-1 : huy tieu doan | 0 : daidoi | 1 : tieudoan
+                ds.MaLT = MaLopTruong;
 
                 db.DanhSachRaNgoais.Add(ds);
 
