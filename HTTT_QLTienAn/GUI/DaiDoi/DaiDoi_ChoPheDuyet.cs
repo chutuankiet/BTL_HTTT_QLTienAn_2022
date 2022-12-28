@@ -37,8 +37,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             {
                 List<c_ChoPheDuyet> ds_ChoPheDuyet = db.c_ChoPheDuyet.Where(m=>m.PheDuyet == -3).ToList();
 
-
-                
+ 
                 dgvDSCho.DataSource = ds_ChoPheDuyet;
 
                 mads = ds_ChoPheDuyet[0].MaDS;

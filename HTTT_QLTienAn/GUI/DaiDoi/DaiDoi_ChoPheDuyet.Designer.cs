@@ -43,6 +43,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.dgvChiTietDS1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -56,7 +57,6 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnHuy = new System.Windows.Forms.Button();
             this.btnXacNhan = new System.Windows.Forms.Button();
-            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.chkEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.danhSachNghiBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnDel)).BeginInit();
@@ -137,6 +137,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.gridColumn5});
             this.dgvDSCho_View.GridControl = this.dgvDSCho;
             this.dgvDSCho_View.Name = "dgvDSCho_View";
+            this.dgvDSCho_View.OptionsBehavior.Editable = false;
             this.dgvDSCho_View.OptionsView.ShowGroupPanel = false;
             this.dgvDSCho_View.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.dgvDSCho_View_RowClick_1);
             // 
@@ -200,6 +201,14 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.gridView1.GridControl = this.dgvChiTietDS1;
             this.gridView1.Name = "gridView1";
             this.gridView1.OptionsView.ShowGroupPanel = false;
+            // 
+            // gridColumn11
+            // 
+            this.gridColumn11.Caption = "Mã đăng ký";
+            this.gridColumn11.FieldName = "MaDK";
+            this.gridColumn11.MinWidth = 25;
+            this.gridColumn11.Name = "gridColumn11";
+            this.gridColumn11.Width = 94;
             // 
             // gridColumn7
             // 
@@ -342,14 +351,6 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.btnXacNhan.Text = "Xác nhận";
             this.btnXacNhan.UseVisualStyleBackColor = false;
             this.btnXacNhan.Click += new System.EventHandler(this.btnXacnhan_Click);
-            // 
-            // gridColumn11
-            // 
-            this.gridColumn11.Caption = "Mã đăng ký";
-            this.gridColumn11.FieldName = "MaDK";
-            this.gridColumn11.MinWidth = 25;
-            this.gridColumn11.Name = "gridColumn11";
-            this.gridColumn11.Width = 94;
             // 
             // DaiDoi_ChoPheDuyet
             // 
