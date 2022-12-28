@@ -122,6 +122,8 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             {
                 MessageBox.Show("Danh sách không tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+
+
             dgvDSCho.DataSource = null;
             LoadDS1();
             dgvChiTietDS1.DataSource = null;

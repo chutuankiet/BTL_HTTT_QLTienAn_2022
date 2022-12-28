@@ -108,7 +108,7 @@ namespace HTTT_QLTienAn.GUI
             // dateEnd
             // 
             this.dateEnd.EditValue = null;
-            this.dateEnd.Location = new System.Drawing.Point(422, 59);
+            this.dateEnd.Location = new System.Drawing.Point(426, 72);
             this.dateEnd.Name = "dateEnd";
             this.dateEnd.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -325,7 +325,7 @@ namespace HTTT_QLTienAn.GUI
             // cbDot
             // 
             this.cbDot.FormattingEnabled = true;
-            this.cbDot.Location = new System.Drawing.Point(71, 57);
+            this.cbDot.Location = new System.Drawing.Point(75, 70);
             this.cbDot.Name = "cbDot";
             this.cbDot.Size = new System.Drawing.Size(125, 24);
             this.cbDot.TabIndex = 6;
@@ -333,11 +333,11 @@ namespace HTTT_QLTienAn.GUI
             // lbHoTen
             // 
             this.lbHoTen.AutoSize = true;
-            this.lbHoTen.Location = new System.Drawing.Point(125, 62);
+            this.lbHoTen.Location = new System.Drawing.Point(146, 62);
             this.lbHoTen.Name = "lbHoTen";
-            this.lbHoTen.Size = new System.Drawing.Size(98, 17);
+            this.lbHoTen.Size = new System.Drawing.Size(26, 17);
             this.lbHoTen.TabIndex = 2;
-            this.lbHoTen.Text = "Chu Tuấn Kiệt";
+            this.lbHoTen.Text = "xxx";
             // 
             // tableLayoutPanel3
             // 
@@ -388,29 +388,29 @@ namespace HTTT_QLTienAn.GUI
             // 
             this.lbTongTien.AutoSize = true;
             this.lbTongTien.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbTongTien.Location = new System.Drawing.Point(125, 266);
+            this.lbTongTien.Location = new System.Drawing.Point(145, 266);
             this.lbTongTien.Name = "lbTongTien";
-            this.lbTongTien.Size = new System.Drawing.Size(136, 23);
+            this.lbTongTien.Size = new System.Drawing.Size(43, 23);
             this.lbTongTien.TabIndex = 9;
-            this.lbTongTien.Text = "240.000 VND";
+            this.lbTongTien.Text = "xxx";
             // 
             // lbLoaiTCA
             // 
             this.lbLoaiTCA.AutoSize = true;
-            this.lbLoaiTCA.Location = new System.Drawing.Point(125, 198);
+            this.lbLoaiTCA.Location = new System.Drawing.Point(146, 198);
             this.lbLoaiTCA.Name = "lbLoaiTCA";
-            this.lbLoaiTCA.Size = new System.Drawing.Size(85, 17);
+            this.lbLoaiTCA.Size = new System.Drawing.Size(26, 17);
             this.lbLoaiTCA.TabIndex = 8;
-            this.lbLoaiTCA.Text = "Cho HSQBS";
+            this.lbLoaiTCA.Text = "xxx";
             // 
             // lbLoaiHocVien
             // 
             this.lbLoaiHocVien.AutoSize = true;
-            this.lbLoaiHocVien.Location = new System.Drawing.Point(125, 147);
+            this.lbLoaiHocVien.Location = new System.Drawing.Point(146, 147);
             this.lbLoaiHocVien.Name = "lbLoaiHocVien";
-            this.lbLoaiHocVien.Size = new System.Drawing.Size(56, 17);
+            this.lbLoaiHocVien.Size = new System.Drawing.Size(26, 17);
             this.lbLoaiHocVien.TabIndex = 7;
-            this.lbLoaiHocVien.Text = "HSQBS";
+            this.lbLoaiHocVien.Text = "xxx";
             // 
             // label10
             // 
@@ -434,7 +434,7 @@ namespace HTTT_QLTienAn.GUI
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Tahoma", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(5, 266);
+            this.label8.Location = new System.Drawing.Point(25, 266);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(114, 23);
             this.label8.TabIndex = 4;
@@ -443,11 +443,11 @@ namespace HTTT_QLTienAn.GUI
             // lbTenLop
             // 
             this.lbTenLop.AutoSize = true;
-            this.lbTenLop.Location = new System.Drawing.Point(125, 107);
+            this.lbTenLop.Location = new System.Drawing.Point(146, 107);
             this.lbTenLop.Name = "lbTenLop";
-            this.lbTenLop.Size = new System.Drawing.Size(64, 17);
+            this.lbTenLop.Size = new System.Drawing.Size(26, 17);
             this.lbTenLop.TabIndex = 3;
-            this.lbTenLop.Text = "ANHTTT";
+            this.lbTenLop.Text = "xxx";
             // 
             // label5
             // 
@@ -577,7 +577,7 @@ namespace HTTT_QLTienAn.GUI
             // 
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Location = new System.Drawing.Point(332, 92);
+            this.label14.Location = new System.Drawing.Point(339, 35);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(81, 17);
             this.label14.TabIndex = 9;
@@ -587,7 +587,7 @@ namespace HTTT_QLTienAn.GUI
             // 
             this.chkTT_DaTT.AutoSize = true;
             this.chkTT_DaTT.BackColor = System.Drawing.Color.Transparent;
-            this.chkTT_DaTT.Location = new System.Drawing.Point(417, 91);
+            this.chkTT_DaTT.Location = new System.Drawing.Point(426, 34);
             this.chkTT_DaTT.Name = "chkTT_DaTT";
             this.chkTT_DaTT.Size = new System.Drawing.Size(120, 21);
             this.chkTT_DaTT.TabIndex = 8;
@@ -598,7 +598,7 @@ namespace HTTT_QLTienAn.GUI
             // 
             this.btnLoc.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoc.Appearance.Options.UseFont = true;
-            this.btnLoc.Location = new System.Drawing.Point(557, 57);
+            this.btnLoc.Location = new System.Drawing.Point(557, 43);
             this.btnLoc.Name = "btnLoc";
             this.btnLoc.Size = new System.Drawing.Size(94, 51);
             this.btnLoc.TabIndex = 5;
@@ -609,7 +609,7 @@ namespace HTTT_QLTienAn.GUI
             // 
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Location = new System.Drawing.Point(370, 64);
+            this.label4.Location = new System.Drawing.Point(374, 77);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(46, 17);
             this.label4.TabIndex = 4;
@@ -619,7 +619,7 @@ namespace HTTT_QLTienAn.GUI
             // 
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
-            this.label3.Location = new System.Drawing.Point(202, 64);
+            this.label3.Location = new System.Drawing.Point(206, 77);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(33, 17);
             this.label3.TabIndex = 3;
@@ -628,7 +628,7 @@ namespace HTTT_QLTienAn.GUI
             // dateStart
             // 
             this.dateStart.EditValue = null;
-            this.dateStart.Location = new System.Drawing.Point(239, 59);
+            this.dateStart.Location = new System.Drawing.Point(243, 72);
             this.dateStart.Name = "dateStart";
             this.dateStart.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -641,7 +641,7 @@ namespace HTTT_QLTienAn.GUI
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
-            this.label1.Location = new System.Drawing.Point(25, 64);
+            this.label1.Location = new System.Drawing.Point(29, 77);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(38, 17);
             this.label1.TabIndex = 0;

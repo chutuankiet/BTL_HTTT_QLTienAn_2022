@@ -115,9 +115,9 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             "c155",
             "cLKBK",
             "cLKNN"});
-            this.cbbDonVi.Location = new System.Drawing.Point(31, 70);
+            this.cbbDonVi.Location = new System.Drawing.Point(36, 70);
             this.cbbDonVi.Name = "cbbDonVi";
-            this.cbbDonVi.Size = new System.Drawing.Size(223, 24);
+            this.cbbDonVi.Size = new System.Drawing.Size(254, 24);
             this.cbbDonVi.TabIndex = 1;
             // 
             // groupControl3
@@ -139,7 +139,7 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             this.groupControl3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl3.Location = new System.Drawing.Point(3, 413);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(281, 331);
+            this.groupControl3.Size = new System.Drawing.Size(322, 331);
             this.groupControl3.TabIndex = 1;
             this.groupControl3.Text = "Quân số ăn tiểu đoàn";
             // 
@@ -147,19 +147,19 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             // 
             this.textEdit12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textEdit12.EditValue = "80";
-            this.textEdit12.Location = new System.Drawing.Point(154, 269);
+            this.textEdit12.Location = new System.Drawing.Point(177, 269);
             this.textEdit12.Name = "textEdit12";
             this.textEdit12.Properties.ReadOnly = true;
-            this.textEdit12.Size = new System.Drawing.Size(100, 22);
+            this.textEdit12.Size = new System.Drawing.Size(114, 22);
             this.textEdit12.TabIndex = 2;
             // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(28, 53);
+            this.label5.Location = new System.Drawing.Point(33, 53);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 17);
+            this.label5.Size = new System.Drawing.Size(41, 17);
             this.label5.TabIndex = 1;
             this.label5.Text = "Ngày";
             // 
@@ -167,43 +167,43 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             // 
             this.textEdit11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textEdit11.EditValue = "70";
-            this.textEdit11.Location = new System.Drawing.Point(31, 269);
+            this.textEdit11.Location = new System.Drawing.Point(36, 269);
             this.textEdit11.Name = "textEdit11";
             this.textEdit11.Properties.ReadOnly = true;
             this.textEdit11.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textEdit11.Size = new System.Drawing.Size(100, 22);
+            this.textEdit11.Size = new System.Drawing.Size(114, 22);
             this.textEdit11.TabIndex = 2;
             // 
             // dtpNgayD
             // 
             this.dtpNgayD.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpNgayD.EditValue = null;
-            this.dtpNgayD.Location = new System.Drawing.Point(31, 74);
+            this.dtpNgayD.Location = new System.Drawing.Point(36, 74);
             this.dtpNgayD.Name = "dtpNgayD";
             this.dtpNgayD.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtpNgayD.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtpNgayD.Size = new System.Drawing.Size(223, 22);
+            this.dtpNgayD.Size = new System.Drawing.Size(255, 22);
             this.dtpNgayD.TabIndex = 0;
             // 
             // textEdit10
             // 
             this.textEdit10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textEdit10.EditValue = "80";
-            this.textEdit10.Location = new System.Drawing.Point(154, 204);
+            this.textEdit10.Location = new System.Drawing.Point(177, 204);
             this.textEdit10.Name = "textEdit10";
             this.textEdit10.Properties.ReadOnly = true;
-            this.textEdit10.Size = new System.Drawing.Size(100, 22);
+            this.textEdit10.Size = new System.Drawing.Size(114, 22);
             this.textEdit10.TabIndex = 2;
             // 
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(28, 118);
+            this.label6.Location = new System.Drawing.Point(33, 118);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(39, 17);
+            this.label6.Size = new System.Drawing.Size(41, 17);
             this.label6.TabIndex = 1;
             this.label6.Text = "Sáng";
             // 
@@ -211,19 +211,19 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             // 
             this.textEdit6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textEdit6.EditValue = "80";
-            this.textEdit6.Location = new System.Drawing.Point(154, 139);
+            this.textEdit6.Location = new System.Drawing.Point(177, 139);
             this.textEdit6.Name = "textEdit6";
             this.textEdit6.Properties.ReadOnly = true;
-            this.textEdit6.Size = new System.Drawing.Size(100, 22);
+            this.textEdit6.Size = new System.Drawing.Size(114, 22);
             this.textEdit6.TabIndex = 2;
             // 
             // label7
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(137, 142);
+            this.label7.Location = new System.Drawing.Point(158, 142);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(13, 17);
+            this.label7.Size = new System.Drawing.Size(12, 17);
             this.label7.TabIndex = 1;
             this.label7.Text = "/";
             // 
@@ -231,20 +231,20 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             // 
             this.textEdit5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textEdit5.EditValue = "70";
-            this.textEdit5.Location = new System.Drawing.Point(31, 204);
+            this.textEdit5.Location = new System.Drawing.Point(36, 204);
             this.textEdit5.Name = "textEdit5";
             this.textEdit5.Properties.ReadOnly = true;
             this.textEdit5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textEdit5.Size = new System.Drawing.Size(100, 22);
+            this.textEdit5.Size = new System.Drawing.Size(114, 22);
             this.textEdit5.TabIndex = 2;
             // 
             // label8
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(137, 207);
+            this.label8.Location = new System.Drawing.Point(158, 207);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(13, 17);
+            this.label8.Size = new System.Drawing.Size(12, 17);
             this.label8.TabIndex = 1;
             this.label8.Text = "/";
             // 
@@ -252,20 +252,20 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             // 
             this.textEdit4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textEdit4.EditValue = "70";
-            this.textEdit4.Location = new System.Drawing.Point(31, 139);
+            this.textEdit4.Location = new System.Drawing.Point(36, 139);
             this.textEdit4.Name = "textEdit4";
             this.textEdit4.Properties.ReadOnly = true;
             this.textEdit4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textEdit4.Size = new System.Drawing.Size(100, 22);
+            this.textEdit4.Size = new System.Drawing.Size(114, 22);
             this.textEdit4.TabIndex = 2;
             // 
             // label12
             // 
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(137, 272);
+            this.label12.Location = new System.Drawing.Point(158, 272);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(13, 17);
+            this.label12.Size = new System.Drawing.Size(12, 17);
             this.label12.TabIndex = 1;
             this.label12.Text = "/";
             // 
@@ -273,9 +273,9 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             // 
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(28, 248);
+            this.label14.Location = new System.Drawing.Point(33, 248);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(26, 17);
+            this.label14.Size = new System.Drawing.Size(28, 17);
             this.label14.TabIndex = 1;
             this.label14.Text = "Tối";
             // 
@@ -283,9 +283,9 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(28, 183);
+            this.label13.Location = new System.Drawing.Point(33, 183);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(37, 17);
+            this.label13.Size = new System.Drawing.Size(38, 17);
             this.label13.TabIndex = 1;
             this.label13.Text = "Trưa";
             // 
@@ -293,30 +293,30 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             // 
             this.textEdit9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textEdit9.EditValue = "80";
-            this.textEdit9.Location = new System.Drawing.Point(154, 334);
+            this.textEdit9.Location = new System.Drawing.Point(177, 334);
             this.textEdit9.Name = "textEdit9";
             this.textEdit9.Properties.ReadOnly = true;
-            this.textEdit9.Size = new System.Drawing.Size(100, 22);
+            this.textEdit9.Size = new System.Drawing.Size(114, 22);
             this.textEdit9.TabIndex = 2;
             // 
             // textEdit3
             // 
             this.textEdit3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textEdit3.EditValue = "70";
-            this.textEdit3.Location = new System.Drawing.Point(31, 334);
+            this.textEdit3.Location = new System.Drawing.Point(36, 334);
             this.textEdit3.Name = "textEdit3";
             this.textEdit3.Properties.ReadOnly = true;
             this.textEdit3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textEdit3.Size = new System.Drawing.Size(100, 22);
+            this.textEdit3.Size = new System.Drawing.Size(114, 22);
             this.textEdit3.TabIndex = 2;
             // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(28, 313);
+            this.label4.Location = new System.Drawing.Point(33, 313);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(26, 17);
+            this.label4.Size = new System.Drawing.Size(28, 17);
             this.label4.TabIndex = 1;
             this.label4.Text = "Tối";
             // 
@@ -334,7 +334,7 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(974, 753);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1113, 753);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
             // groupControl1
@@ -343,7 +343,7 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             this.groupControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl1.Location = new System.Drawing.Point(3, 3);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(675, 747);
+            this.groupControl1.Size = new System.Drawing.Size(773, 747);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Danh sách cắt cơm";
             // 
@@ -357,7 +357,7 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.chkEdit});
-            this.gridControl1.Size = new System.Drawing.Size(675, 722);
+            this.gridControl1.Size = new System.Drawing.Size(773, 722);
             this.gridControl1.TabIndex = 0;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -382,52 +382,52 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             // colMaHocVien
             // 
             this.colMaHocVien.FieldName = "MaHocVien";
-            this.colMaHocVien.MinWidth = 25;
+            this.colMaHocVien.MinWidth = 29;
             this.colMaHocVien.Name = "colMaHocVien";
-            this.colMaHocVien.Width = 94;
+            this.colMaHocVien.Width = 107;
             // 
             // colHoTen
             // 
             this.colHoTen.Caption = "Họ tên";
             this.colHoTen.FieldName = "HoTen";
-            this.colHoTen.MinWidth = 25;
+            this.colHoTen.MinWidth = 29;
             this.colHoTen.Name = "colHoTen";
             this.colHoTen.Visible = true;
             this.colHoTen.VisibleIndex = 0;
-            this.colHoTen.Width = 94;
+            this.colHoTen.Width = 107;
             // 
             // colMaDonVi
             // 
             this.colMaDonVi.FieldName = "MaDonVi";
-            this.colMaDonVi.MinWidth = 25;
+            this.colMaDonVi.MinWidth = 29;
             this.colMaDonVi.Name = "colMaDonVi";
-            this.colMaDonVi.Width = 94;
+            this.colMaDonVi.Width = 107;
             // 
             // colTenDonVi
             // 
             this.colTenDonVi.Caption = "Đơn vị";
             this.colTenDonVi.FieldName = "TenDonVi";
-            this.colTenDonVi.MinWidth = 25;
+            this.colTenDonVi.MinWidth = 29;
             this.colTenDonVi.Name = "colTenDonVi";
-            this.colTenDonVi.Width = 94;
+            this.colTenDonVi.Width = 107;
             // 
             // colNgayNghi
             // 
             this.colNgayNghi.FieldName = "NgayNghi";
-            this.colNgayNghi.MinWidth = 25;
+            this.colNgayNghi.MinWidth = 29;
             this.colNgayNghi.Name = "colNgayNghi";
-            this.colNgayNghi.Width = 94;
+            this.colNgayNghi.Width = 107;
             // 
             // colSoBuoiSang
             // 
             this.colSoBuoiSang.Caption = "Nghỉ sáng";
             this.colSoBuoiSang.ColumnEdit = this.chkEdit;
             this.colSoBuoiSang.FieldName = "SoBuoiSang";
-            this.colSoBuoiSang.MinWidth = 25;
+            this.colSoBuoiSang.MinWidth = 29;
             this.colSoBuoiSang.Name = "colSoBuoiSang";
             this.colSoBuoiSang.Visible = true;
             this.colSoBuoiSang.VisibleIndex = 1;
-            this.colSoBuoiSang.Width = 94;
+            this.colSoBuoiSang.Width = 107;
             // 
             // chkEdit
             // 
@@ -441,22 +441,22 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             this.colSoBuoiTrua.Caption = "Nghỉ trưa";
             this.colSoBuoiTrua.ColumnEdit = this.chkEdit;
             this.colSoBuoiTrua.FieldName = "SoBuoiTrua";
-            this.colSoBuoiTrua.MinWidth = 25;
+            this.colSoBuoiTrua.MinWidth = 29;
             this.colSoBuoiTrua.Name = "colSoBuoiTrua";
             this.colSoBuoiTrua.Visible = true;
             this.colSoBuoiTrua.VisibleIndex = 2;
-            this.colSoBuoiTrua.Width = 94;
+            this.colSoBuoiTrua.Width = 107;
             // 
             // colSoBuoiToi
             // 
             this.colSoBuoiToi.Caption = "Nghỉ tối";
             this.colSoBuoiToi.ColumnEdit = this.chkEdit;
             this.colSoBuoiToi.FieldName = "SoBuoiToi";
-            this.colSoBuoiToi.MinWidth = 25;
+            this.colSoBuoiToi.MinWidth = 29;
             this.colSoBuoiToi.Name = "colSoBuoiToi";
             this.colSoBuoiToi.Visible = true;
             this.colSoBuoiToi.VisibleIndex = 3;
-            this.colSoBuoiToi.Width = 94;
+            this.colSoBuoiToi.Width = 107;
             // 
             // tableLayoutPanel2
             // 
@@ -465,12 +465,12 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             this.tableLayoutPanel2.Controls.Add(this.groupControl2, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.groupControl3, 0, 1);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(684, 3);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(782, 3);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 2;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 55F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 45F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(287, 747);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(328, 747);
             this.tableLayoutPanel2.TabIndex = 1;
             // 
             // groupControl2
@@ -493,7 +493,7 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.groupControl2.Location = new System.Drawing.Point(3, 3);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(281, 404);
+            this.groupControl2.Size = new System.Drawing.Size(322, 404);
             this.groupControl2.TabIndex = 0;
             this.groupControl2.Text = "Quân số ăn đại đội";
             // 
@@ -501,51 +501,51 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             // 
             this.textEdit8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textEdit8.EditValue = "80";
-            this.textEdit8.Location = new System.Drawing.Point(154, 269);
+            this.textEdit8.Location = new System.Drawing.Point(177, 269);
             this.textEdit8.Name = "textEdit8";
             this.textEdit8.Properties.ReadOnly = true;
-            this.textEdit8.Size = new System.Drawing.Size(100, 22);
+            this.textEdit8.Size = new System.Drawing.Size(114, 22);
             this.textEdit8.TabIndex = 2;
             // 
             // textEdit7
             // 
             this.textEdit7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textEdit7.EditValue = "80";
-            this.textEdit7.Location = new System.Drawing.Point(154, 204);
+            this.textEdit7.Location = new System.Drawing.Point(177, 204);
             this.textEdit7.Name = "textEdit7";
             this.textEdit7.Properties.ReadOnly = true;
-            this.textEdit7.Size = new System.Drawing.Size(100, 22);
+            this.textEdit7.Size = new System.Drawing.Size(114, 22);
             this.textEdit7.TabIndex = 2;
             // 
             // textEdit2
             // 
             this.textEdit2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textEdit2.EditValue = "70";
-            this.textEdit2.Location = new System.Drawing.Point(31, 269);
+            this.textEdit2.Location = new System.Drawing.Point(36, 269);
             this.textEdit2.Name = "textEdit2";
             this.textEdit2.Properties.ReadOnly = true;
             this.textEdit2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textEdit2.Size = new System.Drawing.Size(100, 22);
+            this.textEdit2.Size = new System.Drawing.Size(114, 22);
             this.textEdit2.TabIndex = 2;
             // 
             // textEdit1
             // 
             this.textEdit1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.textEdit1.EditValue = "70";
-            this.textEdit1.Location = new System.Drawing.Point(31, 204);
+            this.textEdit1.Location = new System.Drawing.Point(36, 204);
             this.textEdit1.Name = "textEdit1";
             this.textEdit1.Properties.ReadOnly = true;
             this.textEdit1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.textEdit1.Size = new System.Drawing.Size(100, 22);
+            this.textEdit1.Size = new System.Drawing.Size(114, 22);
             this.textEdit1.TabIndex = 2;
             // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(28, 248);
+            this.label3.Location = new System.Drawing.Point(33, 248);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(37, 17);
+            this.label3.Size = new System.Drawing.Size(38, 17);
             this.label3.TabIndex = 1;
             this.label3.Text = "Trưa";
             // 
@@ -553,9 +553,9 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(137, 337);
+            this.label11.Location = new System.Drawing.Point(158, 337);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(13, 17);
+            this.label11.Size = new System.Drawing.Size(12, 17);
             this.label11.TabIndex = 1;
             this.label11.Text = "/";
             // 
@@ -563,9 +563,9 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(137, 272);
+            this.label10.Location = new System.Drawing.Point(158, 272);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(13, 17);
+            this.label10.Size = new System.Drawing.Size(12, 17);
             this.label10.TabIndex = 1;
             this.label10.Text = "/";
             // 
@@ -573,9 +573,9 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(137, 207);
+            this.label9.Location = new System.Drawing.Point(158, 207);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(13, 17);
+            this.label9.Size = new System.Drawing.Size(12, 17);
             this.label9.TabIndex = 1;
             this.label9.Text = "/";
             // 
@@ -583,9 +583,9 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(28, 183);
+            this.label2.Location = new System.Drawing.Point(33, 183);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(39, 17);
+            this.label2.Size = new System.Drawing.Size(41, 17);
             this.label2.TabIndex = 1;
             this.label2.Text = "Sáng";
             // 
@@ -593,9 +593,9 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 118);
+            this.label1.Location = new System.Drawing.Point(33, 118);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 17);
+            this.label1.Size = new System.Drawing.Size(41, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Ngày";
             // 
@@ -603,22 +603,22 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             // 
             this.dtpNgayC.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.dtpNgayC.EditValue = null;
-            this.dtpNgayC.Location = new System.Drawing.Point(31, 139);
+            this.dtpNgayC.Location = new System.Drawing.Point(36, 139);
             this.dtpNgayC.Name = "dtpNgayC";
             this.dtpNgayC.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtpNgayC.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtpNgayC.Size = new System.Drawing.Size(223, 22);
+            this.dtpNgayC.Size = new System.Drawing.Size(255, 22);
             this.dtpNgayC.TabIndex = 0;
             // 
             // NhaBep_QuanLyDS
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "NhaBep_QuanLyDS";
-            this.Size = new System.Drawing.Size(981, 760);
+            this.Size = new System.Drawing.Size(1121, 760);
             ((System.ComponentModel.ISupportInitialize)(this.groupControl3)).EndInit();
             this.groupControl3.ResumeLayout(false);
             this.groupControl3.PerformLayout();

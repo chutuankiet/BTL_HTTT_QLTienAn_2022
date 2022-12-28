@@ -352,7 +352,7 @@ namespace HTTT_QLTienAn.GUI.Lop
                         BuoiToi = item.BuoiToi,
                         MaDangKyTam = MaDKTamCurrent
                     });
-                    StartDateTemp.AddDays(1);
+                    StartDateTemp = StartDateTemp.AddDays(1);
                 }
 
                 gridControl2.DataSource = null;
