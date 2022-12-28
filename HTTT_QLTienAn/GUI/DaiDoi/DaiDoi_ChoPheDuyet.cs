@@ -122,7 +122,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             }
             dgvDSCho.DataSource = null;
             LoadDS1();
-            dgvChiTietDS1.DataSource = null;
+          //  dgvChiTietDS1.DataSource = null;
 
         }
 
@@ -136,7 +136,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
 
             List<DS_ChoPheDuyet> ds_CTChoPheDuyet = db.DS_ChoPheDuyet.Where(m => m.MaDS == mads).ToList();
 
-            ds_CTChoPheDuyet.Reverse();
+            
             //dgvDSCho_View.OptionsBehavior.Editable = false;
             //gridView2.OptionsBehavior.Editable = false;
             dgvChiTietDS1.DataSource = ds_CTChoPheDuyet;
