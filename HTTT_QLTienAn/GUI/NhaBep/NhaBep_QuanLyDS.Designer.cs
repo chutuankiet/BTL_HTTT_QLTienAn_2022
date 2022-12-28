@@ -405,7 +405,7 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             // 
             // colNgayNghi
             // 
-            this.colNgayNghi.FieldName = "NgayNghi";
+            this.colNgayNghi.FieldName = "NgayCatCom";
             this.colNgayNghi.MinWidth = 29;
             this.colNgayNghi.Name = "colNgayNghi";
             this.colNgayNghi.Width = 107;
@@ -414,7 +414,7 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             // 
             this.colSoBuoiSang.Caption = "Nghỉ sáng";
             this.colSoBuoiSang.ColumnEdit = this.chkEdit;
-            this.colSoBuoiSang.FieldName = "SoBuoiSang";
+            this.colSoBuoiSang.FieldName = "BuoiSang";
             this.colSoBuoiSang.MinWidth = 29;
             this.colSoBuoiSang.Name = "colSoBuoiSang";
             this.colSoBuoiSang.Visible = true;
@@ -425,14 +425,12 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             // 
             this.chkEdit.AutoHeight = false;
             this.chkEdit.Name = "chkEdit";
-            this.chkEdit.ValueChecked = 1;
-            this.chkEdit.ValueUnchecked = 0;
             // 
             // colSoBuoiTrua
             // 
             this.colSoBuoiTrua.Caption = "Nghỉ trưa";
             this.colSoBuoiTrua.ColumnEdit = this.chkEdit;
-            this.colSoBuoiTrua.FieldName = "SoBuoiTrua";
+            this.colSoBuoiTrua.FieldName = "BuoiTrua";
             this.colSoBuoiTrua.MinWidth = 29;
             this.colSoBuoiTrua.Name = "colSoBuoiTrua";
             this.colSoBuoiTrua.Visible = true;
@@ -443,7 +441,7 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             // 
             this.colSoBuoiToi.Caption = "Nghỉ tối";
             this.colSoBuoiToi.ColumnEdit = this.chkEdit;
-            this.colSoBuoiToi.FieldName = "SoBuoiToi";
+            this.colSoBuoiToi.FieldName = "BuoiToi";
             this.colSoBuoiToi.MinWidth = 29;
             this.colSoBuoiToi.Name = "colSoBuoiToi";
             this.colSoBuoiToi.Visible = true;
