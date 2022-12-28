@@ -388,6 +388,7 @@ namespace HTTT_QLTienAn
         private void It2_Click(object sender, EventArgs e)
         {
             uc2.BringToFront();
+            uc2.LoadDS1();
         }
 
         private void It1_Click(object sender, EventArgs e)

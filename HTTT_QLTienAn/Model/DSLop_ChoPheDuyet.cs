@@ -6,12 +6,20 @@ namespace HTTT_QLTienAn.Model
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class DS_ChoPheDuyet
+    public partial class DSLop_ChoPheDuyet
     {
         [Key]
         [Column(Order = 0)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int MaDangKy { get; set; }
+        public int MaDS { get; set; }
+
+        public int? PheDuyet { get; set; }
+
+        [StringLength(100)]
+        public string TenLop { get; set; }
+
+        [Column(TypeName = "date")]
+        public DateTime? NgayDK { get; set; }
 
         [Key]
         [Column(Order = 1)]
@@ -19,24 +27,13 @@ namespace HTTT_QLTienAn.Model
         public string HoTen { get; set; }
 
         [StringLength(100)]
-        public string TenLop { get; set; }
+        public string TenDonVi { get; set; }
 
         [Key]
-        [Column(Order = 2, TypeName = "date")]
-        public DateTime NgayCatCom { get; set; }
-
-        [Key]
-        [Column(Order = 3)]
-        [StringLength(100)]
-        public string TenLoaiNghi { get; set; }
-
-        [Key]
-        [Column(Order = 4)]
+        [Column(Order = 2)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int MaDS { get; set; }
+        public int MaDonVi { get; set; }
 
         public int? MaLop { get; set; }
-
-        public int? MaDonVi { get; set; }
     }
 }
