@@ -19,7 +19,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
         }
         public QLTA_model db = new QLTA_model();
 
-
+        string TenDonVi;
         public void reload()
         {
             LoadDSDaHuy();
@@ -30,7 +30,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
 
             var ds_DaHuy = (from ds in db.ds_huy
                             join cbd in db.CanBoes on ds.MaCBd equals cbd.MaCanBo
-                            where ds.PheDuyet == -1 // tiểu đoàn đã hủy 
+                            where ds.PheDuyet == -1 && ds.TenDonVi == TenDonVi // tiểu đoàn đã hủy 
                             select new
                             {
                                 MaDS = ds.MaDS,
@@ -40,7 +40,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
                             }).ToList();
 
             var ds_dahuy2 = (from ds in db.ds_huy
-                             where ds.PheDuyet == -2 //  đại đội hủy
+                             where ds.PheDuyet == -2 && ds.TenDonVi == TenDonVi//  đại đội hủy
                              select new
                              {
                                  MaDS = ds.MaDS,
@@ -60,9 +60,11 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
 
         }
 
-
         private void DaiDoi_DaHuyPheDuyet_Load(object sender, EventArgs e)
         {
+            int madv = (int)db.CanBoes.Where(m => m.MaCanBo == MainForm.MaID).FirstOrDefault().MaDonVi;
+
+            TenDonVi = db.DonVis.Where(m => m.MaDonVi == madv).FirstOrDefault().TenDonVi;
             LoadDSDaHuy();
         }
 

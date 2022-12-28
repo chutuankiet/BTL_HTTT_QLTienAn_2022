@@ -19,9 +19,6 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
         }
         public QLTA_model db = new QLTA_model();
 
-
-        public string MaDS_DaXacNhan;
-
         public void LoadDSDaPheDuyet()
         {
             try
@@ -42,7 +39,6 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
 
                 if (ds_DaXacNhan.Count > 0)
                 {
-                    ds_DaXacNhan.Reverse();
                     dgvDaXacNhan_View.OptionsBehavior.Editable = false;
                     gridView2.OptionsBehavior.Editable = false;
                     dgvDaXacNhan.DataSource = ds_DaXacNhan;

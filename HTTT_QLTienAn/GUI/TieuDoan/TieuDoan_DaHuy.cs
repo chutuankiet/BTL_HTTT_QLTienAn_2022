@@ -18,9 +18,6 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
             InitializeComponent();
         }
         public QLTA_model db = new QLTA_model();
-
-        public string MaDS_DaHuy;
-
         public void LoadDSDaHuy()
         {
             try
@@ -39,7 +36,6 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
                                 }).ToList();
                 if (ds_DaHuy.Count > 0)
                 {
-                    ds_DaHuy.Reverse();
                     dgvDaHuy_View.OptionsBehavior.Editable = false;
                     gridView2.OptionsBehavior.Editable = false;
                     dgvDaHuy.DataSource = ds_DaHuy;
@@ -60,9 +56,7 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
             try
             {
                 int mads = (int)dgvDaHuy_View.GetFocusedRowCellValue("MaDS");
-                MaDS_DaHuy = mads.ToString();
                 List<DS_ChoPheDuyet> dsCTDaHuy = db.DS_ChoPheDuyet.Where(m => m.MaDS == mads).ToList();
-
                 dgvChiTietDaHuy.DataSource = dsCTDaHuy;
 
             }

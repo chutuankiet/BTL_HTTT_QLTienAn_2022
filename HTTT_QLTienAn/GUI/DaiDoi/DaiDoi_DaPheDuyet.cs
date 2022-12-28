@@ -19,7 +19,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
         }
         public QLTA_model db = new QLTA_model();
 
-
+        string TenDonVi;
         public string MaDS_DaXacNhan;
 
 
@@ -34,7 +34,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             var ds_DaXacNhan = (from ds in db.ds_huy
 
                                 join cbd in db.CanBoes on ds.MaCBd equals cbd.MaCanBo
-                                where ds.PheDuyet == 1 // tiểu đoàn đã duyệt 
+                                where ds.PheDuyet == 1 && ds.TenDonVi == TenDonVi // tiểu đoàn đã duyệt 
                                 select new
                                 {
                                     MaDS = ds.MaDS,
@@ -44,7 +44,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
                                 }).ToList();
 
             var ds_DaXacNhan2 = (from ds in db.ds_huy
-                                 where ds.PheDuyet == 0//  đại đội duyệt
+                                 where ds.PheDuyet == 0 && ds.TenDonVi == TenDonVi//  đại đội duyệt
                                  select new
                                  {
                                      MaDS = ds.MaDS,
@@ -64,15 +64,12 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
                 LoadDSChiTietDaXacNhan(ds_DaXacNhan[0].MaDS);
 
             }
-
-
         }
 
         public void LoadDSChiTietDaXacNhan(int mads)
         {
             List<DS_ChoPheDuyet> dsCTDaXacNhan = db.DS_ChoPheDuyet.Where(m => m.MaDS == mads).ToList();
             dgvChiTietDaXaNhan.DataSource = dsCTDaXacNhan;
-
         }
 
         private void dgvDaXacNhan_View_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
@@ -83,6 +80,8 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
 
         private void DaiDoi_DaPheDuyet_Load(object sender, EventArgs e)
         {
+            int madv = (int)db.CanBoes.Where(m => m.MaCanBo == MainForm.MaID).FirstOrDefault().MaDonVi;
+            TenDonVi = db.DonVis.Where(m => m.MaDonVi == madv).FirstOrDefault().TenDonVi;
             LoadDSDaPheDuyet();
         }
     }

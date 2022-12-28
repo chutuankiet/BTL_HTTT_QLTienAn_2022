@@ -47,6 +47,7 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.btnDel = new DevExpress.XtraGrid.Columns.GridColumn();
             this.btnXoa = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
             this.chkEdit = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -59,7 +60,6 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
             this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemDateEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemDateEdit();
             this.viewChoPheDuyetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.btnDel = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.behaviorManager1)).BeginInit();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
@@ -151,6 +151,7 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
             this.btnDel});
             this.gridView2.GridControl = this.dgvChiTietDS1;
             this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsBehavior.Editable = false;
             this.gridView2.OptionsView.ShowGroupPanel = false;
             // 
             // gridColumn7
@@ -193,6 +194,16 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
             this.gridColumn2.VisibleIndex = 3;
             this.gridColumn2.Width = 102;
             // 
+            // btnDel
+            // 
+            this.btnDel.Caption = "Xóa";
+            this.btnDel.ColumnEdit = this.btnXoa;
+            this.btnDel.MinWidth = 25;
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Visible = true;
+            this.btnDel.VisibleIndex = 4;
+            this.btnDel.Width = 94;
+            // 
             // btnXoa
             // 
             this.btnXoa.AutoHeight = false;
@@ -202,7 +213,6 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
-
             // 
             // chkEdit
             // 
@@ -262,6 +272,7 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
             this.gridColumn1});
             this.dgvDSCho_View.GridControl = this.dgvDSCho;
             this.dgvDSCho_View.Name = "dgvDSCho_View";
+            this.dgvDSCho_View.OptionsBehavior.Editable = false;
             this.dgvDSCho_View.OptionsView.ShowGroupPanel = false;
             this.dgvDSCho_View.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.dgvDSCho_View_RowClick_1);
             // 
@@ -313,16 +324,6 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
             this.repositoryItemDateEdit1.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemDateEdit1.Name = "repositoryItemDateEdit1";
-            // 
-            // btnDel
-            // 
-            this.btnDel.Caption = "Xóa";
-            this.btnDel.ColumnEdit = this.btnXoa;
-            this.btnDel.MinWidth = 25;
-            this.btnDel.Name = "btnDel";
-            this.btnDel.Visible = true;
-            this.btnDel.VisibleIndex = 4;
-            this.btnDel.Width = 94;
             // 
             // TieuDoan_ChoPheDuyet
             // 

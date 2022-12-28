@@ -66,9 +66,9 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
             if (MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 List<c_ChoPheDuyet> ds_ChoPheDuyet = db.c_ChoPheDuyet.Where(m => m.PheDuyet == 0).ToList();
-                mads = ds_ChoPheDuyet[0].MaDS;
+                //mads = ds_ChoPheDuyet[0].MaDS;
                 int index = gridView2.FocusedRowHandle;
-                ds_CTChoPheDuyet = db.DS_ChoPheDuyet.Where(m => m.MaDS == mads).ToList();
+                ds_CTChoPheDuyet = db.DS_ChoPheDuyet.Where(m => m.MaDS == MaDS_XacNhan).ToList();
                 int madk = ds_CTChoPheDuyet[index].MaDangKy;
                 PhieuThanhToan ptt = db.PhieuThanhToans.Where(s => s.MaDangKy == madk).FirstOrDefault();
 
@@ -82,7 +82,7 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
                 if (ds_CTChoPheDuyet.Count == 0)
                 {
                     ds_ChoPheDuyet.RemoveAt(0);
-                    DanhSachRaNgoai dsrn = db.DanhSachRaNgoais.Where(s => s.MaDS == mads).FirstOrDefault();
+                    DanhSachRaNgoai dsrn = db.DanhSachRaNgoais.Where(s => s.MaDS == MaDS_XacNhan).FirstOrDefault();
                     db.DanhSachRaNgoais.Remove(dsrn);
                 }
                 dgvDSCho.DataSource = ds_ChoPheDuyet;
@@ -141,7 +141,8 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
         {
 
             int maDS = Convert.ToInt32(dgvDSCho_View.GetRowCellValue(e.RowHandle, "MaDS")); ;
-            List<DS_ChoPheDuyet> ds_CTChoPheDuyet = db.DS_ChoPheDuyet.Where(m => m.MaDS == mads).ToList();
+            MaDS_XacNhan = maDS;
+            List<DS_ChoPheDuyet> ds_CTChoPheDuyet = db.DS_ChoPheDuyet.Where(m => m.MaDS == MaDS_XacNhan).ToList();
             //ds_CTChoPheDuyet.Reverse();
             //dgvDSCho_View.OptionsBehavior.Editable = false;
             //gridView2.OptionsBehavior.Editable = false;
