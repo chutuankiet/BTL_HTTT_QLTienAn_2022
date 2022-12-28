@@ -328,11 +328,13 @@ namespace HTTT_QLTienAn
         private void It10_Click(object sender, EventArgs e)
         {
             uc10.BringToFront();
+            uc10.reload();
         }
 
         private void It9_Click(object sender, EventArgs e)
         {
             uc9.BringToFront();
+            uc9.reload();
         }
 
         private void It8_Click(object sender, EventArgs e)

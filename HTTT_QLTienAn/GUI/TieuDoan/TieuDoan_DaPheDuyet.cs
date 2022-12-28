@@ -18,7 +18,10 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
             InitializeComponent();
         }
         public QLTA_model db = new QLTA_model();
-
+        public void reload()
+        {
+            LoadDSDaPheDuyet();
+        }
         public void LoadDSDaPheDuyet()
         {
             try
