@@ -10,7 +10,9 @@ namespace HTTT_QLTienAn.Model
         public QLTA_model()
             : base("name=QLTA_model")
         {
+
         }
+
 
         public virtual DbSet<CanBo> CanBoes { get; set; }
         public virtual DbSet<ChiTietCatCom> ChiTietCatComs { get; set; }

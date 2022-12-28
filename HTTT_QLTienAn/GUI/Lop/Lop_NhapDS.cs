@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
@@ -10,12 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using HTTT_QLTienAn.Model;
+using System.Data.Entity.Infrastructure;
 
 namespace HTTT_QLTienAn.GUI.Lop
 {
     public partial class Lop_NhapDS : UserControl
     {
         QLTA_model db = new QLTA_model();
+
 
         List<HocVien_DangKiNghi> listDK = new List<HocVien_DangKiNghi>();
 
@@ -31,7 +32,6 @@ namespace HTTT_QLTienAn.GUI.Lop
         public Lop_NhapDS()
         {
             InitializeComponent();
-
 
         }
 
@@ -143,6 +143,27 @@ namespace HTTT_QLTienAn.GUI.Lop
 
         }
 
+        public static void UndoingChangesDbContextLevel(DbContext context)
+        {
+            foreach (DbEntityEntry entry in context.ChangeTracker.Entries())
+            {
+                switch (entry.State)
+                {
+                    case EntityState.Modified:
+                        entry.State = EntityState.Unchanged;
+                        break;
+                    case EntityState.Added:
+                        entry.State = EntityState.Detached;
+                        break;
+                    case EntityState.Deleted:
+                        entry.Reload();
+                        break;
+                    default: break;
+                }
+            }
+        }
+
+
 
         private void SetDefaultState()
         {
@@ -174,7 +195,7 @@ namespace HTTT_QLTienAn.GUI.Lop
 
         private void cbLoainghi_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int index = cbLoainghi.SelectedIndex == -1? 0: cbLoainghi.SelectedIndex;
+            int index = cbLoainghi.SelectedIndex == -1 ? 0 : cbLoainghi.SelectedIndex;
             txtSang.Text = ListLoaiNghi[index].SoBuoiSang.ToString();
             txtTrua.Text = ListLoaiNghi[index].SoBuoiTrua.ToString();
             txtToi.Text = ListLoaiNghi[index].SoBuoiToi.ToString();
@@ -191,7 +212,7 @@ namespace HTTT_QLTienAn.GUI.Lop
 
         List<CT_CatCom_HocVien> lsCTCatCom = new List<CT_CatCom_HocVien>();
 
-       
+
 
         bool IsOverLapping(List<HocVien_DangKiNghi> checkList, HocVien_DangKiNghi hv)
         {
@@ -204,14 +225,14 @@ namespace HTTT_QLTienAn.GUI.Lop
                 string d2 = date2.ToString("dd-MM-yyyy");
 
 
-                if(d1 == d2)
+                if (d1 == d2)
                 {
                     MessageBox.Show($"Đã tồn đăng ký '{item.TenLoaiNghi}' trong danh sách vào ngày {item.NgayBDNghi.Date}", "Thông báo !");
                     return false;
                 }
 
-                if ((item.NgayBDNghi <= hv.NgayKTNghi && item.NgayKTNghi >= hv.NgayBDNghi) 
-                   
+                if ((item.NgayBDNghi <= hv.NgayKTNghi && item.NgayKTNghi >= hv.NgayBDNghi)
+
                     || (hv.NgayBDNghi <= item.NgayKTNghi && hv.NgayKTNghi >= item.NgayBDNghi)
                     )
                 {
@@ -247,7 +268,7 @@ namespace HTTT_QLTienAn.GUI.Lop
 
             if (!IsOverLapping(checkExist, hv) || !IsOverLapping(checkInDB, hv)) return false;
 
-    
+
 
             return true;
         }
@@ -291,7 +312,7 @@ namespace HTTT_QLTienAn.GUI.Lop
 
             int maloainghi = Convert.ToInt32(cbLoainghi.SelectedValue);
 
-       
+
 
             // thêm chi tiết cắt cơm 
 
@@ -342,6 +363,9 @@ namespace HTTT_QLTienAn.GUI.Lop
 
         }
 
+
+        int MaDanhSachCurrent;
+        int MaDangKyCurrent;
         private void btnSendList_Click(object sender, EventArgs e)
         {
             if (MaHVCurrent == 0 || listDK.Count == 0 || lsCTCatCom.Count == 0)
@@ -349,37 +373,48 @@ namespace HTTT_QLTienAn.GUI.Lop
                 MessageBox.Show("Chưa chọn học viên ! Danh sách trống !!", "Error");
                 return;
             }
+            UndoingChangesDbContextLevel(db);
 
             if (MessageBox.Show("Bạn có chắc chắn hoàn thành và gửi không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
 
+                using (var context = new QLTA_model())
+                {
+                    ds.NgayDK = DateTime.Now;
+                    ds.PheDuyet = -3; // -3 : chua duyet | -2 : huy dai doi |-1 : huy tieu doan | 0 : daidoi | 1 : tieudoan
+                    ds.MaLT = MaLopTruong;
 
-                ds.NgayDK = DateTime.Now;
-                ds.PheDuyet = -3; // -3 : chua duyet | -2 : huy dai doi |-1 : huy tieu doan | 0 : daidoi | 1 : tieudoan
-                ds.MaLT = MaLopTruong;
-
-                db.DanhSachRaNgoais.Add(ds);
+                    context.DanhSachRaNgoais.Add(ds);
 
 
-                db.SaveChanges();
+                    context.SaveChanges();
+                    MaDanhSachCurrent = ds.MaDS;
+
+                }
 
 
                 foreach (var item in listDK)
                 {
-                    DangKyNghi dkn = new DangKyNghi
+                    using (var context = new QLTA_model())
                     {
-                        LyDo = item.LyDo,
-                        MaHocVien = item.MaHocVien,
-                        MaLoaiNghi = item.MaLoaiNghi,
-                        MaDS = ds.MaDS,
-                        NgayDi = item.NgayBDNghi,
-                        NgayVe = item.NgayKTNghi
-                    };
+                        DangKyNghi dkn = new DangKyNghi
+                        {
+                            LyDo = item.LyDo,
+                            MaHocVien = item.MaHocVien,
+                            MaLoaiNghi = item.MaLoaiNghi,
+                            MaDS = MaDanhSachCurrent,//----------------------------
+                            NgayDi = item.NgayBDNghi,
+                            NgayVe = item.NgayKTNghi
+                        };
 
 
+                        context.DangKyNghis.Add(dkn);
 
-                    db.DangKyNghis.Add(dkn);
-                    db.SaveChanges();
+
+                        context.SaveChanges();
+                        MaDangKyCurrent = dkn.MaDangKy;
+
+                    }
 
                     int maTCA = (int)db.HocViens.Where(m => m.MaHocVien == item.MaHocVien).FirstOrDefault().LoaiHocVien.MaTCA;
 
@@ -388,32 +423,42 @@ namespace HTTT_QLTienAn.GUI.Lop
                     LoaiNghi ln_hv = db.LoaiNghis.Where(m => m.MaLoaiNghi == item.MaLoaiNghi).FirstOrDefault();
 
 
-                    PhieuThanhToan newThanhToan = new PhieuThanhToan
+                    using (var context = new QLTA_model())
                     {
-                        TrangThaiTT = -2,
-                        MaDangKy = dkn.MaDangKy,
-                        TongTien = (int)ln_hv.SoBuoiSang * tca_hv.TienAnSang +
+                        PhieuThanhToan newThanhToan = new PhieuThanhToan
+                        {
+                            TrangThaiTT = -2,
+                            MaDangKy = MaDangKyCurrent, //---------------------------------------
+                            TongTien = (int)ln_hv.SoBuoiSang * tca_hv.TienAnSang +
                                     (int)ln_hv.SoBuoiTrua * tca_hv.TienAnTrua +
                                     (int)ln_hv.SoBuoiToi * tca_hv.TienAnToi
-                    };
+                        };
 
-                    db.PhieuThanhToans.Add(newThanhToan);
-                    db.SaveChanges();
+                        context.PhieuThanhToans.Add(newThanhToan);
+
+
+                        context.SaveChanges();
+
+                    }
 
                     List<CT_CatCom_HocVien> ls_Add_cc = lsCTCatCom.Where(m => m.MaDangKyTam == item.MaDangKyTam).ToList();
 
                     foreach (var icc in ls_Add_cc)
                     {
-                        ChiTietCatCom ctcc = new ChiTietCatCom
+                        using (var context = new QLTA_model())
                         {
-                            BuoiSang = icc.BuoiSang,
-                            BuoiTrua = icc.BuoiTrua,
-                            BuoiToi = icc.BuoiToi,
-                            MaDangKy = dkn.MaDangKy,
-                            NgayCatCom = icc.NgayCatCom
-                        };
-                        db.ChiTietCatComs.Add(ctcc);
-                        db.SaveChanges();
+                            ChiTietCatCom ctcc = new ChiTietCatCom
+                            {
+                                BuoiSang = icc.BuoiSang,
+                                BuoiTrua = icc.BuoiTrua,
+                                BuoiToi = icc.BuoiToi,
+                                MaDangKy = MaDangKyCurrent, //------------------------------------
+                                NgayCatCom = icc.NgayCatCom
+                            };
+                            context.ChiTietCatComs.Add(ctcc);
+
+                            context.SaveChanges();
+                        }
                     }
                 }
 
@@ -428,6 +473,8 @@ namespace HTTT_QLTienAn.GUI.Lop
 
             }
 
+
+
         }
 
 
@@ -437,7 +484,7 @@ namespace HTTT_QLTienAn.GUI.Lop
 
         }
 
-        
+
     }
 }
 
