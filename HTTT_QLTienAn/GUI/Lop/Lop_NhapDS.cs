@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
@@ -359,8 +358,7 @@ namespace HTTT_QLTienAn.GUI.Lop
                 ds.MaLT = MaLopTruong;
 
                 db.DanhSachRaNgoais.Add(ds);
-
-
+                
                 db.SaveChanges();
 
 

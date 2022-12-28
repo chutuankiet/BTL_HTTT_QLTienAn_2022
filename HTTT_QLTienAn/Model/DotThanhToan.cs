@@ -28,8 +28,6 @@ namespace HTTT_QLTienAn.Model
         [Column(TypeName = "date")]
         public DateTime? NgayKT { get; set; }
 
-        public long? TongTien { get; set; }
-
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PhieuThanhToan> PhieuThanhToans { get; set; }
     }
