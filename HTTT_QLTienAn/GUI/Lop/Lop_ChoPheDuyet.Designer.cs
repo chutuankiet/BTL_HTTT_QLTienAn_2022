@@ -49,8 +49,9 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.chkEdit = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
+            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
+            this.chkEdit = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
@@ -65,15 +66,14 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.danhSachNghiBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn2 = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkEdit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
@@ -181,12 +181,15 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.gridColumn9.VisibleIndex = 2;
             this.gridColumn9.Width = 144;
             // 
-            // chkEdit
+            // gridColumn10
             // 
-            this.chkEdit.AutoHeight = false;
-            this.chkEdit.Name = "chkEdit";
-            this.chkEdit.ValueChecked = 1;
-            this.chkEdit.ValueUnchecked = 0;
+            this.gridColumn10.Caption = "Tên loại nghỉ";
+            this.gridColumn10.FieldName = "TenLoaiNghi";
+            this.gridColumn10.MinWidth = 25;
+            this.gridColumn10.Name = "gridColumn10";
+            this.gridColumn10.Visible = true;
+            this.gridColumn10.VisibleIndex = 3;
+            this.gridColumn10.Width = 94;
             // 
             // repositoryItemButtonEdit1
             // 
@@ -196,6 +199,13 @@ namespace HTTT_QLTienAn.GUI.Lop
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
             this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            // 
+            // chkEdit
+            // 
+            this.chkEdit.AutoHeight = false;
+            this.chkEdit.Name = "chkEdit";
+            this.chkEdit.ValueChecked = 1;
+            this.chkEdit.ValueUnchecked = 0;
             // 
             // groupControl1
             // 
@@ -285,6 +295,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnDel.Name = "btnDel";
             this.btnDel.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // panel1
             // 
@@ -336,16 +347,6 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.gridColumn2.VisibleIndex = 3;
             this.gridColumn2.Width = 94;
             // 
-            // gridColumn10
-            // 
-            this.gridColumn10.Caption = "Tên loại nghỉ";
-            this.gridColumn10.FieldName = "TenLoaiNghi";
-            this.gridColumn10.MinWidth = 25;
-            this.gridColumn10.Name = "gridColumn10";
-            this.gridColumn10.Visible = true;
-            this.gridColumn10.VisibleIndex = 3;
-            this.gridColumn10.Width = 94;
-            // 
             // Lop_ChoPheDuyet
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -360,8 +361,8 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.groupControl2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chkEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chkEdit)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).EndInit();
             this.groupControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
