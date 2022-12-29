@@ -29,11 +29,13 @@ namespace HTTT_QLTienAn.Model
         public virtual DbSet<c_ChoPheDuyet> c_ChoPheDuyet { get; set; }
         public virtual DbSet<DS_ChoPheDuyet> DS_ChoPheDuyet { get; set; }
         public virtual DbSet<DS_CTLopChoPheDuyet> DS_CTLopChoPheDuyet { get; set; }
+        public virtual DbSet<DS_DaPheDuyet_cd> DS_DaPheDuyet_cd { get; set; }
         public virtual DbSet<DS_DaThanhToan> DS_DaThanhToan { get; set; }
         public virtual DbSet<ds_huy> ds_huy { get; set; }
         public virtual DbSet<DS_Lop_DaPheDuyet> DS_Lop_DaPheDuyet { get; set; }
         public virtual DbSet<DS_LopChoPheDuyet> DS_LopChoPheDuyet { get; set; }
         public virtual DbSet<DSLop_ChoPheDuyet> DSLop_ChoPheDuyet { get; set; }
+        public virtual DbSet<getQSc> getQScs { get; set; }
         public virtual DbSet<NhaBep_ListCatCom> NhaBep_ListCatCom { get; set; }
         public virtual DbSet<NhaBep_ListThanhToan> NhaBep_ListThanhToan { get; set; }
 
@@ -58,6 +60,11 @@ namespace HTTT_QLTienAn.Model
                 .HasMany(e => e.PhieuThanhToans)
                 .WithOptional(e => e.CanBo)
                 .HasForeignKey(e => e.MaCBNhaBep);
+
+            modelBuilder.Entity<HocVien>()
+                .HasMany(e => e.DanhSachRaNgoais)
+                .WithOptional(e => e.HocVien)
+                .HasForeignKey(e => e.MaLT);
 
             modelBuilder.Entity<TaiKhoan>()
                 .Property(e => e.TenDangNhap)
