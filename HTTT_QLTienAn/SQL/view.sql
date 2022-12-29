@@ -107,3 +107,14 @@ from DanhSachRaNgoai ds
 join CanBo cb on cb.MaCanBo = ds.MaCBc
 join DonVi dv on dv.MaDonVi = cb.MaDonVi
 
+go
+
+ALTER view  [dbo].[DS_DaThanhToan] as
+select cb.hoten as HoTenCB, hv.hoten as HoTenHV, dv.TenDonVi, ptt.NgayTT, ptt.TongTien
+from PhieuThanhToan ptt
+join CanBo cb on ptt.MaCBNhaBep = cb.MaCanBo
+join DangKyNghi dkn on dkn.MaDangKy = ptt.MaDangKy
+join HocVien hv on hv.MaHocVien = dkn.MaHocVien
+join Lop l on l.MaLop = hv.MaLop
+join DonVi  dv on dv.MaDonVi = l.MaDonVi
+where TrangThaiTT = 1

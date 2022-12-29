@@ -119,6 +119,37 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
             var dsn = db.DanhSachRaNgoais.SingleOrDefault(p => p.MaDS == MaDS_XacNhan);
             if (dsn != null)
             {
+                List<DangKyNghi> Lst_dkn = db.DangKyNghis.Where(m => m.MaDS == dsn.MaDS).ToList();
+
+                foreach(var item in Lst_dkn)
+                {
+                    int maTCA = (int)db.HocViens.Where(m => m.MaHocVien == item.MaHocVien).FirstOrDefault().LoaiHocVien.MaTCA;
+
+                    TieuChuanAn tca_hv = db.TieuChuanAns.Where(m => m.MaTCA == maTCA).FirstOrDefault();
+
+                    LoaiNghi ln_hv = db.LoaiNghis.Where(m => m.MaLoaiNghi == item.MaLoaiNghi).FirstOrDefault();
+
+
+                    using (var context = new QLTA_model())
+                    {
+                        PhieuThanhToan newThanhToan = new PhieuThanhToan
+                        {
+                            TrangThaiTT = -2,
+                            MaDangKy = item.MaDangKy, //---------------------------------------
+                            TongTien = (int)ln_hv.SoBuoiSang * tca_hv.TienAnSang +
+                                    (int)ln_hv.SoBuoiTrua * tca_hv.TienAnTrua +
+                                    (int)ln_hv.SoBuoiToi * tca_hv.TienAnToi
+                        };
+
+                        context.PhieuThanhToans.Add(newThanhToan);
+
+
+                        context.SaveChanges();
+
+                    }
+                }
+
+
                 dsn.PheDuyet = 1;
                 dsn.MaCBd = MainForm.MaID;
                 db.SaveChanges();
