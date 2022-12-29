@@ -32,6 +32,7 @@ namespace HTTT_QLTienAn
         DaiDoi_ChoPheDuyet uc5;
         DaiDoi_DaHuyPheDuyet uc6;
         DaiDoi_DaPheDuyet uc7;
+        DaiDoi_QuanLyDS uc71;
 
         TieuDoan_ChoPheDuyet uc8;
         TieuDoan_DaHuy uc9;
@@ -123,7 +124,9 @@ namespace HTTT_QLTienAn
                     AccordionControlElement it6 = new AccordionControlElement(ElementStyle.Item) { Text = "Danh sách đã hủy" };
                     AccordionControlElement it7 = new AccordionControlElement(ElementStyle.Item) { Text = "Danh sách đã phê duyệt" };
                     AccordionControlElement itLichSuTT = new AccordionControlElement(ElementStyle.Item) { Text = "Lịch sử thanh toán" };
-                    accordionControl1.Elements.AddRange(new AccordionControlElement[] { it5, it6, it7, itLichSuTT });
+                    AccordionControlElement it71 = new AccordionControlElement(ElementStyle.Item) { Text = "Quản lý quân số ăn" };
+
+                    accordionControl1.Elements.AddRange(new AccordionControlElement[] { it5, it6, it7, itLichSuTT, it71 });
                     accordionControl1.AllowItemSelection = true;
                     accordionControl1.ExpandAll();
 
@@ -131,12 +134,14 @@ namespace HTTT_QLTienAn
                     it6.Click += It6_Click;
                     it7.Click += It7_Click;
                     itLichSuTT.Click += ItLSTT_Click;
+                    it71.Click += It71_Click;
                     //itSuaNhap.Click += itSuaNhap_Click;
 
                     uc5 = new DaiDoi_ChoPheDuyet();
                     uc6 = new DaiDoi_DaHuyPheDuyet();
                     uc7 = new DaiDoi_DaPheDuyet();
                     ucLSThanhToan = new Chung_LSThanhToan(true);
+                    uc71 = new DaiDoi_QuanLyDS();
 
                     //testing..............
 
@@ -152,9 +157,10 @@ namespace HTTT_QLTienAn
                     uc6.Dock = DockStyle.Fill;
                     uc7.Dock = DockStyle.Fill;
                     ucLSThanhToan.Dock = DockStyle.Fill;
+                    uc71.Dock = DockStyle.Fill;
                     //ucSuaNhap.Dock = DockStyle.Fill;
 
-                    showUsercontrol.Controls.AddRange(new Control[] { uc5, uc6, uc7, ucLSThanhToan });
+                    showUsercontrol.Controls.AddRange(new Control[] { uc5, uc6, uc7, ucLSThanhToan,uc71 });
 
                     break;
 
@@ -164,7 +170,7 @@ namespace HTTT_QLTienAn
                     AccordionControlElement it8 = new AccordionControlElement(ElementStyle.Item) { Text = "Danh sách đang chờ duyệt" };
                     AccordionControlElement it9 = new AccordionControlElement(ElementStyle.Item) { Text = "Danh sách đã hủy" };
                     AccordionControlElement it10 = new AccordionControlElement(ElementStyle.Item) { Text = "Danh sách đã duyệt" };
-                    AccordionControlElement it101 = new AccordionControlElement(ElementStyle.Item) { Text = "Quản lý danh sách đã thanh toán" };
+                    AccordionControlElement it101 = new AccordionControlElement(ElementStyle.Item) { Text = "Quản lý quân số ăn" };
 
                     accordionControl1.Elements.AddRange(new AccordionControlElement[] { it8, it9, it10, it101 });
                     accordionControl1.AllowItemSelection = true;
@@ -370,7 +376,12 @@ namespace HTTT_QLTienAn
             uc7.reload();
 
         }
+        private void It71_Click(object sender, EventArgs e)
+        {
+            uc7.BringToFront();
+            //uc7.reload();
 
+        }
         private void It6_Click(object sender, EventArgs e)
         {
             uc6.BringToFront();
