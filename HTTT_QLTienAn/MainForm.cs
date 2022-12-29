@@ -103,6 +103,7 @@ namespace HTTT_QLTienAn
                     accordionControl1.AllowItemSelection = true;
                     accordionControl1.ExpandAll();
 
+
                     it1.Click += It1_Click;
                     it2.Click += It2_Click;
                     it3.Click += It3_Click;

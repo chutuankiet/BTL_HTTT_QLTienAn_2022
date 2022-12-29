@@ -48,9 +48,37 @@ namespace HTTT_QLTienAn
             // 
             // accordionControl1
             // 
+            this.accordionControl1.Appearance.AccordionControl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.accordionControl1.Appearance.AccordionControl.Options.UseFont = true;
+            this.accordionControl1.Appearance.Group.Disabled.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.accordionControl1.Appearance.Group.Disabled.Options.UseFont = true;
+            this.accordionControl1.Appearance.Group.Hovered.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.accordionControl1.Appearance.Group.Hovered.Options.UseFont = true;
+            this.accordionControl1.Appearance.Group.Normal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.accordionControl1.Appearance.Group.Normal.Options.UseFont = true;
+            this.accordionControl1.Appearance.Group.Pressed.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.accordionControl1.Appearance.Group.Pressed.Options.UseFont = true;
+            this.accordionControl1.Appearance.Hint.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.accordionControl1.Appearance.Hint.Options.UseFont = true;
+            this.accordionControl1.Appearance.Item.Disabled.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.accordionControl1.Appearance.Item.Disabled.Options.UseFont = true;
+            this.accordionControl1.Appearance.Item.Hovered.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.accordionControl1.Appearance.Item.Hovered.Options.UseFont = true;
+            this.accordionControl1.Appearance.Item.Normal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.accordionControl1.Appearance.Item.Normal.Options.UseFont = true;
+            this.accordionControl1.Appearance.Item.Pressed.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.accordionControl1.Appearance.Item.Pressed.Options.UseFont = true;
+            this.accordionControl1.Appearance.ItemWithContainer.Disabled.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.accordionControl1.Appearance.ItemWithContainer.Disabled.Options.UseFont = true;
+            this.accordionControl1.Appearance.ItemWithContainer.Hovered.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.accordionControl1.Appearance.ItemWithContainer.Hovered.Options.UseFont = true;
+            this.accordionControl1.Appearance.ItemWithContainer.Normal.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.accordionControl1.Appearance.ItemWithContainer.Normal.Options.UseFont = true;
+            this.accordionControl1.Appearance.ItemWithContainer.Pressed.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F);
+            this.accordionControl1.Appearance.ItemWithContainer.Pressed.Options.UseFont = true;
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.accordionControl1.Location = new System.Drawing.Point(0, 25);
-            this.accordionControl1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.accordionControl1.Margin = new System.Windows.Forms.Padding(4);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Touch;
             this.accordionControl1.Size = new System.Drawing.Size(401, 874);
