@@ -69,6 +69,8 @@ namespace HTTT_QLTienAn.GUI.Admin
             this.label16 = new System.Windows.Forms.Label();
             this.btnThemCB = new DevExpress.XtraEditors.SimpleButton();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.cbCanBo = new System.Windows.Forms.ComboBox();
+            this.cbDonVi = new System.Windows.Forms.ComboBox();
             this.dateSuaNgaySinhCB = new DevExpress.XtraEditors.DateEdit();
             this.label19 = new System.Windows.Forms.Label();
             this.txtSuaMaTKCB = new DevExpress.XtraEditors.TextEdit();
@@ -82,8 +84,7 @@ namespace HTTT_QLTienAn.GUI.Admin
             this.txtSuaTenCB = new DevExpress.XtraEditors.TextEdit();
             this.label18 = new System.Windows.Forms.Label();
             this.btnSuaCB = new DevExpress.XtraEditors.SimpleButton();
-            this.cbDonVi = new System.Windows.Forms.ComboBox();
-            this.cbCanBo = new System.Windows.Forms.ComboBox();
+            this.txtSuaMaDVCB = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTTCB)).BeginInit();
@@ -115,6 +116,7 @@ namespace HTTT_QLTienAn.GUI.Admin
             ((System.ComponentModel.ISupportInitialize)(this.txtSuaChucVuCB.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSuaCapBacCB.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSuaTenCB.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSuaMaDVCB.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -550,6 +552,7 @@ namespace HTTT_QLTienAn.GUI.Admin
             // 
             // xtraTabPage2
             // 
+            this.xtraTabPage2.Controls.Add(this.txtSuaMaDVCB);
             this.xtraTabPage2.Controls.Add(this.cbCanBo);
             this.xtraTabPage2.Controls.Add(this.cbDonVi);
             this.xtraTabPage2.Controls.Add(this.dateSuaNgaySinhCB);
@@ -568,6 +571,22 @@ namespace HTTT_QLTienAn.GUI.Admin
             this.xtraTabPage2.Name = "xtraTabPage2";
             this.xtraTabPage2.Size = new System.Drawing.Size(737, 432);
             this.xtraTabPage2.Text = "Sửa";
+            // 
+            // cbCanBo
+            // 
+            this.cbCanBo.FormattingEnabled = true;
+            this.cbCanBo.Location = new System.Drawing.Point(30, 23);
+            this.cbCanBo.Name = "cbCanBo";
+            this.cbCanBo.Size = new System.Drawing.Size(332, 24);
+            this.cbCanBo.TabIndex = 38;
+            // 
+            // cbDonVi
+            // 
+            this.cbDonVi.FormattingEnabled = true;
+            this.cbDonVi.Location = new System.Drawing.Point(30, 391);
+            this.cbDonVi.Name = "cbDonVi";
+            this.cbDonVi.Size = new System.Drawing.Size(332, 24);
+            this.cbDonVi.TabIndex = 37;
             // 
             // dateSuaNgaySinhCB
             // 
@@ -703,21 +722,15 @@ namespace HTTT_QLTienAn.GUI.Admin
             this.btnSuaCB.Text = "Sửa";
             this.btnSuaCB.Click += new System.EventHandler(this.btnSuaCB_Click);
             // 
-            // cbDonVi
+            // txtSuaMaDVCB
             // 
-            this.cbDonVi.FormattingEnabled = true;
-            this.cbDonVi.Location = new System.Drawing.Point(30, 362);
-            this.cbDonVi.Name = "cbDonVi";
-            this.cbDonVi.Size = new System.Drawing.Size(332, 24);
-            this.cbDonVi.TabIndex = 37;
-            // 
-            // cbCanBo
-            // 
-            this.cbCanBo.FormattingEnabled = true;
-            this.cbCanBo.Location = new System.Drawing.Point(30, 23);
-            this.cbCanBo.Name = "cbCanBo";
-            this.cbCanBo.Size = new System.Drawing.Size(332, 24);
-            this.cbCanBo.TabIndex = 38;
+            this.txtSuaMaDVCB.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtSuaMaDVCB.EditValue = "";
+            this.txtSuaMaDVCB.Location = new System.Drawing.Point(30, 363);
+            this.txtSuaMaDVCB.Name = "txtSuaMaDVCB";
+            this.txtSuaMaDVCB.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtSuaMaDVCB.Size = new System.Drawing.Size(333, 22);
+            this.txtSuaMaDVCB.TabIndex = 39;
             // 
             // Admin_QLCanBo
             // 
@@ -763,6 +776,7 @@ namespace HTTT_QLTienAn.GUI.Admin
             ((System.ComponentModel.ISupportInitialize)(this.txtSuaChucVuCB.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSuaCapBacCB.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSuaTenCB.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSuaMaDVCB.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -824,5 +838,6 @@ namespace HTTT_QLTienAn.GUI.Admin
         private DevExpress.XtraEditors.SimpleButton btnSuaCB;
         private System.Windows.Forms.ComboBox cbCanBo;
         private System.Windows.Forms.ComboBox cbDonVi;
+        private DevExpress.XtraEditors.TextEdit txtSuaMaDVCB;
     }
 }
