@@ -31,11 +31,11 @@ namespace HTTT_QLTienAn.GUI.Lop
         {
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Lop_NhapDS));
-            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions2 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject5 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject6 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject7 = new DevExpress.Utils.SerializableAppearanceObject();
-            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject8 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.XtraEditors.Controls.EditorButtonImageOptions editorButtonImageOptions1 = new DevExpress.XtraEditors.Controls.EditorButtonImageOptions();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject1 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject2 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject3 = new DevExpress.Utils.SerializableAppearanceObject();
+            DevExpress.Utils.SerializableAppearanceObject serializableAppearanceObject4 = new DevExpress.Utils.SerializableAppearanceObject();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.groupControl1 = new DevExpress.XtraEditors.GroupControl();
             this.dsLop = new DevExpress.XtraGrid.GridControl();
@@ -354,9 +354,9 @@ namespace HTTT_QLTienAn.GUI.Lop
             // btnXoa
             // 
             this.btnXoa.AutoHeight = false;
-            editorButtonImageOptions2.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions2.Image")));
+            editorButtonImageOptions1.Image = ((System.Drawing.Image)(resources.GetObject("editorButtonImageOptions1.Image")));
             this.btnXoa.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions2, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject5, serializableAppearanceObject6, serializableAppearanceObject7, serializableAppearanceObject8, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Glyph, "", -1, true, true, false, editorButtonImageOptions1, new DevExpress.Utils.KeyShortcut(System.Windows.Forms.Keys.None), serializableAppearanceObject1, serializableAppearanceObject2, serializableAppearanceObject3, serializableAppearanceObject4, "", null, null, DevExpress.Utils.ToolTipAnchor.Default)});
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
@@ -428,7 +428,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.label1.Location = new System.Drawing.Point(30, 237);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 17);
+            this.label1.Size = new System.Drawing.Size(55, 17);
             this.label1.TabIndex = 34;
             this.label1.Text = "Lý do : ";
             // 
@@ -516,7 +516,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.label20.Location = new System.Drawing.Point(380, 224);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(31, 17);
+            this.label20.Size = new System.Drawing.Size(32, 17);
             this.label20.TabIndex = 23;
             this.label20.Text = "Tối:";
             // 
@@ -527,7 +527,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.label19.Location = new System.Drawing.Point(380, 166);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(48, 17);
+            this.label19.Size = new System.Drawing.Size(49, 17);
             this.label19.TabIndex = 22;
             this.label19.Text = "Sáng: ";
             // 
@@ -622,7 +622,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.label13.Location = new System.Drawing.Point(30, 15);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(49, 17);
+            this.label13.Size = new System.Drawing.Size(50, 17);
             this.label13.TabIndex = 8;
             this.label13.Text = "Họ tên";
             // 
@@ -632,7 +632,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.label14.Location = new System.Drawing.Point(30, 179);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(96, 17);
+            this.label14.Size = new System.Drawing.Size(98, 17);
             this.label14.TabIndex = 9;
             this.label14.Text = "Ngày trả phép";
             // 
@@ -643,7 +643,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.label15.Location = new System.Drawing.Point(30, 71);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(31, 17);
+            this.label15.Size = new System.Drawing.Size(32, 17);
             this.label15.TabIndex = 10;
             this.label15.Text = "Lớp";
             // 
@@ -653,7 +653,7 @@ namespace HTTT_QLTienAn.GUI.Lop
             this.label16.Location = new System.Drawing.Point(30, 128);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(121, 17);
+            this.label16.Size = new System.Drawing.Size(124, 17);
             this.label16.TabIndex = 11;
             this.label16.Text = "Ngày bắt đầu nghỉ";
             // 

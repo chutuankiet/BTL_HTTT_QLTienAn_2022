@@ -27,11 +27,15 @@ namespace HTTT_QLTienAn.Model
 
         public int? MaCBd { get; set; }
 
+        public int? MaLT { get; set; }
+
         public virtual CanBo CanBo { get; set; }
 
         public virtual CanBo CanBo1 { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DangKyNghi> DangKyNghis { get; set; }
+
+        public virtual HocVien HocVien { get; set; }
     }
 }

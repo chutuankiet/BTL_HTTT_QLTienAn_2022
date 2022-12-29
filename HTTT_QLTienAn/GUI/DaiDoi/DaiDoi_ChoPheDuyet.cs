@@ -18,70 +18,73 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             InitializeComponent();
         }
         public QLTA_model db = new QLTA_model();
-        public DaiDoi_ChoPheDuyet(int maCB)
-        {
-            InitializeComponent();
-            maCBc = maCB;
-        }
 
-        static int maCBc;
-        public string MaDS_XacNhan;
-        private int mads;
+        public int MaDS_XacNhan;
 
+        //private int mads;
+        string TenDonVi;
 
+        List<DS_ChoPheDuyet> ds_CTChoPheDuyet = new List<DS_ChoPheDuyet>();
 
+        List<c_ChoPheDuyet> ds_ChoPheDuyet;
 
         public void LoadDS1()
         {
             try
             {
-                var ds_ChoPheDuyet = (from ds in db.DanhSachRaNgoais
-                                      join dk in db.DangKyNghis on ds.MaDS equals dk.MaDS
-                                      join hv in db.HocViens on dk.MaHocVien equals hv.MaHocVien
-                                      join l in db.Lops on hv.MaLop equals l.MaLop
-                                      where ds.PheDuyet == -1 // Chưa duyệt
+                ds_ChoPheDuyet = db.c_ChoPheDuyet.Where(m => m.PheDuyet == -3 && m.TenDonVi == TenDonVi).ToList();
 
-                                      select new
-                                      {
-                                          MaDS = ds.MaDS,
-                                          TenLop = l.TenLop,
-                                          NgayDK = ds.NgayDK,
-                                          HoTen = (from hv1 in db.HocViens
-                                                   where hv1.MaHocVien == l.MaLopTruong select new { HoTen = hv1.HoTen }).ToString()
-                                      }).ToList();
-
-
-                ds_ChoPheDuyet.Reverse();
                 dgvDSCho.DataSource = ds_ChoPheDuyet;
 
-                mads = ds_ChoPheDuyet[0].MaDS;
-                MaDS_XacNhan = mads.ToString();
-                var ds_CTChoPheDuyet = (from ds in db.DanhSachRaNgoais
-                                        join dkn in db.DangKyNghis on ds.MaDS equals dkn.MaDS
-                                        join ctn in db.ChiTietCatComs on dkn.MaDangKy equals ctn.MaDangKy
-                                        join hv1 in db.HocViens on dkn.MaHocVien equals hv1.MaHocVien
+                MaDS_XacNhan = ds_ChoPheDuyet[0].MaDS;
 
-                                        where ds.MaDS == mads
-                                        select new
-                                        {
-                                            HoTen = hv1.HoTen,
-                                            Lop = hv1.Lop,
-                                            NgayNghi = ctn.NgayCatCom,
-                                            SoBuoiSang = ctn.BuoiSang,
-                                            SoBuoiTrua = ctn.BuoiTrua,
-                                            SoBuoiToi = ctn.BuoiToi,
+                ds_CTChoPheDuyet = db.DS_ChoPheDuyet.Where(m => m.MaDS == MaDS_XacNhan).ToList();
 
-                                        }).ToList();
-                ds_CTChoPheDuyet.Reverse();
-                //dgvDSCho_View.OptionsBehavior.Editable = false;
-                //gridView2.OptionsBehavior.Editable = false;
                 dgvChiTietDS1.DataSource = ds_CTChoPheDuyet;
             }
             catch
             { }
         }
 
+        private void btnXoa_Click(object sender, EventArgs e)
+        {
 
+            if (MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
+            {
+                List<c_ChoPheDuyet> ds_ChoPheDuyet = db.c_ChoPheDuyet.Where(m => m.PheDuyet == -3 && m.TenDonVi == TenDonVi).ToList();
+                //mads = ds_ChoPheDuyet[0].MaDS;
+                int index = gridView1.FocusedRowHandle;
+                ds_CTChoPheDuyet = db.DS_ChoPheDuyet.Where(m => m.MaDS == MaDS_XacNhan).ToList();
+                int madk = ds_CTChoPheDuyet[index].MaDangKy;
+
+                //Xoa dữ liệu ở phiếu thanh toán
+                PhieuThanhToan ptt = db.PhieuThanhToans.Where(s => s.MaDangKy == madk).FirstOrDefault();
+                db.PhieuThanhToans.Remove(ptt);
+
+                //Xóa dữ liệu ở chi tiết cắt cơm
+                ChiTietCatCom ctcc = db.ChiTietCatComs.Where(s => s.MaDangKy == madk).FirstOrDefault();
+                db.ChiTietCatComs.Remove(ctcc);
+
+                //Xóa dữ liệu ở dkn
+                DangKyNghi dkn = db.DangKyNghis.Where(s => s.MaDangKy == madk).FirstOrDefault();
+                db.DangKyNghis.Remove(dkn);
+
+                ds_CTChoPheDuyet.RemoveAt(index);
+                if (ds_CTChoPheDuyet.Count == 0)
+                {
+                    c_ChoPheDuyet cho = db.c_ChoPheDuyet.Where(s => s.MaDS == MaDS_XacNhan).FirstOrDefault();
+                    //ds_ChoPheDuyet.Remove(cho);
+                    DanhSachRaNgoai dsrn = db.DanhSachRaNgoais.Where(s => s.MaDS == MaDS_XacNhan).FirstOrDefault();
+                    ds_ChoPheDuyet.Remove(cho);
+                    db.DanhSachRaNgoais.Remove(dsrn);
+                }
+                db.SaveChanges();
+
+                dgvDSCho.DataSource = ds_ChoPheDuyet;
+                dgvChiTietDS1.DataSource = ds_CTChoPheDuyet;
+
+            }
+        }
 
 
         private void btnHuy_Click(object sender, EventArgs e)
@@ -89,11 +92,11 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             if (DialogResult.Yes == MessageBox.Show("Bạn có chắc chắn muốn hủy?", "Xác nhận hủy", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
             {
 
-                var dsn = db.DanhSachRaNgoais.SingleOrDefault(p => p.MaDS.ToString() == MaDS_XacNhan);
+                var dsn = db.DanhSachRaNgoais.SingleOrDefault(p => p.MaDS == MaDS_XacNhan);
                 if (dsn != null)
                 {
-                    dsn.PheDuyet = 0;
-                    dsn.MaCBc = maCBc;
+                    dsn.PheDuyet = -2;
+                    dsn.MaCBc = MainForm.MaID;
                     db.SaveChanges();
                     MessageBox.Show("Danh sách đã được huỷ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
@@ -107,11 +110,11 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
 
         private void btnXacnhan_Click(object sender, EventArgs e)
         {
-            var dsn = db.DanhSachRaNgoais.SingleOrDefault(p => p.MaDS.ToString() == MaDS_XacNhan);
+            var dsn = db.DanhSachRaNgoais.SingleOrDefault(p => p.MaDS == MaDS_XacNhan);
             if (dsn != null)
             {
-                dsn.PheDuyet = 1;
-                dsn.MaCBc = maCBc;
+                dsn.PheDuyet = 0;
+                dsn.MaCBc = MainForm.MaID;
                 db.SaveChanges();
                 MessageBox.Show("Danh sách đã được xác nhận thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -119,42 +122,31 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             {
                 MessageBox.Show("Danh sách không tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+
+
             dgvDSCho.DataSource = null;
             LoadDS1();
             dgvChiTietDS1.DataSource = null;
-
         }
-
-
 
 
         private void dgvDSCho_View_RowClick_1(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
-
-            int maDS = Convert.ToInt32(dgvDSCho_View.GetRowCellValue(e.RowHandle, "MaDS")); ;
-
-            var ds_CTChoPheDuyet = (from ds in db.DanhSachRaNgoais
-                                    join dkn in db.DangKyNghis on ds.MaDS equals dkn.MaDS
-                                    join ctn in db.ChiTietCatComs on dkn.MaDangKy equals ctn.MaDangKy
-                                    join hv1 in db.HocViens on dkn.MaHocVien equals hv1.MaHocVien
-
-                                    where ds.MaDS == maDS
-                                    select new
-                                    {
-                                        HoTen = hv1.HoTen,
-                                        Lop = hv1.Lop,
-                                        NgayNghi = ctn.NgayCatCom,
-                                        SoBuoiSang = ctn.BuoiSang,
-                                        SoBuoiTrua = ctn.BuoiTrua,
-                                        SoBuoiToi = ctn.BuoiToi,
-
-                                    }).ToList();
-            ds_CTChoPheDuyet.Reverse();
-            //dgvDSCho_View.OptionsBehavior.Editable = false;
-            //gridView2.OptionsBehavior.Editable = false;
+            int maDS = Convert.ToInt32(dgvDSCho_View.GetRowCellValue(e.RowHandle, "MaDS"));
+            MaDS_XacNhan = maDS;
+            ds_CTChoPheDuyet = db.DS_ChoPheDuyet.Where(m => m.MaDS == MaDS_XacNhan).ToList();
             dgvChiTietDS1.DataSource = ds_CTChoPheDuyet;
         }
 
-        
+        private void DaiDoi_ChoPheDuyet_Load(object sender, EventArgs e)
+        {
+
+            int madv = (int)db.CanBoes.Where(m => m.MaCanBo == MainForm.MaID).FirstOrDefault().MaDonVi;
+
+            TenDonVi = db.DonVis.Where(m => m.MaDonVi == madv).FirstOrDefault().TenDonVi;
+
+
+            LoadDS1();
+        }
     }
 }

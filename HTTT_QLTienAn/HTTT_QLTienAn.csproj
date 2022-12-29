@@ -151,6 +151,36 @@
     <Compile Include="GUI\Admin\Admin_QLTieuChuanAn.Designer.cs">
       <DependentUpon>Admin_QLTieuChuanAn.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\CanBo_SuaDSNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\CanBo_SuaDSNhap.Designer.cs">
+      <DependentUpon>CanBo_SuaDSNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Chung_CBSuaNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Chung_CBSuaNhap.Designer.cs">
+      <DependentUpon>Chung_CBSuaNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Chung_DSPhanHoi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Chung_DSPhanHoi.Designer.cs">
+      <DependentUpon>Chung_DSPhanHoi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Chung_LSThanhToan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Chung_LSThanhToan.Designer.cs">
+      <DependentUpon>Chung_LSThanhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Chung_PhanHoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Chung_PhanHoi.Designer.cs">
+      <DependentUpon>Chung_PhanHoi.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\DaiDoi\DaiDoi_ChoPheDuyet.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -168,6 +198,12 @@
     </Compile>
     <Compile Include="GUI\DaiDoi\DaiDoi_DaPheDuyet.Designer.cs">
       <DependentUpon>DaiDoi_DaPheDuyet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\DaiDoi\DaiDoi_QuanLyDS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\DaiDoi\DaiDoi_QuanLyDS.Designer.cs">
+      <DependentUpon>DaiDoi_QuanLyDS.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\Lop\CatCom_HV.cs">
       <SubType>Form</SubType>
@@ -211,6 +247,12 @@
     <Compile Include="GUI\NhaBep\NhaBep_QuanLyDS.Designer.cs">
       <DependentUpon>NhaBep_QuanLyDS.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\NhaBep\NhaBep_TaoDotTT.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\NhaBep\NhaBep_TaoDotTT.Designer.cs">
+      <DependentUpon>NhaBep_TaoDotTT.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\NhaBep\NhaBep_ThanhToan.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -253,6 +295,12 @@
     <Compile Include="GUI\TieuDoan\TieuDoan_DaPheDuyet.Designer.cs">
       <DependentUpon>TieuDoan_DaPheDuyet.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\TieuDoan\TieuDoan_QuanLyDS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\TieuDoan\TieuDoan_QuanLyDS.Designer.cs">
+      <DependentUpon>TieuDoan_QuanLyDS.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -268,22 +316,32 @@
     <Compile Include="Model\CanBo.cs" />
     <Compile Include="Model\ChiTietCatCom.cs" />
     <Compile Include="Model\ChiTietLoaiNghi.cs" />
+    <Compile Include="Model\Chung_GetPhanHoi.cs" />
     <Compile Include="Model\CT_CatCom_HocVien.cs" />
+    <Compile Include="Model\c_ChoPheDuyet.cs" />
     <Compile Include="Model\DangKyNghi.cs" />
     <Compile Include="Model\DanhSachRaNgoai.cs" />
     <Compile Include="Model\DonVi.cs" />
     <Compile Include="Model\DotThanhToan.cs" />
+    <Compile Include="Model\DSLop_ChoPheDuyet.cs" />
+    <Compile Include="Model\DS_ChoPheDuyet.cs" />
+    <Compile Include="Model\DS_CTLopChoPheDuyet.cs" />
+    <Compile Include="Model\DS_DaPheDuyet_cd.cs" />
+    <Compile Include="Model\DS_DaThanhToan.cs" />
+    <Compile Include="Model\ds_huy.cs" />
+    <Compile Include="Model\DS_LopChoPheDuyet.cs" />
+    <Compile Include="Model\DS_Lop_DaPheDuyet.cs" />
+    <Compile Include="Model\getQSc.cs" />
     <Compile Include="Model\HocVien.cs" />
     <Compile Include="Model\HocVien_DangKiNghi.cs" />
     <Compile Include="Model\LoaiHocVien.cs" />
     <Compile Include="Model\LoaiNghi.cs" />
     <Compile Include="Model\Lop.cs" />
-    <Compile Include="Model\NhaBep_ChuaThanhToan.cs" />
-    <Compile Include="Model\NhaBep_ListDaThanhToan.cs" />
+    <Compile Include="Model\NhaBep_ListCatCom.cs" />
     <Compile Include="Model\NhaBep_ListThanhToan.cs" />
+    <Compile Include="Model\PhanHoi.cs" />
     <Compile Include="Model\PhieuThanhToan.cs" />
     <Compile Include="Model\QLTA_model.cs" />
-    <Compile Include="Model\sysdiagram.cs" />
     <Compile Include="Model\TaiKhoan.cs" />
     <Compile Include="Model\TieuChuanAn.cs" />
     <Compile Include="Program.cs" />
@@ -303,6 +361,21 @@
     <EmbeddedResource Include="GUI\Admin\Admin_QLTieuChuanAn.resx">
       <DependentUpon>Admin_QLTieuChuanAn.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\CanBo_SuaDSNhap.resx">
+      <DependentUpon>CanBo_SuaDSNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Chung_CBSuaNhap.resx">
+      <DependentUpon>Chung_CBSuaNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Chung_DSPhanHoi.resx">
+      <DependentUpon>Chung_DSPhanHoi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Chung_LSThanhToan.resx">
+      <DependentUpon>Chung_LSThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Chung_PhanHoi.resx">
+      <DependentUpon>Chung_PhanHoi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\DaiDoi\DaiDoi_ChoPheDuyet.resx">
       <DependentUpon>DaiDoi_ChoPheDuyet.cs</DependentUpon>
     </EmbeddedResource>
@@ -311,6 +384,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\DaiDoi\DaiDoi_DaPheDuyet.resx">
       <DependentUpon>DaiDoi_DaPheDuyet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DaiDoi\DaiDoi_QuanLyDS.resx">
+      <DependentUpon>DaiDoi_QuanLyDS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Lop\CatCom_HV.resx">
       <DependentUpon>CatCom_HV.cs</DependentUpon>
@@ -333,6 +409,9 @@
     <EmbeddedResource Include="GUI\NhaBep\NhaBep_QuanLyDS.resx">
       <DependentUpon>NhaBep_QuanLyDS.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\NhaBep\NhaBep_TaoDotTT.resx">
+      <DependentUpon>NhaBep_TaoDotTT.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\NhaBep\NhaBep_ThanhToan.resx">
       <DependentUpon>NhaBep_ThanhToan.cs</DependentUpon>
     </EmbeddedResource>
@@ -353,6 +432,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\TieuDoan\TieuDoan_DaPheDuyet.resx">
       <DependentUpon>TieuDoan_DaPheDuyet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\TieuDoan\TieuDoan_QuanLyDS.resx">
+      <DependentUpon>TieuDoan_QuanLyDS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
@@ -392,7 +474,9 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="SQL\view.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

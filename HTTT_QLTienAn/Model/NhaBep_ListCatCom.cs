@@ -6,7 +6,7 @@ namespace HTTT_QLTienAn.Model
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class NhaBep_ChuaThanhToan
+    public partial class NhaBep_ListCatCom
     {
         [Key]
         [Column(Order = 0)]
@@ -18,54 +18,36 @@ namespace HTTT_QLTienAn.Model
         [StringLength(100)]
         public string HoTen { get; set; }
 
-        [StringLength(100)]
-        public string TenLop { get; set; }
-
         [Key]
         [Column(Order = 2)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int MaLop { get; set; }
-
-        [Key]
-        [Column(Order = 3)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int MaDonVi { get; set; }
 
         [StringLength(100)]
         public string TenDonVi { get; set; }
 
-        [Column(TypeName = "date")]
-        public DateTime? NgayDi { get; set; }
+        [Key]
+        [Column(Order = 3, TypeName = "date")]
+        public DateTime NgayCatCom { get; set; }
 
         [Key]
         [Column(Order = 4)]
-        [StringLength(100)]
-        public string TenLoaiNghi { get; set; }
+        public bool BuoiSang { get; set; }
 
         [Key]
         [Column(Order = 5)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int MaLoaiNghi { get; set; }
-
-        public int? SoBuoiSang { get; set; }
-
-        public int? SoBuoiTrua { get; set; }
-
-        public int? SoBuoiToi { get; set; }
+        public bool BuoiTrua { get; set; }
 
         [Key]
         [Column(Order = 6)]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int TongTien { get; set; }
+        public bool BuoiToi { get; set; }
 
-        public int? TrangThaiTT { get; set; }
-
-        [Column(TypeName = "date")]
-        public DateTime? NgayTT { get; set; }
+        [StringLength(100)]
+        public string TenLop { get; set; }
 
         [Key]
         [Column(Order = 7)]
         [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int MaThanhToan { get; set; }
+        public int MaLop { get; set; }
     }
 }

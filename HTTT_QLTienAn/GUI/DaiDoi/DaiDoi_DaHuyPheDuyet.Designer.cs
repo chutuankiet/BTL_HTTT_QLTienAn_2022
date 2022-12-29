@@ -42,14 +42,12 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.gridColumn3 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.dgvDaHuy = new DevExpress.XtraGrid.GridControl();
             this.repositoryItemButtonEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit();
-            this.gridColumn12 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.chkEdit = new DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit();
-            this.gridColumn11 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn9 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn8 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridColumn7 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn10 = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.dgvChiTietDaHuy = new DevExpress.XtraGrid.GridControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
@@ -70,32 +68,32 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             // gridColumn4
             // 
             this.gridColumn4.Caption = "Cán bộ tiểu đoàn";
-            this.gridColumn4.FieldName = "CanBoTieuDoan";
-            this.gridColumn4.MinWidth = 25;
+            this.gridColumn4.FieldName = "HoTend";
+            this.gridColumn4.MinWidth = 29;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
-            this.gridColumn4.Width = 328;
+            this.gridColumn4.Width = 375;
             // 
             // gridColumn2
             // 
             this.gridColumn2.Caption = "Ngày đăng ký";
-            this.gridColumn2.FieldName = "NgayDangKy";
-            this.gridColumn2.MinWidth = 25;
+            this.gridColumn2.FieldName = "NgayDK";
+            this.gridColumn2.MinWidth = 29;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 196;
+            this.gridColumn2.Width = 224;
             // 
             // gridColumn1
             // 
             this.gridColumn1.Caption = "Mã DS";
             this.gridColumn1.FieldName = "MaDS";
-            this.gridColumn1.MinWidth = 25;
+            this.gridColumn1.MinWidth = 29;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 109;
+            this.gridColumn1.Width = 125;
             // 
             // dgvDaHuy_View
             // 
@@ -106,18 +104,19 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.gridColumn4});
             this.dgvDaHuy_View.GridControl = this.dgvDaHuy;
             this.dgvDaHuy_View.Name = "dgvDaHuy_View";
+            this.dgvDaHuy_View.OptionsBehavior.Editable = false;
             this.dgvDaHuy_View.OptionsView.ShowGroupPanel = false;
-            this.dgvDaHuy_View.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.dgvDaHuy_View_FocusedRowChanged);
+            this.dgvDaHuy_View.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.dgvDaHuy_View_RowClick);
             // 
             // gridColumn3
             // 
             this.gridColumn3.Caption = "Cán bộ đại đội";
-            this.gridColumn3.FieldName = "CanBoDaiDoi";
-            this.gridColumn3.MinWidth = 25;
+            this.gridColumn3.FieldName = "HoTenc";
+            this.gridColumn3.MinWidth = 29;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 321;
+            this.gridColumn3.Width = 367;
             // 
             // dgvDaHuy
             // 
@@ -125,7 +124,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.dgvDaHuy.Location = new System.Drawing.Point(2, 17);
             this.dgvDaHuy.MainView = this.dgvDaHuy_View;
             this.dgvDaHuy.Name = "dgvDaHuy";
-            this.dgvDaHuy.Size = new System.Drawing.Size(428, 728);
+            this.dgvDaHuy.Size = new System.Drawing.Size(490, 728);
             this.dgvDaHuy.TabIndex = 1;
             this.dgvDaHuy.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.dgvDaHuy_View});
@@ -139,16 +138,6 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.repositoryItemButtonEdit1.Name = "repositoryItemButtonEdit1";
             this.repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.HideTextEditor;
             // 
-            // gridColumn12
-            // 
-            this.gridColumn12.Caption = "Tối";
-            this.gridColumn12.ColumnEdit = this.chkEdit;
-            this.gridColumn12.FieldName = "Toi";
-            this.gridColumn12.MinWidth = 25;
-            this.gridColumn12.Name = "gridColumn12";
-            this.gridColumn12.Visible = true;
-            this.gridColumn12.VisibleIndex = 5;
-            // 
             // chkEdit
             // 
             this.chkEdit.AutoHeight = false;
@@ -156,46 +145,35 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.chkEdit.ValueChecked = 1;
             this.chkEdit.ValueUnchecked = 0;
             // 
-            // gridColumn11
-            // 
-            this.gridColumn11.Caption = "Trưa";
-            this.gridColumn11.ColumnEdit = this.chkEdit;
-            this.gridColumn11.FieldName = "Trua";
-            this.gridColumn11.MinWidth = 25;
-            this.gridColumn11.Name = "gridColumn11";
-            this.gridColumn11.Visible = true;
-            this.gridColumn11.VisibleIndex = 4;
-            this.gridColumn11.Width = 76;
-            // 
             // gridColumn9
             // 
             this.gridColumn9.Caption = "Ngày nghỉ";
-            this.gridColumn9.FieldName = "NgayNghi";
-            this.gridColumn9.MinWidth = 25;
+            this.gridColumn9.FieldName = "NgayDi";
+            this.gridColumn9.MinWidth = 29;
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.Visible = true;
             this.gridColumn9.VisibleIndex = 2;
-            this.gridColumn9.Width = 259;
+            this.gridColumn9.Width = 296;
             // 
             // gridColumn8
             // 
             this.gridColumn8.Caption = "Lớp";
-            this.gridColumn8.FieldName = "Lop";
-            this.gridColumn8.MinWidth = 25;
+            this.gridColumn8.FieldName = "TenLop";
+            this.gridColumn8.MinWidth = 29;
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Visible = true;
             this.gridColumn8.VisibleIndex = 1;
-            this.gridColumn8.Width = 112;
+            this.gridColumn8.Width = 128;
             // 
             // gridColumn7
             // 
             this.gridColumn7.Caption = "Họ tên";
             this.gridColumn7.FieldName = "HoTen";
-            this.gridColumn7.MinWidth = 25;
+            this.gridColumn7.MinWidth = 29;
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
             this.gridColumn7.VisibleIndex = 0;
-            this.gridColumn7.Width = 275;
+            this.gridColumn7.Width = 314;
             // 
             // gridView2
             // 
@@ -203,23 +181,21 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.gridColumn7,
             this.gridColumn8,
             this.gridColumn9,
-            this.gridColumn10,
-            this.gridColumn11,
-            this.gridColumn12});
+            this.gridColumn5});
             this.gridView2.GridControl = this.dgvChiTietDaHuy;
             this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsBehavior.Editable = false;
             this.gridView2.OptionsView.ShowGroupPanel = false;
             // 
-            // gridColumn10
+            // gridColumn5
             // 
-            this.gridColumn10.Caption = "Sáng";
-            this.gridColumn10.ColumnEdit = this.chkEdit;
-            this.gridColumn10.FieldName = "Sang";
-            this.gridColumn10.MinWidth = 25;
-            this.gridColumn10.Name = "gridColumn10";
-            this.gridColumn10.Visible = true;
-            this.gridColumn10.VisibleIndex = 3;
-            this.gridColumn10.Width = 80;
+            this.gridColumn5.Caption = "Loại nghỉ";
+            this.gridColumn5.FieldName = "TenLoaiNghi";
+            this.gridColumn5.MinWidth = 25;
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 3;
+            this.gridColumn5.Width = 94;
             // 
             // dgvChiTietDaHuy
             // 
@@ -230,7 +206,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.dgvChiTietDaHuy.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
             this.repositoryItemButtonEdit1,
             this.chkEdit});
-            this.dgvChiTietDaHuy.Size = new System.Drawing.Size(526, 728);
+            this.dgvChiTietDaHuy.Size = new System.Drawing.Size(603, 728);
             this.dgvChiTietDaHuy.TabIndex = 7;
             this.dgvChiTietDaHuy.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView2});
@@ -239,9 +215,9 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             // 
             this.groupControl2.Controls.Add(this.dgvChiTietDaHuy);
             this.groupControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.groupControl2.Location = new System.Drawing.Point(441, 3);
+            this.groupControl2.Location = new System.Drawing.Point(503, 3);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(530, 747);
+            this.groupControl2.Size = new System.Drawing.Size(607, 747);
             this.groupControl2.TabIndex = 0;
             this.groupControl2.Text = "Chi tiết danh sách";
             // 
@@ -259,7 +235,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(974, 753);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1113, 753);
             this.tableLayoutPanel1.TabIndex = 4;
             // 
             // groupControl1
@@ -270,17 +246,18 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             this.groupControl1.Controls.Add(this.dgvDaHuy);
             this.groupControl1.Location = new System.Drawing.Point(3, 3);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(432, 747);
+            this.groupControl1.Size = new System.Drawing.Size(494, 747);
             this.groupControl1.TabIndex = 0;
             this.groupControl1.Text = "Danh sách không được duyệt";
             // 
             // DaiDoi_DaHuyPheDuyet
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "DaiDoi_DaHuyPheDuyet";
-            this.Size = new System.Drawing.Size(981, 760);
+            this.Size = new System.Drawing.Size(1121, 760);
+            this.Load += new System.EventHandler(this.DaiDoi_DaHuyPheDuyet_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvDaHuy_View)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDaHuy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemButtonEdit1)).EndInit();
@@ -305,17 +282,15 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.GridControl dgvDaHuy;
         private DevExpress.XtraEditors.Repository.RepositoryItemButtonEdit repositoryItemButtonEdit1;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn12;
         private DevExpress.XtraEditors.Repository.RepositoryItemCheckEdit chkEdit;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn11;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn9;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn8;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn10;
         private DevExpress.XtraGrid.GridControl dgvChiTietDaHuy;
         private DevExpress.XtraEditors.GroupControl groupControl2;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private DevExpress.XtraEditors.GroupControl groupControl1;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
     }
 }

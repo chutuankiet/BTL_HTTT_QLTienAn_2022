@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
@@ -10,12 +9,14 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using HTTT_QLTienAn.Model;
+using System.Data.Entity.Infrastructure;
 
 namespace HTTT_QLTienAn.GUI.Lop
 {
     public partial class Lop_NhapDS : UserControl
     {
         QLTA_model db = new QLTA_model();
+
 
         List<HocVien_DangKiNghi> listDK = new List<HocVien_DangKiNghi>();
 
@@ -32,7 +33,6 @@ namespace HTTT_QLTienAn.GUI.Lop
         {
             InitializeComponent();
 
-
         }
 
         int MaLopTruong = 0;
@@ -44,14 +44,6 @@ namespace HTTT_QLTienAn.GUI.Lop
             if (MessageBox.Show("Bạn có chắc chắn muốn xóa không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 int index = gridView2.FocusedRowHandle;
-
-                //foreach(var item in lsCTCatCom)
-                //{
-                //    if(item.MaDangKyTam == )
-                //    {
-                //        lsCTCatCom.Remove(item);
-                //    }
-                //}
 
                 lsCTCatCom.RemoveAll(m => m.MaDangKyTam == listDK[index].MaDangKyTam);
 
@@ -93,6 +85,9 @@ namespace HTTT_QLTienAn.GUI.Lop
 
             cbLoainghi.ValueMember = "MaLoaiNghi";
             cbLoainghi.DisplayMember = "TenLoaiNghi";
+
+            cbLoainghi.SelectedIndex = 0;
+
         }
 
         private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
@@ -126,6 +121,7 @@ namespace HTTT_QLTienAn.GUI.Lop
 
 
 
+
             var DSHocVien = (
                 from a in db.HocViens
                 join b in db.Lops on a.MaLop equals b.MaLop
@@ -146,6 +142,27 @@ namespace HTTT_QLTienAn.GUI.Lop
 
 
         }
+
+        public static void UndoingChangesDbContextLevel(DbContext context)
+        {
+            foreach (DbEntityEntry entry in context.ChangeTracker.Entries())
+            {
+                switch (entry.State)
+                {
+                    case EntityState.Modified:
+                        entry.State = EntityState.Unchanged;
+                        break;
+                    case EntityState.Added:
+                        entry.State = EntityState.Detached;
+                        break;
+                    case EntityState.Deleted:
+                        entry.Reload();
+                        break;
+                    default: break;
+                }
+            }
+        }
+
 
 
         private void SetDefaultState()
@@ -178,7 +195,7 @@ namespace HTTT_QLTienAn.GUI.Lop
 
         private void cbLoainghi_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int index = cbLoainghi.SelectedIndex;
+            int index = cbLoainghi.SelectedIndex == -1 ? 0 : cbLoainghi.SelectedIndex;
             txtSang.Text = ListLoaiNghi[index].SoBuoiSang.ToString();
             txtTrua.Text = ListLoaiNghi[index].SoBuoiTrua.ToString();
             txtToi.Text = ListLoaiNghi[index].SoBuoiToi.ToString();
@@ -196,52 +213,62 @@ namespace HTTT_QLTienAn.GUI.Lop
         List<CT_CatCom_HocVien> lsCTCatCom = new List<CT_CatCom_HocVien>();
 
 
-        bool IsNotDupDate(HocVien_DangKiNghi hv)
+
+        bool IsOverLapping(List<HocVien_DangKiNghi> checkList, HocVien_DangKiNghi hv)
         {
-            for (int i = 0; i < listDK.Count; i++)
+            foreach (var item in checkList)
             {
+                DateTime date1 = item.NgayBDNghi;
+                DateTime date2 = hv.NgayKTNghi;
 
-                if (listDK[i].MaHocVien == hv.MaHocVien)
+                string d1 = date1.ToString("dd-MM-yyyy");
+                string d2 = date2.ToString("dd-MM-yyyy");
+
+
+                if (d1 == d2)
                 {
-
-                    DateTime temp = hv.NgayBDNghi;
-
-                    for (int j = 0; j < sobuoinghi; j++)
-                    {
-
-                        foreach (var item_cc in lsCTCatCom)
-                        {
-
-                            if (item_cc.NgayCatCom.ToString("dd/MM/yyyy") == temp.ToString("dd/MM/yyyy") && item_cc.MaDangKyTam != listDK[i].MaDangKyTam)
-                            {
-                                MessageBox.Show($"Đã tồn đăng ký trong danh sách", "Thông báo !");
-                                return false;
-
-                            }
-                        }
-                        temp = temp.AddDays(1);
-
-                        //int isInCT = lsCTCatCom.Where(m => m.NgayCatCom.ToString("dd/MM/yyyy") == temp.ToString("dd/MM/yyyy") ).Count();
-                        //&& 
-                    }
-                }
-            }
-
-            // check trung ngay trong csdl
-            DateTime ngayTemp = hv.NgayBDNghi;
-            while (DateTime.Compare(ngayTemp.AddDays(1), hv.NgayKTNghi) < 0)
-            {
-                var isDupInDB = db.ChiTietCatComs.Where(x => x.NgayCatCom == ngayTemp && x.DangKyNghi.MaHocVien == hv.MaHocVien).FirstOrDefault();
-
-                if (isDupInDB != null)
-                {
-                    MessageBox.Show($"Đã tồn tại đăng ký tại ngày {hv.NgayBDNghi.ToString("dd-MM-yyyy")}", "Thông báo !");
+                    MessageBox.Show($"Đã tồn đăng ký '{item.TenLoaiNghi}' trong danh sách vào ngày {item.NgayBDNghi.Date}", "Thông báo !");
                     return false;
                 }
 
-                ngayTemp = ngayTemp.AddDays(1);
+                if ((item.NgayBDNghi <= hv.NgayKTNghi && item.NgayKTNghi >= hv.NgayBDNghi)
 
+                    || (hv.NgayBDNghi <= item.NgayKTNghi && hv.NgayKTNghi >= item.NgayBDNghi)
+                    )
+                {
+                    MessageBox.Show($"Đã tồn đăng ký '{item.TenLoaiNghi}' trong danh sách vào ngày {item.NgayBDNghi.Date}", "Thông báo !");
+                    return false;
+                }
             }
+            return true;
+
+        }
+
+        bool IsNotDupDate(HocVien_DangKiNghi hv)
+        {
+            //check trùng ngày đã đki (RAM)
+            List<HocVien_DangKiNghi> checkExist = listDK.Where(s => s.MaHocVien == hv.MaHocVien).ToList();
+
+            //IsOverLapping(checkExist, hv);
+
+
+            // check trung ngày đã dki trong csdl (DISK)
+
+            List<HocVien_DangKiNghi> checkInDB = db.DangKyNghis.Where(x => x.MaHocVien == hv.MaHocVien).Select(x =>
+               new HocVien_DangKiNghi
+               {
+                   MaDangKyTam = x.MaDangKy,
+                   MaHocVien = (int)x.MaHocVien,
+                   NgayBDNghi = x.NgayDi,
+                   NgayKTNghi = x.NgayVe,
+                   TenLoaiNghi = x.LoaiNghi.TenLoaiNghi
+               }).ToList<HocVien_DangKiNghi>();
+
+            //IsOverLapping(checkInDB, hv);
+
+            if (!IsOverLapping(checkExist, hv) || !IsOverLapping(checkInDB, hv)) return false;
+
+
 
             return true;
         }
@@ -285,14 +312,7 @@ namespace HTTT_QLTienAn.GUI.Lop
 
             int maloainghi = Convert.ToInt32(cbLoainghi.SelectedValue);
 
-            //for(int i = 0; i < listDK.Count; i++)
-            //{
-            //    if(listDK[i].MaHocVien == MaHVCurrent)
-            //    {
-            //        MessageBox.Show("Đã có trong danh sách ! ", "Error");
-            //        return;
-            //    }
-            //}
+
 
             // thêm chi tiết cắt cơm 
 
@@ -332,7 +352,7 @@ namespace HTTT_QLTienAn.GUI.Lop
                         BuoiToi = item.BuoiToi,
                         MaDangKyTam = MaDKTamCurrent
                     });
-                    StartDateTemp.AddDays(1);
+                    StartDateTemp = StartDateTemp.AddDays(1);
                 }
 
                 gridControl2.DataSource = null;
@@ -343,6 +363,9 @@ namespace HTTT_QLTienAn.GUI.Lop
 
         }
 
+
+        int MaDanhSachCurrent;
+        int MaDangKyCurrent;
         private void btnSendList_Click(object sender, EventArgs e)
         {
             if (MaHVCurrent == 0 || listDK.Count == 0 || lsCTCatCom.Count == 0)
@@ -350,70 +373,70 @@ namespace HTTT_QLTienAn.GUI.Lop
                 MessageBox.Show("Chưa chọn học viên ! Danh sách trống !!", "Error");
                 return;
             }
+            UndoingChangesDbContextLevel(db);
 
             if (MessageBox.Show("Bạn có chắc chắn hoàn thành và gửi không?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
 
+                using (var context = new QLTA_model())
+                {
+                    ds.NgayDK = DateTime.Now;
+                    ds.PheDuyet = -3; // -3 : chua duyet | -2 : huy dai doi |-1 : huy tieu doan | 0 : daidoi | 1 : tieudoan
+                    ds.MaLT = MaLopTruong;
 
-                ds.NgayDK = DateTime.Now;
-                ds.PheDuyet = -3; // -3 : chua duyet | -2 : huy dai doi |-1 : huy tieu doan | 0 : daidoi | 1 : tieudoan
-
-                db.DanhSachRaNgoais.Add(ds);
+                    context.DanhSachRaNgoais.Add(ds);
 
 
-                db.SaveChanges();
+                    context.SaveChanges();
+                    MaDanhSachCurrent = ds.MaDS;
+
+                }
 
 
                 foreach (var item in listDK)
                 {
-                    DangKyNghi ctrn = new DangKyNghi
+                    using (var context = new QLTA_model())
                     {
-                        LyDo = item.LyDo,
-                        MaHocVien = item.MaHocVien,
-                        MaLoaiNghi = item.MaLoaiNghi,
-                        MaDS = ds.MaDS,
-                        NgayDi = item.NgayBDNghi,
-                        NgayVe = item.NgayKTNghi
-                    };
+                        DangKyNghi dkn = new DangKyNghi
+                        {
+                            LyDo = item.LyDo,
+                            MaHocVien = item.MaHocVien,
+                            MaLoaiNghi = item.MaLoaiNghi,
+                            MaDS = MaDanhSachCurrent,//----------------------------
+                            NgayDi = item.NgayBDNghi,
+                            NgayVe = item.NgayKTNghi
+                        };
+
+
+                        context.DangKyNghis.Add(dkn);
+
+
+                        context.SaveChanges();
+                        MaDangKyCurrent = dkn.MaDangKy;
+
+                    }
 
 
 
-                    db.DangKyNghis.Add(ctrn);
-                    db.SaveChanges();
-
-                    int maTCA = (int)db.HocViens.Where(m => m.MaHocVien == item.MaHocVien).FirstOrDefault().LoaiHocVien.MaTCA;
-
-                    TieuChuanAn tca_hv = db.TieuChuanAns.Where(m => m.MaTCA == maTCA).FirstOrDefault();
-
-                    LoaiNghi ln_hv = db.LoaiNghis.Where(m => m.MaLoaiNghi == item.MaLoaiNghi).FirstOrDefault();
-
-
-                    PhieuThanhToan newThanhToan = new PhieuThanhToan
-                    {
-                        TrangThaiTT = -2,
-                        MaDangKy = ctrn.MaDangKy,
-                        TongTien = (int)ln_hv.SoBuoiSang * tca_hv.TienAnSang +
-                                    (int)ln_hv.SoBuoiTrua * tca_hv.TienAnTrua +
-                                    (int)ln_hv.SoBuoiToi * tca_hv.TienAnToi
-                    };
-
-                    db.PhieuThanhToans.Add(newThanhToan);
-                    db.SaveChanges();
 
                     List<CT_CatCom_HocVien> ls_Add_cc = lsCTCatCom.Where(m => m.MaDangKyTam == item.MaDangKyTam).ToList();
 
                     foreach (var icc in ls_Add_cc)
                     {
-                        ChiTietCatCom ctcc = new ChiTietCatCom
+                        using (var context = new QLTA_model())
                         {
-                            BuoiSang = icc.BuoiSang,
-                            BuoiTrua = icc.BuoiTrua,
-                            BuoiToi = icc.BuoiToi,
-                            MaDangKy = db.DangKyNghis.Where(m => m.MaHocVien == item.MaHocVien && m.MaDS == ds.MaDS).FirstOrDefault().MaDangKy,
-                            NgayCatCom = icc.NgayCatCom
-                        };
-                        db.ChiTietCatComs.Add(ctcc);
-                        db.SaveChanges();
+                            ChiTietCatCom ctcc = new ChiTietCatCom
+                            {
+                                BuoiSang = icc.BuoiSang,
+                                BuoiTrua = icc.BuoiTrua,
+                                BuoiToi = icc.BuoiToi,
+                                MaDangKy = MaDangKyCurrent, //------------------------------------
+                                NgayCatCom = icc.NgayCatCom
+                            };
+                            context.ChiTietCatComs.Add(ctcc);
+
+                            context.SaveChanges();
+                        }
                     }
                 }
 
@@ -428,6 +451,8 @@ namespace HTTT_QLTienAn.GUI.Lop
 
             }
 
+
+
         }
 
 
@@ -436,6 +461,8 @@ namespace HTTT_QLTienAn.GUI.Lop
             dateEnd.DateTime = dateStart.DateTime.AddDays(sobuoinghi - 1);
 
         }
+
+
     }
 }
 

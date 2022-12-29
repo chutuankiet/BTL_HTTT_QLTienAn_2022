@@ -46,8 +46,8 @@ namespace HTTT_QLTienAn
             // 
             this.labelControl2.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl2.Appearance.Options.UseFont = true;
-            this.labelControl2.Location = new System.Drawing.Point(62, 410);
-            this.labelControl2.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.labelControl2.Location = new System.Drawing.Point(71, 410);
+            this.labelControl2.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.labelControl2.Name = "labelControl2";
             this.labelControl2.Size = new System.Drawing.Size(76, 21);
             this.labelControl2.TabIndex = 9;
@@ -55,13 +55,13 @@ namespace HTTT_QLTienAn
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(62, 435);
-            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtPassword.Location = new System.Drawing.Point(71, 435);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPassword.Properties.Appearance.Options.UseFont = true;
             this.txtPassword.Properties.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(323, 28);
+            this.txtPassword.Size = new System.Drawing.Size(369, 28);
             this.txtPassword.TabIndex = 6;
             this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 
@@ -71,10 +71,10 @@ namespace HTTT_QLTienAn
             this.btnDangNhap.Appearance.ForeColor = System.Drawing.Color.Black;
             this.btnDangNhap.Appearance.Options.UseFont = true;
             this.btnDangNhap.Appearance.Options.UseForeColor = true;
-            this.btnDangNhap.Location = new System.Drawing.Point(158, 493);
-            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnDangNhap.Location = new System.Drawing.Point(181, 493);
+            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.btnDangNhap.Name = "btnDangNhap";
-            this.btnDangNhap.Size = new System.Drawing.Size(135, 49);
+            this.btnDangNhap.Size = new System.Drawing.Size(154, 49);
             this.btnDangNhap.TabIndex = 8;
             this.btnDangNhap.Text = "Đăng Nhập";
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
@@ -83,8 +83,8 @@ namespace HTTT_QLTienAn
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(62, 342);
-            this.labelControl1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.labelControl1.Location = new System.Drawing.Point(71, 342);
+            this.labelControl1.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(121, 21);
             this.labelControl1.TabIndex = 7;
@@ -92,20 +92,20 @@ namespace HTTT_QLTienAn
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(62, 367);
-            this.txtUsername.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.txtUsername.Location = new System.Drawing.Point(71, 367);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Properties.Appearance.Font = new System.Drawing.Font("Tahoma", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.Properties.Appearance.Options.UseFont = true;
-            this.txtUsername.Size = new System.Drawing.Size(323, 28);
+            this.txtUsername.Size = new System.Drawing.Size(369, 28);
             this.txtUsername.TabIndex = 5;
             this.txtUsername.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUsername_KeyDown);
             // 
             // svgImageBox1
             // 
-            this.svgImageBox1.Location = new System.Drawing.Point(122, 90);
+            this.svgImageBox1.Location = new System.Drawing.Point(139, 90);
             this.svgImageBox1.Name = "svgImageBox1";
-            this.svgImageBox1.Size = new System.Drawing.Size(201, 214);
+            this.svgImageBox1.Size = new System.Drawing.Size(230, 214);
             this.svgImageBox1.SizeMode = DevExpress.XtraEditors.SvgImageSizeMode.Stretch;
             this.svgImageBox1.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("svgImageBox1.SvgImage")));
             this.svgImageBox1.TabIndex = 10;
@@ -115,8 +115,8 @@ namespace HTTT_QLTienAn
             // 
             this.labelControl3.Appearance.Font = new System.Drawing.Font("Tahoma", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl3.Appearance.Options.UseFont = true;
-            this.labelControl3.Location = new System.Drawing.Point(62, 32);
-            this.labelControl3.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.labelControl3.Location = new System.Drawing.Point(71, 32);
+            this.labelControl3.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.labelControl3.Name = "labelControl3";
             this.labelControl3.Size = new System.Drawing.Size(334, 34);
             this.labelControl3.TabIndex = 11;
@@ -124,9 +124,9 @@ namespace HTTT_QLTienAn
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(450, 583);
+            this.ClientSize = new System.Drawing.Size(514, 583);
             this.Controls.Add(this.labelControl3);
             this.Controls.Add(this.svgImageBox1);
             this.Controls.Add(this.labelControl2);
