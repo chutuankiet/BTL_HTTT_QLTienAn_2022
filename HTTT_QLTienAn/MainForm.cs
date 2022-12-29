@@ -378,7 +378,7 @@ namespace HTTT_QLTienAn
         }
         private void It71_Click(object sender, EventArgs e)
         {
-            uc7.BringToFront();
+            uc71.BringToFront();
             //uc7.reload();
 
         }
