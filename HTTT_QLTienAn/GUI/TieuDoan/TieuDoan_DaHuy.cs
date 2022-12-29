@@ -44,11 +44,11 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
                     gridView2.OptionsBehavior.Editable = false;
                     dgvDaHuy.DataSource = ds_DaHuy;
                 }
-                else
-                {
-                    MessageBox.Show("Chưa có danh sách đã hủy nào !");
-                    return;
-                }
+                //else
+                //{
+                //    MessageBox.Show("Chưa có danh sách đã hủy nào !");
+                //    return;
+                //}
             }
             catch
             { }

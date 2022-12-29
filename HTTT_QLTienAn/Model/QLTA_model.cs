@@ -1,7 +1,6 @@
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
-using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 
 namespace HTTT_QLTienAn.Model
@@ -73,10 +72,6 @@ namespace HTTT_QLTienAn.Model
                 .HasMany(e => e.PhanHois)
                 .WithOptional(e => e.HocVien)
                 .HasForeignKey(e => e.MaLopTruong);
-
-            modelBuilder.Entity<PhanHoi>()
-                .Property(e => e.PhanHoi1)
-                .IsUnicode(false);
 
             modelBuilder.Entity<PhieuThanhToan>()
                 .HasMany(e => e.PhanHois)

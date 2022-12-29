@@ -103,30 +103,34 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
                 dgvDSCho.DataSource = null;
                 LoadDS1();
                 dgvChiTietDS1.DataSource = null;
-
+                MaDS_XacNhan = 0;
             }
 
         }
 
         private void btnXacnhan_Click(object sender, EventArgs e)
         {
-            var dsn = db.DanhSachRaNgoais.SingleOrDefault(p => p.MaDS == MaDS_XacNhan);
-            if (dsn != null)
+            if (DialogResult.Yes == MessageBox.Show("Bạn có chắc chắn phê duyệt cho danh sách?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
             {
-                dsn.PheDuyet = 0;
-                dsn.MaCBc = MainForm.MaID;
-                db.SaveChanges();
-                MessageBox.Show("Danh sách đã được xác nhận thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            else
-            {
-                MessageBox.Show("Danh sách không tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
+                var dsn = db.DanhSachRaNgoais.SingleOrDefault(p => p.MaDS == MaDS_XacNhan);
+                if (dsn != null)
+                {
+                    dsn.PheDuyet = 0;
+                    dsn.MaCBc = MainForm.MaID;
+                    db.SaveChanges();
+                    MessageBox.Show("Danh sách đã được xác nhận thành công", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    MessageBox.Show("Danh sách không tồn tại", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
 
 
-            dgvDSCho.DataSource = null;
-            LoadDS1();
-            dgvChiTietDS1.DataSource = null;
+                dgvDSCho.DataSource = null;
+                LoadDS1();
+                dgvChiTietDS1.DataSource = null;
+
+            }
         }
 
 

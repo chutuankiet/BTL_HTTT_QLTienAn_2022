@@ -88,6 +88,7 @@ namespace HTTT_QLTienAn.GUI.Lop
                     db.SaveChanges();
                     ReloadAll();
                     MessageBox.Show("Xóa thành công");
+                    gridControl2.DataSource = null;
                 }
                 return;
             }
