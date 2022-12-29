@@ -298,6 +298,7 @@
     <Compile Include="Model\CanBo.cs" />
     <Compile Include="Model\ChiTietCatCom.cs" />
     <Compile Include="Model\ChiTietLoaiNghi.cs" />
+    <Compile Include="Model\Class_RPNhaBep.cs" />
     <Compile Include="Model\CT_CatCom_HocVien.cs" />
     <Compile Include="Model\c_ChoPheDuyet.cs" />
     <Compile Include="Model\DangKyNghi.cs" />
