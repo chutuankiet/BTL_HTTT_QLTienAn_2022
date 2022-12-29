@@ -50,7 +50,7 @@ namespace HTTT_QLTienAn
         Admin_QLHocVien uc16;
         Admin_QLTaiKhoan uc17;
         Admin_QLTieuChuanAn uc18;
-
+        Admin_LoaiHV uc19;
 
         CanBo_SuaDSNhap ucSuaNhap;
         Chung_LSThanhToan ucLSThanhToan;
@@ -231,7 +231,8 @@ namespace HTTT_QLTienAn
                     AccordionControlElement it16 = new AccordionControlElement(ElementStyle.Item) { Text = "Quản lí học viên" };
                     AccordionControlElement it17 = new AccordionControlElement(ElementStyle.Item) { Text = "Quản lý Tài khoản" };
                     AccordionControlElement it18 = new AccordionControlElement(ElementStyle.Item) { Text = "Quản lí Tiêu chuẩn ăn" };
-                    accordionControl1.Elements.AddRange(new AccordionControlElement[] { it14, it15, it16, it17, it18 });
+                    AccordionControlElement it19 = new AccordionControlElement(ElementStyle.Item) { Text = "Quản lí Loại học viên" };
+                    accordionControl1.Elements.AddRange(new AccordionControlElement[] { it14, it15, it16, it17, it18, it19 });
                     accordionControl1.AllowItemSelection = true;
                     accordionControl1.ExpandAll();
 
@@ -240,20 +241,23 @@ namespace HTTT_QLTienAn
                     it16.Click += It16_Click;
                     it17.Click += It17_Click;
                     it18.Click += It18_Click;
+                    it19.Click += It19_Click;
 
                     uc14 = new Admin_QLCanBo();
                     uc15 = new Admin_QLDonVi();
                     uc16 = new Admin_QLHocVien();
                     uc17 = new Admin_QLTaiKhoan();
                     uc18 = new Admin_QLTieuChuanAn();
+                    uc19 = new Admin_LoaiHV();
 
                     uc14.Dock = DockStyle.Fill;
                     uc15.Dock = DockStyle.Fill;
                     uc16.Dock = DockStyle.Fill;
                     uc17.Dock = DockStyle.Fill;
                     uc18.Dock = DockStyle.Fill;
+                    uc19.Dock = DockStyle.Fill;
 
-                    showUsercontrol.Controls.AddRange(new Control[] { uc14, uc15, uc16, uc17 ,uc18});
+                    showUsercontrol.Controls.AddRange(new Control[] { uc14, uc15, uc16, uc17 ,uc18,uc19});
                     break;
                 default:
                     break;
@@ -316,6 +320,12 @@ namespace HTTT_QLTienAn
         {
             uc14.BringToFront();
         }
+         private void It19_Click(object sender, EventArgs e)
+        {
+            uc19.BringToFront();
+        }
+
+
 
 
         #endregion

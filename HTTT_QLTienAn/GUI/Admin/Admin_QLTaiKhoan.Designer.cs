@@ -111,7 +111,7 @@ namespace HTTT_QLTienAn.GUI.Admin
             this.xtraTabPage2.Controls.Add(this.txtSuaTK);
             this.xtraTabPage2.Controls.Add(this.label8);
             this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(496, 219);
+            this.xtraTabPage2.Size = new System.Drawing.Size(568, 219);
             this.xtraTabPage2.Text = "Sửa";
             // 
             // txtSuaMaDN
@@ -119,44 +119,45 @@ namespace HTTT_QLTienAn.GUI.Admin
             this.txtSuaMaDN.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtSuaMaDN.EditValue = "";
             this.txtSuaMaDN.Enabled = false;
-            this.txtSuaMaDN.Location = new System.Drawing.Point(31, 27);
+            this.txtSuaMaDN.Location = new System.Drawing.Point(36, 27);
             this.txtSuaMaDN.Name = "txtSuaMaDN";
-            this.txtSuaMaDN.Size = new System.Drawing.Size(283, 22);
+            this.txtSuaMaDN.Size = new System.Drawing.Size(323, 22);
             this.txtSuaMaDN.TabIndex = 22;
             // 
             // label13
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(28, 6);
+            this.label13.Location = new System.Drawing.Point(33, 6);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(95, 17);
+            this.label13.Size = new System.Drawing.Size(99, 17);
             this.label13.TabIndex = 23;
             this.label13.Text = "Mã đăng nhập";
             // 
             // btnSua
             // 
             this.btnSua.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSua.Location = new System.Drawing.Point(362, 57);
+            this.btnSua.Location = new System.Drawing.Point(415, 57);
             this.btnSua.Name = "btnSua";
-            this.btnSua.Size = new System.Drawing.Size(110, 110);
+            this.btnSua.Size = new System.Drawing.Size(126, 110);
             this.btnSua.TabIndex = 21;
             this.btnSua.Text = "Sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
             // txtSuaQTC
             // 
             this.txtSuaQTC.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtSuaQTC.EditValue = "";
-            this.txtSuaQTC.Location = new System.Drawing.Point(31, 174);
+            this.txtSuaQTC.Location = new System.Drawing.Point(36, 174);
             this.txtSuaQTC.Name = "txtSuaQTC";
-            this.txtSuaQTC.Size = new System.Drawing.Size(283, 22);
+            this.txtSuaQTC.Size = new System.Drawing.Size(323, 22);
             this.txtSuaQTC.TabIndex = 19;
             // 
             // label6
             // 
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(28, 153);
+            this.label6.Location = new System.Drawing.Point(33, 153);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(105, 17);
             this.label6.TabIndex = 20;
@@ -166,18 +167,18 @@ namespace HTTT_QLTienAn.GUI.Admin
             // 
             this.txtSuaMK.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtSuaMK.EditValue = "";
-            this.txtSuaMK.Location = new System.Drawing.Point(31, 126);
+            this.txtSuaMK.Location = new System.Drawing.Point(36, 126);
             this.txtSuaMK.Name = "txtSuaMK";
-            this.txtSuaMK.Size = new System.Drawing.Size(283, 22);
+            this.txtSuaMK.Size = new System.Drawing.Size(323, 22);
             this.txtSuaMK.TabIndex = 17;
             // 
             // label7
             // 
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(28, 104);
+            this.label7.Location = new System.Drawing.Point(33, 104);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(64, 17);
+            this.label7.Size = new System.Drawing.Size(66, 17);
             this.label7.TabIndex = 18;
             this.label7.Text = "Mật khẩu";
             // 
@@ -185,45 +186,46 @@ namespace HTTT_QLTienAn.GUI.Admin
             // 
             this.txtSuaTK.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtSuaTK.EditValue = "";
-            this.txtSuaTK.Location = new System.Drawing.Point(31, 72);
+            this.txtSuaTK.Location = new System.Drawing.Point(36, 72);
             this.txtSuaTK.Name = "txtSuaTK";
-            this.txtSuaTK.Size = new System.Drawing.Size(283, 22);
+            this.txtSuaTK.Size = new System.Drawing.Size(323, 22);
             this.txtSuaTK.TabIndex = 15;
             // 
             // label8
             // 
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(28, 51);
+            this.label8.Location = new System.Drawing.Point(33, 51);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(91, 17);
+            this.label8.Size = new System.Drawing.Size(95, 17);
             this.label8.TabIndex = 16;
             this.label8.Text = "Tên tài khoản";
             // 
             // btnThem
             // 
             this.btnThem.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnThem.Location = new System.Drawing.Point(359, 53);
+            this.btnThem.Location = new System.Drawing.Point(411, 53);
             this.btnThem.Name = "btnThem";
-            this.btnThem.Size = new System.Drawing.Size(110, 110);
+            this.btnThem.Size = new System.Drawing.Size(126, 110);
             this.btnThem.TabIndex = 14;
             this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
             // txtEditQTC
             // 
             this.txtEditQTC.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtEditQTC.EditValue = "";
-            this.txtEditQTC.Location = new System.Drawing.Point(24, 162);
+            this.txtEditQTC.Location = new System.Drawing.Point(28, 162);
             this.txtEditQTC.Name = "txtEditQTC";
             this.txtEditQTC.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtEditQTC.Size = new System.Drawing.Size(283, 22);
+            this.txtEditQTC.Size = new System.Drawing.Size(323, 22);
             this.txtEditQTC.TabIndex = 12;
             // 
             // label3
             // 
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(21, 141);
+            this.label3.Location = new System.Drawing.Point(25, 141);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(105, 17);
             this.label3.TabIndex = 13;
@@ -233,10 +235,10 @@ namespace HTTT_QLTienAn.GUI.Admin
             // 
             this.txtEditMK.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtEditMK.EditValue = "";
-            this.txtEditMK.Location = new System.Drawing.Point(24, 97);
+            this.txtEditMK.Location = new System.Drawing.Point(28, 97);
             this.txtEditMK.Name = "txtEditMK";
             this.txtEditMK.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtEditMK.Size = new System.Drawing.Size(283, 22);
+            this.txtEditMK.Size = new System.Drawing.Size(323, 22);
             this.txtEditMK.TabIndex = 10;
             // 
             // xtraTabPage3
@@ -249,33 +251,34 @@ namespace HTTT_QLTienAn.GUI.Admin
             this.xtraTabPage3.Controls.Add(this.txtXoaTK);
             this.xtraTabPage3.Controls.Add(this.label12);
             this.xtraTabPage3.Name = "xtraTabPage3";
-            this.xtraTabPage3.Size = new System.Drawing.Size(496, 219);
+            this.xtraTabPage3.Size = new System.Drawing.Size(568, 219);
             this.xtraTabPage3.Text = "Xoá";
             // 
             // btnXoa
             // 
             this.btnXoa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnXoa.Location = new System.Drawing.Point(363, 57);
+            this.btnXoa.Location = new System.Drawing.Point(416, 57);
             this.btnXoa.Name = "btnXoa";
-            this.btnXoa.Size = new System.Drawing.Size(110, 110);
+            this.btnXoa.Size = new System.Drawing.Size(126, 110);
             this.btnXoa.TabIndex = 28;
             this.btnXoa.Text = "Xoá";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
             // txtXoaQTC
             // 
             this.txtXoaQTC.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtXoaQTC.EditValue = "";
             this.txtXoaQTC.Enabled = false;
-            this.txtXoaQTC.Location = new System.Drawing.Point(31, 166);
+            this.txtXoaQTC.Location = new System.Drawing.Point(36, 166);
             this.txtXoaQTC.Name = "txtXoaQTC";
-            this.txtXoaQTC.Size = new System.Drawing.Size(283, 22);
+            this.txtXoaQTC.Size = new System.Drawing.Size(323, 22);
             this.txtXoaQTC.TabIndex = 26;
             // 
             // label9
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(28, 145);
+            this.label9.Location = new System.Drawing.Point(33, 145);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(105, 17);
             this.label9.TabIndex = 27;
@@ -286,18 +289,18 @@ namespace HTTT_QLTienAn.GUI.Admin
             this.txtXoaMK.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtXoaMK.EditValue = "";
             this.txtXoaMK.Enabled = false;
-            this.txtXoaMK.Location = new System.Drawing.Point(31, 101);
+            this.txtXoaMK.Location = new System.Drawing.Point(36, 101);
             this.txtXoaMK.Name = "txtXoaMK";
-            this.txtXoaMK.Size = new System.Drawing.Size(283, 22);
+            this.txtXoaMK.Size = new System.Drawing.Size(323, 22);
             this.txtXoaMK.TabIndex = 24;
             // 
             // label11
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(28, 80);
+            this.label11.Location = new System.Drawing.Point(33, 80);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(64, 17);
+            this.label11.Size = new System.Drawing.Size(66, 17);
             this.label11.TabIndex = 25;
             this.label11.Text = "Mật khẩu";
             // 
@@ -306,18 +309,18 @@ namespace HTTT_QLTienAn.GUI.Admin
             this.txtXoaTK.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtXoaTK.EditValue = "";
             this.txtXoaTK.Enabled = false;
-            this.txtXoaTK.Location = new System.Drawing.Point(31, 32);
+            this.txtXoaTK.Location = new System.Drawing.Point(36, 32);
             this.txtXoaTK.Name = "txtXoaTK";
-            this.txtXoaTK.Size = new System.Drawing.Size(283, 22);
+            this.txtXoaTK.Size = new System.Drawing.Size(323, 22);
             this.txtXoaTK.TabIndex = 22;
             // 
             // label12
             // 
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(28, 11);
+            this.label12.Location = new System.Drawing.Point(33, 11);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(91, 17);
+            this.label12.Size = new System.Drawing.Size(95, 17);
             this.label12.TabIndex = 23;
             this.label12.Text = "Tên tài khoản";
             // 
@@ -327,7 +330,7 @@ namespace HTTT_QLTienAn.GUI.Admin
             this.Thêm.Location = new System.Drawing.Point(2, 17);
             this.Thêm.Name = "Thêm";
             this.Thêm.SelectedTabPage = this.xtraTabPage1;
-            this.Thêm.Size = new System.Drawing.Size(498, 244);
+            this.Thêm.Size = new System.Drawing.Size(570, 244);
             this.Thêm.TabIndex = 0;
             this.Thêm.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
             this.xtraTabPage1,
@@ -344,16 +347,16 @@ namespace HTTT_QLTienAn.GUI.Admin
             this.xtraTabPage1.Controls.Add(this.txtEditThemTK);
             this.xtraTabPage1.Controls.Add(this.label5);
             this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(496, 219);
+            this.xtraTabPage1.Size = new System.Drawing.Size(568, 219);
             this.xtraTabPage1.Text = "Thêm";
             // 
             // label4
             // 
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(21, 76);
+            this.label4.Location = new System.Drawing.Point(25, 76);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(64, 17);
+            this.label4.Size = new System.Drawing.Size(66, 17);
             this.label4.TabIndex = 11;
             this.label4.Text = "Mật khẩu";
             // 
@@ -361,19 +364,19 @@ namespace HTTT_QLTienAn.GUI.Admin
             // 
             this.txtEditThemTK.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtEditThemTK.EditValue = "";
-            this.txtEditThemTK.Location = new System.Drawing.Point(24, 28);
+            this.txtEditThemTK.Location = new System.Drawing.Point(28, 28);
             this.txtEditThemTK.Name = "txtEditThemTK";
             this.txtEditThemTK.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtEditThemTK.Size = new System.Drawing.Size(283, 22);
+            this.txtEditThemTK.Size = new System.Drawing.Size(323, 22);
             this.txtEditThemTK.TabIndex = 8;
             // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(21, 7);
+            this.label5.Location = new System.Drawing.Point(25, 7);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(91, 17);
+            this.label5.Size = new System.Drawing.Size(95, 17);
             this.label5.TabIndex = 9;
             this.label5.Text = "Tên tài khoản";
             // 
@@ -385,7 +388,7 @@ namespace HTTT_QLTienAn.GUI.Admin
             this.dgvTKDN.Location = new System.Drawing.Point(2, 28);
             this.dgvTKDN.MainView = this.dgvTKDN_View;
             this.dgvTKDN.Name = "dgvTKDN";
-            this.dgvTKDN.Size = new System.Drawing.Size(854, 241);
+            this.dgvTKDN.Size = new System.Drawing.Size(976, 241);
             this.dgvTKDN.TabIndex = 0;
             this.dgvTKDN.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.dgvTKDN_View});
@@ -400,46 +403,47 @@ namespace HTTT_QLTienAn.GUI.Admin
             this.dgvTKDN_View.GridControl = this.dgvTKDN;
             this.dgvTKDN_View.Name = "dgvTKDN_View";
             this.dgvTKDN_View.OptionsView.ShowGroupPanel = false;
+            this.dgvTKDN_View.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.dgvTKDN_View_FocusedRowChanged);
             // 
             // gridColumn1
             // 
             this.gridColumn1.Caption = "Mã đăng nhập";
-            this.gridColumn1.FieldName = "MaDangNhap";
-            this.gridColumn1.MinWidth = 25;
+            this.gridColumn1.FieldName = "MaTK";
+            this.gridColumn1.MinWidth = 29;
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
             this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 94;
+            this.gridColumn1.Width = 107;
             // 
             // gridColumn2
             // 
             this.gridColumn2.Caption = "Tài khoản";
-            this.gridColumn2.FieldName = "TaiKhoan";
-            this.gridColumn2.MinWidth = 25;
+            this.gridColumn2.FieldName = "TenDangNhap";
+            this.gridColumn2.MinWidth = 29;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
             this.gridColumn2.VisibleIndex = 1;
-            this.gridColumn2.Width = 94;
+            this.gridColumn2.Width = 107;
             // 
             // gridColumn3
             // 
             this.gridColumn3.Caption = "Mật khẩu";
             this.gridColumn3.FieldName = "MatKhau";
-            this.gridColumn3.MinWidth = 25;
+            this.gridColumn3.MinWidth = 29;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
             this.gridColumn3.VisibleIndex = 2;
-            this.gridColumn3.Width = 94;
+            this.gridColumn3.Width = 107;
             // 
             // gridColumn4
             // 
             this.gridColumn4.Caption = "Quyền truy cập";
-            this.gridColumn4.FieldName = "QuyenTruyCap";
-            this.gridColumn4.MinWidth = 25;
+            this.gridColumn4.FieldName = "Quyen";
+            this.gridColumn4.MinWidth = 29;
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
             this.gridColumn4.VisibleIndex = 3;
-            this.gridColumn4.Width = 94;
+            this.gridColumn4.Width = 107;
             // 
             // groupControl2
             // 
@@ -450,9 +454,9 @@ namespace HTTT_QLTienAn.GUI.Admin
             this.groupControl2.Controls.Add(this.label1);
             this.groupControl2.Controls.Add(this.txtTenTK_CT);
             this.groupControl2.Controls.Add(this.label10);
-            this.groupControl2.Location = new System.Drawing.Point(5, 283);
+            this.groupControl2.Location = new System.Drawing.Point(6, 283);
             this.groupControl2.Name = "groupControl2";
-            this.groupControl2.Size = new System.Drawing.Size(346, 263);
+            this.groupControl2.Size = new System.Drawing.Size(395, 263);
             this.groupControl2.TabIndex = 5;
             this.groupControl2.Text = "Chi tiết tài khoản";
             // 
@@ -461,17 +465,17 @@ namespace HTTT_QLTienAn.GUI.Admin
             this.txtQuyenTruyCap_CT.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtQuyenTruyCap_CT.EditValue = "";
             this.txtQuyenTruyCap_CT.Enabled = false;
-            this.txtQuyenTruyCap_CT.Location = new System.Drawing.Point(19, 196);
+            this.txtQuyenTruyCap_CT.Location = new System.Drawing.Point(22, 196);
             this.txtQuyenTruyCap_CT.Name = "txtQuyenTruyCap_CT";
             this.txtQuyenTruyCap_CT.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtQuyenTruyCap_CT.Size = new System.Drawing.Size(283, 22);
+            this.txtQuyenTruyCap_CT.Size = new System.Drawing.Size(323, 22);
             this.txtQuyenTruyCap_CT.TabIndex = 6;
             // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 175);
+            this.label2.Location = new System.Drawing.Point(18, 175);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 17);
             this.label2.TabIndex = 7;
@@ -482,19 +486,19 @@ namespace HTTT_QLTienAn.GUI.Admin
             this.txtMatKhau_CT.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtMatKhau_CT.EditValue = "";
             this.txtMatKhau_CT.Enabled = false;
-            this.txtMatKhau_CT.Location = new System.Drawing.Point(19, 131);
+            this.txtMatKhau_CT.Location = new System.Drawing.Point(22, 131);
             this.txtMatKhau_CT.Name = "txtMatKhau_CT";
             this.txtMatKhau_CT.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtMatKhau_CT.Size = new System.Drawing.Size(283, 22);
+            this.txtMatKhau_CT.Size = new System.Drawing.Size(323, 22);
             this.txtMatKhau_CT.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(16, 110);
+            this.label1.Location = new System.Drawing.Point(18, 110);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 17);
+            this.label1.Size = new System.Drawing.Size(66, 17);
             this.label1.TabIndex = 5;
             this.label1.Text = "Mật khẩu";
             // 
@@ -503,19 +507,19 @@ namespace HTTT_QLTienAn.GUI.Admin
             this.txtTenTK_CT.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtTenTK_CT.EditValue = "";
             this.txtTenTK_CT.Enabled = false;
-            this.txtTenTK_CT.Location = new System.Drawing.Point(19, 62);
+            this.txtTenTK_CT.Location = new System.Drawing.Point(22, 62);
             this.txtTenTK_CT.Name = "txtTenTK_CT";
             this.txtTenTK_CT.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.txtTenTK_CT.Size = new System.Drawing.Size(283, 22);
+            this.txtTenTK_CT.Size = new System.Drawing.Size(323, 22);
             this.txtTenTK_CT.TabIndex = 2;
             // 
             // label10
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(16, 41);
+            this.label10.Location = new System.Drawing.Point(18, 41);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(91, 17);
+            this.label10.Size = new System.Drawing.Size(95, 17);
             this.label10.TabIndex = 3;
             this.label10.Text = "Tên tài khoản";
             // 
@@ -527,7 +531,7 @@ namespace HTTT_QLTienAn.GUI.Admin
             this.groupControl1.Controls.Add(this.dgvTKDN);
             this.groupControl1.Location = new System.Drawing.Point(3, 3);
             this.groupControl1.Name = "groupControl1";
-            this.groupControl1.Size = new System.Drawing.Size(858, 274);
+            this.groupControl1.Size = new System.Drawing.Size(981, 274);
             this.groupControl1.TabIndex = 4;
             this.groupControl1.Text = "Tài khoản đăng nhập";
             // 
@@ -536,21 +540,22 @@ namespace HTTT_QLTienAn.GUI.Admin
             this.groupControl3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupControl3.Controls.Add(this.Thêm);
-            this.groupControl3.Location = new System.Drawing.Point(357, 283);
+            this.groupControl3.Location = new System.Drawing.Point(408, 283);
             this.groupControl3.Name = "groupControl3";
-            this.groupControl3.Size = new System.Drawing.Size(502, 263);
+            this.groupControl3.Size = new System.Drawing.Size(574, 263);
             this.groupControl3.TabIndex = 6;
             this.groupControl3.Text = "Chỉnh sửa tài khoản";
             // 
-            // Admin_TaiKhoan
+            // Admin_QLTaiKhoan
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.groupControl3);
-            this.Name = "Admin_TaiKhoan";
-            this.Size = new System.Drawing.Size(865, 549);
+            this.Name = "Admin_QLTaiKhoan";
+            this.Size = new System.Drawing.Size(989, 549);
+            this.Load += new System.EventHandler(this.Admin_DangNhap_Load);
             this.xtraTabPage2.ResumeLayout(false);
             this.xtraTabPage2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.txtSuaMaDN.Properties)).EndInit();
