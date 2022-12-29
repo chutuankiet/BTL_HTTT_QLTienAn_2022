@@ -118,3 +118,15 @@ join HocVien hv on hv.MaHocVien = dkn.MaHocVien
 join Lop l on l.MaLop = hv.MaLop
 join DonVi  dv on dv.MaDonVi = l.MaDonVi
 where TrangThaiTT = 1
+
+
+GO 
+
+CREATE VIEW CanBo_SuaNhapDS as
+SELECT dkn.MaHocVien, l.TenLop, dkn.NgayDi, dkn.NgayVe, ln.TenLoaiNghi, dkn.MaDangKy,hv.MaLop,l.MaDonVi,dkn.MaDS,dkn.MaLoaiNghi
+FROM dbo.DanhSachRaNgoai dsrn 
+LEFT JOIN dbo.DangKyNghi dkn ON dkn.MaDS = dsrn.MaDS
+LEFT JOIN dbo.LoaiNghi ln ON ln.MaLoaiNghi = dkn.MaLoaiNghi
+INNER JOIN dbo.HocVien hv ON hv.MaHocVien = dkn.MaHocVien
+INNER JOIN dbo.Lop l ON	l.MaLop = hv.MaLop
+JOIN dbo.ChiTietCatCom ctcc ON ctcc.MaDangKy = dkn.MaDangKy

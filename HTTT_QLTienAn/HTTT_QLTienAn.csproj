@@ -163,11 +163,23 @@
     <Compile Include="GUI\Chung_CBSuaNhap.Designer.cs">
       <DependentUpon>Chung_CBSuaNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Chung_DSPhanHoi.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Chung_DSPhanHoi.Designer.cs">
+      <DependentUpon>Chung_DSPhanHoi.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Chung_LSThanhToan.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="GUI\Chung_LSThanhToan.Designer.cs">
       <DependentUpon>Chung_LSThanhToan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Chung_PhanHoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Chung_PhanHoi.Designer.cs">
+      <DependentUpon>Chung_PhanHoi.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\DaiDoi\DaiDoi_ChoPheDuyet.cs">
       <SubType>UserControl</SubType>
@@ -304,6 +316,7 @@
     <Compile Include="Model\CanBo.cs" />
     <Compile Include="Model\ChiTietCatCom.cs" />
     <Compile Include="Model\ChiTietLoaiNghi.cs" />
+    <Compile Include="Model\Chung_GetPhanHoi.cs" />
     <Compile Include="Model\CT_CatCom_HocVien.cs" />
     <Compile Include="Model\c_ChoPheDuyet.cs" />
     <Compile Include="Model\DangKyNghi.cs" />
@@ -326,6 +339,7 @@
     <Compile Include="Model\Lop.cs" />
     <Compile Include="Model\NhaBep_ListCatCom.cs" />
     <Compile Include="Model\NhaBep_ListThanhToan.cs" />
+    <Compile Include="Model\PhanHoi.cs" />
     <Compile Include="Model\PhieuThanhToan.cs" />
     <Compile Include="Model\QLTA_model.cs" />
     <Compile Include="Model\TaiKhoan.cs" />
@@ -353,8 +367,14 @@
     <EmbeddedResource Include="GUI\Chung_CBSuaNhap.resx">
       <DependentUpon>Chung_CBSuaNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Chung_DSPhanHoi.resx">
+      <DependentUpon>Chung_DSPhanHoi.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Chung_LSThanhToan.resx">
       <DependentUpon>Chung_LSThanhToan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Chung_PhanHoi.resx">
+      <DependentUpon>Chung_PhanHoi.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\DaiDoi\DaiDoi_ChoPheDuyet.resx">
       <DependentUpon>DaiDoi_ChoPheDuyet.cs</DependentUpon>
@@ -454,7 +474,9 @@
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="SQL\view.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

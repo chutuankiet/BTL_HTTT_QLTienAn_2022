@@ -80,6 +80,7 @@ namespace HTTT_QLTienAn.GUI
             this.label3 = new System.Windows.Forms.Label();
             this.dateStart = new DevExpress.XtraEditors.DateEdit();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnPhanHoi = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dateEnd.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEnd.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -368,6 +369,7 @@ namespace HTTT_QLTienAn.GUI
             // 
             // groupControl3
             // 
+            this.groupControl3.Controls.Add(this.btnPhanHoi);
             this.groupControl3.Controls.Add(this.lbTongTien);
             this.groupControl3.Controls.Add(this.lbLoaiTCA);
             this.groupControl3.Controls.Add(this.lbLoaiHocVien);
@@ -654,6 +656,16 @@ namespace HTTT_QLTienAn.GUI
             this.label1.TabIndex = 0;
             this.label1.Text = "Đợt :";
             // 
+            // btnPhanHoi
+            // 
+            this.btnPhanHoi.Location = new System.Drawing.Point(29, 308);
+            this.btnPhanHoi.Name = "btnPhanHoi";
+            this.btnPhanHoi.Size = new System.Drawing.Size(230, 23);
+            this.btnPhanHoi.TabIndex = 10;
+            this.btnPhanHoi.Text = "Phản hồi về thanh toán";
+            this.btnPhanHoi.UseVisualStyleBackColor = true;
+            this.btnPhanHoi.Click += new System.EventHandler(this.btnPhanHoi_Click);
+            // 
             // Chung_LSThanhToan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -743,5 +755,6 @@ namespace HTTT_QLTienAn.GUI
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn6;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn7;
+        private System.Windows.Forms.Button btnPhanHoi;
     }
 }

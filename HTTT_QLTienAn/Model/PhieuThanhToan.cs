@@ -9,6 +9,12 @@ namespace HTTT_QLTienAn.Model
     [Table("PhieuThanhToan")]
     public partial class PhieuThanhToan
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public PhieuThanhToan()
+        {
+            PhanHois = new HashSet<PhanHoi>();
+        }
+
         [Key]
         public int MaThanhToan { get; set; }
 
@@ -30,5 +36,8 @@ namespace HTTT_QLTienAn.Model
         public virtual DangKyNghi DangKyNghi { get; set; }
 
         public virtual DotThanhToan DotThanhToan { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PhanHoi> PhanHois { get; set; }
     }
 }

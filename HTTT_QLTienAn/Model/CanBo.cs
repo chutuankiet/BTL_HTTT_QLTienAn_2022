@@ -15,6 +15,7 @@ namespace HTTT_QLTienAn.Model
             DonVis = new HashSet<DonVi>();
             DanhSachRaNgoais = new HashSet<DanhSachRaNgoai>();
             DanhSachRaNgoais1 = new HashSet<DanhSachRaNgoai>();
+            PhanHois = new HashSet<PhanHoi>();
             PhieuThanhToans = new HashSet<PhieuThanhToan>();
         }
 
@@ -47,6 +48,9 @@ namespace HTTT_QLTienAn.Model
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<DanhSachRaNgoai> DanhSachRaNgoais1 { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PhanHoi> PhanHois { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PhieuThanhToan> PhieuThanhToans { get; set; }

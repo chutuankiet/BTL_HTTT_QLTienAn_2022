@@ -35,6 +35,7 @@ namespace HTTT_QLTienAn.GUI
         List<NhaBep_ListThanhToan> dsHocVien;
         private void Chung_LSThanhToan_Load(object sender, EventArgs e)
         {
+            MaTTCur = 0;
             switch (accPer)
             {
 
@@ -76,8 +77,12 @@ namespace HTTT_QLTienAn.GUI
 
             gridControl1.DataSource = dsHocVien;
 
-            if(dsHocVien.Count > 0) LoadChiTietInfo_HocVien(dsHocVien[0]);
+            if (dsHocVien.Count > 0)
+            {
+                LoadChiTietInfo_HocVien(dsHocVien[0]);
+                MaTTCur = dsHocVien[0].MaThanhToan;
 
+            }
 
         }
 
@@ -107,11 +112,29 @@ namespace HTTT_QLTienAn.GUI
 
         }
 
+        int MaTTCur;
         private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
         {
             int index = e.RowHandle;
 
+            MaTTCur = dsHocVien[index].MaThanhToan;
             LoadChiTietInfo_HocVien(dsHocVien[index]);
+
+        }
+
+        private void btnPhanHoi_Click(object sender, EventArgs e)
+        {
+            if(MaTTCur != 0)
+            {
+
+            GUI.Chung_PhanHoi newfrom = new Chung_PhanHoi(accPer, MaTTCur);
+            newfrom.Show();
+            }
+            else
+            {
+                MessageBox.Show("Vui lòng chọn thanh toán cần phản hồi!!", "Thông báo");
+                return;
+            }
 
         }
     }
