@@ -41,5 +41,13 @@ namespace HTTT_QLTienAn.Model
         [Key]
         [Column(Order = 6)]
         public bool BuoiToi { get; set; }
+
+        [StringLength(100)]
+        public string TenLop { get; set; }
+
+        [Key]
+        [Column(Order = 7)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
+        public int MaLop { get; set; }
     }
 }

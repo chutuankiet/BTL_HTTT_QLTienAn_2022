@@ -181,6 +181,12 @@
     <Compile Include="GUI\DaiDoi\DaiDoi_DaPheDuyet.Designer.cs">
       <DependentUpon>DaiDoi_DaPheDuyet.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\DaiDoi\DaiDoi_QuanLyDS.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\DaiDoi\DaiDoi_QuanLyDS.Designer.cs">
+      <DependentUpon>DaiDoi_QuanLyDS.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Lop\CatCom_HV.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -349,6 +355,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\DaiDoi\DaiDoi_DaPheDuyet.resx">
       <DependentUpon>DaiDoi_DaPheDuyet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\DaiDoi\DaiDoi_QuanLyDS.resx">
+      <DependentUpon>DaiDoi_QuanLyDS.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Lop\CatCom_HV.resx">
       <DependentUpon>CatCom_HV.cs</DependentUpon>
