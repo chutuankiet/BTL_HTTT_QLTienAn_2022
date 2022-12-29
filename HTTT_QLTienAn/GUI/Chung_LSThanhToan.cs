@@ -20,14 +20,14 @@ namespace HTTT_QLTienAn.GUI
             InitializeComponent();
 
         }
-        public Chung_LSThanhToan(bool isCanBo)
+        public Chung_LSThanhToan(string per)
         {
             InitializeComponent();
-            isCB = isCanBo;
+            accPer = per;
         }
         QLTA_model db = new QLTA_model();
 
-        bool isCB;
+        string accPer;
 
         CanBo cb;
         HocVien loptruong;
@@ -35,22 +35,49 @@ namespace HTTT_QLTienAn.GUI
         List<NhaBep_ListThanhToan> dsHocVien;
         private void Chung_LSThanhToan_Load(object sender, EventArgs e)
         {
-            if (isCB)
+            switch (accPer)
             {
-                cb = db.CanBoes.Where(m => m.MaCanBo == MainForm.MaID).FirstOrDefault();
-                string TenDonvi = db.DonVis.Where(m => m.MaDonVi == cb.MaDonVi).FirstOrDefault().TenDonVi;
+
+                case "l":
+                    {
+                        loptruong = db.HocViens.Where(m => m.MaHocVien == MainForm.MaID).FirstOrDefault();
+                        string TenDonvi = db.DonVis.Where(m => m.MaDonVi == loptruong.Lop.MaDonVi).FirstOrDefault().TenDonVi;
+                        string TenLop = db.Lops.Where(m => m.MaLop == loptruong.MaLop).FirstOrDefault().TenLop;
+                        lbTenDV.Text = $"Lớp {TenLop} - Đại đội {TenDonvi}";
+
+                        dsHocVien = db.NhaBep_ListThanhToan.Where(m => m.TrangThaiTT == 1 && m.MaLop == loptruong.MaLop).ToList();
+                        break;
+                    }
+                case "c":
+                    {
+                        cb = db.CanBoes.Where(m => m.MaCanBo == MainForm.MaID).FirstOrDefault();
+                        string TenDonvi = db.DonVis.Where(m => m.MaDonVi == cb.MaDonVi).FirstOrDefault().TenDonVi;
 
 
-                lbTenDV.Text = TenDonvi;
+                        lbTenDV.Text = TenDonvi;
 
-                dsHocVien = db.NhaBep_ListThanhToan.Where(m => m.TrangThaiTT == 1 && m.TenDonVi == TenDonvi).ToList();
+                        dsHocVien = db.NhaBep_ListThanhToan.Where(m => m.TrangThaiTT == 1 && m.TenDonVi == TenDonvi).ToList();
 
+                        break;
+                    }
 
-                gridControl1.DataSource = dsHocVien;
+                case "d":
+                    {
+                        string TenDonvi = "Tiểu đoàn 1";
 
+                        lbTenDV.Text = TenDonvi;
+
+                        dsHocVien = db.NhaBep_ListThanhToan.ToList();
+                        break;
+                    }
 
 
             }
+
+            gridControl1.DataSource = dsHocVien;
+
+            if(dsHocVien.Count > 0) LoadChiTietInfo_HocVien(dsHocVien[0]);
+
 
         }
 

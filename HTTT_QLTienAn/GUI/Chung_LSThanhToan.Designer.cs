@@ -107,6 +107,7 @@ namespace HTTT_QLTienAn.GUI
             // 
             // dateEnd
             // 
+            this.dateEnd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dateEnd.EditValue = null;
             this.dateEnd.Location = new System.Drawing.Point(426, 72);
             this.dateEnd.Name = "dateEnd";
@@ -575,6 +576,7 @@ namespace HTTT_QLTienAn.GUI
             // 
             // label14
             // 
+            this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label14.AutoSize = true;
             this.label14.BackColor = System.Drawing.Color.Transparent;
             this.label14.Location = new System.Drawing.Point(339, 35);
@@ -585,6 +587,7 @@ namespace HTTT_QLTienAn.GUI
             // 
             // chkTT_DaTT
             // 
+            this.chkTT_DaTT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.chkTT_DaTT.AutoSize = true;
             this.chkTT_DaTT.BackColor = System.Drawing.Color.Transparent;
             this.chkTT_DaTT.Location = new System.Drawing.Point(426, 34);
@@ -596,6 +599,7 @@ namespace HTTT_QLTienAn.GUI
             // 
             // btnLoc
             // 
+            this.btnLoc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnLoc.Appearance.Font = new System.Drawing.Font("Tahoma", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLoc.Appearance.Options.UseFont = true;
             this.btnLoc.Location = new System.Drawing.Point(557, 43);
@@ -607,6 +611,7 @@ namespace HTTT_QLTienAn.GUI
             // 
             // label4
             // 
+            this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
             this.label4.BackColor = System.Drawing.Color.Transparent;
             this.label4.Location = new System.Drawing.Point(374, 77);
@@ -617,6 +622,7 @@ namespace HTTT_QLTienAn.GUI
             // 
             // label3
             // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
             this.label3.BackColor = System.Drawing.Color.Transparent;
             this.label3.Location = new System.Drawing.Point(206, 77);
@@ -627,6 +633,7 @@ namespace HTTT_QLTienAn.GUI
             // 
             // dateStart
             // 
+            this.dateStart.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.dateStart.EditValue = null;
             this.dateStart.Location = new System.Drawing.Point(243, 72);
             this.dateStart.Name = "dateStart";

@@ -94,9 +94,9 @@ namespace HTTT_QLTienAn
                     AccordionControlElement it2 = new AccordionControlElement(ElementStyle.Item) { Text = "Danh sách chờ phê duyệt" };
                     AccordionControlElement it3 = new AccordionControlElement(ElementStyle.Item) { Text = "Danh sách đã hủy" };
                     AccordionControlElement it4 = new AccordionControlElement(ElementStyle.Item) { Text = "Danh sách đã phê duyệt" };
+                    AccordionControlElement itLSTT = new AccordionControlElement(ElementStyle.Item) { Text = "Lịch sử thanh toán" };
 
-                    //gr1.Elements.AddRange(new AccordionControlElement[] { it6, it7, it8 });
-                    accordionControl1.Elements.AddRange(new AccordionControlElement[] { it1, it2, it3, it4 });
+                    accordionControl1.Elements.AddRange(new AccordionControlElement[] { it1, it2, it3, it4, itLSTT });
                     accordionControl1.AllowItemSelection = true;
                     accordionControl1.ExpandAll();
 
@@ -104,17 +104,20 @@ namespace HTTT_QLTienAn
                     it2.Click += It2_Click;
                     it3.Click += It3_Click;
                     it4.Click += It4_Click;
+                    itLSTT.Click += ItLSTT_Click;
 
                     uc1 = new Lop_NhapDS();
                     uc2 = new Lop_ChoPheDuyet();
                     uc3 = new Lop_DaHuy();
                     uc4 = new Lop_DaPheDuyet();
+                    ucLSThanhToan = new Chung_LSThanhToan(accPer);
 
                     uc1.Dock = DockStyle.Fill;
                     uc2.Dock = DockStyle.Fill;
                     uc3.Dock = DockStyle.Fill;
                     uc4.Dock = DockStyle.Fill;
-                    showUsercontrol.Controls.AddRange(new Control[] { uc1, uc2, uc3, uc4 });
+                    ucLSThanhToan.Dock = DockStyle.Fill;
+                    showUsercontrol.Controls.AddRange(new Control[] { uc1, uc2, uc3, uc4, ucLSThanhToan });
                     break;
 
 
@@ -140,7 +143,7 @@ namespace HTTT_QLTienAn
                     uc5 = new DaiDoi_ChoPheDuyet();
                     uc6 = new DaiDoi_DaHuyPheDuyet();
                     uc7 = new DaiDoi_DaPheDuyet();
-                    ucLSThanhToan = new Chung_LSThanhToan(true);
+                    ucLSThanhToan = new Chung_LSThanhToan(accPer);
                     uc71 = new DaiDoi_QuanLyDS();
 
                     //testing..............
@@ -171,8 +174,9 @@ namespace HTTT_QLTienAn
                     AccordionControlElement it9 = new AccordionControlElement(ElementStyle.Item) { Text = "Danh sách đã hủy" };
                     AccordionControlElement it10 = new AccordionControlElement(ElementStyle.Item) { Text = "Danh sách đã duyệt" };
                     AccordionControlElement it101 = new AccordionControlElement(ElementStyle.Item) { Text = "Quản lý quân số ăn" };
+                    AccordionControlElement itLSTTd = new AccordionControlElement(ElementStyle.Item) { Text = "Lịch sử thanh toán" };
 
-                    accordionControl1.Elements.AddRange(new AccordionControlElement[] { it8, it9, it10, it101 });
+                    accordionControl1.Elements.AddRange(new AccordionControlElement[] { it8, it9, it10, it101, itLSTTd });
                     accordionControl1.AllowItemSelection = true;
                     accordionControl1.ExpandAll();
 
@@ -180,20 +184,23 @@ namespace HTTT_QLTienAn
                     it9.Click += It9_Click;
                     it10.Click += It10_Click;
                     it101.Click += It101_Click;
+                    itLSTTd.Click += ItLSTT_Click;
 
 
                     uc8 = new TieuDoan_ChoPheDuyet();//para macanbo
                     uc9 = new TieuDoan_DaHuy();
                     uc10 = new TieuDoan_DaPheDuyet();
                     uc101 = new TieuDoan_QuanLyDS();
+                    ucLSThanhToan = new Chung_LSThanhToan(accPer);
 
                     uc8.Dock = DockStyle.Fill;
                     uc9.Dock = DockStyle.Fill;
                     uc10.Dock = DockStyle.Fill;
                     uc101.Dock = DockStyle.Fill;
+                    ucLSThanhToan.Dock = DockStyle.Fill;
 
 
-                    showUsercontrol.Controls.AddRange(new Control[] { uc8, uc9, uc10,uc101 });
+                    showUsercontrol.Controls.AddRange(new Control[] { uc8, uc9, uc10,uc101, ucLSThanhToan });
 
                     break;
 

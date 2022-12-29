@@ -157,6 +157,12 @@
     <Compile Include="GUI\CanBo_SuaDSNhap.Designer.cs">
       <DependentUpon>CanBo_SuaDSNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\Chung_CBSuaNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Chung_CBSuaNhap.Designer.cs">
+      <DependentUpon>Chung_CBSuaNhap.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Chung_LSThanhToan.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -343,6 +349,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\CanBo_SuaDSNhap.resx">
       <DependentUpon>CanBo_SuaDSNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Chung_CBSuaNhap.resx">
+      <DependentUpon>Chung_CBSuaNhap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\Chung_LSThanhToan.resx">
       <DependentUpon>Chung_LSThanhToan.cs</DependentUpon>
