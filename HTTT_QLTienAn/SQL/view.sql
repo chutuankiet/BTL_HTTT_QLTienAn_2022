@@ -130,3 +130,17 @@ LEFT JOIN dbo.LoaiNghi ln ON ln.MaLoaiNghi = dkn.MaLoaiNghi
 INNER JOIN dbo.HocVien hv ON hv.MaHocVien = dkn.MaHocVien
 INNER JOIN dbo.Lop l ON	l.MaLop = hv.MaLop
 JOIN dbo.ChiTietCatCom ctcc ON ctcc.MaDangKy = dkn.MaDangKy
+
+
+GO
+
+
+alter VIEW [dbo].[CanBo_SuaNhapDS] AS
+SELECT dkn.MaHocVien, l.TenLop, dkn.NgayDi, dkn.NgayVe, ln.TenLoaiNghi, dkn.MaDangKy,hv.MaLop,l.MaDonVi,dkn.MaDS,dkn.MaLoaiNghi,
+ ctcc.BuoiSang,ctcc.BuoiTrua,ctcc.BuoiToi, dsrn.PheDuyet
+FROM dbo.DanhSachRaNgoai dsrn 
+LEFT JOIN dbo.DangKyNghi dkn ON dkn.MaDS = dsrn.MaDS
+LEFT JOIN dbo.LoaiNghi ln ON ln.MaLoaiNghi = dkn.MaLoaiNghi
+INNER JOIN dbo.HocVien hv ON hv.MaHocVien = dkn.MaHocVien
+INNER JOIN dbo.Lop l ON	l.MaLop = hv.MaLop
+JOIN dbo.ChiTietCatCom ctcc ON ctcc.MaDangKy = dkn.MaDangKy

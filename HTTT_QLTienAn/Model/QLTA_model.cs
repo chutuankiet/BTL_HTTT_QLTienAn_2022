@@ -28,6 +28,7 @@ namespace HTTT_QLTienAn.Model
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
         public virtual DbSet<TieuChuanAn> TieuChuanAns { get; set; }
         public virtual DbSet<c_ChoPheDuyet> c_ChoPheDuyet { get; set; }
+        public virtual DbSet<CanBo_SuaNhapDS> CanBo_SuaNhapDS { get; set; }
         public virtual DbSet<Chung_GetPhanHoi> Chung_GetPhanHoi { get; set; }
         public virtual DbSet<DS_ChoPheDuyet> DS_ChoPheDuyet { get; set; }
         public virtual DbSet<DS_CTLopChoPheDuyet> DS_CTLopChoPheDuyet { get; set; }

@@ -91,19 +91,23 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
         {
             if (DialogResult.Yes == MessageBox.Show("Bạn có chắc chắn muốn hủy?", "Xác nhận hủy", MessageBoxButtons.YesNo, MessageBoxIcon.Warning))
             {
-
-                var dsn = db.DanhSachRaNgoais.SingleOrDefault(p => p.MaDS == MaDS_XacNhan);
-                if (dsn != null)
+                if (MaDS_XacNhan != 0)
                 {
-                    dsn.PheDuyet = -2;
-                    dsn.MaCBc = MainForm.MaID;
-                    db.SaveChanges();
-                    MessageBox.Show("Danh sách đã được huỷ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    var dsn = db.DanhSachRaNgoais.SingleOrDefault(p => p.MaDS == MaDS_XacNhan);
+                    if (dsn != null)
+                    {
+                        dsn.PheDuyet = -2;
+                        dsn.MaCBc = MainForm.MaID;
+                        db.SaveChanges();
+                        MessageBox.Show("Danh sách đã được huỷ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    dgvDSCho.DataSource = null;
+                    LoadDS1();
+                    dgvChiTietDS1.DataSource = null;
+                    MaDS_XacNhan = 0;
                 }
-                dgvDSCho.DataSource = null;
-                LoadDS1();
-                dgvChiTietDS1.DataSource = null;
-                MaDS_XacNhan = 0;
+
             }
 
         }
@@ -129,6 +133,7 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
                 dgvDSCho.DataSource = null;
                 LoadDS1();
                 dgvChiTietDS1.DataSource = null;
+                MaDS_XacNhan = 0;
 
             }
         }
@@ -140,6 +145,14 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             MaDS_XacNhan = maDS;
             ds_CTChoPheDuyet = db.DS_ChoPheDuyet.Where(m => m.MaDS == MaDS_XacNhan).ToList();
             dgvChiTietDS1.DataSource = ds_CTChoPheDuyet;
+
+
+            if (dgvDSCho_View.FocusedColumn == dgvDSCho_View.Columns["fldEdit"])
+            {
+                GUI.Chung_CBSuaNhap newform = new Chung_CBSuaNhap(maDS);
+
+                newform.Show();
+            }
         }
 
         private void DaiDoi_ChoPheDuyet_Load(object sender, EventArgs e)
@@ -151,6 +164,11 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
 
 
             LoadDS1();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

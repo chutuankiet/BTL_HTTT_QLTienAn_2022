@@ -314,6 +314,7 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\CanBo.cs" />
+    <Compile Include="Model\CanBo_SuaNhapDS.cs" />
     <Compile Include="Model\ChiTietCatCom.cs" />
     <Compile Include="Model\ChiTietLoaiNghi.cs" />
     <Compile Include="Model\Chung_GetPhanHoi.cs" />

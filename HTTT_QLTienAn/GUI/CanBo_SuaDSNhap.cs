@@ -24,7 +24,14 @@ namespace HTTT_QLTienAn.GUI
         List<HocVien_DangKiNghi> DS_old_DK;
 
         List<ChiTietCatCom> lsCTCatCom = new List<ChiTietCatCom>();
+        public CanBo_SuaDSNhap(int MaDS)
+        {
+            InitializeComponent();
+            MaDSCur = MaDS;
+        }
 
+
+        int MaDSCur;
 
         public CanBo_SuaDSNhap(List<HocVien> dshv, List<DangKyNghi> dsdk)
         {
@@ -78,12 +85,18 @@ namespace HTTT_QLTienAn.GUI
 
         }
 
-
+        List<CanBo_SuaNhapDS> listDS;
 
 
         private void CanBo_SuaDSNhap_Load(object sender, EventArgs e)
         {
+            if(MaDSCur != 0)
+            {
 
+                listDS = db.CanBo_SuaNhapDS.Where(m => m.MaDS == MaDSCur).ToList(); 
+
+
+            }
 
         }
 
@@ -108,7 +121,16 @@ namespace HTTT_QLTienAn.GUI
             gridControl2.DataSource = null;
         }
 
+        private void gridView2_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        {
+            int index = e.RowHandle;
+            txtHoTen.Text = listDS[index].HoTen;
+            txtLop.Text = listDS[index].TenLop;
+            dateStart.DateTime = listDS[index].NgayDi;
+            dateEnd.DateTime = listDS[index].NgayVe;
+            txtLyDo.Text = listDS[index].LyDo;
 
 
+        }
     }
 }

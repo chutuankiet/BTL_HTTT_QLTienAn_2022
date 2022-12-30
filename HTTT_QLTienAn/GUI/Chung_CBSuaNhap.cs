@@ -27,7 +27,7 @@ namespace HTTT_QLTienAn.GUI
         {
             InitializeComponent();
 
-            MaDanhSach = MaDS;
+            MaDSCur = MaDS;
         }
 
         CanBo TargetCanbo;
@@ -37,7 +37,9 @@ namespace HTTT_QLTienAn.GUI
 
         List<LoaiNghi> ListLoaiNghi = new List<LoaiNghi>();
 
-        int MaDanhSach;
+        int MaDSCur;
+        List<CanBo_SuaNhapDS> listDS;
+
         private void Chung_CBSuaNhap_Load(object sender, EventArgs e)
         {
 
@@ -56,14 +58,15 @@ namespace HTTT_QLTienAn.GUI
 
             dsLop.DataSource = DSHocVien;
             //--------------------------------------------
+            lbMaDS.Text = MaDSCur.ToString();
+            
+            if (MaDSCur != 0)
+            {
+
+                listDS = db.CanBo_SuaNhapDS.Where(m => m.MaDS == MaDSCur).ToList();
 
 
-
-
-
-
-
-
+            }
 
 
 
@@ -93,6 +96,37 @@ namespace HTTT_QLTienAn.GUI
             MaHVCurrent = Convert.ToInt32(gridView1.GetRowCellValue(e.RowHandle, "MaHocVien")); ;
             txtHoTen.EditValue = gridView1.GetRowCellValue(e.RowHandle, "HoTen").ToString();
             txtLop.Text = gridView1.GetRowCellValue(e.RowHandle, "Lop").ToString();
+        }
+
+
+
+        private void SetDefaultState()
+        {
+
+            txtHoTen.Text = "";
+            txtLop.Text = "";
+            txtLyDo.Text = "";
+            txtSang.Text = "";
+            txtTrua.Text = "";
+            txtToi.Text = "";
+
+
+            dateStart.DateTime = DateTime.Now;
+            dateEnd.DateTime = DateTime.Now;
+
+            gridControl2.DataSource = null;
+        }
+
+        private void gridView2_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        {
+            int index = e.RowHandle;
+            txtHoTen.Text = listDS[index].HoTen;
+            txtLop.Text = listDS[index].TenLop;
+            dateStart.DateTime = listDS[index].NgayDi;
+            dateEnd.DateTime = listDS[index].NgayVe;
+            txtLyDo.Text = listDS[index].LyDo;
+
+
         }
     }
 }
