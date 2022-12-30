@@ -65,17 +65,17 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             // 
             // txtLuot
             // 
-            this.txtLuot.Location = new System.Drawing.Point(823, 8);
+            this.txtLuot.Location = new System.Drawing.Point(941, 8);
             this.txtLuot.Name = "txtLuot";
             this.txtLuot.Properties.ReadOnly = true;
-            this.txtLuot.Size = new System.Drawing.Size(101, 22);
+            this.txtLuot.Size = new System.Drawing.Size(115, 22);
             this.txtLuot.TabIndex = 19;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(701, 11);
+            this.label4.Location = new System.Drawing.Point(801, 11);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(116, 18);
             this.label4.TabIndex = 18;
@@ -83,17 +83,17 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             // 
             // txtTongTien
             // 
-            this.txtTongTien.Location = new System.Drawing.Point(594, 8);
+            this.txtTongTien.Location = new System.Drawing.Point(679, 8);
             this.txtTongTien.Name = "txtTongTien";
             this.txtTongTien.Properties.ReadOnly = true;
-            this.txtTongTien.Size = new System.Drawing.Size(101, 22);
+            this.txtTongTien.Size = new System.Drawing.Size(115, 22);
             this.txtTongTien.TabIndex = 17;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(450, 11);
+            this.label3.Location = new System.Drawing.Point(514, 11);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(138, 18);
             this.label3.TabIndex = 16;
@@ -115,7 +115,7 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             series1.View = lineSeriesView1;
             this.chartControl2.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series1};
-            this.chartControl2.Size = new System.Drawing.Size(981, 371);
+            this.chartControl2.Size = new System.Drawing.Size(1121, 371);
             this.chartControl2.TabIndex = 15;
             chartTitle1.Font = new System.Drawing.Font("Tahoma", 9F);
             chartTitle1.Text = "Tổng số lượt cắt cơm";
@@ -125,20 +125,21 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             // dtpCuoi
             // 
             this.dtpCuoi.EditValue = null;
-            this.dtpCuoi.Location = new System.Drawing.Point(297, 8);
+            this.dtpCuoi.Location = new System.Drawing.Point(339, 8);
             this.dtpCuoi.Name = "dtpCuoi";
             this.dtpCuoi.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtpCuoi.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtpCuoi.Size = new System.Drawing.Size(147, 22);
+            this.dtpCuoi.Size = new System.Drawing.Size(168, 22);
             this.dtpCuoi.TabIndex = 14;
+            this.dtpCuoi.EditValueChanged += new System.EventHandler(this.dtpCuoi_EditValueChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(258, 11);
+            this.label2.Location = new System.Drawing.Point(295, 11);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(33, 18);
             this.label2.TabIndex = 13;
@@ -147,20 +148,21 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             // dtpDau
             // 
             this.dtpDau.EditValue = null;
-            this.dtpDau.Location = new System.Drawing.Point(105, 8);
+            this.dtpDau.Location = new System.Drawing.Point(120, 8);
             this.dtpDau.Name = "dtpDau";
             this.dtpDau.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dtpDau.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dtpDau.Size = new System.Drawing.Size(147, 22);
+            this.dtpDau.Size = new System.Drawing.Size(168, 22);
             this.dtpDau.TabIndex = 12;
+            this.dtpDau.EditValueChanged += new System.EventHandler(this.dtpDau_EditValueChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(5, 11);
+            this.label1.Location = new System.Drawing.Point(6, 11);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 18);
             this.label1.TabIndex = 11;
@@ -182,7 +184,7 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             series2.View = lineSeriesView2;
             this.chartControl1.SeriesSerializable = new DevExpress.XtraCharts.Series[] {
         series2};
-            this.chartControl1.Size = new System.Drawing.Size(982, 346);
+            this.chartControl1.Size = new System.Drawing.Size(1122, 346);
             this.chartControl1.TabIndex = 10;
             chartTitle2.Font = new System.Drawing.Font("Tahoma", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             chartTitle2.Text = "Tổng số tiền ăn đã thanh toán";
@@ -192,7 +194,7 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             // 
             // NhaBep_ThongKe
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.txtLuot);
             this.Controls.Add(this.label4);
@@ -205,7 +207,7 @@ namespace HTTT_QLTienAn.GUI.NhaBep
             this.Controls.Add(this.label1);
             this.Controls.Add(this.chartControl1);
             this.Name = "NhaBep_ThongKe";
-            this.Size = new System.Drawing.Size(981, 760);
+            this.Size = new System.Drawing.Size(1121, 760);
             ((System.ComponentModel.ISupportInitialize)(this.txtLuot.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtTongTien.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(xyDiagram1)).EndInit();

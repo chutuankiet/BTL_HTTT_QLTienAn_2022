@@ -8,7 +8,7 @@ namespace HTTT_QLTienAn.Model
 {
     class Class_RPNhaBep
     {
-        int sotien;
-        DateTime ngay;
+        public DateTime ngay;
+        public int sotien;
     }
 }
