@@ -61,5 +61,12 @@ namespace HTTT_QLTienAn.GUI.Lop
 
             LoadDSDaPheDuyet();
         }
+
+        private void gridView1_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        {
+            int index = e.RowHandle;
+            int mads = ds_DaXacNhan[index].MaDS;
+            LoadDSChiTietDaXacNhan(mads);
+        }
     }
 }

@@ -25,10 +25,9 @@ namespace HTTT_QLTienAn.GUI.Admin
         List<CanBo> lsCanBo;
         private void Admin_QLCanBo_Load(object sender, EventArgs e)
         {
-            var ttcb = db.CanBoes.ToList();
-            dgvTTCB.DataSource = ttcb;
             LoadChiTietCB();
             lsCanBo = db.CanBoes.ToList();
+            dgvTTCB.DataSource = lsCanBo;
             cbCanBo.DataSource = lsCanBo;
             cbCanBo.ValueMember = "MaCanBo";
             cbCanBo.DisplayMember = "TenCanBo";
@@ -38,7 +37,7 @@ namespace HTTT_QLTienAn.GUI.Admin
         {
             try
             {
-                int macb = (int)dgvTTCB_View.GetFocusedRowCellValue("MaCanBo");
+                int macb = lsCanBo[0].MaCanBo;
                 cb = db.CanBoes.Where(p => p.MaCanBo == macb).FirstOrDefault();
             }
             catch { }

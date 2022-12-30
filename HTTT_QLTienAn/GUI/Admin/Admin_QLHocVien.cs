@@ -57,7 +57,7 @@ namespace HTTT_QLTienAn.GUI.Admin
         {
             try
             {
-                int mahv = (int)dgvTTHV_View.GetFocusedRowCellValue("MaHocVien");
+                int mahv = lstHocVien[0].MaHocVien;
                 hv = db.HocViens.Where(p => p.MaHocVien == mahv).FirstOrDefault();
             }
             catch { }
@@ -222,11 +222,11 @@ namespace HTTT_QLTienAn.GUI.Admin
             }
             return true;
         }
-
+        List<HocVien> lstHocVien;
         private void Admin_QLHocVien_Load(object sender, EventArgs e)
         {
-            var tthv1 = db.HocViens.ToList();
-            dgvTTHV.DataSource = tthv1;
+            lstHocVien = db.HocViens.ToList();
+            dgvTTHV.DataSource = lstHocVien;
         }
     }
 }
