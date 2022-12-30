@@ -20,19 +20,18 @@ namespace HTTT_QLTienAn.GUI.Admin
         }
         public QLTA_model db = new QLTA_model();
         public TieuChuanAn TieuChuanAn = new TieuChuanAn();
-
+        List<TieuChuanAn> lstTCA;
         private void Admin_QLTieuChuanAn_Load(object sender, EventArgs e)
         {
-            var tca = db.TieuChuanAns.ToList();
-            tca.Reverse();
-            dgvLichSuTCA.DataSource = tca;
+            lstTCA = db.TieuChuanAns.ToList();
+            dgvLichSuTCA.DataSource = lstTCA;
             LoadChiTietTCA();
         }
         public void LoadChiTietTCA()
         {
             try
             {
-                int id = (int)dgvTCA_View.GetFocusedRowCellValue("MaTCA");
+                int id = lstTCA[0].MaTCA;
                 TieuChuanAn = db.TieuChuanAns.Where(p => p.MaTCA == id).FirstOrDefault();
             }
             catch

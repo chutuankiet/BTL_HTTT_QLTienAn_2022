@@ -121,6 +121,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI\Admin\Admin_LoaiHV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\Admin_LoaiHV.Designer.cs">
+      <DependentUpon>Admin_LoaiHV.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Admin\Admin_QLHocVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -314,6 +320,7 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\CanBo.cs" />
+    <Compile Include="Model\CanBo_SuaNhapDS.cs" />
     <Compile Include="Model\ChiTietCatCom.cs" />
     <Compile Include="Model\ChiTietLoaiNghi.cs" />
     <Compile Include="Model\Chung_GetPhanHoi.cs" />
@@ -338,6 +345,7 @@
     <Compile Include="Model\LoaiHocVien.cs" />
     <Compile Include="Model\LoaiNghi.cs" />
     <Compile Include="Model\Lop.cs" />
+    <Compile Include="Model\Lop_DSHuy.cs" />
     <Compile Include="Model\NhaBep_ListCatCom.cs" />
     <Compile Include="Model\NhaBep_ListThanhToan.cs" />
     <Compile Include="Model\PhanHoi.cs" />
@@ -347,6 +355,9 @@
     <Compile Include="Model\TieuChuanAn.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\Admin\Admin_LoaiHV.resx">
+      <DependentUpon>Admin_LoaiHV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin\Admin_QLHocVien.resx">
       <DependentUpon>Admin_QLHocVien.cs</DependentUpon>
     </EmbeddedResource>

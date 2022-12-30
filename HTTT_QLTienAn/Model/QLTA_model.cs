@@ -1,7 +1,6 @@
 using System;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
-using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 
 namespace HTTT_QLTienAn.Model
@@ -29,6 +28,7 @@ namespace HTTT_QLTienAn.Model
         public virtual DbSet<TaiKhoan> TaiKhoans { get; set; }
         public virtual DbSet<TieuChuanAn> TieuChuanAns { get; set; }
         public virtual DbSet<c_ChoPheDuyet> c_ChoPheDuyet { get; set; }
+        public virtual DbSet<CanBo_SuaNhapDS> CanBo_SuaNhapDS { get; set; }
         public virtual DbSet<Chung_GetPhanHoi> Chung_GetPhanHoi { get; set; }
         public virtual DbSet<DS_ChoPheDuyet> DS_ChoPheDuyet { get; set; }
         public virtual DbSet<DS_CTLopChoPheDuyet> DS_CTLopChoPheDuyet { get; set; }
@@ -39,6 +39,7 @@ namespace HTTT_QLTienAn.Model
         public virtual DbSet<DS_LopChoPheDuyet> DS_LopChoPheDuyet { get; set; }
         public virtual DbSet<DSLop_ChoPheDuyet> DSLop_ChoPheDuyet { get; set; }
         public virtual DbSet<getQSc> getQScs { get; set; }
+        public virtual DbSet<Lop_DSHuy> Lop_DSHuy { get; set; }
         public virtual DbSet<NhaBep_ListCatCom> NhaBep_ListCatCom { get; set; }
         public virtual DbSet<NhaBep_ListThanhToan> NhaBep_ListThanhToan { get; set; }
 
@@ -73,10 +74,6 @@ namespace HTTT_QLTienAn.Model
                 .HasMany(e => e.PhanHois)
                 .WithOptional(e => e.HocVien)
                 .HasForeignKey(e => e.MaLopTruong);
-
-            modelBuilder.Entity<PhanHoi>()
-                .Property(e => e.PhanHoi1)
-                .IsUnicode(false);
 
             modelBuilder.Entity<PhieuThanhToan>()
                 .HasMany(e => e.PhanHois)

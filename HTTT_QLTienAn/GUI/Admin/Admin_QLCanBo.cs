@@ -25,20 +25,19 @@ namespace HTTT_QLTienAn.GUI.Admin
         List<CanBo> lsCanBo;
         private void Admin_QLCanBo_Load(object sender, EventArgs e)
         {
-            var ttcb = db.CanBoes.ToList();
-            dgvTTCB.DataSource = ttcb;
-            LoadChiTietCB();
             lsCanBo = db.CanBoes.ToList();
+            LoadChiTietCB(0);
+            dgvTTCB.DataSource = lsCanBo;
             cbCanBo.DataSource = lsCanBo;
             cbCanBo.ValueMember = "MaCanBo";
             cbCanBo.DisplayMember = "TenCanBo";
         }
 
-        private void LoadChiTietCB()
+        private void LoadChiTietCB(int index)
         {
             try
             {
-                int macb = (int)dgvTTCB_View.GetFocusedRowCellValue("MaCanBo");
+                int macb = lsCanBo[index].MaCanBo;
                 cb = db.CanBoes.Where(p => p.MaCanBo == macb).FirstOrDefault();
             }
             catch { }
@@ -54,7 +53,7 @@ namespace HTTT_QLTienAn.GUI.Admin
 
         private void dgvTTCB_View_FocusedRowChanged(object sender, DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventArgs e)
         {
-            LoadChiTietCB();
+            LoadChiTietCB(0);
         }
 
         private bool Check()
@@ -143,7 +142,7 @@ namespace HTTT_QLTienAn.GUI.Admin
                 dgvTTCB.DataSource = null;
                 var ttcb1 = db.CanBoes.ToList();
                 dgvTTCB.DataSource = ttcb1;
-                LoadChiTietCB();
+                LoadChiTietCB(0);
                 txtThemCapBacCB.Text = "";
                 dateThemNgaySinhCB.EditValue = null;
                 txtThemCapBacCB.Text = "";
@@ -196,7 +195,7 @@ namespace HTTT_QLTienAn.GUI.Admin
             dgvTTCB.DataSource = null;
             var tthv1 = db.CanBoes.ToList();
             dgvTTCB.DataSource = tthv1;
-            LoadChiTietCB();
+            LoadChiTietCB(0);
 
             dateSuaNgaySinhCB.EditValue = null;
             txtSuaTenCB.Text = "";
@@ -204,6 +203,11 @@ namespace HTTT_QLTienAn.GUI.Admin
             txtSuaChucVuCB.Text = "";
             txtSuaMaDVCB.Text = "";
             txtSuaMaTKCB.Text = "";
+        }
+
+        private void dgvTTCB_View_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        {
+            LoadChiTietCB(e.RowHandle);
         }
     }
 }

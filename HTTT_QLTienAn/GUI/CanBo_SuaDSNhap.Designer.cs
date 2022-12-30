@@ -85,9 +85,9 @@ namespace HTTT_QLTienAn.GUI
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.lbMaDS = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.hocVienBindingSource)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
@@ -322,6 +322,7 @@ namespace HTTT_QLTienAn.GUI
             this.gridView2.GridControl = this.gridControl2;
             this.gridView2.Name = "gridView2";
             this.gridView2.OptionsView.ShowGroupPanel = false;
+            this.gridView2.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.gridView2_RowClick);
             // 
             // gridColumn1
             // 
@@ -336,7 +337,7 @@ namespace HTTT_QLTienAn.GUI
             // gridColumn2
             // 
             this.gridColumn2.Caption = "Lớp";
-            this.gridColumn2.FieldName = "Lop";
+            this.gridColumn2.FieldName = "TenLop";
             this.gridColumn2.MinWidth = 25;
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
@@ -346,7 +347,7 @@ namespace HTTT_QLTienAn.GUI
             // gridColumn3
             // 
             this.gridColumn3.Caption = "Ngày đi";
-            this.gridColumn3.FieldName = "NgayBDNghi";
+            this.gridColumn3.FieldName = "NgayDi";
             this.gridColumn3.MinWidth = 25;
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
@@ -356,7 +357,7 @@ namespace HTTT_QLTienAn.GUI
             // gridColumn6
             // 
             this.gridColumn6.Caption = "Ngày trả phép";
-            this.gridColumn6.FieldName = "NgayKTnghi";
+            this.gridColumn6.FieldName = "NgayVe";
             this.gridColumn6.MinWidth = 25;
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
@@ -585,7 +586,7 @@ namespace HTTT_QLTienAn.GUI
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.btnSubmit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSubmit.Appearance.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.btnSubmit.Appearance.Options.UseForeColor = true;
             this.btnSubmit.Location = new System.Drawing.Point(383, 265);
@@ -695,15 +696,15 @@ namespace HTTT_QLTienAn.GUI
             this.panel3.Size = new System.Drawing.Size(1354, 46);
             this.panel3.TabIndex = 3;
             // 
-            // label2
+            // lbMaDS
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(18, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(294, 24);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Chỉnh sửa Danh sách đăng ký";
+            this.lbMaDS.AutoSize = true;
+            this.lbMaDS.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMaDS.Location = new System.Drawing.Point(1127, 13);
+            this.lbMaDS.Name = "lbMaDS";
+            this.lbMaDS.Size = new System.Drawing.Size(43, 24);
+            this.lbMaDS.TabIndex = 2;
+            this.lbMaDS.Text = "xxx";
             // 
             // label3
             // 
@@ -715,15 +716,15 @@ namespace HTTT_QLTienAn.GUI
             this.label3.TabIndex = 1;
             this.label3.Text = "Mã Danh sách : ";
             // 
-            // lbMaDS
+            // label2
             // 
-            this.lbMaDS.AutoSize = true;
-            this.lbMaDS.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbMaDS.Location = new System.Drawing.Point(1127, 13);
-            this.lbMaDS.Name = "lbMaDS";
-            this.lbMaDS.Size = new System.Drawing.Size(43, 24);
-            this.lbMaDS.TabIndex = 2;
-            this.lbMaDS.Text = "xxx";
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(18, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(294, 24);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Chỉnh sửa Danh sách đăng ký";
             // 
             // CanBo_SuaDSNhap
             // 

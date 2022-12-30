@@ -10,6 +10,8 @@
 *.userosscache
 *.sln.docstates
 
+/HTTT_QLTienAn/App.config
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 

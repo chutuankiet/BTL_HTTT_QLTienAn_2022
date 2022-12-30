@@ -29,34 +29,39 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             LoadDSDaPheDuyet();
         }
 
+        List<DS_DaPheDuyet_cd> ds_DaXacNhan;
         public void LoadDSDaPheDuyet()
         {
 
-            var ds_DaXacNhan = (from ds in db.ds_huy
+            //var ds_DaXacNhan = (from ds in db.ds_huy
 
-                                join cbd in db.CanBoes on ds.MaCBd equals cbd.MaCanBo
-                                where ds.PheDuyet == 1 && ds.TenDonVi == TenDonVi // tiểu đoàn đã duyệt 
-                                select new
-                                {
-                                    MaDS = ds.MaDS,
-                                    NgayDK = ds.NgayDK,
-                                    HoTenc = ds.HoTenc,
-                                    HoTend = cbd.HoTen
-                                }).ToList();
+            //                    join cbd in db.CanBoes on ds.MaCBd equals cbd.MaCanBo
+            //                    where ds.PheDuyet == 1 && ds.TenDonVi == TenDonVi // tiểu đoàn đã duyệt 
+            //                    select new
+            //                    {
+            //                        MaDS = ds.MaDS,
+            //                        NgayDK = ds.NgayDK,
+            //                        HoTenc = ds.HoTenc,
+            //                        HoTend = cbd.HoTen
+            //                    }).ToList();
 
-            var ds_DaXacNhan2 = (from ds in db.ds_huy
-                                 where ds.PheDuyet == 0 && ds.TenDonVi == TenDonVi//  đại đội duyệt
-                                 select new
-                                 {
-                                     MaDS = ds.MaDS,
-                                     NgayDK = ds.NgayDK,
-                                     HoTenc = ds.HoTenc,
-                                     HoTend = ""
-                                 }).ToList();
-            foreach (var item in ds_DaXacNhan2)
-            {
-                ds_DaXacNhan.Add(item);
-            }
+            //var ds_DaXacNhan2 = (from ds in db.ds_huy
+            //                     where ds.PheDuyet == 0 && ds.TenDonVi == TenDonVi//  đại đội duyệt
+            //                     select new
+            //                     {
+            //                         MaDS = ds.MaDS,
+            //                         NgayDK = ds.NgayDK,
+            //                         HoTenc = ds.HoTenc,
+            //                         HoTend = ""
+            //                     }).ToList();
+            //foreach (var item in ds_DaXacNhan2)
+            //{
+            //    ds_DaXacNhan.Add(item);
+            //}
+
+
+            ds_DaXacNhan = db.DS_DaPheDuyet_cd.Where(m => m.TenDonVi == TenDonVi).ToList();
+
             if (ds_DaXacNhan.Count > 0)
             {
 
@@ -73,17 +78,20 @@ namespace HTTT_QLTienAn.GUI.DaiDoi
             dgvChiTietDaXaNhan.DataSource = dsCTDaXacNhan;
         }
 
-        private void dgvDaXacNhan_View_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
-        {
-            int mads = Convert.ToInt32(dgvDaXacNhan_View.GetRowCellValue(e.RowHandle, "MaDS"));
-            LoadDSChiTietDaXacNhan(mads);
-        }
+        
 
         private void DaiDoi_DaPheDuyet_Load(object sender, EventArgs e)
         {
             int madv = (int)db.CanBoes.Where(m => m.MaCanBo == MainForm.MaID).FirstOrDefault().MaDonVi;
             TenDonVi = db.DonVis.Where(m => m.MaDonVi == madv).FirstOrDefault().TenDonVi;
             LoadDSDaPheDuyet();
+        }
+
+        private void dgvDaXacNhan_View_RowClick(object sender, DevExpress.XtraGrid.Views.Grid.RowClickEventArgs e)
+        {
+            int index = e.RowHandle;
+            int mads = ds_DaXacNhan[index].MaDS;
+            LoadDSChiTietDaXacNhan(mads);
         }
     }
 }

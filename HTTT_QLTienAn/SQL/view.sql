@@ -90,7 +90,7 @@ JOIN dbo.CanBo cb1 ON cb1.MaCanBo = ds.MaCBd
 
 go
 
-create VIEW [dbo].[DSLop_ChoPheDuyet] AS
+CREATE VIEW [dbo].[DSLop_ChoPheDuyet] AS
 SELECT DISTINCT(ds.MaDS),ds.PheDuyet,  l.TenLop,ds.NgayDK, hv1.HoTen, dv.TenDonVi, dv.MaDonVi, hv.MaLop
 FROM DanhSachRaNgoai ds
 JOIN DangKyNghi dk ON dk.MaDS = ds.MaDS
@@ -99,30 +99,30 @@ JOIN Lop l ON l.MaLop = hv.MaLop
 JOIN HocVien hv1 ON hv1.MaHocVien = l.MaLopTruong
 JOIN DonVi dv ON l.MaDonVi = dv.MaDonVi
 
-go 
+GO 
 
-create view ds_huy as 
-select ds.PheDuyet, ds.MaDS, ds.NgayDK, cb.HoTen as HoTenc, ds.MaCBd, TenDonVi 
-from DanhSachRaNgoai ds
-join CanBo cb on cb.MaCanBo = ds.MaCBc
-join DonVi dv on dv.MaDonVi = cb.MaDonVi
+CREATE VIEW ds_huy AS 
+SELECT ds.PheDuyet, ds.MaDS, ds.NgayDK, cb.HoTen AS HoTenc, ds.MaCBd, TenDonVi 
+FROM DanhSachRaNgoai ds
+JOIN CanBo cb ON cb.MaCanBo = ds.MaCBc
+JOIN DonVi dv ON dv.MaDonVi = cb.MaDonVi
 
-go
+GO
 
-ALTER view  [dbo].[DS_DaThanhToan] as
-select cb.hoten as HoTenCB, hv.hoten as HoTenHV, dv.TenDonVi, ptt.NgayTT, ptt.TongTien
-from PhieuThanhToan ptt
-join CanBo cb on ptt.MaCBNhaBep = cb.MaCanBo
-join DangKyNghi dkn on dkn.MaDangKy = ptt.MaDangKy
-join HocVien hv on hv.MaHocVien = dkn.MaHocVien
-join Lop l on l.MaLop = hv.MaLop
-join DonVi  dv on dv.MaDonVi = l.MaDonVi
-where TrangThaiTT = 1
+ALTER VIEW  [dbo].[DS_DaThanhToan] AS
+SELECT cb.hoten AS HoTenCB, hv.hoten AS HoTenHV, dv.TenDonVi, ptt.NgayTT, ptt.TongTien
+FROM PhieuThanhToan ptt
+JOIN CanBo cb ON ptt.MaCBNhaBep = cb.MaCanBo
+JOIN DangKyNghi dkn ON dkn.MaDangKy = ptt.MaDangKy
+JOIN HocVien hv ON hv.MaHocVien = dkn.MaHocVien
+JOIN Lop l ON l.MaLop = hv.MaLop
+JOIN DonVi  dv ON dv.MaDonVi = l.MaDonVi
+WHERE TrangThaiTT = 1
 
 
 GO 
 
-CREATE VIEW CanBo_SuaNhapDS as
+CREATE VIEW CanBo_SuaNhapDS AS
 SELECT dkn.MaHocVien, l.TenLop, dkn.NgayDi, dkn.NgayVe, ln.TenLoaiNghi, dkn.MaDangKy,hv.MaLop,l.MaDonVi,dkn.MaDS,dkn.MaLoaiNghi
 FROM dbo.DanhSachRaNgoai dsrn 
 LEFT JOIN dbo.DangKyNghi dkn ON dkn.MaDS = dsrn.MaDS
@@ -130,3 +130,28 @@ LEFT JOIN dbo.LoaiNghi ln ON ln.MaLoaiNghi = dkn.MaLoaiNghi
 INNER JOIN dbo.HocVien hv ON hv.MaHocVien = dkn.MaHocVien
 INNER JOIN dbo.Lop l ON	l.MaLop = hv.MaLop
 JOIN dbo.ChiTietCatCom ctcc ON ctcc.MaDangKy = dkn.MaDangKy
+
+
+GO
+
+
+ALTER VIEW [dbo].[CanBo_SuaNhapDS] AS
+SELECT dkn.MaHocVien, l.TenLop, dkn.NgayDi, dkn.NgayVe, ln.TenLoaiNghi, dkn.MaDangKy,hv.MaLop,l.MaDonVi,dkn.MaDS,dkn.MaLoaiNghi,
+ ctcc.BuoiSang,ctcc.BuoiTrua,ctcc.BuoiToi, dsrn.PheDuyet
+FROM dbo.DanhSachRaNgoai dsrn 
+LEFT JOIN dbo.DangKyNghi dkn ON dkn.MaDS = dsrn.MaDS
+LEFT JOIN dbo.LoaiNghi ln ON ln.MaLoaiNghi = dkn.MaLoaiNghi
+INNER JOIN dbo.HocVien hv ON hv.MaHocVien = dkn.MaHocVien
+INNER JOIN dbo.Lop l ON	l.MaLop = hv.MaLop
+JOIN dbo.ChiTietCatCom ctcc ON ctcc.MaDangKy = dkn.MaDangKy
+
+GO
+
+CREATE VIEW Lop_DSHuy as
+SELECT dsrn.MaDS, dsrn.NgayDK,cbc.HoTen 'TenCBc', cbd.HoTen 'TenCBd', dsrn.PheDuyet, lt.MaLop
+FROM dbo.DanhSachRaNgoai dsrn
+LEFT JOIN dbo.CanBo cbc ON cbc.MaCanBo = dsrn.MaCBc
+LEFT JOIN dbo.CanBo cbd ON cbd.MaCanBo = dsrn.MaCBd
+INNER JOIN dbo.HocVien lt ON lt.MaHocVien = dsrn.MaLT
+WHERE dsrn.PheDuyet = -1 OR dsrn.PheDuyet = -2
+
