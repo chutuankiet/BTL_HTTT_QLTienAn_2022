@@ -121,6 +121,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GUI\Admin\Admin_LoaiHV.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\Admin_LoaiHV.Designer.cs">
+      <DependentUpon>Admin_LoaiHV.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\Admin\Admin_QLHocVien.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -347,6 +353,9 @@
     <Compile Include="Model\TieuChuanAn.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\Admin\Admin_LoaiHV.resx">
+      <DependentUpon>Admin_LoaiHV.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\Admin\Admin_QLHocVien.resx">
       <DependentUpon>Admin_QLHocVien.cs</DependentUpon>
     </EmbeddedResource>

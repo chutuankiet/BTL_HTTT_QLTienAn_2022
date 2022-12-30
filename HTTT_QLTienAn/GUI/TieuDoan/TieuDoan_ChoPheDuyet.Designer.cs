@@ -200,8 +200,6 @@ namespace HTTT_QLTienAn.GUI.TieuDoan
             this.btnDel.ColumnEdit = this.btnXoa;
             this.btnDel.MinWidth = 25;
             this.btnDel.Name = "btnDel";
-            this.btnDel.Visible = true;
-            this.btnDel.VisibleIndex = 4;
             this.btnDel.Width = 94;
             // 
             // btnXoa

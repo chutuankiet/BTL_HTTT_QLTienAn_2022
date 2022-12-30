@@ -69,6 +69,7 @@ namespace HTTT_QLTienAn.GUI.Admin
             this.label16 = new System.Windows.Forms.Label();
             this.btnThemCB = new DevExpress.XtraEditors.SimpleButton();
             this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
+            this.txtSuaMaDVCB = new DevExpress.XtraEditors.TextEdit();
             this.cbCanBo = new System.Windows.Forms.ComboBox();
             this.cbDonVi = new System.Windows.Forms.ComboBox();
             this.dateSuaNgaySinhCB = new DevExpress.XtraEditors.DateEdit();
@@ -84,7 +85,6 @@ namespace HTTT_QLTienAn.GUI.Admin
             this.txtSuaTenCB = new DevExpress.XtraEditors.TextEdit();
             this.label18 = new System.Windows.Forms.Label();
             this.btnSuaCB = new DevExpress.XtraEditors.SimpleButton();
-            this.txtSuaMaDVCB = new DevExpress.XtraEditors.TextEdit();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTTCB)).BeginInit();
@@ -110,13 +110,13 @@ namespace HTTT_QLTienAn.GUI.Admin
             ((System.ComponentModel.ISupportInitialize)(this.txtThemCapBacCB.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtThemTenCB.Properties)).BeginInit();
             this.xtraTabPage2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSuaMaDVCB.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateSuaNgaySinhCB.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateSuaNgaySinhCB.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSuaMaTKCB.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSuaChucVuCB.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSuaCapBacCB.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSuaTenCB.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSuaMaDVCB.Properties)).BeginInit();
             this.SuspendLayout();
             // 
             // groupControl1
@@ -152,7 +152,9 @@ namespace HTTT_QLTienAn.GUI.Admin
             this.gridColumn7});
             this.dgvTTCB_View.GridControl = this.dgvTTCB;
             this.dgvTTCB_View.Name = "dgvTTCB_View";
+            this.dgvTTCB_View.OptionsBehavior.Editable = false;
             this.dgvTTCB_View.OptionsView.ShowGroupPanel = false;
+            this.dgvTTCB_View.RowClick += new DevExpress.XtraGrid.Views.Grid.RowClickEventHandler(this.dgvTTCB_View_RowClick);
             this.dgvTTCB_View.FocusedRowChanged += new DevExpress.XtraGrid.Views.Base.FocusedRowChangedEventHandler(this.dgvTTCB_View_FocusedRowChanged);
             // 
             // gridColumn1
@@ -572,6 +574,16 @@ namespace HTTT_QLTienAn.GUI.Admin
             this.xtraTabPage2.Size = new System.Drawing.Size(737, 432);
             this.xtraTabPage2.Text = "Sửa";
             // 
+            // txtSuaMaDVCB
+            // 
+            this.txtSuaMaDVCB.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtSuaMaDVCB.EditValue = "";
+            this.txtSuaMaDVCB.Location = new System.Drawing.Point(30, 363);
+            this.txtSuaMaDVCB.Name = "txtSuaMaDVCB";
+            this.txtSuaMaDVCB.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.txtSuaMaDVCB.Size = new System.Drawing.Size(333, 22);
+            this.txtSuaMaDVCB.TabIndex = 39;
+            // 
             // cbCanBo
             // 
             this.cbCanBo.FormattingEnabled = true;
@@ -722,16 +734,6 @@ namespace HTTT_QLTienAn.GUI.Admin
             this.btnSuaCB.Text = "Sửa";
             this.btnSuaCB.Click += new System.EventHandler(this.btnSuaCB_Click);
             // 
-            // txtSuaMaDVCB
-            // 
-            this.txtSuaMaDVCB.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtSuaMaDVCB.EditValue = "";
-            this.txtSuaMaDVCB.Location = new System.Drawing.Point(30, 363);
-            this.txtSuaMaDVCB.Name = "txtSuaMaDVCB";
-            this.txtSuaMaDVCB.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtSuaMaDVCB.Size = new System.Drawing.Size(333, 22);
-            this.txtSuaMaDVCB.TabIndex = 39;
-            // 
             // Admin_QLCanBo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -770,13 +772,13 @@ namespace HTTT_QLTienAn.GUI.Admin
             ((System.ComponentModel.ISupportInitialize)(this.txtThemTenCB.Properties)).EndInit();
             this.xtraTabPage2.ResumeLayout(false);
             this.xtraTabPage2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.txtSuaMaDVCB.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateSuaNgaySinhCB.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateSuaNgaySinhCB.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSuaMaTKCB.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSuaChucVuCB.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSuaCapBacCB.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.txtSuaTenCB.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.txtSuaMaDVCB.Properties)).EndInit();
             this.ResumeLayout(false);
 
         }
