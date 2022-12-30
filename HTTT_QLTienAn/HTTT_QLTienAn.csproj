@@ -344,6 +344,7 @@
     <Compile Include="Model\LoaiHocVien.cs" />
     <Compile Include="Model\LoaiNghi.cs" />
     <Compile Include="Model\Lop.cs" />
+    <Compile Include="Model\Lop_DSHuy.cs" />
     <Compile Include="Model\NhaBep_ListCatCom.cs" />
     <Compile Include="Model\NhaBep_ListThanhToan.cs" />
     <Compile Include="Model\PhanHoi.cs" />
