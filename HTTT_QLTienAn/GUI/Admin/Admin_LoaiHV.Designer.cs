@@ -296,8 +296,11 @@ namespace HTTT_QLTienAn.GUI.Admin
             // 
             // txtTCA
             // 
-            this.txtTCA.Location = new System.Drawing.Point(70, 106);
+            this.txtTCA.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.txtTCA.EditValue = "";
+            this.txtTCA.Location = new System.Drawing.Point(71, 109);
             this.txtTCA.Name = "txtTCA";
+            this.txtTCA.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.txtTCA.Size = new System.Drawing.Size(323, 22);
             this.txtTCA.TabIndex = 28;
             // 

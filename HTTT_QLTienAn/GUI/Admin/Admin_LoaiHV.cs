@@ -23,9 +23,9 @@ namespace HTTT_QLTienAn.GUI.Admin
         {
             var dv = db.LoaiHocViens.ToList();
             dgvLHV.DataSource = dv;
-            LoadChiTietDonVi();
+            LoadChiTietLHV();
         }
-        private void LoadChiTietDonVi()
+        private void LoadChiTietLHV()
         {
             try
             {
@@ -66,7 +66,7 @@ namespace HTTT_QLTienAn.GUI.Admin
                 MessageBox.Show("Tên loại học viên không được để trống", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
             }
-            if (txtMaTCA.Text == "")
+            if (txtTCA.Text == "")
             {
                 MessageBox.Show("Mã tiêu chuẩn ăn không được để trống ", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return false;
@@ -74,7 +74,7 @@ namespace HTTT_QLTienAn.GUI.Admin
      
             try
             {
-                int k = int.Parse(txtMaTCA.Text);
+                int k = int.Parse(txtTCA.Text);
             }
             catch
             {
@@ -82,7 +82,7 @@ namespace HTTT_QLTienAn.GUI.Admin
                 return false;
             }
            
-            int maTCA = int.Parse(txtMaTCA.Text);
+            int maTCA = int.Parse(txtTCA.Text);
             
             var temp_tca = db.TieuChuanAns.Where(p => p.MaTCA == maTCA).FirstOrDefault();
             if (temp_tca == null)
@@ -92,15 +92,7 @@ namespace HTTT_QLTienAn.GUI.Admin
             }
             return true;
         }
-        private void LoadChiTietLHV()
-        {
-            try
-            {
-                malhv = (int)dgvLHV_View.GetFocusedRowCellValue("MaLHV");
-            }
-            catch { }
-            txtSuaMaLHV.EditValue = malhv;
-        }
+      
         private void btnSuaLHV_Click(object sender, EventArgs e)
         {
             
